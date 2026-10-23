@@ -23,11 +23,11 @@
     "parentWaitMilliseconds": 6714,
     "cause": "Persistent child inherits native stdout/stderr pipes held by Run-Step"
   },
-  "fix": "Windows Start-Process supplies native log file handles for persistent processes; PID/start identity/executable checks are retained. Native argument quoting explicitly preserves spaces/quotes/backslashes.",
+  "fix": "Superseded: Start-Process file redirection was insufficient on Windows. See windows-handle-inheritance-fix.json for the explicit handle-list fix and actual Windows CI pass.",
   "portableChecks": {
     "processOwnershipAndHashAssertions": 14,
     "nativeArgvRoundtrip": "passed"
   },
-  "windowsDetachedHandoffTest": "Added to TestDemo; not executed on this Linux host",
+  "windowsDetachedHandoffTest": "b8b392c2ec60 failed on the user PC; corrected native handle-list implementation passed Windows CI 39991292356 with PS7.6.7 and PS5.1 parents.",
   "unrealMediaTest": "Not performed"
 }

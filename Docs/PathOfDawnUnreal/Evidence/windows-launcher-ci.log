@@ -1,0 +1,107 @@
+Windows launcher test only; no Unreal/GPU/media execution.
+Run: https://github.com/ka8877/unreal_yesu/actions/runs/39991292356
+
+launcher	Record test environment (no Unreal or GPU test)	﻿2026-10-23T16:59:20.6272234Z ##[group]Run $PSVersionTable | Format-List
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:20.6272712Z $PSVersionTable | Format-List
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:20.6272966Z python --version
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:20.7182515Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:20.7182861Z ##[endgroup]
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0642707Z 
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0706511Z Name  : PSVersion
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0707092Z Value : 7.6.7
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0707273Z 
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0710031Z Name  : PSEdition
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0710743Z Value : Core
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0710956Z 
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0713090Z Name  : GitCommitId
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0713570Z Value : 7.6.7
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0716071Z 
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0716355Z Name  : OS
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0716781Z Value : Microsoft Windows 10.0.26100
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0717049Z 
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0718992Z Name  : Platform
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0719449Z Value : Win32NT
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0719631Z 
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0722457Z Name  : PSCompatibleVersions
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0724140Z Value : {1.0, 2.0, 3.0, 4.0…}
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0724338Z 
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0725838Z Name  : PSRemotingProtocolVersion
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0726273Z Value : 2.4
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0726443Z 
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0728419Z Name  : SerializationVersion
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0729126Z Value : 1.1.0.1
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0729402Z 
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0731387Z Name  : WSManStackVersion
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0731991Z Value : 3.0
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.0732201Z 
+launcher	Record test environment (no Unreal or GPU test)	2026-10-23T16:59:21.3570681Z Python 3.12.10
+launcher	Native handle isolation and late logs with PowerShell 7 parent	﻿2026-10-23T16:59:21.4310783Z ##[group]Run ./Tools/PathOfDawnUnreal/tests/process_launch_tests.ps1
+launcher	Native handle isolation and late logs with PowerShell 7 parent	2026-10-23T16:59:21.4311266Z ./Tools/PathOfDawnUnreal/tests/process_launch_tests.ps1
+launcher	Native handle isolation and late logs with PowerShell 7 parent	2026-10-23T16:59:21.4366492Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+launcher	Native handle isolation and late logs with PowerShell 7 parent	2026-10-23T16:59:21.4366776Z ##[endgroup]
+launcher	Native handle isolation and late logs with PowerShell 7 parent	2026-10-23T16:59:30.5765603Z PASS: native launcher C# compiles; 64-bit Win32 structure layouts match.
+launcher	Native handle isolation and late logs with PowerShell 7 parent	2026-10-23T16:59:33.0189152Z PASS: native arguments retain empty values, spaces, Unicode, embedded quotes, trailing backslashes and shell punctuation.
+launcher	Native handle isolation and late logs with PowerShell 7 parent	2026-10-23T16:59:33.1089344Z PASS: persistent child did not inherit an unrelated pipe; parent sees EOF while the child is still alive.
+launcher	Native handle isolation and late logs with PowerShell 7 parent	2026-10-23T16:59:34.9462895Z PASS: Windows Run-Step returned while its child remained alive; subsequent browser step reached; late stdout/stderr preserved in dedicated logs.
+launcher	Native handle isolation and late logs with Windows PowerShell 5.1 parent	﻿2026-10-23T16:59:35.0038184Z ##[group]Run ./Tools/PathOfDawnUnreal/tests/process_launch_tests.ps1 -WrapperShell (Get-Command powershell.exe).Source
+launcher	Native handle isolation and late logs with Windows PowerShell 5.1 parent	2026-10-23T16:59:35.0038988Z ./Tools/PathOfDawnUnreal/tests/process_launch_tests.ps1 -WrapperShell (Get-Command powershell.exe).Source
+launcher	Native handle isolation and late logs with Windows PowerShell 5.1 parent	2026-10-23T16:59:35.0120879Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+launcher	Native handle isolation and late logs with Windows PowerShell 5.1 parent	2026-10-23T16:59:35.0121180Z ##[endgroup]
+launcher	Native handle isolation and late logs with Windows PowerShell 5.1 parent	2026-10-23T16:59:35.9360234Z PASS: native launcher C# compiles; 64-bit Win32 structure layouts match.
+launcher	Native handle isolation and late logs with Windows PowerShell 5.1 parent	2026-10-23T16:59:36.0054983Z PASS: native arguments retain empty values, spaces, Unicode, embedded quotes, trailing backslashes and shell punctuation.
+launcher	Native handle isolation and late logs with Windows PowerShell 5.1 parent	2026-10-23T16:59:36.0873157Z PASS: persistent child did not inherit an unrelated pipe; parent sees EOF while the child is still alive.
+launcher	Native handle isolation and late logs with Windows PowerShell 5.1 parent	2026-10-23T16:59:44.3453628Z PASS: Windows Run-Step returned while its child remained alive; subsequent browser step reached; late stdout/stderr preserved in dedicated logs.
+launcher	Process ownership, save session exclusion and diagnostic collection	﻿2026-10-23T16:59:44.4531927Z ##[group]Run # Diagnostic tests intentionally catch failing native children. Run
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:44.4532478Z # Diagnostic tests intentionally catch failing native children. Run
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:44.4532858Z # each suite in its own shell so their expected LASTEXITCODE values
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:44.4533195Z # cannot be mistaken for this Actions step's exit status.
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:44.4533542Z foreach ($suite in @('tooling_tests.ps1', 'start_step_tests.ps1')) {
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:44.4534002Z   & (Get-Process -Id $PID).Path -NoLogo -NoProfile -File "./Tools/PathOfDawnUnreal/tests/$suite"
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:44.4534471Z   if ($LASTEXITCODE -ne 0) { throw "$suite failed with exit code $LASTEXITCODE" }
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:44.4534771Z }
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:44.4593351Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:44.4593636Z ##[endgroup]
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:45.5539633Z PASS 14 tooling assertions (space paths, unsafe IDs, hashes, smoke rejection, atomic JSON, session exclusion, owned-process cleanup). Host: Win32NT; no Unreal/media test.
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:46.0330496Z [success] 실행 중입니다. 자세한 기록: C:\Users\runneradmin\AppData\Local\Temp\Dawn 시작 검사 6dbb621e448243d98ac00cb779feabdb\start-here-regression-success.log
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:46.4075628Z [failure] 실행 중입니다. 자세한 기록: C:\Users\runneradmin\AppData\Local\Temp\Dawn 시작 검사 6dbb621e448243d98ac00cb779feabdb\start-here-regression-failure.log
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:46.7423058Z 
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:46.7427919Z 컴파일/빌드 오류 요약(진단 JSON에도 기록):
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:46.7440622Z fixture build error: shared build settings differ
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:46.7445655Z fixture wrapper exception
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:46.7450111Z 
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:46.7454390Z 실패 직전 로그(전체 내용은 위 로그 파일에 보관):
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:46.7475557Z fixture build error: shared build settings differ
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:46.7480911Z fixture wrapper exception
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:46.7549957Z [compiler] 실행 중입니다. 자세한 기록: C:\Users\runneradmin\AppData\Local\Temp\Dawn 시작 검사 6dbb621e448243d98ac00cb779feabdb\start-here-regression-compiler.log
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0461334Z 
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0465858Z 컴파일/빌드 오류 요약(진단 JSON에도 기록):
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0470963Z DawnPlayerController.cpp(227,31): error C4458: Player hides a class member
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0475946Z PlayerController.h(272,22): note: see declaration of Player
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0479432Z wrapper tail: no compiler diagnostic here
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0483379Z 
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0488528Z 실패 직전 로그(전체 내용은 위 로그 파일에 보관):
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0502718Z wrapper tail: no compiler diagnostic here
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0507863Z wrapper tail: no compiler diagnostic here
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0512416Z wrapper tail: no compiler diagnostic here
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0518573Z wrapper tail: no compiler diagnostic here
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0523159Z wrapper tail: no compiler diagnostic here
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0527830Z wrapper tail: no compiler diagnostic here
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0532220Z wrapper tail: no compiler diagnostic here
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0537125Z wrapper tail: no compiler diagnostic here
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0541494Z wrapper tail: no compiler diagnostic here
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0546397Z wrapper tail: no compiler diagnostic here
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0550738Z wrapper tail: no compiler diagnostic here
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0555564Z wrapper tail: no compiler diagnostic here
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0560075Z wrapper tail: no compiler diagnostic here
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0564576Z wrapper tail: no compiler diagnostic here
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0569396Z wrapper tail: no compiler diagnostic here
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0574300Z wrapper tail: no compiler diagnostic here
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0578806Z wrapper tail: no compiler diagnostic here
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0583110Z wrapper tail: no compiler diagnostic here
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0587414Z wrapper tail: no compiler diagnostic here
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0592642Z wrapper tail: no compiler diagnostic here
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0597254Z wrapper tail: no compiler diagnostic here
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0602224Z wrapper tail: no compiler diagnostic here
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0607013Z wrapper tail: no compiler diagnostic here
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0611378Z wrapper tail: no compiler diagnostic here
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-10-23T16:59:47.0716485Z PASS: native stderr success; Unicode/space arguments; preferences preserved; exit 37 recorded; complete failure log; missing script rejected; compiler exit 6; early compiler error/context; JSON error summary.

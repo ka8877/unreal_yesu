@@ -167,3 +167,19 @@ v8 변경 범위는 타이틀·도입·인물 초상·세 결과의 7종 일러�
 ## 스트리밍 실행기 출력 파이프 — 2026-10-24 KST
 
 실행 스크립트가 반환해도 6초짜리 자식 프로세스가 native 출력 파이프를 보유하면 상위 Run-Step이 약 6.7초 기다리는 현상을 재현했다. 게임/서버처럼 계속 실행되는 자식이면 자동 브라우저 단계에 도달하지 못할 수 있다. Windows의 지속 프로세스 실행은 전용 stdout/stderr 파일 핸들을 제공하는 Start-Process로 변경했다. 공백·빈 인자·한국어·따옴표·끝 역슬래시·셸 특수문자가 실제 native argv로 유지되는 검사와 소유 프로세스/저장 해시 14개 검사를 통과했다. Windows 분리 실행, 부모 종료 뒤 늦은 로그 기록을 검사하는 통합 테스트는 TestDemo에 연결했으며 Linux에서는 명시적으로 미실행 처리했다. 증거: `Evidence/streaming-launch-handoff.json`.
+
+## Windows 실행기 실제 검증과 후속 수정 — 2026-10-24 KST
+
+사용자 로그 `source-b8b392c2ec60`에서 콘텐츠·원화·폰트·인자 검사는 통과했지만 실행기 파이프 검사가 실패했다. 이전 stdout/stderr 파일 분리만으로는 부모의 다른 파이프 상속이 차단되지 않았다. PowerShell 7.6.7의 실제 CreateProcess 호출과 Win32 문서를 확인하고, NUL/stdout/stderr 세 핸들만 상속하는 STARTUPINFOEX 기반 실행기로 교체했다. 테스트를 생략하지 않았다.
+
+실제 GitHub Windows Server 2025(10.0.26100), PowerShell 7.6.7, Python 3.12.10에서 다음 검사를 통과했다. 부모 실행기로 PowerShell 7.6.7과 Windows PowerShell 5.1을 각각 사용했다.
+
+- 빈 값·공백·한국어·따옴표·역슬래시·셸 특수문자 native argv 보존.
+- 별도로 만든 상속 가능한 파이프가 살아 있는 자식에게 전달되지 않음.
+- 프로젝트의 실제 Run-Step 함수가 자식 생존 중 반환하고 다음 브라우저 단계 표식에 도달.
+- 부모 종료 후 늦게 출력한 stdout/stderr까지 전용 로그에 보존.
+- 소유 프로세스 종료·동시 저장 세션 차단·해시 검사 14개와 오류 수집 검사 9개.
+
+[성공한 CI 실행](https://github.com/ka8877/unreal_yesu/actions/runs/39991292356), [실행 로그](Evidence/windows-launcher-ci.log), [원인·환경·결과](Evidence/windows-handle-inheritance-fix.json). 첫 CI 실행은 개별 검사가 통과했으나 의도한 실패 fixture의 종료 코드가 Actions 단계에 남아 실패 처리됐다. 각 검사 스크립트를 독립 PowerShell로 실행하도록 수정한 후 전체 workflow가 성공했다.
+
+Linux의 `TestDemo.ps1 -SourceOnly -RequireArt`도 코어 479개 assertion과 콘텐츠·원화·폰트 검사를 통과했다. 이 Windows CI에는 Unreal/GPU가 없으므로 실제 게임 렌더링·Pixel Streaming 미디어·사용자 PC 재시도 성공을 의미하지 않는다.

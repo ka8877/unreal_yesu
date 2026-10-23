@@ -1,0 +1,117 @@
+{
+  "checkedUtc": "2026-10-23T17:01:11.809540+00:00",
+  "reportedFailingCommit": "b8b392c2ec60d9f0f09e7d76350bb109f885cc95",
+  "reportedFailure": "process_launch_tests.ps1: Persistent child retained the launcher output pipe; browser-open step could not be reached.",
+  "userChecksPassedBeforeFailure": [
+    "narrative/content",
+    "source asset guards",
+    "editor contracts",
+    "25 visual sources",
+    "446 Korean glyphs",
+    "native argv roundtrip"
+  ],
+  "rootCause": "Windows Start-Process redirects standard handles but calls CreateProcess with unrestricted handle inheritance; unused ancestor pipeline handles remain inherited.",
+  "references": [
+    "https://github.com/PowerShell/PowerShell/blob/v7.6.7/src/Microsoft.PowerShell.Commands.Management/commands/management/Process.cs#L2619",
+    "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-updateprocthreadattribute"
+  ],
+  "fix": "CreateProcessW STARTUPINFOEX with PROC_THREAD_ATTRIBUTE_HANDLE_LIST restricted to NUL stdin and two dedicated log files; current user/environment, no shell/admin/policy change.",
+  "windowsRunner": {
+    "os": "Windows Server 2025 10.0.26100",
+    "image": "windows-2025-vs2026 20261021.278.1",
+    "powershell": "7.6.7",
+    "wrapperParents": [
+      "PowerShell 7.6.7",
+      "Windows PowerShell 5.1"
+    ],
+    "python": "3.12.10"
+  },
+  "successfulRun": {
+    "conclusion": "success",
+    "headSha": "6fe042e895f5bbd3987a3f6f64b4a7bb73e7f7e0",
+    "jobs": [
+      {
+        "completedAt": "2026-10-23T16:59:50Z",
+        "conclusion": "success",
+        "databaseId": 120543414329,
+        "name": "launcher",
+        "startedAt": "2026-10-23T16:59:08Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Record test environment (no Unreal or GPU test)",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Native handle isolation and late logs with PowerShell 7 parent",
+            "number": 4,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Native handle isolation and late logs with Windows PowerShell 5.1 parent",
+            "number": 5,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Process ownership, save session exclusion and diagnostic collection",
+            "number": 6,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "number": 12,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 13,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/ka8877/unreal_yesu/actions/runs/39991292356/job/120543414329"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/ka8877/unreal_yesu/actions/runs/39991292356"
+  },
+  "checks": [
+    "Native helper compilation and x64 structure layouts",
+    "Native argv roundtrip including Unicode, empty values and quotes",
+    "Unrelated inheritable pipe not retained by live child",
+    "Actual Run-Step returns while worker remains alive",
+    "Subsequent browser step marker reached",
+    "Late stdout/stderr preserved after parent exits",
+    "14 ownership/hash/session exclusion checks",
+    "9 child error collection checks"
+  ],
+  "priorCiRun": {
+    "id": 39991022427,
+    "testAssertions": "passed",
+    "workflow": "failed because expected child failure codes leaked into the Actions step status; suites subsequently run in isolated shells"
+  },
+  "linuxSourceChecks": "TestDemo -SourceOnly -RequireArt passed including 479 C++ assertions; see existing source reports.",
+  "notVerified": [
+    "User PC retry of new launcher",
+    "Unreal render/encode/browser audio/video/input",
+    "Public gameplay URL"
+  ]
+}

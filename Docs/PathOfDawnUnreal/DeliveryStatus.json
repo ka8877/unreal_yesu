@@ -140,5 +140,11 @@
   "local_pc_v8_asset_and_test_steps_completed_user_log": true,
   "local_pc_streamer_websocket_connected_user_log": true,
   "local_pc_v8_browser_video_verified": false,
-  "latest_launch_issue": "Persistent game/server stdout can retain the parent launcher pipeline, preventing automatic browser opening. Windows launch redirects native handles to dedicated log files."
+  "latest_launch_issue": "Fixed inherited unused ancestor pipe handles using an explicit Win32 handle list. Windows CI passed under PS7.6.7 and PS5.1 parents; user PC retry and Unreal/browser media remain unverified.",
+  "windows_launcher_ci": {
+    "passed": true,
+    "url": "https://github.com/ka8877/unreal_yesu/actions/runs/39991292356",
+    "testedCommit": "6fe042e895f5bbd3987a3f6f64b4a7bb73e7f7e0",
+    "unrealOrMediaTest": false
+  }
 }

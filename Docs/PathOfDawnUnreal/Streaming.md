@@ -86,3 +86,11 @@ Start-PathOfDawn.cmd -BuildId <빌드이름> -Streaming -TestCandidate
 `-RenderOffscreen` 모드이므로 Unreal 로그 창에 게임 화면이 나오지 않는 것은 그 자체로 렌더링 실패를 뜻하지 않는다. 호스트를 켜둔 채 Chrome/Edge 한 탭에서 http://127.0.0.1:8080/ → **플레이 화면 열기** → 영상 시작 버튼을 누른다. 게임/시그널링을 종료하면 브라우저로 접속할 수 없다.
 
 자동 브라우저 열기를 막을 수 있는 부모 출력 파이프 상속을 실제 자식 프로세스로 재현했다. Windows에서는 지속 실행 프로세스의 stdout/stderr를 `runtime/logs/<역할>-<고유ID>.stdout.log` / `.stderr.log` 파일로 보내도록 변경했다. 기록된 프로세스의 PID·시작 식별자·실행 경로 검사와 종료 규칙은 유지한다. 인자 전달 검사는 통과했고 Windows의 실제 분리 실행/늦은 로그 보존 검사는 TestDemo에 추가했지만 이 Linux 환경에서는 실행하지 않았다.
+
+## 후속 수정: Windows 핸들 상속 제한
+
+위 첫 수정(`b8b392c2ec60`)은 사용자 PC의 실행기 검사에서 실패했다. `Start-Process`는 stdout/stderr를 파일로 바꿔도 다른 상속 가능한 부모 파이프까지 자식에게 넘긴다. 현재 `WindowsProcessLauncher.cs`는 `CreateProcessW`의 `PROC_THREAD_ATTRIBUTE_HANDLE_LIST`에 NUL 입력과 두 로그 파일만 지정한다. PowerShell에 포함된 C# 컴파일 기능을 사용하며 별도 설치·관리자 권한·방화벽 변경이 필요하지 않다. 실행 경로·PID·시작 식별자 확인은 유지한다.
+
+[Windows CI 실행 39991292356](https://github.com/ka8877/unreal_yesu/actions/runs/39991292356)에서 PowerShell 7.6.7과 Windows PowerShell 5.1 부모 프로세스 모두 통과했다. 실제 Run-Step 반환, 다음 단계 도달, 자식 생존, 부모 종료 후 로그 기록, 불필요한 파이프 비상속을 확인했다. 사용자 GPU PC에서의 재시도와 Unreal 영상·음성·입력은 별도 미검증이다.
+
+기존 설치에서 `& 'C:\PathOfDawn\Play-in-Browser.cmd'`를 실행하면 main의 수정본을 자동으로 가져온다. 새 소스 버전은 별도 폴더에서 빌드하며 기존 저장·패키지는 보존한다. 브라우저가 자동으로 열리지 않으면 실행 세션을 유지한 채 `http://127.0.0.1:8080/`를 연다.
