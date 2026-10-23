@@ -111,6 +111,15 @@ function Test-DawnProcessRunning([string]$Role) {
     $process = Get-Process -Id $record.pid -ErrorAction SilentlyContinue
     return $process -and -not $process.HasExited -and (Get-DawnProcessIdentity $process) -eq $record.startIdentity -and $process.Path -eq $record.executable
 }
+function ConvertTo-DawnNativeArguments([string[]]$Arguments) {
+    # Start-Process joins ArgumentList with spaces. Serialize each argument using
+    # Windows native argv quoting (no cmd.exe or shell expression is involved).
+    return (@(foreach ($argument in $Arguments) {
+        $escaped = [regex]::Replace($argument, '(\\*)"', '$1$1\"')
+        $escaped = [regex]::Replace($escaped, '(\\+)$', '$1$1')
+        '"' + $escaped + '"'
+    }) -join ' ')
+}
 function Start-DawnProcess([string]$Role, [string]$File, [string[]]$Arguments, [string]$WorkingDirectory) {
     $runtime = Join-Path $script:StreamRoot 'runtime'
     New-Item -ItemType Directory -Path $runtime -Force | Out-Null
@@ -126,15 +135,37 @@ function Start-DawnProcess([string]$Role, [string]$File, [string[]]$Arguments, [
                 if (Test-DawnProcessRunning $gameRole) { throw "$gameRole already owns the host save session. Stop it before starting another game." }
             }
         } elseif (Test-DawnProcessRunning $Role) { throw "$Role is already running. Use StopStreaming.ps1." }
-        $info = [Diagnostics.ProcessStartInfo]::new()
-        $info.FileName = $File
-        $info.WorkingDirectory = $WorkingDirectory
-        $info.UseShellExecute = $false
-        foreach ($argument in $Arguments) { $info.ArgumentList.Add($argument) }
-        $process = [Diagnostics.Process]::Start($info)
+        $stdoutLog = $null; $stderrLog = $null
+        if ($IsWindows) {
+            # On Windows Start-Process supplies native file handles for these
+            # redirects. The persistent game/server must not inherit Run-Step's
+            # output pipes: that keeps its native pipeline waiting forever and
+            # prevents the browser-open step, even after the launcher has exited.
+            $logs = Join-Path $runtime 'logs'
+            New-Item -ItemType Directory -Path $logs -Force | Out-Null
+            $logId = $Role + '-' + [guid]::NewGuid().ToString('N')
+            $stdoutLog = Join-Path $logs ($logId + '.stdout.log')
+            $stderrLog = Join-Path $logs ($logId + '.stderr.log')
+            $parameters = @{
+                FilePath=$File; WorkingDirectory=$WorkingDirectory; PassThru=$true
+                RedirectStandardOutput=$stdoutLog; RedirectStandardError=$stderrLog
+                WindowStyle=$(if ($Role -eq 'local-game') {'Normal'} else {'Hidden'})
+            }
+            if ($Arguments.Count) { $parameters.ArgumentList=ConvertTo-DawnNativeArguments $Arguments }
+            $process = Start-Process @parameters
+        } else {
+            # Portable unit tests only; the Windows/Unreal launcher never runs on
+            # this path. Unix Start-Process uses different redirection semantics.
+            $info = [Diagnostics.ProcessStartInfo]::new()
+            $info.FileName = $File
+            $info.WorkingDirectory = $WorkingDirectory
+            $info.UseShellExecute = $false
+            foreach ($argument in $Arguments) { $info.ArgumentList.Add($argument) }
+            $process = [Diagnostics.Process]::Start($info)
+        }
         if (-not $process) { throw "Could not start $Role" }
         try {
-            Write-DawnJson $stateFile ([ordered]@{pid=$process.Id; startedUtc=$process.StartTime.ToUniversalTime().ToString('O'); startIdentity=(Get-DawnProcessIdentity $process); executable=$process.Path; role=$Role})
+            Write-DawnJson $stateFile ([ordered]@{pid=$process.Id; startedUtc=$process.StartTime.ToUniversalTime().ToString('O'); startIdentity=(Get-DawnProcessIdentity $process); executable=$process.Path; role=$Role; stdoutLog=$stdoutLog; stderrLog=$stderrLog})
         } catch {
             if (-not $process.HasExited) { $process.Kill($true); [void]$process.WaitForExit(5000) }
             throw

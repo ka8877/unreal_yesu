@@ -1,0 +1,33 @@
+{
+  "checkedUtc": "2026-10-23T16:39:32.993942+00:00",
+  "reportedSourceCommit": "efd9d2c361a77899458216807c295deec75c9280",
+  "userReportedWindowsBuildId": "local-20261023T161912Z-d6bd",
+  "userLogStepsCompleted": [
+    "environment",
+    "editor",
+    "assets",
+    "tests",
+    "windows-build",
+    "streaming-prepare",
+    "switch-session"
+  ],
+  "userLogObserved": [
+    "Websocket connection made to ws://127.0.0.1:8888",
+    "DefaultStreamer joined",
+    "Cooked Korean font loaded"
+  ],
+  "browserMediaObserved": false,
+  "pipelineReproduction": {
+    "host": "Linux pwsh7, real native child",
+    "childDurationSeconds": 6,
+    "parentWaitMilliseconds": 6714,
+    "cause": "Persistent child inherits native stdout/stderr pipes held by Run-Step"
+  },
+  "fix": "Windows Start-Process supplies native log file handles for persistent processes; PID/start identity/executable checks are retained. Native argument quoting explicitly preserves spaces/quotes/backslashes.",
+  "portableChecks": {
+    "processOwnershipAndHashAssertions": 14,
+    "nativeArgvRoundtrip": "passed"
+  },
+  "windowsDetachedHandoffTest": "Added to TestDemo; not executed on this Linux host",
+  "unrealMediaTest": "Not performed"
+}

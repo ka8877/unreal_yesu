@@ -215,6 +215,8 @@ try {
             Run-Step 'switch-session' 'StopStreaming.ps1' @('-IncludeLocalGame')
             $streamArguments=@('-EngineRoot',$engine.path,'-BuildId',$BuildId)
             if ($TestCandidate) { $streamArguments += '-TestCandidate'; $report.testCandidate=$true; Write-Host '미검증 후보의 첫 브라우저 테스트입니다. 서비스 버전을 승격하지 않습니다.' }
+            Write-Host '게임 화면은 브라우저에 표시됩니다. 실행 중인 게임/서버를 종료하지 마세요.'
+            Write-Host '브라우저가 자동으로 열리지 않으면 http://127.0.0.1:8080/ 에서 플레이 화면 열기와 영상 시작 버튼을 누르세요.'
             Run-Step 'streaming-start' 'StartStreaming.ps1' $streamArguments
             Start-Process 'http://127.0.0.1:8080/'
             Write-Host '같은 PC의 브라우저를 열었습니다. 공개 인터넷 주소가 아닙니다. 영상·소리·조작은 직접 확인하세요.'

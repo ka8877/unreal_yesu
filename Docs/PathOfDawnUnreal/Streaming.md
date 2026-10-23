@@ -77,3 +77,12 @@ Start-PathOfDawn.cmd -BuildId <빌드이름> -Streaming -TestCandidate
 ```
 
 `-TestCandidate`는 실행하려는 패키지의 해시를 검증하되, 첫 관찰을 위해 기존 smoke-report.json 없이 loopback에서 실행하는 옵션이다. 검증 완료로 표시하지 않으며 `runtime/current.json`의 정상 서비스 버전을 변경하지 않는다. 기본 StartStreaming과 UpdateDemo의 검증된 버전 교체 조건은 유지한다. 시작 도구는 프로젝트가 기록한 소유 프로세스만 정리하고 기존 호스트 저장을 유지한다. 브라우저가 열려도 실제 영상·음성·입력은 직접 검사해야 한다. 이 명령의 Windows 실제 실행은 아직 미검증이다.
+
+
+## 2026-10-24 KST 첫 Windows 스트리밍 시작 기록
+
+사용자 로그에서 `efd9d2c361a7`의 Editor, 에셋 생성/검증, tests, Windows 패키징과 streaming-prepare가 완료됐다. 빌드 ID는 `local-20261023T161912Z-d6bd`이며 Unreal의 `DefaultStreamer`가 localhost WebSocket에 연결했다. 아직 브라우저 영상·음성·입력 검증은 아니다.
+
+`-RenderOffscreen` 모드이므로 Unreal 로그 창에 게임 화면이 나오지 않는 것은 그 자체로 렌더링 실패를 뜻하지 않는다. 호스트를 켜둔 채 Chrome/Edge 한 탭에서 http://127.0.0.1:8080/ → **플레이 화면 열기** → 영상 시작 버튼을 누른다. 게임/시그널링을 종료하면 브라우저로 접속할 수 없다.
+
+자동 브라우저 열기를 막을 수 있는 부모 출력 파이프 상속을 실제 자식 프로세스로 재현했다. Windows에서는 지속 실행 프로세스의 stdout/stderr를 `runtime/logs/<역할>-<고유ID>.stdout.log` / `.stderr.log` 파일로 보내도록 변경했다. 기록된 프로세스의 PID·시작 식별자·실행 경로 검사와 종료 규칙은 유지한다. 인자 전달 검사는 통과했고 Windows의 실제 분리 실행/늦은 로그 보존 검사는 TestDemo에 추가했지만 이 Linux 환경에서는 실행하지 않았다.

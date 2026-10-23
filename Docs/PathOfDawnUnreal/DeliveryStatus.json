@@ -133,5 +133,12 @@
   "local_pc_v8_editor_step_completed_user_log": true,
   "local_pc_v8_editor_step_evidence": "User pasted Windows launcher log: environment/editor returned successfully before assets preflight on commit 4b250f963eaad8684981a28aa6eb1d943e59aa49",
   "windows_visual_path_regressions_passed": 4,
-  "windows_visual_path_fix_retry_verified": false
+  "windows_visual_path_fix_retry_verified": true,
+  "local_pc_v8_windows_package_user_reported": true,
+  "local_pc_v8_package_build_id": "local-20261023T161912Z-d6bd",
+  "local_pc_v8_package_source_commit": "efd9d2c361a77899458216807c295deec75c9280",
+  "local_pc_v8_asset_and_test_steps_completed_user_log": true,
+  "local_pc_streamer_websocket_connected_user_log": true,
+  "local_pc_v8_browser_video_verified": false,
+  "latest_launch_issue": "Persistent game/server stdout can retain the parent launcher pipeline, preventing automatic browser opening. Windows launch redirects native handles to dedicated log files."
 }

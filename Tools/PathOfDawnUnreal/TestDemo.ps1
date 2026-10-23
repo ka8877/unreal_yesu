@@ -18,6 +18,7 @@ if ($RequireArt) {
 $core = Join-Path $script:ProjectRoot 'Source/PathOfDawnUnreal/Core'
 $tests = Join-Path $PSScriptRoot 'tests/core_tests.cpp'
 Assert-DawnFile $tests
+Invoke-DawnCommand (Get-Process -Id $PID).Path @('-NoLogo','-NoProfile','-File',(Join-Path $PSScriptRoot 'tests/process_launch_tests.ps1')) (Join-Path $script:EvidenceRoot 'process-launch-tests.log')
 $outputDirectory = Join-Path ([IO.Path]::GetTempPath()) "PathOfDawn-tests-$([guid]::NewGuid().ToString('N'))"
 New-Item -ItemType Directory -Path $outputDirectory | Out-Null
 try {

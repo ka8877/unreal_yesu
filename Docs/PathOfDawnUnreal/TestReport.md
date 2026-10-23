@@ -162,3 +162,8 @@ v8 변경 범위는 타이틀·도입·인물 초상·세 결과의 7종 일러�
 실제 원화·FBX·표면 텍스처 파일을 읽되 relative 경로만 PureWindowsPath로 제공한 재현에서 수정 전 25개 동일 오류, 수정 후 25개 통과를 확인했다. 네 회귀 검사에는 OS별 검사 결과 일치와 잘못된 SHA/빠진 manifest 항목의 거절을 포함한다. TestDemo의 원화 검사에도 회귀 검사를 연결했다. 기록: `Evidence/windows-path-validator-fix.json`. Linux에서 경로 처리를 재현한 검사이며, Windows 재실행·Unreal 가져오기·게임·영상 스트리밍 성공을 의미하지 않는다.
 
 한국어 콘솔 출력도 수정했다. StartHere의 UTF-8 바이트를 부모 Windows PowerShell이 CP949로 해석하던 경계에서 양쪽 입출력 인코딩을 맞추고, Python 자식 출력은 프로세스 환경 `PYTHONIOENCODING=utf-8`로 지정한다. 실제 자식 프로세스와 Python의 CP949 불일치를 재현한 뒤 한국어 및 실패 코드 보존을 확인했다. `Evidence/console-encoding-fix-tests.log` 참조. 이는 Linux pwsh7에서의 바이트 경계 검사이며 Windows PowerShell5.1 화면 재시도는 별도다. 기존 updater 44개·Bootstrap·시작 도구 회귀 검사도 통과했다.
+
+
+## 스트리밍 실행기 출력 파이프 — 2026-10-24 KST
+
+실행 스크립트가 반환해도 6초짜리 자식 프로세스가 native 출력 파이프를 보유하면 상위 Run-Step이 약 6.7초 기다리는 현상을 재현했다. 게임/서버처럼 계속 실행되는 자식이면 자동 브라우저 단계에 도달하지 못할 수 있다. Windows의 지속 프로세스 실행은 전용 stdout/stderr 파일 핸들을 제공하는 Start-Process로 변경했다. 공백·빈 인자·한국어·따옴표·끝 역슬래시·셸 특수문자가 실제 native argv로 유지되는 검사와 소유 프로세스/저장 해시 14개 검사를 통과했다. Windows 분리 실행, 부모 종료 뒤 늦은 로그 기록을 검사하는 통합 테스트는 TestDemo에 연결했으며 Linux에서는 명시적으로 미실행 처리했다. 증거: `Evidence/streaming-launch-handoff.json`.

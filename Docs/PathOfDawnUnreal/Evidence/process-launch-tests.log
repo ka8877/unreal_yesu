@@ -1,0 +1,2 @@
+PASS: native arguments retain empty values, spaces, Unicode, embedded quotes, trailing backslashes and shell punctuation.
+NOT RUN: Windows detached process/file-handle test requires Windows. It will run in TestDemo on the target host.

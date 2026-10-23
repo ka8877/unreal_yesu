@@ -34,6 +34,8 @@ if (-not $startMutex.WaitOne(0)) { $startMutex.Dispose(); throw 'Another streami
 $createdServer = $false
 $createdGame = $false
 try {
+    Write-Host 'Starting offscreen Unreal rendering. The game picture appears in the browser, not in an Unreal log window.'
+    Write-Host 'Player address: http://127.0.0.1:8080/ . Keep the host running; click the page and video start buttons.'
     Write-DawnJson $config @{vendor=$vendor; buildId=$BuildId; payloadSha256=$manifest.payloadSha256; port=8080; streamerPort=8888; logRoot=(Join-Path $runtime 'logs')}
     $server = Start-DawnProcess 'signalling' $node @((Join-Path $script:StreamRoot 'server.mjs'),'--config',$config) $script:StreamRoot
     $createdServer = $true
@@ -50,6 +52,18 @@ try {
     if (-not $TestCandidate) { Write-DawnJson (Join-Path $runtime 'current.json') @{buildId=$BuildId; switchedUtc=[DateTime]::UtcNow.ToString('O'); payloadSha256=$manifest.payloadSha256} }
     Write-Host 'Streamer registered: http://127.0.0.1:8080/ (same host only). Now verify actual video, audio, movement, choices and rewind. Registration is not media proof.'
 } catch {
+    # Detached processes write to their own files; preserve useful startup errors
+    # in the launcher log before cleaning up this attempt's owned processes.
+    foreach ($role in @('signalling','stream-game')) {
+        $recordPath = Join-Path $runtime "$role.process.json"
+        if (Test-Path -LiteralPath $recordPath) {
+            $record = Get-Content -Raw -LiteralPath $recordPath | ConvertFrom-Json
+            if ($record.PSObject.Properties.Name -contains 'stderrLog' -and $record.stderrLog -and (Test-Path -LiteralPath $record.stderrLog)) {
+                Write-Host "Startup stderr ($role): $($record.stderrLog)"
+                Get-Content -LiteralPath $record.stderrLog -Tail 16 | ForEach-Object { Write-Host $_ }
+            }
+        }
+    }
     if ($createdGame) { Stop-DawnProcess 'stream-game' }
     if ($createdServer) { Stop-DawnProcess 'signalling' }
     throw
