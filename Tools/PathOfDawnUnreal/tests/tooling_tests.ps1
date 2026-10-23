@@ -45,7 +45,7 @@ try {
     Require (-not (Test-DawnProcessRunning 'local-game')) 'Owned process did not stop'
     Write-DawnJson (Join-Path $temporary 'runtime/unrelated.process.json') @{pid=$PID;startedUtc='not-this-process-start';startIdentity='not-this-process-start';executable=$pwshPath;role='unrelated'}
     MustReject { Stop-DawnProcess 'unrelated' } 'Stop accepted an unrelated/reused PID'
-    Write-Output "PASS $checks tooling assertions (space paths, unsafe IDs, hashes, smoke rejection, atomic JSON, session exclusion, owned-process cleanup). No Windows/Unreal execution."
+    Write-Output "PASS $checks tooling assertions (space paths, unsafe IDs, hashes, smoke rejection, atomic JSON, session exclusion, owned-process cleanup). Host: $([Environment]::OSVersion.Platform); no Unreal/media test."
 } finally {
     if ($script:StreamRoot -eq $temporary) { Stop-DawnProcess 'local-game'; Stop-DawnProcess 'stream-game' }
     $script:StreamRoot = $originalStreamRoot

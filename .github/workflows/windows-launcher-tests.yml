@@ -30,5 +30,10 @@ jobs:
       - name: Process ownership, save session exclusion and diagnostic collection
         shell: pwsh
         run: |
-          ./Tools/PathOfDawnUnreal/tests/tooling_tests.ps1
-          ./Tools/PathOfDawnUnreal/tests/start_step_tests.ps1
+          # Diagnostic tests intentionally catch failing native children. Run
+          # each suite in its own shell so their expected LASTEXITCODE values
+          # cannot be mistaken for this Actions step's exit status.
+          foreach ($suite in @('tooling_tests.ps1', 'start_step_tests.ps1')) {
+            & (Get-Process -Id $PID).Path -NoLogo -NoProfile -File "./Tools/PathOfDawnUnreal/tests/$suite"
+            if ($LASTEXITCODE -ne 0) { throw "$suite failed with exit code $LASTEXITCODE" }
+          }
