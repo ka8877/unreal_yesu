@@ -11,6 +11,7 @@ Invoke-DawnCommand $python @('-m','unittest','discover','-s',(Join-Path $PSScrip
 Invoke-DawnCommand $python @('-m','unittest','discover','-s',(Join-Path $PSScriptRoot 'tests'),'-p','test_narrative_import.py','-v') (Join-Path $script:EvidenceRoot 'narrative-import-contract-tests.log')
 Invoke-DawnCommand $python @('-m','unittest','discover','-s',(Join-Path $PSScriptRoot 'tests'),'-p','test_editor_verification.py','-v') (Join-Path $script:EvidenceRoot 'editor-verification-contract-tests.log')
 if ($RequireArt) {
+    Invoke-DawnCommand $python @('-m','unittest','discover','-s',(Join-Path $PSScriptRoot 'tests'),'-p','test_visual_source_paths.py','-v') (Join-Path $script:EvidenceRoot 'visual-source-path-tests.log')
     Invoke-DawnCommand $python @((Join-Path $PSScriptRoot 'validate_visual_sources.py'),'--root',$script:RepoRoot,'--report',(Join-Path $script:EvidenceRoot 'visual-source-validation.json')) (Join-Path $script:EvidenceRoot 'visual-source-validation.log')
     Invoke-DawnCommand $python @((Join-Path $PSScriptRoot 'validate_font.py')) (Join-Path $script:EvidenceRoot 'font-validation.log')
 }

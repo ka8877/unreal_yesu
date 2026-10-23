@@ -26,7 +26,9 @@ def validate(root):
     for path,kind in inputs:
         try:
             data=path.read_bytes()
-            record={'file':str(path.relative_to(root)),'id':path.stem,'kind':kind,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()}
+            # AssetManifest uses repository-relative '/' keys on every OS.
+            # str(WindowsPath(...)) would introduce '\\' and reject valid art.
+            record={'file':path.relative_to(root).as_posix(),'id':path.stem,'kind':kind,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()}
             if kind=='mesh':
                 if len(data)<1024 or not data.startswith(b'Kaydara FBX Binary'):
                     raise ValueError('Expected a nonempty binary FBX, not a placeholder')
@@ -39,7 +41,7 @@ def validate(root):
                     if kind=='surface' and image.width!=image.height:raise ValueError('Expected a square tiling texture')
             records.append(record)
         except (OSError,ValueError) as error:
-            errors.append(str(path.relative_to(root))+': '+str(error))
+            errors.append(path.relative_to(root).as_posix()+': '+str(error))
     for group,expected in (('illustration',7),('mesh',15),('surface',3)):
         group_records=[record for record in records if record['kind']==group]
         if len(group_records)!=expected:errors.append(f'Expected {expected} {group} sources, found {len(group_records)}')

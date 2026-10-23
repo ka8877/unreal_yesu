@@ -1,0 +1,27 @@
+{
+  "checkedUtc": "2026-10-23T16:13:32.589164+00:00",
+  "reportedByUser": "Windows PowerShell log, assets validation before Editor import",
+  "affectedCommit": "4b250f963eaad8684981a28aa6eb1d943e59aa49",
+  "cause": "OS-native str(relative path) produced Windows backslashes; AssetManifest.json uses slash-separated repository paths",
+  "reproduction": "Real repository bytes/PNG/FBX validation through PureWindowsPath relative semantics on Linux; not a Windows execution",
+  "before": {
+    "status": "failed",
+    "provenanceErrors": 25,
+    "example": "Missing/stale provenance manifest entry: SourceArt\\PathOfDawnUnreal\\VisualV8\\Illustrations\\IL_Title_Dawn.png"
+  },
+  "after": {
+    "status": "passed",
+    "validatedSources": 25
+  },
+  "regressionTests": {
+    "passed": 4,
+    "cases": [
+      "Windows path records match real assets",
+      "Windows/native records identical",
+      "Wrong SHA still rejected",
+      "Missing manifest entry still rejected"
+    ]
+  },
+  "windowsFullRetry": "Not performed here",
+  "unrealGraphicsOrStreaming": "Not performed here"
+}

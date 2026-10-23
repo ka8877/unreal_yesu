@@ -34,3 +34,8 @@ Windows 더블클릭 시작 도구의 탐색·UBT 실행·실패 전파는 사�
 v6는 에셋 생성의 내부 Python 예외와 전체 Editor 로그를 보존한다. 현재 대화에는 PC 터미널·화면 연결이 없다. 로컬 도구로 실행과 수정을 이어갈 수 있는 새 Windows Codex 작업 절차는 [LocalCodex](LocalCodex.md)에 있다. 실제 로컬 세션에서 사용할 수 있는 화면 조작 도구는 별도로 확인해야 한다.
 
 설치 도우미는 공식 winget 도구 설치를 호출하도록 작성하고 Linux에서 호출 로직만 검사했다. 실제 Windows 설치·권한 요청·설치 완료 후 탐색은 사용자 PC에서 검증해야 한다. Epic 로그인과 UE 설치는 별도 사용자 단계다. Store PowerShell의 실제 실행 경로는 버전 probe 후 허용하도록 v3에서 수정했다.
+
+
+## 2026-10-24 KST Windows 자동 업데이트 후 assets 중단
+
+`4b250f963eaa`에서 보인 25개 `Missing/stale provenance manifest entry`는 Windows 경로 구분자 비교 오류로 수정했다. 기존 `C:\PathOfDawn\Play-in-Browser.cmd`가 최신 소스를 받아 재시도한다. 엔진/도구 재설치나 기존 소스 폴더 삭제는 필요하지 않다. 새 폴더의 Windows 전체 재시도는 아직 미검증이다.

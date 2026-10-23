@@ -8,6 +8,11 @@ param(
     [switch]$DownloadOnly
 )
 $ErrorActionPreference = 'Stop'
+# Match child PowerShell UTF-8 output before a Windows PowerShell 5.1 parent
+# creates a native pipeline. No registry, machine policy or persistent PATH change.
+$OutputEncoding = New-Object System.Text.UTF8Encoding($false)
+[Console]::InputEncoding = $OutputEncoding
+[Console]::OutputEncoding = $OutputEncoding
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 $repo = 'ka8877/unreal_yesu'
 $headers = @{ 'User-Agent' = 'PathOfDawn-Updater'; 'Accept' = 'application/vnd.github+json' }

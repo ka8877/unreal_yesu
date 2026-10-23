@@ -1,0 +1,1 @@
+PASS: CP949 native/Python decode failures reproduced; real UTF-8 child stdout preserved; console input/output aligned; exit 37 and Korean failure output retained; StartHere Python output corrected.

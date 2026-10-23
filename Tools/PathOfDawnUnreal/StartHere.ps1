@@ -4,7 +4,12 @@
 [CmdletBinding()]
 param([string]$EngineRoot, [string]$BuildId, [switch]$Streaming, [switch]$TestCandidate, [switch]$CheckOnly, [switch]$BuildOnly)
 $ErrorActionPreference = 'Stop'
-[Console]::OutputEncoding = New-Object System.Text.UTF8Encoding($false)
+$OutputEncoding = New-Object System.Text.UTF8Encoding($false)
+[Console]::InputEncoding = $OutputEncoding
+[Console]::OutputEncoding = $OutputEncoding
+# Redirected Python stdout otherwise follows the Windows locale, not the console
+# code page. All downstream PowerShell logs expect UTF-8 native output.
+$env:PYTHONIOENCODING = 'utf-8'
 $repo = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '../..'))
 $stamp = (Get-Date).ToUniversalTime().ToString('yyyyMMddTHHmmssZ')
 $diagnostic = Join-Path $repo "Docs/PathOfDawnUnreal/Evidence/start-here-$stamp.json"

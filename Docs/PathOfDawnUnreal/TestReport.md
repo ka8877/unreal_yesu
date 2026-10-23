@@ -153,3 +153,12 @@ v8 변경 범위는 타이틀·도입·인물 초상·세 결과의 7종 일러�
 소스 자동 업데이트/보존/경로/압축/모의 세션 롤백 44개 검사, Bootstrap의 고정 커밋·blob 해시·인자 전달·임시 파일 정리·변조 거절 검사, 공식 Windows Node/MinGit ZIP 및 안전한 추출·캐시 31개 검사를 통과했다. `StartHere -BuildOnly`를 추가했으며 기존 자식 프로세스 오류 수집 회귀 검사를 통과했다. `TestDemo -SourceOnly -RequireArt`를 다시 실행해 코어 479개 assertion, 콘텐츠/원화/폰트 검사를 통과했다.
 
 모의 세션 검사와 Linux에서의 Windows ZIP 추출은 Windows 실제 실행이 아니다. Unreal 빌드·게임 플레이·WebRTC 영상은 여기서 실행하지 못했다. 실제 GitHub 게시·다운로드 검증 기록은 `Evidence/github-delivery-verification.json`에 별도로 남긴다.
+
+
+## Windows 에셋 경로 검사 수정 — 2026-10-24 KST
+
+사용자 PowerShell 로그에서 `4b250f963eaa`의 environment/editor 단계가 끝난 뒤 assets의 원화 사전 검사에서 멈춘 것을 확인했다. `str(path.relative_to(root))`가 Windows에서는 역슬래시를 만들어 `/`로 기록한 AssetManifest의 25개 항목을 잘못 불일치 처리했다. 실제 파일 누락·엔진 설치 오류로 진단한 것이 아니다. 경로를 `.as_posix()`로 통일했다.
+
+실제 원화·FBX·표면 텍스처 파일을 읽되 relative 경로만 PureWindowsPath로 제공한 재현에서 수정 전 25개 동일 오류, 수정 후 25개 통과를 확인했다. 네 회귀 검사에는 OS별 검사 결과 일치와 잘못된 SHA/빠진 manifest 항목의 거절을 포함한다. TestDemo의 원화 검사에도 회귀 검사를 연결했다. 기록: `Evidence/windows-path-validator-fix.json`. Linux에서 경로 처리를 재현한 검사이며, Windows 재실행·Unreal 가져오기·게임·영상 스트리밍 성공을 의미하지 않는다.
+
+한국어 콘솔 출력도 수정했다. StartHere의 UTF-8 바이트를 부모 Windows PowerShell이 CP949로 해석하던 경계에서 양쪽 입출력 인코딩을 맞추고, Python 자식 출력은 프로세스 환경 `PYTHONIOENCODING=utf-8`로 지정한다. 실제 자식 프로세스와 Python의 CP949 불일치를 재현한 뒤 한국어 및 실패 코드 보존을 확인했다. `Evidence/console-encoding-fix-tests.log` 참조. 이는 Linux pwsh7에서의 바이트 경계 검사이며 Windows PowerShell5.1 화면 재시도는 별도다. 기존 updater 44개·Bootstrap·시작 도구 회귀 검사도 통과했다.

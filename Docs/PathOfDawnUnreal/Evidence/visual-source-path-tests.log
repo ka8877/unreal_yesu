@@ -1,0 +1,9 @@
+test_real_sources_match_manifest_with_windows_relative_paths (test_visual_source_paths.VisualSourcePathsTests.test_real_sources_match_manifest_with_windows_relative_paths) ... ok
+test_windows_and_native_validation_have_identical_asset_records (test_visual_source_paths.VisualSourcePathsTests.test_windows_and_native_validation_have_identical_asset_records) ... ok
+test_windows_still_rejects_missing_manifest_entry (test_visual_source_paths.VisualSourcePathsTests.test_windows_still_rejects_missing_manifest_entry) ... ok
+test_windows_still_rejects_wrong_asset_hash (test_visual_source_paths.VisualSourcePathsTests.test_windows_still_rejects_wrong_asset_hash) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.414s
+
+OK

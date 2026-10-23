@@ -10,6 +10,9 @@ param(
 )
 $ErrorActionPreference='Stop'
 Set-StrictMode -Version 2
+$OutputEncoding = New-Object System.Text.UTF8Encoding($false)
+[Console]::InputEncoding = $OutputEncoding
+[Console]::OutputEncoding = $OutputEncoding
 
 function Write-SyncJson([string]$Path, $Value) {
     $temporary="$Path.$([guid]::NewGuid().ToString('N')).tmp"
@@ -108,6 +111,11 @@ function Get-SyncBuild([string]$Root) {
 }
 function Invoke-SyncChild([string]$Shell,[string]$ScriptPath,[string[]]$Arguments=@()) {
     if (-not (Test-Path -LiteralPath $ScriptPath -PathType Leaf)) { throw "Missing child script: $ScriptPath" }
+    # Native stdout is decoded using the parent's Console.OutputEncoding.
+    # StartHere emits UTF-8; a cached CP949 parent previously corrupted Korean.
+    $OutputEncoding = New-Object System.Text.UTF8Encoding($false)
+    [Console]::InputEncoding = $OutputEncoding
+    [Console]::OutputEncoding = $OutputEncoding
     $prior=$ErrorActionPreference
     try {
         $ErrorActionPreference='Continue'; $PSNativeCommandUseErrorActionPreference=$false
@@ -253,7 +261,7 @@ try {
         if ($Streaming) {
             $browserTools=Join-Path $sourceRoot 'Tools/PathOfDawnUnreal/PrepareBrowserTools.ps1'
             if (-not (Test-Path -LiteralPath $browserTools -PathType Leaf)) { throw 'Browser tooling setup script is missing from this source version.' }
-            & $browserTools -ToolsRoot (Join-Path $InstallRoot 'tools') | Out-Host
+            & $browserTools -ToolsRoot (Join-Path $InstallRoot 'tools') | Out-Null
         }
         $shell=(Get-Command powershell.exe -CommandType Application -ErrorAction Stop).Source
         $start=Join-Path $sourceRoot 'Tools/PathOfDawnUnreal/StartHere.ps1'
