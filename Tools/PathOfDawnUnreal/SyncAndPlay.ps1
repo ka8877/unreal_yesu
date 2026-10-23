@@ -143,9 +143,9 @@ exit /b %DawnExit%
     $desired=@{
         'Bootstrap.ps1'=[IO.File]::ReadAllBytes((Join-Path $Source 'Tools/PathOfDawnUnreal/Bootstrap.ps1'))
         'StopManagedSession.ps1'=[IO.File]::ReadAllBytes((Join-Path $Source 'Tools/PathOfDawnUnreal/StopManagedSession.ps1'))
-        'Update-PathOfDawn.cmd'=[Text.Encoding]::ASCII.GetBytes($content.Replace("`n","`r`n"))
-        'Play-in-Browser.cmd'=[Text.Encoding]::ASCII.GetBytes($browser.Replace("`n","`r`n"))
-        'Stop-PathOfDawn.cmd'=[Text.Encoding]::ASCII.GetBytes($stop.Replace("`n","`r`n"))
+        'Update-PathOfDawn.cmd'=[Text.Encoding]::ASCII.GetBytes($content.Replace("`r`n","`n").Replace("`n","`r`n"))
+        'Play-in-Browser.cmd'=[Text.Encoding]::ASCII.GetBytes($browser.Replace("`r`n","`n").Replace("`n","`r`n"))
+        'Stop-PathOfDawn.cmd'=[Text.Encoding]::ASCII.GetBytes($stop.Replace("`r`n","`n").Replace("`n","`r`n"))
     }
     $receiptPath=Join-Path $Root '.dawn-launchers.json'
     $records=@()
