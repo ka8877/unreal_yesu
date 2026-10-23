@@ -112,8 +112,8 @@ function Test-DawnProcessRunning([string]$Role) {
     return $process -and -not $process.HasExited -and (Get-DawnProcessIdentity $process) -eq $record.startIdentity -and $process.Path -eq $record.executable
 }
 function ConvertTo-DawnNativeArguments([string[]]$Arguments) {
-    # Start-Process joins ArgumentList with spaces. Serialize each argument using
-    # Windows native argv quoting (no cmd.exe or shell expression is involved).
+    # Serialize the CreateProcess command line using Windows native argv quoting.
+    # No cmd.exe or shell expression is involved.
     return (@(foreach ($argument in $Arguments) {
         $escaped = [regex]::Replace($argument, '(\\*)"', '$1$1\"')
         $escaped = [regex]::Replace($escaped, '(\\+)$', '$1$1')
@@ -137,22 +137,19 @@ function Start-DawnProcess([string]$Role, [string]$File, [string[]]$Arguments, [
         } elseif (Test-DawnProcessRunning $Role) { throw "$Role is already running. Use StopStreaming.ps1." }
         $stdoutLog = $null; $stderrLog = $null
         if ($IsWindows) {
-            # On Windows Start-Process supplies native file handles for these
-            # redirects. The persistent game/server must not inherit Run-Step's
-            # output pipes: that keeps its native pipeline waiting forever and
-            # prevents the browser-open step, even after the launcher has exited.
+            # Start-Process redirects stdio but still inherits OTHER inheritable
+            # handles, including ancestor PowerShell pipes. Restrict inheritance
+            # at CreateProcess to NUL input and the two dedicated log handles.
             $logs = Join-Path $runtime 'logs'
             New-Item -ItemType Directory -Path $logs -Force | Out-Null
             $logId = $Role + '-' + [guid]::NewGuid().ToString('N')
             $stdoutLog = Join-Path $logs ($logId + '.stdout.log')
             $stderrLog = Join-Path $logs ($logId + '.stderr.log')
-            $parameters = @{
-                FilePath=$File; WorkingDirectory=$WorkingDirectory; PassThru=$true
-                RedirectStandardOutput=$stdoutLog; RedirectStandardError=$stderrLog
-                WindowStyle=$(if ($Role -eq 'local-game') {'Normal'} else {'Hidden'})
+            if (-not ('PathOfDawn.Tools.WindowsProcessLauncher' -as [type])) {
+                Add-Type -Path (Join-Path $PSScriptRoot 'WindowsProcessLauncher.cs')
             }
-            if ($Arguments.Count) { $parameters.ArgumentList=ConvertTo-DawnNativeArguments $Arguments }
-            $process = Start-Process @parameters
+            $commandLine = ConvertTo-DawnNativeArguments (@($File) + $Arguments)
+            $process = [PathOfDawn.Tools.WindowsProcessLauncher]::Start($File, $commandLine, $WorkingDirectory, $stdoutLog, $stderrLog, ($Role -ne 'local-game'))
         } else {
             # Portable unit tests only; the Windows/Unreal launcher never runs on
             # this path. Unix Start-Process uses different redirection semantics.

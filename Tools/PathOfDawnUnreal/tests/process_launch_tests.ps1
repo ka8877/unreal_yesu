@@ -1,6 +1,7 @@
 #requires -Version 7.2
 # Real native argv roundtrip on every host, plus the real Run-Step/long-lived
 # process handoff on Windows. No Unreal, GPU or media success is inferred.
+param([string]$WrapperShell)
 $ErrorActionPreference='Stop'
 . (Join-Path $PSScriptRoot '../Common.ps1')
 $common=[IO.Path]::GetFullPath((Join-Path $PSScriptRoot '../Common.ps1'))
@@ -8,8 +9,19 @@ $start=[IO.Path]::GetFullPath((Join-Path $PSScriptRoot '../StartHere.ps1'))
 $temporary=Join-Path ([IO.Path]::GetTempPath()) ('Dawn launch tests '+[guid]::NewGuid().ToString('N'))
 [void][IO.Directory]::CreateDirectory($temporary)
 $shell=(Get-Process -Id $PID).Path
-$wrapper=$null; $script:StreamRoot=$temporary
+if (-not $WrapperShell) { $WrapperShell=$shell }
+$wrapper=$null; $script:StreamRoot=$temporary; $failed=$false
 try {
+    # Compile the actual native launcher on every host. This catches C# errors
+    # even where the Win32 APIs cannot be executed; it is not a Windows pass.
+    Add-Type -Path (Join-Path $PSScriptRoot '../WindowsProcessLauncher.cs')
+    if ([IntPtr]::Size -eq 8) {
+        foreach ($layout in @{SecurityAttributes=24;StartupInfo=104;StartupInfoEx=112;ProcessInformation=24}.GetEnumerator()) {
+            $type=[PathOfDawn.Tools.WindowsProcessLauncher].GetNestedType($layout.Key,[Reflection.BindingFlags]::NonPublic)
+            if ([Runtime.InteropServices.Marshal]::SizeOf([Activator]::CreateInstance($type)) -ne $layout.Value) { throw "Native structure layout mismatch: $($layout.Key)" }
+        }
+    }
+    Write-Host 'PASS: native launcher C# compiles; 64-bit Win32 structure layouts match.'
     $python=(Get-Command $(if ($IsWindows) {'python.exe'} else {'python3'}) -CommandType Application -ErrorAction Stop | Select-Object -First 1).Source
     $arguments=@('','two words','Korean_한국어','a"b','C:\folder with spaces\','backslash\"quote','literal $() & | ; % ! ` chars')
     $info=[Diagnostics.ProcessStartInfo]::new()
@@ -27,11 +39,23 @@ try {
         return
     }
 
+    # A deliberately inheritable, UNUSED pipe must not leak into the worker.
+    # Redirecting its standard output alone does not satisfy this check.
+    $probe=[IO.Pipes.AnonymousPipeServerStream]::new([IO.Pipes.PipeDirection]::In,[IO.HandleInheritability]::Inheritable)
+    try {
+        $child=Start-DawnProcess 'leak-probe' $shell @('-NoLogo','-NoProfile','-Command','Start-Sleep -Seconds 30') $temporary
+        $probe.DisposeLocalCopyOfClientHandle()
+        $read=$probe.ReadAsync([byte[]]::new(1),0,1)
+        if (-not $read.Wait(2000) -or $read.Result -ne 0) { throw 'An unrelated inheritable pipe leaked into the persistent child.' }
+        if (-not (Test-DawnProcessRunning 'leak-probe')) { throw 'Handle-isolation probe exited prematurely.' }
+        Write-Host 'PASS: persistent child did not inherit an unrelated pipe; parent sees EOF while the child is still alive.'
+    } finally { Stop-DawnProcess 'leak-probe'; $probe.Dispose() }
+
     [IO.File]::WriteAllText((Join-Path $temporary 'worker.ps1'),@'
 [Console]::WriteLine('worker early stdout')
 [Console]::Error.WriteLine('worker early stderr')
 [IO.File]::WriteAllText((Join-Path $PSScriptRoot 'worker.ready'),'ready')
-for ($i=0; $i -lt 150; $i++) {
+for ($i=0; $i -lt 450; $i++) {
     if (Test-Path -LiteralPath (Join-Path $PSScriptRoot 'worker.release')) {
         [Console]::WriteLine('worker late stdout')
         [Console]::Error.WriteLine('worker late stderr')
@@ -66,17 +90,21 @@ Run-Step 'launch' 'launch.ps1' @('-Common',$Common,'-Shell',$Shell)
 [IO.File]::WriteAllText((Join-Path $PSScriptRoot 'browser-step.ready'),'next step reached')
 '@)
     $info=[Diagnostics.ProcessStartInfo]::new()
-    $info.FileName=$shell; $info.UseShellExecute=$false
+    $info.FileName=$WrapperShell; $info.UseShellExecute=$false
     $info.RedirectStandardOutput=$true; $info.RedirectStandardError=$true
     foreach ($argument in @('-NoLogo','-NoProfile','-File',(Join-Path $temporary 'wrapper.ps1'),'-Common',$common,'-Shell',$shell)) { $info.ArgumentList.Add($argument) }
     $wrapper=[Diagnostics.Process]::Start($info)
     $stdoutTask=$wrapper.StandardOutput.ReadToEndAsync(); $stderrTask=$wrapper.StandardError.ReadToEndAsync()
-    $deadline=[DateTime]::UtcNow.AddSeconds(12)
+    $deadline=[DateTime]::UtcNow.AddSeconds(20)
     while ([DateTime]::UtcNow -lt $deadline -and -not (Test-Path -LiteralPath (Join-Path $temporary 'browser-step.ready'))) {
-        if ($wrapper.HasExited -and -not (Test-Path -LiteralPath (Join-Path $temporary 'browser-step.ready'))) { throw "Launcher exited before its next step: $($stdoutTask.Result) $($stderrTask.Result)" }
+        if ($wrapper.HasExited -and -not (Test-Path -LiteralPath (Join-Path $temporary 'browser-step.ready'))) {
+            $outText=if ($stdoutTask.IsCompleted) { $stdoutTask.Result } else { '[stdout still open]' }
+            $errText=if ($stderrTask.IsCompleted) { $stderrTask.Result } else { '[stderr still open]' }
+            throw "Launcher exited before its next step: $outText $errText"
+        }
         Start-Sleep -Milliseconds 100
     }
-    if (-not (Test-Path -LiteralPath (Join-Path $temporary 'browser-step.ready'))) { throw 'Persistent child retained the launcher output pipe; browser-open step could not be reached.' }
+    if (-not (Test-Path -LiteralPath (Join-Path $temporary 'browser-step.ready'))) { throw 'Launcher did not reach its next step within 20 seconds. Worker and launcher logs follow.' }
     if (-not (Test-DawnProcessRunning 'fixture')) { throw 'Detached child did not remain alive after the launch step returned.' }
     if (-not $wrapper.WaitForExit(3000) -or $wrapper.ExitCode -ne 0) { throw 'Launcher did not finish independently of its child.' }
     $record=Get-Content -LiteralPath (Join-Path $temporary 'runtime/fixture.process.json') -Raw | ConvertFrom-Json
@@ -88,8 +116,16 @@ Run-Step 'launch' 'launch.ps1' @('-Common',$Common,'-Shell',$Shell)
     $stderr=Get-Content -LiteralPath $record.stderrLog -Raw
     if ($stdout -notmatch 'worker early stdout' -or $stdout -notmatch 'worker late stdout' -or $stderr -notmatch 'worker early stderr' -or $stderr -notmatch 'worker late stderr') { throw 'Detached stdout/stderr was lost after the launcher exited.' }
     Write-Host 'PASS: Windows Run-Step returned while its child remained alive; subsequent browser step reached; late stdout/stderr preserved in dedicated logs.'
+} catch {
+    $failed=$true
+    Write-Host "Process-launch diagnostics retained at: $temporary"
+    Get-ChildItem -LiteralPath $temporary -Recurse -Filter '*.log' | ForEach-Object {
+        Write-Host "Log: $($_.FullName)"
+        Get-Content -LiteralPath $_.FullName -Tail 16 -ErrorAction SilentlyContinue | ForEach-Object { Write-Host $_ }
+    }
+    throw
 } finally {
     if ($wrapper -and -not $wrapper.HasExited) { $wrapper.Kill($true); [void]$wrapper.WaitForExit(3000) }
     Stop-DawnProcess 'fixture'
-    Remove-Item -LiteralPath $temporary -Recurse -Force
+    if (-not $failed) { Remove-Item -LiteralPath $temporary -Recurse -Force }
 }
