@@ -1,0 +1,5489 @@
+{
+  "kind": "Blender source-art layout render; NOT Unreal gameplay or screenshot",
+  "blender_version": "4.3.2",
+  "render_engine": "Cycles CPU",
+  "resolution": [
+    1440,
+    810
+  ],
+  "samples": 32,
+  "denoising": false,
+  "generator": "Tools/PathOfDawnUnreal/generate_demo_assets.py",
+  "generator_sha256": "d0cd713bbad90849dbee1ef44dcc5d778c1dc7dcdbaa2a99c13d2f41f27eb35c",
+  "method": "Evaluated actual create_map actor placement function through Blender adapter; centimetres converted to metres. Static FBX files imported without geometry replacement. Invisible collision omitted.",
+  "limitations": [
+    "Cycles lighting/haze approximates art direction, not Unreal Lumen or actual GPU output.",
+    "FBX orientation/conversion, live movement, collisions, UI and camera behavior still require UE verification.",
+    "Traveler shown at initial foot location; CharacterMovement not simulated."
+  ],
+  "source_hashes": {
+    "T_LakeNormal.png": "783a0aeedb85d020b7a32602b9d08a85f6cd7c3eaec1bea406ca1f0a0d6bcf2b",
+    "T_ShoreAlbedo.png": "4b29b477fe96eb8f5fa1658245ff41f3500698958c73f31a0113c69524e7e2f9",
+    "T_ShoreNormal.png": "1168b6c93ea2f25aa8289521e932cd17e0956516d55a032bacbeda5aa2bd4672",
+    "SM_ShoreGround.fbx": "f28eee13883f743266b0f29532f9ecb967bba6a6bc9b8fb306642f7509309de8",
+    "SM_PathSlab.fbx": "3f49bcc9ccefa16ee9656229ef77d8000d9f71a69bf707db42c014a2072834de",
+    "SM_StoneWall.fbx": "c5ca23f35afb74241e9ca870c8753c564ec168f0233cab36ad22cd4809fe9d79",
+    "SM_Jar.fbx": "99e2e5c8dafd229ffaffcacd968ef761085b96857576b3ad7cb347193fab4cbc",
+    "SM_ShoreRock.fbx": "3195e8a7a8776dcbed7e5272e665ba696795e26b33b63f3441a54d75f1b50bd1",
+    "SM_Canopy.fbx": "31b70bef0f090287be1df99568f4b70d9ab089e383cac8f36ecfa8ac788009cf",
+    "SM_OliveTree.fbx": "61a82b34a1239f13d38486bacd7ddcd261f8976daa021a3f925b566ba562a4d6",
+    "SM_ReedClump.fbx": "affa871d50f1b21e63e7ef7f5aced4fe07e1fa1f6ca3c391dbc7ea6f75d2e295",
+    "SM_Boat.fbx": "d1711b49333cd8c5c49c4d7391a57cdcca8c64434e35618feab63f41041ac513",
+    "SM_Net.fbx": "33368e0a1f5f0e3663477cd4536a03dd401cacc23af0c84cdae15a1381bbc58c",
+    "SM_Simon.fbx": "4794e928a75c59880c308eb6a8cc8baa2a33bebfd4ad35edd3491e2b19fc6017",
+    "SM_Jesus.fbx": "c54957c7ff74c9c5e793fb0f823315a09d91d1525d878b5af3f7489f318b6060",
+    "SM_Traveler.fbx": "0b89415eb4ee449f35b15644df43b9f9dea7dfdd1da535d3feb701981804eded",
+    "SM_DistantRidge.fbx": "668966d5b0c2b2b5857dd8bd046e12b5ed543a4b2e83e6559cc8f0eeb31df906"
+  },
+  "visible_actor_count": 263,
+  "placements": [
+    {
+      "label": "Walkable_shore",
+      "location_cm": [
+        0,
+        -550,
+        -55
+      ],
+      "scale": [
+        46,
+        29,
+        1
+      ],
+      "visible": false
+    },
+    {
+      "label": "ShoreGround",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreGround",
+      "location_cm": [
+        0,
+        -550,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreBackdrop_-1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreGround",
+      "location_cm": [
+        -4540,
+        -550,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreBackdrop_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreGround",
+      "location_cm": [
+        4540,
+        -550,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "visible": true
+    },
+    {
+      "label": "SouthBackdrop",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreGround",
+      "location_cm": [
+        0,
+        -4020,
+        -18
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        3,
+        1.5,
+        1
+      ],
+      "visible": true
+    },
+    {
+      "label": "Lake",
+      "mesh": "/Engine/BasicShapes/Plane",
+      "location_cm": [
+        0,
+        11200,
+        -9
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        600,
+        210,
+        1
+      ],
+      "visible": true
+    },
+    {
+      "label": "Boundary_Water",
+      "location_cm": [
+        0,
+        875,
+        180
+      ],
+      "scale": [
+        47,
+        0.7,
+        4
+      ],
+      "visible": false
+    },
+    {
+      "label": "Boundary_West",
+      "location_cm": [
+        -2300,
+        -550,
+        180
+      ],
+      "scale": [
+        0.7,
+        30,
+        4
+      ],
+      "visible": false
+    },
+    {
+      "label": "Boundary_East",
+      "location_cm": [
+        2300,
+        -550,
+        180
+      ],
+      "scale": [
+        0.7,
+        30,
+        4
+      ],
+      "visible": false
+    },
+    {
+      "label": "Walkable_VillageLane",
+      "location_cm": [
+        0,
+        -2675,
+        -55
+      ],
+      "scale": [
+        9.4,
+        16.5,
+        1
+      ],
+      "visible": false
+    },
+    {
+      "label": "VillageLaneGround",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreGround",
+      "location_cm": [
+        0,
+        -2675,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.205,
+        0.59,
+        1
+      ],
+      "visible": true
+    },
+    {
+      "label": "Boundary_SouthWest",
+      "location_cm": [
+        -1385,
+        -2000,
+        180
+      ],
+      "scale": [
+        18.3,
+        0.7,
+        4
+      ],
+      "visible": false
+    },
+    {
+      "label": "Boundary_SouthEast",
+      "location_cm": [
+        1385,
+        -2000,
+        180
+      ],
+      "scale": [
+        18.3,
+        0.7,
+        4
+      ],
+      "visible": false
+    },
+    {
+      "label": "Boundary_LaneWest",
+      "location_cm": [
+        -470,
+        -2675,
+        180
+      ],
+      "scale": [
+        0.7,
+        17.2,
+        4
+      ],
+      "visible": false
+    },
+    {
+      "label": "Boundary_LaneEast",
+      "location_cm": [
+        470,
+        -2675,
+        180
+      ],
+      "scale": [
+        0.7,
+        17.2,
+        4
+      ],
+      "visible": false
+    },
+    {
+      "label": "Boundary_VillageEnd",
+      "location_cm": [
+        0,
+        -3500,
+        180
+      ],
+      "scale": [
+        10,
+        0.7,
+        4
+      ],
+      "visible": false
+    },
+    {
+      "label": "PathStone_00_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -83.09650053973536,
+        -3425.9489572353796,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -10.685064645021924,
+        0
+      ],
+      "scale": [
+        1.00902999638909,
+        0.8570080841661865,
+        0.7259978255731899
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_00_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -6.355524552976477,
+        -3423.7526946820367,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -15.938604474200563,
+        0
+      ],
+      "scale": [
+        0.791910457960706,
+        1.0517899778665205,
+        0.7771528850609554
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_00_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        71.86339721411439,
+        -3429.7237647420757,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -16.109286677970452,
+        0
+      ],
+      "scale": [
+        0.8863737251771192,
+        0.9050457049331373,
+        0.9336279182678286
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_01_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -62.77747541842339,
+        -3321.878236241496,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -21.615467678921803,
+        0
+      ],
+      "scale": [
+        0.8784332902174555,
+        0.9170708025909096,
+        0.7417277833482242
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_01_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -1.1022102924974302,
+        -3338.272865849804,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -22.16811700697225,
+        0
+      ],
+      "scale": [
+        0.8258779505708219,
+        0.8907506272148091,
+        0.8403574428581884
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_01_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        84.0508758367574,
+        -3326.853336003318,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -5.058955652511376,
+        0
+      ],
+      "scale": [
+        0.8854073991776099,
+        0.8241983061196271,
+        0.8419812726588545
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_02_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -65.60221415927506,
+        -3257.164510213295,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        16.94404746874813,
+        0
+      ],
+      "scale": [
+        0.8553204049230866,
+        0.9860295448926434,
+        0.8416279897387047
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_02_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        15.031026368132851,
+        -3239.4727582631162,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -14.552460132696579,
+        0
+      ],
+      "scale": [
+        0.8858928825395594,
+        1.0394394820533743,
+        0.8698088409443873
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_02_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        93.8133656902606,
+        -3245.5138580890375,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        6.101813981925552,
+        0
+      ],
+      "scale": [
+        0.780501788494932,
+        0.8845870250415543,
+        0.7789709778339823
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_03_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -64.78345958280495,
+        -3166.5752349633976,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -21.288116895290948,
+        0
+      ],
+      "scale": [
+        0.8056031319064231,
+        1.0072697891453835,
+        0.7481596567622233
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_03_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        19.236219395505064,
+        -3154.608244465835,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        2.709228029753433,
+        0
+      ],
+      "scale": [
+        0.8348718884435875,
+        1.0743263452920062,
+        0.7806763382502643
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_04_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -50.2890888253058,
+        -3071.1682232458948,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -1.0316632086426019,
+        0
+      ],
+      "scale": [
+        0.9578155992972806,
+        0.9299675264239337,
+        0.9078255137102941
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_04_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        21.679709544654052,
+        -3061.2997177115726,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -9.368949414902026,
+        0
+      ],
+      "scale": [
+        0.8232325495814933,
+        0.9610155607604887,
+        0.7900697989824725
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_04_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        87.74819998832834,
+        -3072.157636102021,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -19.58896550768509,
+        0
+      ],
+      "scale": [
+        0.9423099195238602,
+        1.025096793632993,
+        0.764980771616545
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_05_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -52.54729234056005,
+        -2988.570633390174,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        6.367789143858722,
+        0
+      ],
+      "scale": [
+        0.7892639733188311,
+        0.9228908027811171,
+        0.798072844829097
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_05_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        15.63487908734005,
+        -2977.1499547036,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        21.046396812680932,
+        0
+      ],
+      "scale": [
+        0.7835332022822229,
+        0.8793918096533707,
+        0.8670617377169114
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_05_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        96.79880796459189,
+        -2976.9512340208316,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        7.258763110293273,
+        0
+      ],
+      "scale": [
+        0.8850460210829024,
+        0.8563164263527995,
+        0.7437497960429864
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_06_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -43.82776037396703,
+        -2899.178026880037,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -6.83361775717356,
+        0
+      ],
+      "scale": [
+        0.8596160069742544,
+        0.9465460706239499,
+        0.8902208100973514
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_06_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        19.943066881426113,
+        -2878.847693160719,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        21.79335855261599,
+        0
+      ],
+      "scale": [
+        0.8433699654397165,
+        1.0719556604497813,
+        0.9295865784282118
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_06_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        101.1039744478041,
+        -2879.073097763573,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -8.58808536732364,
+        0
+      ],
+      "scale": [
+        0.8556345779675899,
+        0.9673485674967368,
+        0.8271703454169924
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_07_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -46.51260417431328,
+        -2802.8315020185296,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -8.446488797529843,
+        0
+      ],
+      "scale": [
+        0.7982346675413,
+        1.0249035365560348,
+        0.7054067399743148
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_07_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        25.739624026791653,
+        -2795.4379178410527,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -7.53512542592112,
+        0
+      ],
+      "scale": [
+        0.9561157253949562,
+        1.027557128587791,
+        0.9106332959765282
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_08_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -45.82879288939009,
+        -2720.9121879813965,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -22.90579150023669,
+        0
+      ],
+      "scale": [
+        0.8655391326194065,
+        0.8551546066806572,
+        0.7498332542846151
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_08_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        33.69117757361307,
+        -2721.925108476447,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        6.895733139830927,
+        0
+      ],
+      "scale": [
+        0.843847837632498,
+        0.8442759622437017,
+        0.785363420105058
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_08_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        109.01576586550088,
+        -2722.973249734678,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -22.361130001027647,
+        0
+      ],
+      "scale": [
+        0.9525918009189366,
+        0.9166019861061475,
+        0.9051649749985897
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_09_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -57.14681135267758,
+        -2614.3957072719527,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        21.447648737651086,
+        0
+      ],
+      "scale": [
+        1.0034389658405027,
+        1.0369352287617999,
+        0.761501526176626
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_09_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        21.774777742189077,
+        -2639.848744773326,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -15.468530783714147,
+        0
+      ],
+      "scale": [
+        0.8474476547802886,
+        0.8410689001655808,
+        0.8785141530716927
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_09_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        100.72513146409315,
+        -2638.2769215449325,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -7.431049685069494,
+        0
+      ],
+      "scale": [
+        0.8971401843950516,
+        0.9885338702829608,
+        0.7406439981342249
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_10_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        31.402009478263167,
+        -2531.4164904029253,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        14.77873717794099,
+        0
+      ],
+      "scale": [
+        1.0148623947432642,
+        1.0728818907413773,
+        0.8282868261268255
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_10_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        107.26558321873155,
+        -2542.1615114594983,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -19.217279818387198,
+        0
+      ],
+      "scale": [
+        1.0156488053366992,
+        0.8586441415029525,
+        0.8063653646940157
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_11_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        10.92833480447212,
+        -2442.275363868306,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -0.03132837961024393,
+        0
+      ],
+      "scale": [
+        0.9597514634918805,
+        0.9919578381856046,
+        0.7008096830225476
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_11_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        98.34036659848803,
+        -2449.4469564353076,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -5.728083703475303,
+        0
+      ],
+      "scale": [
+        0.8903022879815429,
+        0.8895153235167503,
+        0.9494346728187766
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_12_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -67.74245268119523,
+        -2353.4022731654018,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -6.019307016830847,
+        0
+      ],
+      "scale": [
+        0.860108708355716,
+        1.0591378556889117,
+        0.7355189258193884
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_12_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        15.21927304502859,
+        -2370.3404867388913,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        14.682917826445149,
+        0
+      ],
+      "scale": [
+        1.0032481207537705,
+        0.9634634522323235,
+        0.7914203048594529
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_13_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        19.481310252309292,
+        -2289.8429075396475,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        0.9597936357069159,
+        0
+      ],
+      "scale": [
+        0.8612552886070409,
+        1.0448774664397498,
+        0.7403578384549412
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_13_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        83.5827728128766,
+        -2288.698395394407,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -5.082158269702163,
+        0
+      ],
+      "scale": [
+        0.7862932903316348,
+        0.8900793480779743,
+        0.8744400907004773
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_14_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -64.60030510510339,
+        -2194.136840316375,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        6.810593442277703,
+        0
+      ],
+      "scale": [
+        0.9125379552407791,
+        0.9044520408265927,
+        0.775711816813498
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_14_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        0.20755157935444846,
+        -2174.2377307915394,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -22.436566724806365,
+        0
+      ],
+      "scale": [
+        0.833731192723582,
+        1.0646803303121914,
+        0.7940439885200281
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_14_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        85.23410073068068,
+        -2188.616993158997,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        5.465200852690057,
+        0
+      ],
+      "scale": [
+        0.8380895176642256,
+        1.0723556341356273,
+        0.8320160346311867
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_15_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -84.74077299429217,
+        -2111.6525325405537,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -20.305060243450637,
+        0
+      ],
+      "scale": [
+        0.9470097865489051,
+        0.9181437879891594,
+        0.7868858425728078
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_15_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -0.05960946915833773,
+        -2089.4865717578687,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -3.788527089807939,
+        0
+      ],
+      "scale": [
+        0.7981991367883776,
+        1.0762098551239538,
+        0.7764125110883335
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_15_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        70.25005916840037,
+        -2097.5017285578715,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        4.329318421235332,
+        0
+      ],
+      "scale": [
+        0.891249341605003,
+        1.0344504887224186,
+        0.8000349414890768
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_16_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -89.88530772266984,
+        -1999.4468134765457,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        16.493015961121912,
+        0
+      ],
+      "scale": [
+        0.9222063023426136,
+        0.9121064254781791,
+        0.9040924030568568
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_16_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -0.4642175351458757,
+        -2012.0535174837728,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        18.05348487155922,
+        0
+      ],
+      "scale": [
+        0.8389133603807016,
+        0.886689525523096,
+        0.9498891907333229
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_16_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        71.307232995792,
+        -2010.0312799265137,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        11.258423816058361,
+        0
+      ],
+      "scale": [
+        0.9497795714781968,
+        0.9661757300389502,
+        0.7535744781486117
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_17_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -85.73928022058837,
+        -1920.2274072478667,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -15.997409788235627,
+        0
+      ],
+      "scale": [
+        0.8367895638720594,
+        0.8241070191048911,
+        0.8902544626252973
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_17_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -20.727065262845286,
+        -1914.9941515505056,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        18.16899022198588,
+        0
+      ],
+      "scale": [
+        0.8279824587196577,
+        0.9801303248369092,
+        0.7559467652349959
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_17_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        72.4396094246701,
+        -1918.4275712929891,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        21.848329566295845,
+        0
+      ],
+      "scale": [
+        0.7801073677392575,
+        1.0225023304678789,
+        0.7446985130211281
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_18_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -25.95212020298349,
+        -1842.4179875063276,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        22.37908976409981,
+        0
+      ],
+      "scale": [
+        1.0035705322315571,
+        0.8352390855987785,
+        0.877246562502029
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_18_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        62.274264855775755,
+        -1824.239160560732,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        11.057628210169455,
+        0
+      ],
+      "scale": [
+        0.7871436584924508,
+        0.8610183223488999,
+        0.755775756565733
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_19_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -15.647133530786622,
+        -1750.9009263703374,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        18.25686689978626,
+        0
+      ],
+      "scale": [
+        0.9811260307956169,
+        0.8412949373057279,
+        0.700529802771976
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_19_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        62.94929745409088,
+        -1736.4058558079603,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        20.632975617624446,
+        0
+      ],
+      "scale": [
+        0.8292393469665862,
+        0.9838989947151286,
+        0.7975148910784302
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_20_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -100.60189470182259,
+        -1651.9583843949683,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        17.33412976296097,
+        0
+      ],
+      "scale": [
+        1.0154931357857757,
+        0.8305904590294795,
+        0.867040446016779
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_20_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -34.2375273619668,
+        -1654.427685701017,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        22.42059896826831,
+        0
+      ],
+      "scale": [
+        0.9680032624049728,
+        0.8262676755396564,
+        0.87689226108358
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_20_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        60.48042442343061,
+        -1672.1981701295856,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -11.622531557677817,
+        0
+      ],
+      "scale": [
+        0.8182012547644505,
+        0.9368627716370405,
+        0.823082409703223
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_21_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -103.86271001602404,
+        -1581.424044894418,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -4.527170986917284,
+        0
+      ],
+      "scale": [
+        0.8523940714439371,
+        1.0607887439959143,
+        0.9308221053340473
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_21_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -16.80023219285632,
+        -1583.8154631909088,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -21.060352226927215,
+        0
+      ],
+      "scale": [
+        0.9554888243059155,
+        0.8569237687076159,
+        0.9460289787518962
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_21_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        41.71225489730173,
+        -1585.8958577204364,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -22.184808068225806,
+        0
+      ],
+      "scale": [
+        0.9512553707235696,
+        0.8623043052500045,
+        0.9404502050726655
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_22_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -27.32471658257949,
+        -1481.1848590612467,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -12.184616363068445,
+        0
+      ],
+      "scale": [
+        0.7868714310302407,
+        1.0605966595284735,
+        0.8751635990591153
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_22_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        45.242035340013416,
+        -1487.470409221725,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -6.3970972457039075,
+        0
+      ],
+      "scale": [
+        0.8736059523390818,
+        1.0599096236351004,
+        0.8216378088231047
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_23_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -99.72451010681073,
+        -1403.6732863785692,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -5.046333236282056,
+        0
+      ],
+      "scale": [
+        0.7856412028770221,
+        1.0373009094236898,
+        0.9157572335924747
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_23_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -26.70658872962942,
+        -1405.2022745411925,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -1.6701512825367182,
+        0
+      ],
+      "scale": [
+        0.8987865368139785,
+        0.9442272437572482,
+        0.7998694680102206
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_23_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        40.8741643367042,
+        -1385.4292482467338,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -0.2753273905835272,
+        0
+      ],
+      "scale": [
+        0.8939040397165681,
+        1.0526721015542597,
+        0.9465097652116864
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_24_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -111.43295424841097,
+        -1321.7093066889975,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        1.0955283354049534,
+        0
+      ],
+      "scale": [
+        0.946598718473809,
+        0.9404995178322849,
+        0.9180264500590715
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_24_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -18.797895237244894,
+        -1295.1582570537084,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        10.624234469433262,
+        0
+      ],
+      "scale": [
+        0.7818280612192038,
+        0.9943082832110934,
+        0.884484918851466
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_24_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        47.517889341774094,
+        -1305.0344615939061,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        12.047493078766614,
+        0
+      ],
+      "scale": [
+        0.9495584984514768,
+        1.0333764396069187,
+        0.9046771463358652
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_25_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -90.99691098083696,
+        -1217.645265582059,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -7.312386941235978,
+        0
+      ],
+      "scale": [
+        1.008239377605889,
+        1.041162571293159,
+        0.8044541649624206
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_25_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -14.089997453800944,
+        -1222.0558346937662,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -9.612331836785655,
+        0
+      ],
+      "scale": [
+        0.8690176866950674,
+        0.9349028209593286,
+        0.88308213473046
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_25_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        42.90390894293697,
+        -1233.5641847351765,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -18.103996216365143,
+        0
+      ],
+      "scale": [
+        0.9239823217874146,
+        1.0018054572568105,
+        0.861121739206954
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_26_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -105.92255260522512,
+        -1138.6491187659465,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -17.26691188643181,
+        0
+      ],
+      "scale": [
+        1.0089970787939206,
+        1.0601332019459448,
+        0.778090700497645
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_26_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -29.187579389023703,
+        -1128.2660928659245,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        1.6981924477730068,
+        0
+      ],
+      "scale": [
+        0.9106862689621265,
+        0.977723699495196,
+        0.8736109985745238
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_26_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        60.03675338270206,
+        -1145.5438333062348,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -14.991255597450136,
+        0
+      ],
+      "scale": [
+        0.7922567803294638,
+        0.8950170779909516,
+        0.7858986659722098
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_27_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -85.57128620163417,
+        -1038.4764265472893,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -1.98122172875404,
+        0
+      ],
+      "scale": [
+        0.8151454864180223,
+        0.8219647146846496,
+        0.9020562060246309
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_27_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -18.709764791958072,
+        -1057.8834010789565,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        9.13579941798109,
+        0
+      ],
+      "scale": [
+        0.9113185395655585,
+        0.8469914545787252,
+        0.7524793337408207
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_27_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        63.346837363322194,
+        -1050.2803813058185,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        16.00993296242273,
+        0
+      ],
+      "scale": [
+        0.9782020450843643,
+        0.9377667182284949,
+        0.7439820536676733
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_28_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -82.86248307057845,
+        -954.632116092759,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -2.828387154366755,
+        0
+      ],
+      "scale": [
+        0.904929942035989,
+        0.9323982261786042,
+        0.9433109543288175
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_28_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -6.636997257333178,
+        -968.4647119450116,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        20.114196070564084,
+        0
+      ],
+      "scale": [
+        0.8899161951848172,
+        1.0552910710776338,
+        0.7147729008809295
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_28_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        65.09409820158803,
+        -968.7265824177607,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -16.27217760644816,
+        0
+      ],
+      "scale": [
+        0.9199305650552085,
+        0.945453143998757,
+        0.9312252599832185
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_29_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -91.17882390029602,
+        -875.8214513162375,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -8.30475943640874,
+        0
+      ],
+      "scale": [
+        0.9679115949010315,
+        0.9174508629647851,
+        0.77134651032873
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_29_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -2.4300096703742984,
+        -873.5629957097118,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -20.4542538488724,
+        0
+      ],
+      "scale": [
+        0.8760662255029487,
+        0.8271651827916101,
+        0.7913064736444825
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_29_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        77.4144737084036,
+        -860.4531875362643,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -2.348592473166832,
+        0
+      ],
+      "scale": [
+        0.8864836637562594,
+        0.9061118176279443,
+        0.7215482212581967
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_30_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -79.3294023171649,
+        -769.2588462207524,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -12.766276713646773,
+        0
+      ],
+      "scale": [
+        0.9894781960160571,
+        0.9323600551563046,
+        0.8761669212992027
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_30_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        0.3368963397864311,
+        -790.3770217522454,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        19.95376541558619,
+        0
+      ],
+      "scale": [
+        0.9419032618847203,
+        0.8242121572955051,
+        0.7918932775023667
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_31_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        7.3161457893203075,
+        -701.6560766034314,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -12.659010517019398,
+        0
+      ],
+      "scale": [
+        1.0179537720399674,
+        0.9568514451907546,
+        0.7099544173419616
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_32_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        20.889512801506864,
+        -611.6319077318176,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        12.793366709786888,
+        0
+      ],
+      "scale": [
+        1.0096301764827886,
+        0.9236140210346011,
+        0.724613469848195
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_33_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -49.91718453750738,
+        -527.5312897455395,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -4.082017316696394,
+        0
+      ],
+      "scale": [
+        0.9035402648813957,
+        0.9493587061567477,
+        0.8250502786943459
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_33_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        13.037332591235993,
+        -510.83265033724007,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        10.828997675097071,
+        0
+      ],
+      "scale": [
+        0.9235720497532701,
+        1.0722972811276636,
+        0.8641328720010152
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_33_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        89.86406351280672,
+        -508.6639434467972,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        13.358363367097624,
+        0
+      ],
+      "scale": [
+        0.983017169706784,
+        0.9346695127524003,
+        0.8995235365738332
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_34_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -49.03799044941395,
+        -429.2935032174076,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        20.531676129358154,
+        0
+      ],
+      "scale": [
+        0.8257079742866668,
+        0.8982446888256638,
+        0.770611741710834
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_34_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        12.809027332089052,
+        -437.48902441280296,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        5.520073333919008,
+        0
+      ],
+      "scale": [
+        0.8322994799275448,
+        0.8711640318940606,
+        0.876579123372596
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_34_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        105.27433337656316,
+        -426.33278764442315,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -8.13626999810252,
+        0
+      ],
+      "scale": [
+        0.7832404655570118,
+        0.9585886648677089,
+        0.8988091288628753
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_35_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -60.97347568217573,
+        -342.34573656760847,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -22.84875460090683,
+        0
+      ],
+      "scale": [
+        0.8606021319921416,
+        0.8975707871035714,
+        0.8745215632842545
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_35_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        27.847817962916842,
+        -327.52925616622827,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -19.72615855945293,
+        0
+      ],
+      "scale": [
+        0.92238959610045,
+        0.8364154221268592,
+        0.8231711171292384
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_35_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        100.24183847640863,
+        -330.0643504316767,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -7.207791076611629,
+        0
+      ],
+      "scale": [
+        0.9377507983001244,
+        0.9963786977607281,
+        0.8681815163048895
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_36_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -52.31964904342651,
+        -256.6839209526809,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        4.181541578901037,
+        0
+      ],
+      "scale": [
+        0.845960375297669,
+        1.003453131962932,
+        0.7194189509318877
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_36_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        24.7635663350885,
+        -238.10046339338948,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        10.62011326503827,
+        0
+      ],
+      "scale": [
+        0.8259232014552117,
+        1.030068521029932,
+        0.7298872064399223
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_36_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        97.94295670918999,
+        -265.8528442375605,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -22.509049430011874,
+        0
+      ],
+      "scale": [
+        0.9221005488815199,
+        0.8563956232055033,
+        0.7089915382621763
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_37_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -46.934150897671074,
+        -157.46188084906058,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -20.242859721650103,
+        0
+      ],
+      "scale": [
+        0.9026012466341241,
+        1.0354980114260213,
+        0.7317062015486214
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_37_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        35.04763998158469,
+        -156.61165918033632,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -16.426771548952253,
+        0
+      ],
+      "scale": [
+        0.8632655995117199,
+        1.0485697474685942,
+        0.8523768797084901
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_37_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        109.85548086649688,
+        -173.9354505327321,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -12.176027170921756,
+        0
+      ],
+      "scale": [
+        0.8604567118571272,
+        1.0321911072502834,
+        0.7703356838639663
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_38_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -52.89373917020868,
+        -80.63390763323487,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        16.869488751683207,
+        0
+      ],
+      "scale": [
+        1.0109005144945178,
+        0.8856050826494095,
+        0.8013132729479117
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_38_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        36.50283088391227,
+        -76.5720678052997,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -17.72858216024512,
+        0
+      ],
+      "scale": [
+        0.9956658476541089,
+        0.8591524519105858,
+        0.7037076735515407
+      ],
+      "visible": true
+    },
+    {
+      "label": "PathStone_38_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        95.63139676524301,
+        -63.58097219303507,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        12.622837890193871,
+        0
+      ],
+      "scale": [
+        0.9182042746106431,
+        0.9972581193720131,
+        0.8683561013747408
+      ],
+      "visible": true
+    },
+    {
+      "label": "LaneLowWall_-1_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_StoneWall",
+      "location_cm": [
+        -435,
+        -2250,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        88,
+        0
+      ],
+      "scale": [
+        1,
+        0.85,
+        0.52
+      ],
+      "visible": true
+    },
+    {
+      "label": "LaneLowWall_-1_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_StoneWall",
+      "location_cm": [
+        -435,
+        -2650,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        88,
+        0
+      ],
+      "scale": [
+        1,
+        0.85,
+        0.6
+      ],
+      "visible": true
+    },
+    {
+      "label": "LaneLowWall_-1_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_StoneWall",
+      "location_cm": [
+        -435,
+        -3050,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        88,
+        0
+      ],
+      "scale": [
+        1,
+        0.85,
+        0.52
+      ],
+      "visible": true
+    },
+    {
+      "label": "VillageGatePillar_-1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_StoneWall",
+      "location_cm": [
+        -270,
+        -3375,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.32,
+        1.1,
+        1.55
+      ],
+      "visible": true
+    },
+    {
+      "label": "LaneLowWall_1_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_StoneWall",
+      "location_cm": [
+        435,
+        -2250,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        92,
+        0
+      ],
+      "scale": [
+        1,
+        0.85,
+        0.52
+      ],
+      "visible": true
+    },
+    {
+      "label": "LaneLowWall_1_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_StoneWall",
+      "location_cm": [
+        435,
+        -2650,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        92,
+        0
+      ],
+      "scale": [
+        1,
+        0.85,
+        0.6
+      ],
+      "visible": true
+    },
+    {
+      "label": "LaneLowWall_1_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_StoneWall",
+      "location_cm": [
+        435,
+        -3050,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        92,
+        0
+      ],
+      "scale": [
+        1,
+        0.85,
+        0.52
+      ],
+      "visible": true
+    },
+    {
+      "label": "VillageGatePillar_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_StoneWall",
+      "location_cm": [
+        270,
+        -3375,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.32,
+        1.1,
+        1.55
+      ],
+      "visible": true
+    },
+    {
+      "label": "VillageGateLintel",
+      "mesh": "/Game/PathOfDawn/Environment/SM_StoneWall",
+      "location_cm": [
+        0,
+        -3375,
+        265
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.58,
+        1.2,
+        0.24
+      ],
+      "visible": true
+    },
+    {
+      "label": "LaneJar",
+      "mesh": "/Game/PathOfDawn/Environment/SM_Jar",
+      "location_cm": [
+        300,
+        -2760,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.82,
+        0.82,
+        0.82
+      ],
+      "visible": true
+    },
+    {
+      "label": "Interact_Village",
+      "mesh": "/Game/PathOfDawn/SM_ShoreRock",
+      "location_cm": [
+        0,
+        -3200,
+        0
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreRock_00",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -2200,
+        755.0988170449989,
+        -10
+      ],
+      "rotation_pitch_yaw_roll": [
+        1.182984898797459,
+        309.0323419856195,
+        -4.607936381485578
+      ],
+      "scale": [
+        1.0783930619910238,
+        0.7205990826401178,
+        0.8243216314559081
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreRock_01",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -2020,
+        741.8798772319075,
+        -10
+      ],
+      "rotation_pitch_yaw_roll": [
+        1.5807891560230933,
+        211.75618791984417,
+        -4.696942584507329
+      ],
+      "scale": [
+        1.1137922175433028,
+        0.6274479268774581,
+        0.694690760292015
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreRock_02",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -1840,
+        729.2352007092683,
+        -10
+      ],
+      "rotation_pitch_yaw_roll": [
+        3.0610401913337615,
+        46.86744326148408,
+        -2.007322779130949
+      ],
+      "scale": [
+        0.7378249291626643,
+        0.6371741856698258,
+        0.7346710701477932
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreRock_03",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -1660,
+        736.8541137596378,
+        -10
+      ],
+      "rotation_pitch_yaw_roll": [
+        5.639393316558076,
+        190.5519470090761,
+        -1.4700718663631607
+      ],
+      "scale": [
+        1.4242417298114507,
+        1.1338189602659057,
+        0.7246608751088548
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreRock_04",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -1480,
+        714.9083346762994,
+        -10
+      ],
+      "rotation_pitch_yaw_roll": [
+        -2.4882445125137367,
+        359.18093091521456,
+        -3.5647346697463336
+      ],
+      "scale": [
+        0.846307381077817,
+        1.0075293035867978,
+        0.6915341495604562
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreRock_09",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -580,
+        679.8672735569858,
+        -10
+      ],
+      "rotation_pitch_yaw_roll": [
+        5.953261889365418,
+        179.79946536685918,
+        -2.8872671830171157
+      ],
+      "scale": [
+        1.1140713861777551,
+        0.9433547632505337,
+        0.49380135412177656
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreRock_10",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -400,
+        677.7366229127337,
+        -10
+      ],
+      "rotation_pitch_yaw_roll": [
+        2.5509917256843373,
+        146.90288277680526,
+        -3.382656513871317
+      ],
+      "scale": [
+        0.9805587657539137,
+        0.941503441884321,
+        0.6527996456053604
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreRock_11",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -220,
+        763.0635499946648,
+        -10
+      ],
+      "rotation_pitch_yaw_roll": [
+        -1.1626106207114981,
+        26.237452842146602,
+        -2.488784432136134
+      ],
+      "scale": [
+        1.5908085056490933,
+        1.12298418785688,
+        0.6291045213405833
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreRock_15",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        500,
+        703.7432351323969,
+        -10
+      ],
+      "rotation_pitch_yaw_roll": [
+        0.2879392121712261,
+        265.35359319094414,
+        4.182592384580007
+      ],
+      "scale": [
+        1.1739065233513533,
+        0.914112727367087,
+        0.8820202054779316
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreRock_16",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        680,
+        752.3183433631248,
+        -10
+      ],
+      "rotation_pitch_yaw_roll": [
+        -4.395209618148828,
+        18.86895359286558,
+        -1.7738794049585982
+      ],
+      "scale": [
+        1.2010808450531552,
+        1.1633540114456313,
+        0.5618042699192385
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreRock_17",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        860,
+        727.6333806444583,
+        -10
+      ],
+      "rotation_pitch_yaw_roll": [
+        -0.46310979085285275,
+        265.30388686533973,
+        3.631642010465816
+      ],
+      "scale": [
+        0.8713789646375851,
+        1.1355605008439054,
+        0.5583678753694535
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreRock_18",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        1040,
+        684.7155600062349,
+        -10
+      ],
+      "rotation_pitch_yaw_roll": [
+        3.136960167638941,
+        323.7043647407094,
+        -1.6264447136233007
+      ],
+      "scale": [
+        0.7131803109266792,
+        0.9203065618258457,
+        0.5403513366245238
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreRock_19",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        1220,
+        716.5872838908184,
+        -10
+      ],
+      "rotation_pitch_yaw_roll": [
+        -2.6485310843304157,
+        269.17205958885194,
+        -2.6288409534804447
+      ],
+      "scale": [
+        1.1044929115101456,
+        0.7429560623650155,
+        0.667874752220443
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreRock_20",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        1400,
+        731.1380357620769,
+        -10
+      ],
+      "rotation_pitch_yaw_roll": [
+        3.7563037526377716,
+        113.84030119844262,
+        -3.3785354366722564
+      ],
+      "scale": [
+        1.0060127670140808,
+        0.6299889751049926,
+        0.49574830433884065
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreRock_21",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        1580,
+        748.2408101243377,
+        -10
+      ],
+      "rotation_pitch_yaw_roll": [
+        -2.994178774003868,
+        245.5200463126988,
+        0.4603615184489058
+      ],
+      "scale": [
+        1.5946782986591357,
+        1.1127715761875787,
+        0.8971827813701948
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreRock_22",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        1760,
+        753.9726996523721,
+        -10
+      ],
+      "rotation_pitch_yaw_roll": [
+        -4.160474888766544,
+        19.76257030241614,
+        -2.276835956462455
+      ],
+      "scale": [
+        1.0751619747458818,
+        0.6243027469077873,
+        0.8986619803851741
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreRock_23",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        1940,
+        754.8182272607115,
+        -10
+      ],
+      "rotation_pitch_yaw_roll": [
+        -2.546561669847017,
+        164.0875023911882,
+        3.27221228297746
+      ],
+      "scale": [
+        0.803574764772321,
+        1.1564893861207937,
+        0.5643698698911217
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreRock_24",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        2120,
+        734.4964405107783,
+        -10
+      ],
+      "rotation_pitch_yaw_roll": [
+        5.620406228199032,
+        320.64194344090373,
+        -1.1349427997661632
+      ],
+      "scale": [
+        1.5048882092766882,
+        0.6661960984855521,
+        0.7418409639276407
+      ],
+      "visible": true
+    },
+    {
+      "label": "StoneWall_-1480_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_StoneWall",
+      "location_cm": [
+        -1480,
+        -1590,
+        -5
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        88,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        0.8
+      ],
+      "visible": true
+    },
+    {
+      "label": "StoneWall_-1480_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_StoneWall",
+      "location_cm": [
+        -1480,
+        -1200,
+        -5
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        90,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        0.8
+      ],
+      "visible": true
+    },
+    {
+      "label": "StoneWall_-1480_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_StoneWall",
+      "location_cm": [
+        -1480,
+        -810,
+        -5
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        92,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        0.8
+      ],
+      "visible": true
+    },
+    {
+      "label": "StoneWall_1480_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_StoneWall",
+      "location_cm": [
+        1480,
+        -1590,
+        -5
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        88,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "visible": true
+    },
+    {
+      "label": "StoneWall_1480_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_StoneWall",
+      "location_cm": [
+        1480,
+        -1200,
+        -5
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        90,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "visible": true
+    },
+    {
+      "label": "StoneWall_1480_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_StoneWall",
+      "location_cm": [
+        1480,
+        -810,
+        -5
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        92,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "visible": true
+    },
+    {
+      "label": "StoneSpace_Back",
+      "mesh": "/Game/PathOfDawn/Environment/SM_StoneWall",
+      "location_cm": [
+        950,
+        -1800,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -3,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "visible": true
+    },
+    {
+      "label": "StoneSpace_Canopy",
+      "mesh": "/Game/PathOfDawn/Environment/SM_Canopy",
+      "location_cm": [
+        1050,
+        -1170,
+        -5
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -7,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "visible": true
+    },
+    {
+      "label": "Jar_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_Jar",
+      "location_cm": [
+        900,
+        -1090,
+        -5
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.85,
+        0.85,
+        0.85
+      ],
+      "visible": true
+    },
+    {
+      "label": "Jar_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_Jar",
+      "location_cm": [
+        1020,
+        -1095,
+        -5
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        37,
+        0
+      ],
+      "scale": [
+        0.65,
+        0.65,
+        0.65
+      ],
+      "visible": true
+    },
+    {
+      "label": "Jar_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_Jar",
+      "location_cm": [
+        950,
+        -970,
+        -5
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        74,
+        0
+      ],
+      "scale": [
+        0.72,
+        0.72,
+        0.72
+      ],
+      "visible": true
+    },
+    {
+      "label": "Jar_3",
+      "mesh": "/Game/PathOfDawn/Environment/SM_Jar",
+      "location_cm": [
+        1240,
+        -1390,
+        -5
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        111,
+        0
+      ],
+      "scale": [
+        0.92,
+        0.92,
+        0.92
+      ],
+      "visible": true
+    },
+    {
+      "label": "Jar_4",
+      "mesh": "/Game/PathOfDawn/Environment/SM_Jar",
+      "location_cm": [
+        1180,
+        -1530,
+        -5
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        148,
+        0
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ],
+      "visible": true
+    },
+    {
+      "label": "OliveTree_00",
+      "mesh": "/Game/PathOfDawn/Environment/SM_OliveTree",
+      "location_cm": [
+        -1930,
+        -1570,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        118.21135044013347,
+        0
+      ],
+      "scale": [
+        1.14,
+        1.14,
+        1.14
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_00_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -2039.8179847069416,
+        -1514.2557808430965,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        228.22170655382158,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_00_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -1916.2810161171578,
+        -1646.1798724253667,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        33.44740944519113,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_00_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -1837.129269159597,
+        -1585.5869492760132,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        308.671700031681,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "OliveTree_01",
+      "mesh": "/Game/PathOfDawn/Environment/SM_OliveTree",
+      "location_cm": [
+        -1750,
+        -770,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        107.58676147009612,
+        0
+      ],
+      "scale": [
+        0.95,
+        0.95,
+        0.95
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_01_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -1649.7703594810016,
+        -816.5111967634443,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        42.340182317182155,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_01_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -1728.5563779597894,
+        -777.311007514384,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        19.36007438830317,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_01_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -1833.560056381222,
+        -831.4993003183465,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        253.4073986973899,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "OliveTree_02",
+      "mesh": "/Game/PathOfDawn/Environment/SM_OliveTree",
+      "location_cm": [
+        -1920,
+        150,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        117.9711505612839,
+        0
+      ],
+      "scale": [
+        0.85,
+        0.85,
+        0.85
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_02_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -1841.081017450973,
+        120.54216419245742,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        104.86026009286444,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_02_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -1873.891649708544,
+        129.49253190714728,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        263.5804591039737,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_02_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -1902.8839986129,
+        60.012226695086866,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        163.70887491062686,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "OliveTree_03",
+      "mesh": "/Game/PathOfDawn/Environment/SM_OliveTree",
+      "location_cm": [
+        1880,
+        -1550,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        178.81788788018997,
+        0
+      ],
+      "scale": [
+        1.1,
+        1.1,
+        1.1
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_03_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        1816.7437565981816,
+        -1511.777401878577,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        275.7930884482908,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_03_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        1898.4604498024285,
+        -1553.6462726064788,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        320.5339249797684,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_03_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        1839.56321253877,
+        -1486.7072180136063,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        50.21470152995939,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "OliveTree_04",
+      "mesh": "/Game/PathOfDawn/Environment/SM_OliveTree",
+      "location_cm": [
+        1880,
+        -550,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        306.1536654281082,
+        0
+      ],
+      "scale": [
+        0.92,
+        0.92,
+        0.92
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_04_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        1811.0629041766704,
+        -460.9727178626924,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        274.2934003856492,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_04_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        1878.2059601583119,
+        -615.5943590121763,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        4.275321551583988,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_04_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        1915.289361777603,
+        -574.3821778494466,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        276.0377890195033,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "OliveTree_05",
+      "mesh": "/Game/PathOfDawn/Environment/SM_OliveTree",
+      "location_cm": [
+        2070,
+        330,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        284.7515636569185,
+        0
+      ],
+      "scale": [
+        0.82,
+        0.82,
+        0.82
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_05_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        1993.190037751636,
+        330.6656587601532,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        146.65906943472777,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_05_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        2087.6022068027787,
+        338.84857024467885,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        155.31267396109635,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_05_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        2008.1810843540497,
+        332.98390290730924,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        245.14938753026615,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "OliveTree_06",
+      "mesh": "/Game/PathOfDawn/Environment/SM_OliveTree",
+      "location_cm": [
+        -680,
+        -2350,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        313.1025968083392,
+        0
+      ],
+      "scale": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_06_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -659.8983575247005,
+        -2318.727694458712,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        22.312493915025687,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_06_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -751.5569557267515,
+        -2319.410952739999,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        25.557462511059615,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_06_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -620.0847006208129,
+        -2346.4560937292013,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        101.3240787027715,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "OliveTree_07",
+      "mesh": "/Game/PathOfDawn/Environment/SM_OliveTree",
+      "location_cm": [
+        680,
+        -2810,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        147.74704913291407,
+        0
+      ],
+      "scale": [
+        0.86,
+        0.86,
+        0.86
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_07_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        789.0896622370601,
+        -2836.019577463576,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        261.52346642505705,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_07_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        666.7727476719929,
+        -2763.7450787393605,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        328.8868397657584,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_07_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        646.5745625230196,
+        -2757.649968801078,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        40.81244165862981,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "OliveTree_08",
+      "mesh": "/Game/PathOfDawn/Environment/SM_OliveTree",
+      "location_cm": [
+        -750,
+        -3390,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        27.747641792214054,
+        0
+      ],
+      "scale": [
+        1.1,
+        1.1,
+        1.1
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_08_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -698.3202355637875,
+        -3305.3882804398827,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        5.127223052361436,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_08_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -737.0405003369963,
+        -3419.5989359589453,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        351.4654610347328,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_08_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -787.5545500183199,
+        -3403.417848656405,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        13.04751496665466,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "OliveTree_09",
+      "mesh": "/Game/PathOfDawn/Environment/SM_OliveTree",
+      "location_cm": [
+        940,
+        -3500,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        34.02848784811225,
+        0
+      ],
+      "scale": [
+        1.05,
+        1.05,
+        1.05
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_09_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        1034.2637157985978,
+        -3498.9115022071323,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        22.640170907478048,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_09_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        958.4059465119157,
+        -3501.2606495288987,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        195.1111106382721,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_09_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        871.1029102938697,
+        -3503.38431818345,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        148.93477451402075,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "OliveTree_10",
+      "mesh": "/Game/PathOfDawn/Environment/SM_OliveTree",
+      "location_cm": [
+        -650,
+        -280,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        325.82654984731494,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_10_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -754.9321879618471,
+        -275.44091647895067,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        0.8016605868422388,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_10_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -591.0110174862132,
+        -351.68343420568806,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        189.96681543806773,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_10_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -643.6535388348482,
+        -326.07315682283945,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        288.27377416365516,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "OliveTree_11",
+      "mesh": "/Game/PathOfDawn/Environment/SM_OliveTree",
+      "location_cm": [
+        690,
+        -50,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        210.67424607129053,
+        0
+      ],
+      "scale": [
+        0.78,
+        0.78,
+        0.78
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_11_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        655.5430250919802,
+        18.96382944355028,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        83.14423462680492,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_11_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        635.845152505445,
+        -96.36154231713783,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        328.9992787641439,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_11_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        658.3104300030277,
+        -131.72989088414678,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        125.71618549855145,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "OliveTree_12",
+      "mesh": "/Game/PathOfDawn/Environment/SM_OliveTree",
+      "location_cm": [
+        -3150,
+        -1050,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        302.9846106734617,
+        0
+      ],
+      "scale": [
+        1.2,
+        1.2,
+        1.2
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_12_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -3240.0916549551393,
+        -1074.1448150086126,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        298.9358678407812,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_12_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -3176.9962226239436,
+        -1090.8470825709935,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        130.8286765476398,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_12_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -3132.1652037945046,
+        -1112.8174986208385,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        276.84407138635476,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "OliveTree_13",
+      "mesh": "/Game/PathOfDawn/Environment/SM_OliveTree",
+      "location_cm": [
+        3200,
+        -1400,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        301.9275706664872,
+        0
+      ],
+      "scale": [
+        1.15,
+        1.15,
+        1.15
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_13_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        3111.2531323653034,
+        -1425.286804130372,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        161.36511489449921,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_13_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        3263.587235756107,
+        -1328.2467838331067,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        77.16409218670898,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_13_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        3166.6853383169237,
+        -1369.1078104066987,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        328.9371849118156,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "OliveTree_14",
+      "mesh": "/Game/PathOfDawn/Environment/SM_OliveTree",
+      "location_cm": [
+        -2900,
+        -2540,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        68.79224175736684,
+        0
+      ],
+      "scale": [
+        1.05,
+        1.05,
+        1.05
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_14_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -2815.6549193506053,
+        -2507.080344372981,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        134.88599200815923,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_14_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -2884.413762695563,
+        -2479.239425617109,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        94.00428778530784,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_14_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -2916.2652038206816,
+        -2481.3606723591506,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        119.43236113337889,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "OliveTree_15",
+      "mesh": "/Game/PathOfDawn/Environment/SM_OliveTree",
+      "location_cm": [
+        2850,
+        -2700,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        52.132634574906824,
+        0
+      ],
+      "scale": [
+        1.2,
+        1.2,
+        1.2
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_15_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        2758.485625244291,
+        -2644.0895199971355,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        209.70323396125497,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_15_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        2940.581575846764,
+        -2729.5625636877103,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        91.14263699692066,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_15_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        2847.8816801954954,
+        -2693.5981806815225,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        170.0018151176182,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "OliveTree_16",
+      "mesh": "/Game/PathOfDawn/Environment/SM_OliveTree",
+      "location_cm": [
+        -1050,
+        -4500,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        140.28208413639462,
+        0
+      ],
+      "scale": [
+        1.1,
+        1.1,
+        1.1
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_16_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -1049.602324977684,
+        -4524.335009255634,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        222.2825776063294,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_16_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -945.5601814571742,
+        -4487.3143039529805,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        123.70490886451982,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_16_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        -1000.7311952376681,
+        -4440.600957643882,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        347.7504813828448,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "OliveTree_17",
+      "mesh": "/Game/PathOfDawn/Environment/SM_OliveTree",
+      "location_cm": [
+        1250,
+        -4480,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        26.14540218078949,
+        0
+      ],
+      "scale": [
+        1.25,
+        1.25,
+        1.25
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_17_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        1179.1217935493105,
+        -4552.872239906698,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        154.85386599241798,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_17_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        1193.0941267181213,
+        -4567.672974777521,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        201.13219880606144,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "TreeStone_17_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "location_cm": [
+        1329.384889342243,
+        -4479.884295215299,
+        -12
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        267.0848717920348,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.6,
+        0.35
+      ],
+      "visible": true
+    },
+    {
+      "label": "NearLowWall",
+      "mesh": "/Game/PathOfDawn/Environment/SM_StoneWall",
+      "location_cm": [
+        720,
+        -650,
+        -5
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        95,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.38
+      ],
+      "visible": true
+    },
+    {
+      "label": "WorkingJar_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_Jar",
+      "location_cm": [
+        -390,
+        -590,
+        -5
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.72,
+        0.72,
+        0.72
+      ],
+      "visible": true
+    },
+    {
+      "label": "WorkingJar_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_Jar",
+      "location_cm": [
+        -460,
+        -550,
+        -5
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        51,
+        0
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ],
+      "visible": true
+    },
+    {
+      "label": "WorkingJar_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_Jar",
+      "location_cm": [
+        620,
+        -670,
+        -5
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        102,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreReeds_00",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ReedClump",
+      "location_cm": [
+        -2180,
+        783.7093215769919,
+        -15
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        90.9940874608862,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.9058235161548767
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreReeds_01",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ReedClump",
+      "location_cm": [
+        -2010,
+        705.39661431026,
+        -15
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        234.44527371157764,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.7042227555245009
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreReeds_02",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ReedClump",
+      "location_cm": [
+        -1840,
+        714.8964877232002,
+        -15
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        113.4955856301851,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.6478258551017434
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreReeds_03",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ReedClump",
+      "location_cm": [
+        -1670,
+        765.2219305090842,
+        -15
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        53.5616108353366,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.7895074594073652
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreReeds_04",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ReedClump",
+      "location_cm": [
+        -1500,
+        711.206126777131,
+        -15
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        39.34403155198206,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.6331139996966463
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreReeds_09",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ReedClump",
+      "location_cm": [
+        -650,
+        732.0380860820629,
+        -15
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        21.116492562655548,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8054045732229073
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreReeds_10",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ReedClump",
+      "location_cm": [
+        -480,
+        729.3195384327707,
+        -15
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        244.16693196838025,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.5531333618151033
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreReeds_11",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ReedClump",
+      "location_cm": [
+        -310,
+        710.4986670679107,
+        -15
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        308.30258368672,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.6042369185763008
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreReeds_16",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ReedClump",
+      "location_cm": [
+        540,
+        758.3345056654923,
+        -15
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        303.6378483806201,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.5845215378365762
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreReeds_17",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ReedClump",
+      "location_cm": [
+        710,
+        740.510329722864,
+        -15
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        98.10227923760648,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.724762403926758
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreReeds_18",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ReedClump",
+      "location_cm": [
+        880,
+        749.6276706910555,
+        -15
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        186.7028038246854,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8123528437038865
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreReeds_19",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ReedClump",
+      "location_cm": [
+        1050,
+        732.66970388636,
+        -15
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        226.19648097393338,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8391395290963455
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreReeds_20",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ReedClump",
+      "location_cm": [
+        1220,
+        766.6816994583196,
+        -15
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        161.4527038518711,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.5727609714080959
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreReeds_21",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ReedClump",
+      "location_cm": [
+        1390,
+        745.1970113964,
+        -15
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        317.23331405800445,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8868391240358146
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreReeds_22",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ReedClump",
+      "location_cm": [
+        1560,
+        707.8175717873643,
+        -15
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        177.48354590611078,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.7662739064530791
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreReeds_23",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ReedClump",
+      "location_cm": [
+        1730,
+        765.2718313878879,
+        -15
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        225.64677584611334,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.671893321237863
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreReeds_24",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ReedClump",
+      "location_cm": [
+        1900,
+        783.5948159556765,
+        -15
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        264.7940805139075,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.895500805795185
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreReeds_25",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ReedClump",
+      "location_cm": [
+        2070,
+        762.9268281584168,
+        -15
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        71.46203700343453,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.7527669424965657
+      ],
+      "visible": true
+    },
+    {
+      "label": "ShoreReeds_26",
+      "mesh": "/Game/PathOfDawn/Environment/SM_ReedClump",
+      "location_cm": [
+        2240,
+        773.5022324840669,
+        -15
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        211.81269067101255,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.9156749134722646
+      ],
+      "visible": true
+    },
+    {
+      "label": "NetPath_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -120,
+        -290,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -38.483735335929296,
+        0
+      ],
+      "scale": [
+        0.65,
+        0.75,
+        0.7
+      ],
+      "visible": true
+    },
+    {
+      "label": "NetPath_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -208,
+        -252,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -9.772800366759746,
+        0
+      ],
+      "scale": [
+        0.65,
+        0.75,
+        0.7
+      ],
+      "visible": true
+    },
+    {
+      "label": "NetPath_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -296,
+        -214,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        11.71668222089933,
+        0
+      ],
+      "scale": [
+        0.65,
+        0.75,
+        0.7
+      ],
+      "visible": true
+    },
+    {
+      "label": "NetPath_3",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -384,
+        -176,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        17.75500362437461,
+        0
+      ],
+      "scale": [
+        0.65,
+        0.75,
+        0.7
+      ],
+      "visible": true
+    },
+    {
+      "label": "NetPath_4",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -472,
+        -138,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        16.24398643042548,
+        0
+      ],
+      "scale": [
+        0.65,
+        0.75,
+        0.7
+      ],
+      "visible": true
+    },
+    {
+      "label": "NetPath_5",
+      "mesh": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "location_cm": [
+        -560,
+        -100,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        29.805342704921742,
+        0
+      ],
+      "scale": [
+        0.65,
+        0.75,
+        0.7
+      ],
+      "visible": true
+    },
+    {
+      "label": "Interact_Boat",
+      "mesh": "/Game/PathOfDawn/SM_Boat",
+      "location_cm": [
+        130,
+        540,
+        -9
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        10,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "visible": true
+    },
+    {
+      "label": "SecondBoat",
+      "mesh": "/Game/PathOfDawn/Environment/SM_Boat",
+      "location_cm": [
+        -1000,
+        650,
+        -8
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        22,
+        0
+      ],
+      "scale": [
+        0.85,
+        0.85,
+        0.85
+      ],
+      "visible": true
+    },
+    {
+      "label": "Interact_Net",
+      "mesh": "/Game/PathOfDawn/SM_Net",
+      "location_cm": [
+        -720,
+        40,
+        -5
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "visible": true
+    },
+    {
+      "label": "Interact_Stone",
+      "mesh": "/Game/PathOfDawn/SM_ShoreRock",
+      "location_cm": [
+        980,
+        380,
+        -3
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "visible": true
+    },
+    {
+      "label": "Interact_Simon",
+      "mesh": "/Game/PathOfDawn/SM_Simon",
+      "location_cm": [
+        -180,
+        110,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -30,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "visible": true
+    },
+    {
+      "label": "Interact_Jesus",
+      "mesh": "/Game/PathOfDawn/SM_Jesus",
+      "location_cm": [
+        180,
+        220,
+        -4
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -105,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "visible": true
+    },
+    {
+      "label": "Traveler_start_marker",
+      "mesh": "/Game/PathOfDawn/SM_Traveler",
+      "location_cm": [
+        0,
+        -950,
+        0
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "visible": true
+    },
+    {
+      "label": "DistantRidge_0",
+      "mesh": "/Game/PathOfDawn/Environment/SM_DistantRidge",
+      "location_cm": [
+        -16000,
+        20500,
+        -80
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        -8,
+        0
+      ],
+      "scale": [
+        1.8,
+        1.2,
+        2.1
+      ],
+      "visible": true
+    },
+    {
+      "label": "DistantRidge_1",
+      "mesh": "/Game/PathOfDawn/Environment/SM_DistantRidge",
+      "location_cm": [
+        -4000,
+        19000,
+        -80
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.6,
+        1.2,
+        1.8
+      ],
+      "visible": true
+    },
+    {
+      "label": "DistantRidge_2",
+      "mesh": "/Game/PathOfDawn/Environment/SM_DistantRidge",
+      "location_cm": [
+        7200,
+        19800,
+        -80
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        8,
+        0
+      ],
+      "scale": [
+        1.5,
+        1.2,
+        2.5
+      ],
+      "visible": true
+    },
+    {
+      "label": "DistantRidge_3",
+      "mesh": "/Game/PathOfDawn/Environment/SM_DistantRidge",
+      "location_cm": [
+        17000,
+        21000,
+        -80
+      ],
+      "rotation_pitch_yaw_roll": [
+        0,
+        16,
+        0
+      ],
+      "scale": [
+        1.7,
+        1.2,
+        1.9
+      ],
+      "visible": true
+    }
+  ],
+  "views": [
+    {
+      "name": "LevelPreview_Shore",
+      "position_m": [
+        0,
+        -13.0,
+        2.65
+      ],
+      "target_m": [
+        0,
+        2.5,
+        1.25
+      ],
+      "lens_mm": 30
+    },
+    {
+      "name": "LevelPreview_Overview",
+      "position_m": [
+        -21,
+        -28,
+        14
+      ],
+      "target_m": [
+        0,
+        -3,
+        0.6
+      ],
+      "lens_mm": 28
+    }
+  ],
+  "outputs": [
+    {
+      "file": "LevelPreview_Shore.png",
+      "sha256": "00b23b17181dd19bddb7b9f1e3bea2f38ffc2093a774a2d3e8aa1d41a51e8a09"
+    },
+    {
+      "file": "LevelPreview_Overview.png",
+      "sha256": "179c57af6f6beb5dfdf3ef32a2bafcb21e905c3660225a39e705e0e84f4ac0b8"
+    }
+  ],
+  "status": "rendered_and_visually_reviewed",
+  "visual_review": [
+    "Final source map includes corrected ground heights for boats, net, stone, NPCs, canopy and jars.",
+    "Near olives and jars frame the starting view without blocking the center route.",
+    "Decorative terrain extends beyond the unchanged playable bounds.",
+    "Geometry remains stylized and static; these source renders do not prove final photorealistic characters or Unreal appearance."
+  ],
+  "command": "blender -b --python Tools/PathOfDawnUnreal/render_level_v8.py -- --output-dir /tmp/PathOfDawn-LevelPreview-v8-grounded --samples 32 --width 1440"
+}

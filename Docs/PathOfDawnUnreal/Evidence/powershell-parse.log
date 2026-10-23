@@ -1,0 +1,13 @@
+PARSE OK BuildDemo.ps1
+PARSE OK BuildEditor.ps1
+PARSE OK CheckEnvironment.ps1
+PARSE OK Common.ps1
+PARSE OK GenerateDemoAssets.ps1
+PARSE OK PackageDemo.ps1
+PARSE OK PrepareStreaming.ps1
+PARSE OK RunLocal.ps1
+PARSE OK StartStreaming.ps1
+PARSE OK StopStreaming.ps1
+PARSE OK TestDemo.ps1
+PARSE OK UpdateDemo.ps1
+PARSE OK tooling_tests.ps1

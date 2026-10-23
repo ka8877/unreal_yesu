@@ -1,0 +1,9 @@
+# Unreal project rules
+
+Inherit root AGENTS.md. Stable UE 5.8 target. The user reports that v7 launched on their Windows PC but rejected its blocky character/environment appearance and UI/art quality. v8 updates illustrations, clothed static character geometry, environment geometry/scatter and UMG title/dialogue/results. New source art lives under SourceArt/PathOfDawnUnreal/VisualV8/{Illustrations,Models}; preserve original v7 sources. These characters remain static meshes without skeletal locomotion or facial animation. v8 compile/import/reload/Cook/gameplay remain unverified. Generate v8 in a fresh source folder without copying v7 Content/Intermediate/Binaries; preserve user maps/materials/Blueprints. Source previews are not Unreal screenshots. Use Enhanced Input, UMG, USaveGame, spring arm and camera; keep editor dependencies isolated. Content is generated using real editor APIs after compiling the Editor target. JSON in SourceArt is authoritative for narrative content; imported DataAssets and textures are cooked.
+
+Keep one authoritative narrative state, value snapshots, stable IDs, independent meta progression/settings, deduplicated choice effects and stale callback invalidation. New game preserves meta; resetting meta requires a separate confirmation. Save errors and incompatible/corrupt slots must be visible and must not silently replace good saves.
+
+Temporary 3D character models must be documented. Font, illustrations, narrative data and map references must be explicitly cooked. Do not claim a successful executable build until UAT and extracted-package graphical execution succeed.
+
+Current narrative ContentVersion=2 adds spatial Task interactions and pending departure. Source-only core tests cover these; roughly five-minute first play and any public game URL remain unverified until a real GPU Unreal host is connected.

@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "checks": 9,
+  "scope": "actual HTTP/WebSocket signalling; protocol test peer only",
+  "unrealVideoAudioGameplay": "NOT TESTED",
+  "node": "v22.14.0"
+}

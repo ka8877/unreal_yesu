@@ -1,0 +1,762 @@
+{
+  "SchemaVersion": 1,
+  "ContentVersion": 2,
+  "EpisodeId": "GalileeFirstMorning",
+  "Title": "새벽의 길: 갈릴리의 첫 아침",
+  "Language": "ko-KR",
+  "Disclaimer": "성경의 사건을 바탕으로 구성한 창작 서사입니다. 여행자의 존재, 선택과 시간 회귀는 허구입니다.",
+  "ScriptureReference": "누가복음 5:1–11",
+  "SourceURL": "https://bible.usccb.org/bible/luke/5",
+  "Authority": "This JSON is the authoring source. Unreal Editor imports localized FText rows into DA_DawnNarrative; packaged runtime never reads this source file.",
+  "Images": {
+    "IL_Title_Dawn": "/Game/PathOfDawn/Illustrations/IL_Title_Dawn.IL_Title_Dawn",
+    "IL_Arrival": "/Game/PathOfDawn/Illustrations/IL_Arrival.IL_Arrival",
+    "IL_Portrait_Jesus": "/Game/PathOfDawn/Illustrations/IL_Portrait_Jesus.IL_Portrait_Jesus",
+    "IL_Portrait_Simon": "/Game/PathOfDawn/Illustrations/IL_Portrait_Simon.IL_Portrait_Simon",
+    "IL_Ending_Together": "/Game/PathOfDawn/Illustrations/IL_Ending_Together.IL_Ending_Together",
+    "IL_Ending_Witness": "/Game/PathOfDawn/Illustrations/IL_Ending_Witness.IL_Ending_Witness",
+    "IL_Ending_Departure": "/Game/PathOfDawn/Illustrations/IL_Ending_Departure.IL_Ending_Departure"
+  },
+  "Memories": [
+    {
+      "Id": "Memory_Net",
+      "Title": "손끝의 그물",
+      "Text": "밤의 무게와 한 조각의 수선용 밧줄."
+    },
+    {
+      "Id": "Memory_Boat",
+      "Title": "비어 있는 배",
+      "Text": "누군가의 하루를 떠받치는 목선."
+    },
+    {
+      "Id": "Memory_Stone",
+      "Title": "젖은 돌",
+      "Text": "물가에 남은 일의 흔적."
+    },
+    {
+      "Id": "Memory_SharedWork",
+      "Title": "매듭의 한쪽",
+      "Text": "시몬 곁에서 줄을 잡았던 감촉."
+    },
+    {
+      "Id": "Memory_Shore",
+      "Title": "밤이 지나간 자리",
+      "Text": "빈 바구니와 씻은 그물이 남긴 자국."
+    },
+    {
+      "Id": "Memory_Together",
+      "Title": "함께한 아침",
+      "Text": "누군가의 곁에서 본 시작."
+    },
+    {
+      "Id": "Memory_Witness",
+      "Title": "호숫가의 증인",
+      "Text": "잊지 않기로 한 물가의 표정."
+    },
+    {
+      "Id": "Memory_Departure",
+      "Title": "아직 걷지 않은 길",
+      "Text": "들은 말을 품고 옮긴 몇 걸음."
+    }
+  ],
+  "RuntimeRouting": {
+    "Outcome_Stay": {
+      "HelpSimon": "Ending_Together",
+      "ObserveShore": "Ending_Witness"
+    }
+  },
+  "Branches": [
+    {
+      "Choice1": "HelpSimon",
+      "Choice2": "Stay",
+      "Ending": "Ending_Together"
+    },
+    {
+      "Choice1": "ObserveShore",
+      "Choice2": "Stay",
+      "Ending": "Ending_Witness"
+    },
+    {
+      "Choice1": "HelpSimon",
+      "Choice2": "Depart",
+      "Ending": "Ending_Departure"
+    },
+    {
+      "Choice1": "ObserveShore",
+      "Choice2": "Depart",
+      "Ending": "Ending_Departure"
+    }
+  ],
+  "AdaptationNotes": [
+    "여행자, 시간 이동, 조사 사물, 수선용 밧줄, 선택, 관계값, 회귀와 모든 여행자 대화는 허구다.",
+    "군중, 야고보와 요한, 다른 배의 동료는 사건 요약으로 언급하며 개별 3D 인물로 구현하지 않는다.",
+    "두 배의 항해·그물 가득한 고기는 일러스트와 환경음으로 압축한다. 낚시·물고기 물리 시뮬레이션이 아니다.",
+    "마을로 걷는 결과는 여행자의 시점을 떠나게 할 뿐 성경 사건 자체를 취소하거나 바꾸지 않는다.",
+    "예수님의 대화 초상은 창작적 재현이다. 역사적으로 확인된 초상이나 배우의 모습을 복제한 것이 아니다.",
+    "본문의 시각은 새벽이라고 특정되지 않는다. 새벽빛과 공간 배치는 데모의 시각적 각색이다.",
+    "요한복음 21장의 부활 후 장면이나 다른 복음서의 유사 사건을 섞지 않는다."
+  ],
+  "Nodes": [
+    {
+      "Id": "Intro_Arrival",
+      "Speaker": "여행자의 기록",
+      "TextKey": "POD.Intro_Arrival.Text",
+      "Text": "눈을 뜨자 물소리가 들린다. 낯선 모래 위로 새벽빛이 번지고, 젖은 나무와 바람의 냄새가 다가온다. 언제, 어떻게 이곳에 왔는지는 알 수 없다. 다만 오늘의 작은 선택을 오래 기억하게 될 것 같은 느낌이 든다.",
+      "Portrait": "",
+      "Illustration": "IL_Arrival",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "Explore",
+      "ContentKind": "창작 연결 장면",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "누가복음 5:1–11을 배경으로 직접 쓴 창작 대사·행동이다. 성경 직접 인용이 아니며 여행자는 본문에 등장하지 않는다."
+    },
+    {
+      "Id": "Explore",
+      "Speaker": "여행자의 기록",
+      "TextKey": "POD.Explore.Text",
+      "Text": "호숫가를 천천히 걸으며 낡은 그물, 작은 배, 물가의 돌을 살펴보자. 세 곳을 조사한 뒤 배 가까이에 있는 시몬과 이야기할 수 있다. WASD 이동 · 마우스 시점 · E 상호작용 · Esc 메뉴",
+      "Portrait": "",
+      "Illustration": "",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "",
+      "ContentKind": "창작 연결 장면",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "누가복음 5:1–11을 배경으로 직접 쓴 창작 대사·행동이다. 성경 직접 인용이 아니며 여행자는 본문에 등장하지 않는다.",
+      "RuntimeTerminal": true
+    },
+    {
+      "Id": "Inspect_Net",
+      "Speaker": "여행자",
+      "TextKey": "POD.Inspect_Net.Text",
+      "Text": "그물의 가장자리에 풀린 매듭이 보인다. 밤새 물을 머금었던 줄은 손끝에 차갑고 거칠다. 옆에 놓인 짧은 수선용 밧줄 한 조각을 챙긴다. 누군가의 일을 거들 수도 있겠지만, 먼저 무슨 일이 있었는지 알아볼 수도 있을 것이다.",
+      "Portrait": "",
+      "Illustration": "",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [
+        {
+          "Command": "AddItem",
+          "Target": "Rope",
+          "Amount": 1
+        }
+      ],
+      "NextNode": "Explore",
+      "ContentKind": "창작 연결 장면",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "누가복음 5:1–11을 배경으로 직접 쓴 창작 대사·행동이다. 성경 직접 인용이 아니며 여행자는 본문에 등장하지 않는다.",
+      "MemoryId": "Memory_Net"
+    },
+    {
+      "Id": "Inspect_Boat",
+      "Speaker": "여행자",
+      "TextKey": "POD.Inspect_Boat.Text",
+      "Text": "작은 목선 안쪽에 물기가 남아 있다. 닳은 노와 비어 있는 바구니, 오래 밟아 매끈해진 널판이 눈에 들어온다. 이 배는 구경거리가 아니라 누군가의 하루를 떠받치는 자리다. 손으로 뱃전을 짚자 먼 물결의 흔들림이 전해진다.",
+      "Portrait": "",
+      "Illustration": "",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "Explore",
+      "ContentKind": "창작 연결 장면",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "누가복음 5:1–11을 배경으로 직접 쓴 창작 대사·행동이다. 성경 직접 인용이 아니며 여행자는 본문에 등장하지 않는다.",
+      "MemoryId": "Memory_Boat"
+    },
+    {
+      "Id": "Inspect_Stone",
+      "Speaker": "여행자",
+      "TextKey": "POD.Inspect_Stone.Text",
+      "Text": "물가의 납작한 돌에 앉아 호수를 바라본다. 발치에는 그물이 끌린 가느다란 자국이 있고, 멀리서는 사람들이 말을 낮추는 소리가 들린다. 물은 아무 일도 없었던 것처럼 잔잔하다. 여기서 조금 더 살피면 돌아온 이들의 밤을 짐작할 수 있을 것 같다.",
+      "Portrait": "",
+      "Illustration": "",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "Explore",
+      "ContentKind": "창작 연결 장면",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "누가복음 5:1–11을 배경으로 직접 쓴 창작 대사·행동이다. 성경 직접 인용이 아니며 여행자는 본문에 등장하지 않는다.",
+      "MemoryId": "Memory_Stone"
+    },
+    {
+      "Id": "Simon_Greeting",
+      "Speaker": "시몬",
+      "TextKey": "POD.Simon_Greeting.Text",
+      "Text": "처음 보는 얼굴이군. 길을 잃었나? 우린 긴 밤을 보내고 돌아오는 길이야. 잠깐 쉬려면 저 돌길이 덜 젖었을 거야. 배 가까이에 서려면 발밑을 조심해. 젖은 줄이 생각보다 잘 미끄러지거든.",
+      "Portrait": "IL_Portrait_Simon",
+      "Illustration": "",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "Traveler_Question",
+      "ContentKind": "창작 연결 장면",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "누가복음 5:1–11을 배경으로 직접 쓴 창작 대사·행동이다. 성경 직접 인용이 아니며 여행자는 본문에 등장하지 않는다."
+    },
+    {
+      "Id": "Traveler_Question",
+      "Speaker": "여행자",
+      "TextKey": "POD.Traveler_Question.Text",
+      "Text": "어디에서 왔다고 설명해야 할까. 입을 열었다가 다시 다문다. 대신 빈 바구니와 시몬의 거친 손을 바라본다. 무언가를 바꾸러 왔다는 생각보다, 지금 눈앞에 있는 하루를 함부로 지나치지 않고 싶다는 마음이 먼저 든다.",
+      "Portrait": "",
+      "Illustration": "",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "Simon_Morning",
+      "ContentKind": "창작 연결 장면",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "누가복음 5:1–11을 배경으로 직접 쓴 창작 대사·행동이다. 성경 직접 인용이 아니며 여행자는 본문에 등장하지 않는다."
+    },
+    {
+      "Id": "Simon_Morning",
+      "Speaker": "시몬",
+      "TextKey": "POD.Simon_Morning.Text",
+      "Text": "아침이면 끝날 줄 알았던 일도 다시 손을 기다리곤 하지. 저 그물부터 정리해야겠어. 자네까지 서두를 필요는 없어. 물가를 둘러보고 와도 괜찮아. 이 호수는 처음 온 사람에게 늘 넓게 보이더군.",
+      "Portrait": "IL_Portrait_Simon",
+      "Illustration": "",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "Jesus_Arrival",
+      "ContentKind": "창작 연결 장면",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "누가복음 5:1–11을 배경으로 직접 쓴 창작 대사·행동이다. 성경 직접 인용이 아니며 여행자는 본문에 등장하지 않는다."
+    },
+    {
+      "Id": "Jesus_Arrival",
+      "Speaker": "예수님",
+      "TextKey": "POD.Jesus_Arrival.Text",
+      "Text": "먼 길을 온 듯하구나. 이 아침에는 사람들의 얼굴도, 그들이 손에 쥔 것도 천천히 바라보아라. 서 있는 자리에서 들을 수 있는 이야기가 있을 것이다.",
+      "Portrait": "IL_Portrait_Jesus",
+      "Illustration": "",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "Traveler_Pause",
+      "ContentKind": "창작 연결 장면",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "누가복음 5:1–11을 배경으로 직접 쓴 창작 대사·행동이다. 성경 직접 인용이 아니며 여행자는 본문에 등장하지 않는다.",
+      "DisplayNote": "창작 대사 · 성경 직접 인용 아님"
+    },
+    {
+      "Id": "Traveler_Pause",
+      "Speaker": "여행자",
+      "TextKey": "POD.Traveler_Pause.Text",
+      "Text": "그 말이 이곳에 도착한 까닭을 설명해 주지는 않는다. 그래도 숨을 고를 수는 있다. 시몬은 다시 그물 쪽으로 몸을 돌리고, 호수 가장자리에는 밤의 흔적이 남아 있다. 나는 어떤 곁에 먼저 머물고 싶은가.",
+      "Portrait": "",
+      "Illustration": "",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "Choice_01",
+      "ContentKind": "창작 연결 장면",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "누가복음 5:1–11을 배경으로 직접 쓴 창작 대사·행동이다. 성경 직접 인용이 아니며 여행자는 본문에 등장하지 않는다."
+    },
+    {
+      "Id": "Choice_01",
+      "Speaker": "여행자의 선택",
+      "TextKey": "POD.Choice_01.Text",
+      "Text": "시몬은 그물을 정리하려 하고, 물가에는 아직 살펴보지 못한 흔적이 있다. 손에 쥔 밧줄은 한 조각이다. 지금 어느 쪽으로 발걸음을 옮길까?",
+      "Portrait": "",
+      "Illustration": "",
+      "Choices": [
+        {
+          "Id": "HelpSimon",
+          "TextKey": "POD.Choice_01.A",
+          "Text": "시몬의 그물 정리를 돕는다 · 밧줄 1개 사용",
+          "NextNode": "Task_HelpNet",
+          "Conditions": [
+            {
+              "Inspected": "Net"
+            },
+            {
+              "Item": "Rope",
+              "Minimum": 1
+            }
+          ],
+          "Effects": [
+            {
+              "Command": "RemoveItem",
+              "Target": "Rope",
+              "Amount": 1
+            },
+            {
+              "Command": "SetFlag",
+              "Target": "NetPrepared",
+              "Value": true
+            },
+            {
+              "Command": "ChangeRelationship",
+              "Target": "Simon",
+              "Amount": 1
+            }
+          ]
+        },
+        {
+          "Id": "ObserveShore",
+          "TextKey": "POD.Choice_01.B",
+          "Text": "물가를 살피며 밤의 흔적을 알아본다 · 밧줄 유지",
+          "NextNode": "Task_ObserveShore",
+          "Conditions": [],
+          "Effects": [
+            {
+              "Command": "SetFlag",
+              "Target": "ShoreClueFound",
+              "Value": true
+            }
+          ]
+        }
+      ],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "",
+      "ContentKind": "가상 분기",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "여행자의 위치·관계·기억에 관한 가상 분기다. 성경 사건의 원인이나 결과를 여행자의 공로 또는 신앙 점수로 평가하지 않는다.",
+      "Checkpoint": "CP01",
+      "RepeatTextKey": "POD.Choice_01.Repeat",
+      "RepeatText": "이 매듭과 물결을 전에도 마주한 듯하다. 기억은 남아 있지만, 지금 손에 쥔 밧줄과 선택은 다시 나의 것이다. 이번에는 어느 곁에 머물까?"
+    },
+    {
+      "Id": "Simon_Helped",
+      "Speaker": "시몬",
+      "TextKey": "POD.Simon_Helped.Text",
+      "Text": "그쪽 끝을 잠깐 잡아 주겠나? 그래, 너무 당기지 말고. …이제 매듭이 제자리를 찾았군. 고맙네. 대단한 일이 아니라고 생각할지 몰라도, 긴 밤 뒤에는 누군가 곁에서 한쪽 끝을 잡아 주는 게 반갑지.",
+      "Portrait": "IL_Portrait_Simon",
+      "Illustration": "",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "Traveler_Knot",
+      "ContentKind": "가상 분기",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "여행자의 위치·관계·기억에 관한 가상 분기다. 성경 사건의 원인이나 결과를 여행자의 공로 또는 신앙 점수로 평가하지 않는다.",
+      "MemoryId": "Memory_SharedWork"
+    },
+    {
+      "Id": "Traveler_Knot",
+      "Speaker": "여행자",
+      "TextKey": "POD.Traveler_Knot.Text",
+      "Text": "밧줄 한 조각이 그물의 가장자리에 묶였다. 손바닥에는 줄 자국이 잠깐 남고, 시몬은 조금 편안한 얼굴로 나를 돌아본다. 이 작은 수선이 앞으로 일어날 일을 만들어 내는 것은 아니다. 다만 나는 이 아침의 손길 하나를 기억하게 되었다.",
+      "Portrait": "",
+      "Illustration": "",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "Scene_Teaching",
+      "ContentKind": "가상 분기",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "여행자의 위치·관계·기억에 관한 가상 분기다. 성경 사건의 원인이나 결과를 여행자의 공로 또는 신앙 점수로 평가하지 않는다."
+    },
+    {
+      "Id": "Shore_Clue",
+      "Speaker": "여행자",
+      "TextKey": "POD.Shore_Clue.Text",
+      "Text": "돌 아래의 젖은 자국을 따라가 보니 빈 바구니가 지나간 길과 그물을 씻은 자리가 겹친다. 붙잡으려 했던 밤과 다시 시작해야 하는 아침이 한곳에 남아 있다. 나는 밧줄을 쓰지 않은 채 주머니에 넣고, 호수 쪽을 바라본다.",
+      "Portrait": "",
+      "Illustration": "",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "Shore_Response",
+      "ContentKind": "가상 분기",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "여행자의 위치·관계·기억에 관한 가상 분기다. 성경 사건의 원인이나 결과를 여행자의 공로 또는 신앙 점수로 평가하지 않는다.",
+      "MemoryId": "Memory_Shore"
+    },
+    {
+      "Id": "Shore_Response",
+      "Speaker": "시몬",
+      "TextKey": "POD.Shore_Response.Text",
+      "Text": "그쪽을 보고 있었나? 일하는 사람들에겐 익숙한 자리라 눈길이 잘 안 가는 곳이지. 자네는 먼 곳에서 와서인지 오래 바라보는군. 내가 보지 못한 걸 발견했다면, 나중에 들려주게.",
+      "Portrait": "IL_Portrait_Simon",
+      "Illustration": "",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "Scene_Teaching",
+      "ContentKind": "가상 분기",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "여행자의 위치·관계·기억에 관한 가상 분기다. 성경 사건의 원인이나 결과를 여행자의 공로 또는 신앙 점수로 평가하지 않는다."
+    },
+    {
+      "Id": "Scene_Teaching",
+      "Speaker": "사건의 기록",
+      "TextKey": "POD.Scene_Teaching.Text",
+      "Text": "누가복음은 사람들이 호숫가의 예수님께 모였고, 어부들이 두 배 곁에서 그물을 씻고 있었다고 전한다. 예수님은 시몬의 배에 올라 조금 물러나게 하신 뒤 사람들을 가르치신다.",
+      "Portrait": "",
+      "Illustration": "IL_Title_Dawn",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "Traveler_Listen",
+      "ContentKind": "성경 사건 요약",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "USCCB 누가복음 5:1–11의 사건 순서를 확인하여 직접 작성한 짧은 한국어 요약이다. 특정 한국어 번역문을 옮기지 않았다.",
+      "DisplayNote": "누가복음 5:1–3 · 직접 쓴 사건 요약"
+    },
+    {
+      "Id": "Traveler_Listen",
+      "Speaker": "여행자",
+      "TextKey": "POD.Traveler_Listen.Text",
+      "Text": "물 위의 작은 거리가 오히려 목소리를 가까이 가져온다. 바람이 옷자락을 스치고, 시몬의 배가 잔잔하게 흔들린다. 나는 이야기의 한가운데 서 있지 않다. 하지만 주변에 서 있다는 이유로 아무것도 듣지 못하는 것은 아니다.",
+      "Portrait": "",
+      "Illustration": "",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "Simon_Wait",
+      "ContentKind": "창작 연결 장면",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "누가복음 5:1–11을 배경으로 직접 쓴 창작 대사·행동이다. 성경 직접 인용이 아니며 여행자는 본문에 등장하지 않는다."
+    },
+    {
+      "Id": "Scene_DeepWater",
+      "Speaker": "사건의 기록",
+      "TextKey": "POD.Scene_DeepWater.Text",
+      "Text": "가르침을 마친 뒤, 예수님은 시몬에게 깊은 물로 가서 그물을 내리도록 말씀하신다. 밤새 고기를 잡지 못했던 시몬은 그 말씀을 따라 다시 그물을 내린다.",
+      "Portrait": "",
+      "Illustration": "IL_Ending_Witness",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "Traveler_Distance",
+      "ContentKind": "성경 사건 요약",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "USCCB 누가복음 5:1–11의 사건 순서를 확인하여 직접 작성한 짧은 한국어 요약이다. 특정 한국어 번역문을 옮기지 않았다.",
+      "DisplayNote": "누가복음 5:4–5 · 직접 쓴 사건 요약"
+    },
+    {
+      "Id": "Simon_Wait",
+      "Speaker": "시몬",
+      "TextKey": "POD.Simon_Wait.Text",
+      "Text": "뭍에 서 있을 때는 물의 깊이를 다 알 수 없지. 손에 익은 일이라도 매번 같은 아침으로 돌아오는 건 아니더군. 자네가 여기 머문다면, 잠깐 배가 돌아올 자리를 살펴 주겠나.",
+      "Portrait": "IL_Portrait_Simon",
+      "Illustration": "",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "Scene_DeepWater",
+      "ContentKind": "창작 연결 장면",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "누가복음 5:1–11을 배경으로 직접 쓴 창작 대사·행동이다. 성경 직접 인용이 아니며 여행자는 본문에 등장하지 않는다.",
+      "DisplayNote": "창작 연결 대사 · 항해는 일러스트 전환으로 압축"
+    },
+    {
+      "Id": "Traveler_Distance",
+      "Speaker": "여행자",
+      "TextKey": "POD.Traveler_Distance.Text",
+      "Text": "배가 멀어지는 사이 호숫가의 소리는 낮아진다. 나는 발밑의 모래를 한 번 밟고, 남겨진 그물의 무게를 떠올린다. 기다리는 시간에는 손을 보탤 수도, 바라본 것을 잊지 않으려 애쓸 수도 있다. 어느 쪽이 더 나은 사람을 만드는지 가르쳐 주는 표시는 없다.",
+      "Portrait": "",
+      "Illustration": "",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "Scene_Catch",
+      "ContentKind": "창작 연결 장면",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "누가복음 5:1–11을 배경으로 직접 쓴 창작 대사·행동이다. 성경 직접 인용이 아니며 여행자는 본문에 등장하지 않는다."
+    },
+    {
+      "Id": "Scene_Catch",
+      "Speaker": "사건의 기록",
+      "TextKey": "POD.Scene_Catch.Text",
+      "Text": "많은 고기가 잡혀 그물이 찢어질 지경이 된다. 어부들은 다른 배의 동료들에게 도움을 청하고, 두 배에 고기가 가득 찬다. 이 장면은 일러스트와 환경음으로 간추려 보여 준다.",
+      "Portrait": "",
+      "Illustration": "IL_Ending_Together",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "Traveler_Return",
+      "ContentKind": "성경 사건 요약",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "USCCB 누가복음 5:1–11의 사건 순서를 확인하여 직접 작성한 짧은 한국어 요약이다. 특정 한국어 번역문을 옮기지 않았다.",
+      "DisplayNote": "누가복음 5:6–7 · 직접 쓴 사건 요약"
+    },
+    {
+      "Id": "Traveler_Return",
+      "Speaker": "여행자",
+      "TextKey": "POD.Traveler_Return.Text",
+      "Text": "먼 배에서 사람들의 움직임이 달라진다. 가라앉아 있던 아침에 놀라움이 번져 온다. 나는 물소리와 나무가 삐걱이는 소리 사이에서 숨을 멈춘다. 손에 남은 매듭의 감촉도, 돌 곁에서 보았던 자국도 이제 조금 다른 기억이 된다.",
+      "Portrait": "",
+      "Illustration": "",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "Scene_SimonAwe",
+      "ContentKind": "창작 연결 장면",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "누가복음 5:1–11을 배경으로 직접 쓴 창작 대사·행동이다. 성경 직접 인용이 아니며 여행자는 본문에 등장하지 않는다."
+    },
+    {
+      "Id": "Scene_SimonAwe",
+      "Speaker": "사건의 기록",
+      "TextKey": "POD.Scene_SimonAwe.Text",
+      "Text": "시몬은 일어난 일에 놀라 예수님 앞에 엎드린다. 동료인 야고보와 요한도 놀란다. 예수님은 시몬을 안심시키며 새로운 부르심을 전하신다.",
+      "Portrait": "IL_Portrait_Simon",
+      "Illustration": "",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "Jesus_Quiet",
+      "ContentKind": "성경 사건 요약",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "USCCB 누가복음 5:1–11의 사건 순서를 확인하여 직접 작성한 짧은 한국어 요약이다. 특정 한국어 번역문을 옮기지 않았다.",
+      "DisplayNote": "누가복음 5:8–10 · 직접 쓴 사건 요약"
+    },
+    {
+      "Id": "Jesus_Quiet",
+      "Speaker": "예수님",
+      "TextKey": "POD.Jesus_Quiet.Text",
+      "Text": "지금 네가 본 것을 서둘러 한마디로 묶지 않아도 된다. 함께 있던 이들의 얼굴과, 네 마음에 남는 것을 기억하여라.",
+      "Portrait": "IL_Portrait_Jesus",
+      "Illustration": "",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "Simon_Quiet",
+      "ContentKind": "창작 연결 장면",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "누가복음 5:1–11을 배경으로 직접 쓴 창작 대사·행동이다. 성경 직접 인용이 아니며 여행자는 본문에 등장하지 않는다.",
+      "DisplayNote": "여행자를 향한 창작 대사 · 성경 직접 인용 아님"
+    },
+    {
+      "Id": "Simon_Quiet",
+      "Speaker": "시몬",
+      "TextKey": "POD.Simon_Quiet.Text",
+      "Text": "처음 자네를 보았을 때는 그저 길을 잃은 줄 알았네. 그런데 나도 이 아침이 어디로 이어질지 다 알고 있었던 건 아니군. 잠깐만 곁에 있어도 좋고, 자네 길을 걸어도 좋네. 오늘 본 것을 잊지 말게.",
+      "Portrait": "IL_Portrait_Simon",
+      "Illustration": "",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "Traveler_Crossroads",
+      "ContentKind": "창작 연결 장면",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "누가복음 5:1–11을 배경으로 직접 쓴 창작 대사·행동이다. 성경 직접 인용이 아니며 여행자는 본문에 등장하지 않는다."
+    },
+    {
+      "Id": "Traveler_Crossroads",
+      "Speaker": "여행자",
+      "TextKey": "POD.Traveler_Crossroads.Text",
+      "Text": "돌길은 낮은 석조 벽을 지나 마을 쪽으로 이어진다. 호숫가에서는 아직 사람들이 움직이고 있다. 나는 이곳에서 일어날 모든 일을 결정할 수 없다. 다만 다음 몇 걸음을 누구 곁에서, 어떤 기억을 품고 옮길지는 선택할 수 있다.",
+      "Portrait": "",
+      "Illustration": "",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "Task_ReturnToSimon",
+      "ContentKind": "창작 연결 장면",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "누가복음 5:1–11을 배경으로 직접 쓴 창작 대사·행동이다. 성경 직접 인용이 아니며 여행자는 본문에 등장하지 않는다."
+    },
+    {
+      "Id": "Choice_02",
+      "Speaker": "여행자의 선택",
+      "TextKey": "POD.Choice_02.Text",
+      "Text": "호숫가에 머물며 이어지는 일을 지켜볼까, 들은 말을 마음에 담고 마을 쪽으로 걸어갈까? 어느 길도 믿음이나 구원의 점수로 평가되지 않는다.",
+      "Portrait": "",
+      "Illustration": "",
+      "Choices": [
+        {
+          "Id": "Stay",
+          "TextKey": "POD.Choice_02.A",
+          "Text": "시몬 곁에 남아 이어지는 일을 지켜본다",
+          "NextNode": "Outcome_Stay",
+          "Conditions": [],
+          "Effects": [
+            {
+              "Command": "SetFlag",
+              "Target": "StayedWithSimon",
+              "Value": true
+            },
+            {
+              "Command": "SetFlag",
+              "Target": "WalkedToVillage",
+              "Value": false
+            }
+          ]
+        },
+        {
+          "Id": "Depart",
+          "TextKey": "POD.Choice_02.B",
+          "Text": "들은 말을 마음에 담고 마을 쪽으로 걷는다",
+          "NextNode": "Task_Departure",
+          "Conditions": [],
+          "Effects": [
+            {
+              "Command": "SetFlag",
+              "Target": "StayedWithSimon",
+              "Value": false
+            },
+            {
+              "Command": "SetFlag",
+              "Target": "WalkedToVillage",
+              "Value": false
+            }
+          ]
+        }
+      ],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "",
+      "ContentKind": "가상 분기",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "여행자의 위치·관계·기억에 관한 가상 분기다. 성경 사건의 원인이나 결과를 여행자의 공로 또는 신앙 점수로 평가하지 않는다.",
+      "Checkpoint": "CP02"
+    },
+    {
+      "Id": "Ending_Together",
+      "Speaker": "함께한 아침",
+      "TextKey": "POD.Ending_Together.Text",
+      "Text": "나는 시몬 곁에 남았다. 손에 남았던 줄 자국은 옅어졌지만 함께 그물의 한쪽을 잡았던 순간은 사라지지 않았다. 누가복음의 사건은 사람들이 배를 뭍에 대고 예수님을 따르는 장면으로 이어진다. 나의 작은 수선이 그 부르심을 만든 것은 아니다. 나는 그저 그 아침을 누군가의 곁에서 보았다.\n\n밧줄 0개 · 그물 정리됨 · 시몬과 함께한 기억\n다른 선택을 보고 싶다면 CP01 또는 CP02로 돌아갈 수 있다. 발견한 기억과 결과 기록은 남는다.",
+      "Portrait": "",
+      "Illustration": "IL_Ending_Together",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "",
+      "ContentKind": "가상 분기",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "여행자의 위치·관계·기억에 관한 가상 분기다. 성경 사건의 원인이나 결과를 여행자의 공로 또는 신앙 점수로 평가하지 않는다. 누가복음 5:11의 마무리는 짧은 사건 요약이며 여행자의 참여는 창작이다.",
+      "MemoryId": "Memory_Together",
+      "OutcomeId": "Ending_Together"
+    },
+    {
+      "Id": "Ending_Witness",
+      "Speaker": "호숫가의 증인",
+      "TextKey": "POD.Ending_Witness.Text",
+      "Text": "나는 시몬 곁에 남아 배가 돌아온 물가를 오래 바라보았다. 빈 바구니가 지나간 자국과 바뀌어 버린 사람들의 표정이 하나의 아침에 겹친다. 누가복음의 사건은 사람들이 배를 뭍에 대고 예수님을 따르는 장면으로 이어진다. 주머니에는 아직 쓰지 않은 밧줄이 있다. 돕지 못한 일을 점수로 헤아리는 대신, 내가 본 것을 가볍게 잊지 않기로 한다.\n\n밧줄 1개 · 물가의 흔적 발견 · 목격자의 기억\n다른 선택을 보고 싶다면 CP01 또는 CP02로 돌아갈 수 있다. 발견한 기억과 결과 기록은 남는다.",
+      "Portrait": "",
+      "Illustration": "IL_Ending_Witness",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "",
+      "ContentKind": "가상 분기",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "여행자의 위치·관계·기억에 관한 가상 분기다. 성경 사건의 원인이나 결과를 여행자의 공로 또는 신앙 점수로 평가하지 않는다. 누가복음 5:11의 마무리는 짧은 사건 요약이며 여행자의 관찰은 창작이다.",
+      "MemoryId": "Memory_Witness",
+      "OutcomeId": "Ending_Witness"
+    },
+    {
+      "Id": "Ending_Departure",
+      "Speaker": "아직 걷지 않은 길",
+      "TextKey": "POD.Ending_Departure.Text",
+      "Text": "나는 낮은 돌담을 따라 마을 쪽으로 걸었다. 뒤에서 들려오는 호수의 소리는 조금씩 멀어지고, 앞에는 아직 이름 모를 길이 남아 있다. 시몬과 사람들의 이야기는 내가 바라보는 곳 바깥에서도 이어질 것이다. 마지막 장면을 보지 못한 빈자리는 실패의 표시가 아니다. 그저 이번에 내가 택한 자리의 모양이다.\n\n마을로 향한 발걸음 · 첫 선택의 소지품과 관계 유지 · 길 위의 기억\n다른 선택을 보고 싶다면 CP01 또는 CP02로 돌아갈 수 있다. 발견한 기억과 결과 기록은 남는다.",
+      "Portrait": "",
+      "Illustration": "IL_Ending_Departure",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "",
+      "ContentKind": "가상 분기",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "여행자의 위치·관계·기억에 관한 가상 분기다. 성경 사건의 원인이나 결과를 여행자의 공로 또는 신앙 점수로 평가하지 않는다.",
+      "MemoryId": "Memory_Departure",
+      "OutcomeId": "Ending_Departure"
+    },
+    {
+      "Id": "Task_HelpNet",
+      "Speaker": "여행자의 발걸음",
+      "TextKey": "POD.Task_HelpNet.Text",
+      "Text": "그물 쪽으로 걸어가 E를 눌러 시몬과 매듭을 확인하자.",
+      "Portrait": "",
+      "Illustration": "",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "",
+      "RuntimeStage": "Task",
+      "ContentKind": "가상 분기",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "여행자의 이동과 상호작용은 게임을 위해 만든 허구다. 성경 사건이나 신앙의 우열을 바꾸지 않는다. 효과는 정해진 선택 또는 상호작용에서 한 번만 적용한다."
+    },
+    {
+      "Id": "Task_ObserveShore",
+      "Speaker": "여행자의 발걸음",
+      "TextKey": "POD.Task_ObserveShore.Text",
+      "Text": "물가의 돌로 걸어가 E를 눌러 밤이 남긴 흔적을 살펴보자.",
+      "Portrait": "",
+      "Illustration": "",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "",
+      "RuntimeStage": "Task",
+      "ContentKind": "가상 분기",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "여행자의 이동과 상호작용은 게임을 위해 만든 허구다. 성경 사건이나 신앙의 우열을 바꾸지 않는다. 효과는 정해진 선택 또는 상호작용에서 한 번만 적용한다."
+    },
+    {
+      "Id": "Task_ReturnToSimon",
+      "Speaker": "여행자의 발걸음",
+      "TextKey": "POD.Task_ReturnToSimon.Text",
+      "Text": "시몬 곁으로 돌아가 E를 눌러 다음 발걸음을 정하자.",
+      "Portrait": "",
+      "Illustration": "",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "",
+      "RuntimeStage": "Task",
+      "ContentKind": "가상 분기",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "여행자의 이동과 상호작용은 게임을 위해 만든 허구다. 성경 사건이나 신앙의 우열을 바꾸지 않는다. 효과는 정해진 선택 또는 상호작용에서 한 번만 적용한다."
+    },
+    {
+      "Id": "Task_Departure",
+      "Speaker": "여행자의 발걸음",
+      "TextKey": "POD.Task_Departure.Text",
+      "Text": "돌길을 따라 마을 쪽으로 걸어가 길 끝에서 E를 누르자.",
+      "Portrait": "",
+      "Illustration": "",
+      "Choices": [],
+      "Conditions": [],
+      "Effects": [],
+      "NextNode": "",
+      "RuntimeStage": "Task",
+      "ContentKind": "가상 분기",
+      "ScriptureReference": "누가복음 5:1–11",
+      "SourceNote": "여행자의 이동과 상호작용은 게임을 위해 만든 허구다. 성경 사건이나 신앙의 우열을 바꾸지 않는다. 효과는 정해진 선택 또는 상호작용에서 한 번만 적용한다."
+    }
+  ],
+  "RuntimeEntryPoints": {
+    "Simon": "Simon_Greeting",
+    "Jesus": "Simon_Greeting"
+  },
+  "RuntimeInteractions": {
+    "Task_HelpNet": {
+      "ActorId": "Net",
+      "NextNode": "Simon_Helped",
+      "Effects": []
+    },
+    "Task_ObserveShore": {
+      "ActorId": "Stone",
+      "NextNode": "Shore_Clue",
+      "Effects": []
+    },
+    "Task_ReturnToSimon": {
+      "ActorId": "Simon",
+      "NextNode": "Choice_02",
+      "Effects": []
+    },
+    "Task_Departure": {
+      "ActorId": "Village",
+      "NextNode": "Ending_Departure",
+      "Effects": [
+        {
+          "Command": "SetFlag",
+          "Target": "WalkedToVillage",
+          "Value": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,766 @@
+{
+  "schema": 1,
+  "scope": "Active v8 authoring sources. Runtime references are import destinations; no claim of v8 Unreal execution. Original v7 manifest: AssetManifestV7.json",
+  "assets": [
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Illustrations/IL_Title_Dawn.png",
+      "id": "IL_Title_Dawn",
+      "purpose": "타이틀 배경",
+      "source": "OpenAI image_gen 내장 이미지 생성 도구, 이 작업에서 생성",
+      "usage_terms": "연결된 이미지 생성 서비스의 이용 조건 적용. 제3자 사진·배우 초상·영화 원화 미사용. CC0 또는 독점 저작권을 주장하지 않음.",
+      "history": [
+        "VisualV8용 신규 image_gen 생성",
+        "원본 출력 파일을 변경하지 않고 신규 SourceArt 디렉터리에 복사",
+        "얼굴·손·발·구도·문자·워터마크 육안 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Illustrations/IL_Title_Dawn.IL_Title_Dawn",
+      "sha256": "c577385e02df7b70a0b2060cd2aeb6c235ba3737db1fed0ba7bf6180633ac8c1",
+      "limitations": [
+        "Unreal 실제 게임 캡처가 아닌 생성 일러스트",
+        "에디터 가져오기·Cook·런타임 표시 미검증",
+        "가로 원본 해상도 1672×941: 목표 1920×1080보다 작음"
+      ],
+      "native_size": [
+        1672,
+        941
+      ],
+      "bytes": 2485313
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Illustrations/IL_Arrival.png",
+      "id": "IL_Arrival",
+      "purpose": "도입 장면",
+      "source": "OpenAI image_gen 내장 이미지 생성 도구, 이 작업에서 생성",
+      "usage_terms": "연결된 이미지 생성 서비스의 이용 조건 적용. 제3자 사진·배우 초상·영화 원화 미사용. CC0 또는 독점 저작권을 주장하지 않음.",
+      "history": [
+        "VisualV8용 신규 image_gen 생성",
+        "원본 출력 파일을 변경하지 않고 신규 SourceArt 디렉터리에 복사",
+        "얼굴·손·발·구도·문자·워터마크 육안 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Illustrations/IL_Arrival.IL_Arrival",
+      "sha256": "2d1f4fa05c01779f9c16a256b0ee7da7fcc2fb660a6268a84472f2a3582f1882",
+      "limitations": [
+        "Unreal 실제 게임 캡처가 아닌 생성 일러스트",
+        "에디터 가져오기·Cook·런타임 표시 미검증",
+        "가로 원본 해상도 1672×941: 목표 1920×1080보다 작음"
+      ],
+      "native_size": [
+        1672,
+        941
+      ],
+      "bytes": 2791034
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Illustrations/IL_Portrait_Jesus.png",
+      "id": "IL_Portrait_Jesus",
+      "purpose": "예수님 대화 초상",
+      "source": "OpenAI image_gen 내장 이미지 생성 도구, 이 작업에서 생성",
+      "usage_terms": "연결된 이미지 생성 서비스의 이용 조건 적용. 제3자 사진·배우 초상·영화 원화 미사용. CC0 또는 독점 저작권을 주장하지 않음.",
+      "history": [
+        "VisualV8용 신규 image_gen 생성",
+        "원본 출력 파일을 변경하지 않고 신규 SourceArt 디렉터리에 복사",
+        "얼굴·손·발·구도·문자·워터마크 육안 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Illustrations/IL_Portrait_Jesus.IL_Portrait_Jesus",
+      "sha256": "4286c89a5b3ad328acc95b3d819e4f92015c5c77d6573d6ee661250788a5be7b",
+      "limitations": [
+        "Unreal 실제 게임 캡처가 아닌 생성 일러스트",
+        "에디터 가져오기·Cook·런타임 표시 미검증"
+      ],
+      "native_size": [
+        1024,
+        1536
+      ],
+      "bytes": 2870894
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Illustrations/IL_Portrait_Simon.png",
+      "id": "IL_Portrait_Simon",
+      "purpose": "시몬 대화 초상",
+      "source": "OpenAI image_gen 내장 이미지 생성 도구, 이 작업에서 생성",
+      "usage_terms": "연결된 이미지 생성 서비스의 이용 조건 적용. 제3자 사진·배우 초상·영화 원화 미사용. CC0 또는 독점 저작권을 주장하지 않음.",
+      "history": [
+        "VisualV8용 신규 image_gen 생성",
+        "원본 출력 파일을 변경하지 않고 신규 SourceArt 디렉터리에 복사",
+        "얼굴·손·발·구도·문자·워터마크 육안 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Illustrations/IL_Portrait_Simon.IL_Portrait_Simon",
+      "sha256": "feaa27b4bc814738ddc03e6ede29ec0c4c6ce3e94b3180d433372f4670f39050",
+      "limitations": [
+        "Unreal 실제 게임 캡처가 아닌 생성 일러스트",
+        "에디터 가져오기·Cook·런타임 표시 미검증"
+      ],
+      "native_size": [
+        1024,
+        1536
+      ],
+      "bytes": 2903787
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Illustrations/IL_Ending_Together.png",
+      "id": "IL_Ending_Together",
+      "purpose": "함께한 아침 결과",
+      "source": "OpenAI image_gen 내장 이미지 생성 도구, 이 작업에서 생성",
+      "usage_terms": "연결된 이미지 생성 서비스의 이용 조건 적용. 제3자 사진·배우 초상·영화 원화 미사용. CC0 또는 독점 저작권을 주장하지 않음.",
+      "history": [
+        "VisualV8용 신규 image_gen 생성",
+        "원본 출력 파일을 변경하지 않고 신규 SourceArt 디렉터리에 복사",
+        "얼굴·손·발·구도·문자·워터마크 육안 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Illustrations/IL_Ending_Together.IL_Ending_Together",
+      "sha256": "4029eab7bf45e43be0b59eb94a49998c94da6d788f55932921517e5e0bd5e449",
+      "limitations": [
+        "Unreal 실제 게임 캡처가 아닌 생성 일러스트",
+        "에디터 가져오기·Cook·런타임 표시 미검증",
+        "가로 원본 해상도 1672×941: 목표 1920×1080보다 작음"
+      ],
+      "native_size": [
+        1672,
+        941
+      ],
+      "bytes": 2954990
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Illustrations/IL_Ending_Witness.png",
+      "id": "IL_Ending_Witness",
+      "purpose": "호숫가의 증인 결과",
+      "source": "OpenAI image_gen 내장 이미지 생성 도구, 이 작업에서 생성",
+      "usage_terms": "연결된 이미지 생성 서비스의 이용 조건 적용. 제3자 사진·배우 초상·영화 원화 미사용. CC0 또는 독점 저작권을 주장하지 않음.",
+      "history": [
+        "VisualV8용 신규 image_gen 생성",
+        "원본 출력 파일을 변경하지 않고 신규 SourceArt 디렉터리에 복사",
+        "얼굴·손·발·구도·문자·워터마크 육안 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Illustrations/IL_Ending_Witness.IL_Ending_Witness",
+      "sha256": "2b210b3845af0cf3fc00fc6ae887db6dc63902eea40d2a215559b701384acb22",
+      "limitations": [
+        "Unreal 실제 게임 캡처가 아닌 생성 일러스트",
+        "에디터 가져오기·Cook·런타임 표시 미검증",
+        "가로 원본 해상도 1672×941: 목표 1920×1080보다 작음"
+      ],
+      "native_size": [
+        1672,
+        941
+      ],
+      "bytes": 2924473
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Illustrations/IL_Ending_Departure.png",
+      "id": "IL_Ending_Departure",
+      "purpose": "아직 걷지 않은 길 결과",
+      "source": "OpenAI image_gen 내장 이미지 생성 도구, 이 작업에서 생성",
+      "usage_terms": "연결된 이미지 생성 서비스의 이용 조건 적용. 제3자 사진·배우 초상·영화 원화 미사용. CC0 또는 독점 저작권을 주장하지 않음.",
+      "history": [
+        "VisualV8용 신규 image_gen 생성",
+        "첫 생성의 태양 두 개 오류를 발견하여 image_gen 편집으로 왼쪽 여분 태양 제거. 아치 너머 태양 하나만 남긴 수정본 사용.",
+        "원본 출력 파일을 변경하지 않고 신규 SourceArt 디렉터리에 복사",
+        "얼굴·손·발·구도·문자·워터마크 육안 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Illustrations/IL_Ending_Departure.IL_Ending_Departure",
+      "sha256": "347cf6a087187024c738caf62b9a67019c8b98385ef90089dae18e54464ef28d",
+      "limitations": [
+        "Unreal 실제 게임 캡처가 아닌 생성 일러스트",
+        "에디터 가져오기·Cook·런타임 표시 미검증",
+        "가로 원본 해상도 1672×941: 목표 1920×1080보다 작음"
+      ],
+      "native_size": [
+        1672,
+        941
+      ],
+      "bytes": 2656870
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_Jesus.fbx",
+      "id": "SM_Jesus",
+      "purpose": "중거리 3D 인물",
+      "source": "Original procedural sculpt authored for this project; no third-party mesh or actor likeness",
+      "usage_terms": "Original project-authored geometry and material colors. No third-party asset restrictions. Creative depiction, not historically verified likeness.",
+      "history": [
+        "Blender 4.3.2 v8 신규 원본; 연속 얼굴 면, 감싸는 의복, 머리·수염, 손·샌들",
+        "렌더 검수 후 어깨 틈·망토 접합·눈·머리 형태 수정",
+        "FBX 재수입으로 실제 크기·스무딩·단일 메시 확인"
+      ],
+      "temporary": true,
+      "runtime_reference": "/Game/PathOfDawn/Characters/SM_Jesus",
+      "limitations": [
+        "Static unrigged medium-distance sculpture; no facial animation or deformable walk cycle. Requires in-engine lighting and integration verification.",
+        "Unreal 재질·조명·Cook·게임 표시 미검증"
+      ],
+      "dimensions_metres": [
+        0.659891664981842,
+        0.4073678255081177,
+        1.8009999990463257
+      ],
+      "triangles": 100688,
+      "sha256": "c54957c7ff74c9c5e793fb0f823315a09d91d1525d878b5af3f7489f318b6060",
+      "bytes": 2009372
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_Simon.fbx",
+      "id": "SM_Simon",
+      "purpose": "중거리 3D 인물",
+      "source": "Original procedural sculpt authored for this project; no third-party mesh or actor likeness",
+      "usage_terms": "Original project-authored geometry and material colors. No third-party asset restrictions. Creative depiction, not historically verified likeness.",
+      "history": [
+        "Blender 4.3.2 v8 신규 원본; 연속 얼굴 면, 감싸는 의복, 머리·수염, 손·샌들",
+        "렌더 검수 후 어깨 틈·망토 접합·눈·머리 형태 수정",
+        "FBX 재수입으로 실제 크기·스무딩·단일 메시 확인"
+      ],
+      "temporary": true,
+      "runtime_reference": "/Game/PathOfDawn/Characters/SM_Simon",
+      "limitations": [
+        "Static unrigged medium-distance sculpture; no facial animation or deformable walk cycle. Requires in-engine lighting and integration verification.",
+        "Unreal 재질·조명·Cook·게임 표시 미검증"
+      ],
+      "dimensions_metres": [
+        0.723518431186676,
+        0.42162567377090454,
+        1.7739850282669067
+      ],
+      "triangles": 101904,
+      "sha256": "4794e928a75c59880c308eb6a8cc8baa2a33bebfd4ad35edd3491e2b19fc6017",
+      "bytes": 2036844
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_Traveler.fbx",
+      "id": "SM_Traveler",
+      "purpose": "중거리 3D 인물",
+      "source": "Original procedural sculpt authored for this project; no third-party mesh or actor likeness",
+      "usage_terms": "Original project-authored geometry and material colors. No third-party asset restrictions. Creative depiction, not historically verified likeness.",
+      "history": [
+        "Blender 4.3.2 v8 신규 원본; 연속 얼굴 면, 감싸는 의복, 머리·수염, 손·샌들",
+        "렌더 검수 후 어깨 틈·망토 접합·눈·머리 형태 수정",
+        "FBX 재수입으로 실제 크기·스무딩·단일 메시 확인"
+      ],
+      "temporary": true,
+      "runtime_reference": "/Game/PathOfDawn/Characters/SM_Traveler",
+      "limitations": [
+        "Static unrigged medium-distance sculpture; no facial animation or deformable walk cycle. Requires in-engine lighting and integration verification.",
+        "Unreal 재질·조명·Cook·게임 표시 미검증"
+      ],
+      "dimensions_metres": [
+        0.6272350549697876,
+        0.3910731077194214,
+        1.7829900979995728
+      ],
+      "triangles": 90116,
+      "sha256": "0b89415eb4ee449f35b15644df43b9f9dea7dfdd1da535d3feb701981804eded",
+      "bytes": 1797676
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_Boat.fbx",
+      "id": "SM_Boat",
+      "purpose": "호숫가 3D 환경",
+      "source": "Original geometry authored in create_environment_v8.py; Blender 4.3.2",
+      "usage_terms": "Project-created; no external geometry, images, or textures",
+      "history": [
+        "V8 rebuilt curved and worn surfaces, explicit triangles, FBX face smoothing, material colors",
+        "시각 검수 후 지면 격자 색 제거, 둥근 비정형 돌담·올리브 수관 보강",
+        "FBX 단일 메시·크기·재질·지면 UV0 왕복 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Environment/SM_Boat",
+      "limitations": [
+        "Static mesh source; Unreal import, collision, Lumen and runtime appearance require Windows verification."
+      ],
+      "sha256": "d1711b49333cd8c5c49c4d7391a57cdcca8c64434e35618feab63f41041ac513",
+      "dimensions_metres": [
+        4.1604,
+        1.4924,
+        0.9661
+      ],
+      "triangles": 14328,
+      "bytes": 327276
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_Net.fbx",
+      "id": "SM_Net",
+      "purpose": "호숫가 3D 환경",
+      "source": "Original geometry authored in create_environment_v8.py; Blender 4.3.2",
+      "usage_terms": "Project-created; no external geometry, images, or textures",
+      "history": [
+        "V8 rebuilt curved and worn surfaces, explicit triangles, FBX face smoothing, material colors",
+        "시각 검수 후 지면 격자 색 제거, 둥근 비정형 돌담·올리브 수관 보강",
+        "FBX 단일 메시·크기·재질·지면 UV0 왕복 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Environment/SM_Net",
+      "limitations": [
+        "Static mesh source; Unreal import, collision, Lumen and runtime appearance require Windows verification."
+      ],
+      "sha256": "33368e0a1f5f0e3663477cd4536a03dd401cacc23af0c84cdae15a1381bbc58c",
+      "dimensions_metres": [
+        2.5499,
+        1.4172,
+        0.3547
+      ],
+      "triangles": 13248,
+      "bytes": 339292
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_NetPrepared.fbx",
+      "id": "SM_NetPrepared",
+      "purpose": "호숫가 3D 환경",
+      "source": "Original geometry authored in create_environment_v8.py; Blender 4.3.2",
+      "usage_terms": "Project-created; no external geometry, images, or textures",
+      "history": [
+        "V8 rebuilt curved and worn surfaces, explicit triangles, FBX face smoothing, material colors",
+        "시각 검수 후 지면 격자 색 제거, 둥근 비정형 돌담·올리브 수관 보강",
+        "FBX 단일 메시·크기·재질·지면 UV0 왕복 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Environment/SM_NetPrepared",
+      "limitations": [
+        "Static mesh source; Unreal import, collision, Lumen and runtime appearance require Windows verification."
+      ],
+      "sha256": "9d3b3d2a9903968901ed2920f39d71fbe877c23cc05079a11e912dfae0b46174",
+      "dimensions_metres": [
+        2.4317,
+        1.6276,
+        0.1135
+      ],
+      "triangles": 12716,
+      "bytes": 320044
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_Jar.fbx",
+      "id": "SM_Jar",
+      "purpose": "호숫가 3D 환경",
+      "source": "Original geometry authored in create_environment_v8.py; Blender 4.3.2",
+      "usage_terms": "Project-created; no external geometry, images, or textures",
+      "history": [
+        "V8 rebuilt curved and worn surfaces, explicit triangles, FBX face smoothing, material colors",
+        "시각 검수 후 지면 격자 색 제거, 둥근 비정형 돌담·올리브 수관 보강",
+        "FBX 단일 메시·크기·재질·지면 UV0 왕복 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Environment/SM_Jar",
+      "limitations": [
+        "Static mesh source; Unreal import, collision, Lumen and runtime appearance require Windows verification."
+      ],
+      "sha256": "99e2e5c8dafd229ffaffcacd968ef761085b96857576b3ad7cb347193fab4cbc",
+      "dimensions_metres": [
+        0.5865,
+        0.4914,
+        0.709
+      ],
+      "triangles": 4770,
+      "bytes": 121356
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_StoneWall.fbx",
+      "id": "SM_StoneWall",
+      "purpose": "호숫가 3D 환경",
+      "source": "Original geometry authored in create_environment_v8.py; Blender 4.3.2",
+      "usage_terms": "Project-created; no external geometry, images, or textures",
+      "history": [
+        "V8 rebuilt curved and worn surfaces, explicit triangles, FBX face smoothing, material colors",
+        "시각 검수 후 지면 격자 색 제거, 둥근 비정형 돌담·올리브 수관 보강",
+        "FBX 단일 메시·크기·재질·지면 UV0 왕복 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Environment/SM_StoneWall",
+      "limitations": [
+        "Static mesh source; Unreal import, collision, Lumen and runtime appearance require Windows verification."
+      ],
+      "sha256": "c5ca23f35afb74241e9ca870c8753c564ec168f0233cab36ad22cd4809fe9d79",
+      "dimensions_metres": [
+        3.9637,
+        0.5674,
+        1.7616
+      ],
+      "triangles": 7392,
+      "bytes": 207292
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_Canopy.fbx",
+      "id": "SM_Canopy",
+      "purpose": "호숫가 3D 환경",
+      "source": "Original geometry authored in create_environment_v8.py; Blender 4.3.2",
+      "usage_terms": "Project-created; no external geometry, images, or textures",
+      "history": [
+        "V8 rebuilt curved and worn surfaces, explicit triangles, FBX face smoothing, material colors",
+        "시각 검수 후 지면 격자 색 제거, 둥근 비정형 돌담·올리브 수관 보강",
+        "FBX 단일 메시·크기·재질·지면 UV0 왕복 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Environment/SM_Canopy",
+      "limitations": [
+        "Static mesh source; Unreal import, collision, Lumen and runtime appearance require Windows verification."
+      ],
+      "sha256": "31b70bef0f090287be1df99568f4b70d9ab089e383cac8f36ecfa8ac788009cf",
+      "dimensions_metres": [
+        2.9563,
+        2.2163,
+        2.177
+      ],
+      "triangles": 4660,
+      "bytes": 124668
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_ShoreRock.fbx",
+      "id": "SM_ShoreRock",
+      "purpose": "호숫가 3D 환경",
+      "source": "Original geometry authored in create_environment_v8.py; Blender 4.3.2",
+      "usage_terms": "Project-created; no external geometry, images, or textures",
+      "history": [
+        "V8 rebuilt curved and worn surfaces, explicit triangles, FBX face smoothing, material colors",
+        "시각 검수 후 지면 격자 색 제거, 둥근 비정형 돌담·올리브 수관 보강",
+        "FBX 단일 메시·크기·재질·지면 UV0 왕복 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "limitations": [
+        "Static mesh source; Unreal import, collision, Lumen and runtime appearance require Windows verification."
+      ],
+      "sha256": "3195e8a7a8776dcbed7e5272e665ba696795e26b33b63f3441a54d75f1b50bd1",
+      "dimensions_metres": [
+        0.9436,
+        0.7288,
+        0.5336
+      ],
+      "triangles": 506,
+      "bytes": 27276
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_OliveTree.fbx",
+      "id": "SM_OliveTree",
+      "purpose": "호숫가 3D 환경",
+      "source": "Original geometry authored in create_environment_v8.py; Blender 4.3.2",
+      "usage_terms": "Project-created; no external geometry, images, or textures",
+      "history": [
+        "V8 rebuilt curved and worn surfaces, explicit triangles, FBX face smoothing, material colors",
+        "시각 검수 후 지면 격자 색 제거, 둥근 비정형 돌담·올리브 수관 보강",
+        "FBX 단일 메시·크기·재질·지면 UV0 왕복 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Environment/SM_OliveTree",
+      "limitations": [
+        "Static mesh source; Unreal import, collision, Lumen and runtime appearance require Windows verification."
+      ],
+      "sha256": "61a82b34a1239f13d38486bacd7ddcd261f8976daa021a3f925b566ba562a4d6",
+      "dimensions_metres": [
+        3.6673,
+        3.6364,
+        3.8256
+      ],
+      "triangles": 128024,
+      "bytes": 3313596
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_ReedClump.fbx",
+      "id": "SM_ReedClump",
+      "purpose": "호숫가 3D 환경",
+      "source": "Original geometry authored in create_environment_v8.py; Blender 4.3.2",
+      "usage_terms": "Project-created; no external geometry, images, or textures",
+      "history": [
+        "V8 rebuilt curved and worn surfaces, explicit triangles, FBX face smoothing, material colors",
+        "시각 검수 후 지면 격자 색 제거, 둥근 비정형 돌담·올리브 수관 보강",
+        "FBX 단일 메시·크기·재질·지면 UV0 왕복 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Environment/SM_ReedClump",
+      "limitations": [
+        "Static mesh source; Unreal import, collision, Lumen and runtime appearance require Windows verification."
+      ],
+      "sha256": "affa871d50f1b21e63e7ef7f5aced4fe07e1fa1f6ca3c391dbc7ea6f75d2e295",
+      "dimensions_metres": [
+        1.2128,
+        1.2045,
+        1.7067
+      ],
+      "triangles": 4448,
+      "bytes": 131420
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_PathSlab.fbx",
+      "id": "SM_PathSlab",
+      "purpose": "호숫가 3D 환경",
+      "source": "Original geometry authored in create_environment_v8.py; Blender 4.3.2",
+      "usage_terms": "Project-created; no external geometry, images, or textures",
+      "history": [
+        "V8 rebuilt curved and worn surfaces, explicit triangles, FBX face smoothing, material colors",
+        "시각 검수 후 지면 격자 색 제거, 둥근 비정형 돌담·올리브 수관 보강",
+        "FBX 단일 메시·크기·재질·지면 UV0 왕복 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Environment/SM_PathSlab",
+      "limitations": [
+        "Static mesh source; Unreal import, collision, Lumen and runtime appearance require Windows verification."
+      ],
+      "sha256": "3f49bcc9ccefa16ee9656229ef77d8000d9f71a69bf707db42c014a2072834de",
+      "dimensions_metres": [
+        0.8843,
+        0.712,
+        0.1005
+      ],
+      "triangles": 60,
+      "bytes": 17884
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_ShoreGround.fbx",
+      "id": "SM_ShoreGround",
+      "purpose": "호숫가 3D 환경",
+      "source": "Original geometry authored in create_environment_v8.py; Blender 4.3.2",
+      "usage_terms": "Project-created; no external geometry, images, or textures",
+      "history": [
+        "V8 rebuilt curved and worn surfaces, explicit triangles, FBX face smoothing, material colors",
+        "시각 검수 후 지면 격자 색 제거, 둥근 비정형 돌담·올리브 수관 보강",
+        "FBX 단일 메시·크기·재질·지면 UV0 왕복 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Environment/SM_ShoreGround",
+      "limitations": [
+        "Static mesh source; Unreal import, collision, Lumen and runtime appearance require Windows verification."
+      ],
+      "sha256": "f28eee13883f743266b0f29532f9ecb967bba6a6bc9b8fb306642f7509309de8",
+      "dimensions_metres": [
+        46.0,
+        28.9879,
+        0.84
+      ],
+      "triangles": 6064,
+      "bytes": 140092
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_DistantRidge.fbx",
+      "id": "SM_DistantRidge",
+      "purpose": "호숫가 3D 환경",
+      "source": "Original geometry authored in create_environment_v8.py; Blender 4.3.2",
+      "usage_terms": "Project-created; no external geometry, images, or textures",
+      "history": [
+        "V8 rebuilt curved and worn surfaces, explicit triangles, FBX face smoothing, material colors",
+        "시각 검수 후 지면 격자 색 제거, 둥근 비정형 돌담·올리브 수관 보강",
+        "FBX 단일 메시·크기·재질·지면 UV0 왕복 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Environment/SM_DistantRidge",
+      "limitations": [
+        "Static mesh source; Unreal import, collision, Lumen and runtime appearance require Windows verification."
+      ],
+      "sha256": "668966d5b0c2b2b5857dd8bd046e12b5ed543a4b2e83e6559cc8f0eeb31df906",
+      "dimensions_metres": [
+        90.0,
+        20.0,
+        11.5
+      ],
+      "triangles": 2016,
+      "bytes": 63708
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/T_LakeNormal.png",
+      "id": "T_LakeNormal",
+      "purpose": "잔물결 노멀",
+      "source": "Original periodic ripple normal texture authored mathematically in create_environment_v8.py",
+      "usage_terms": "Project-created; no external image",
+      "history": [
+        "외부 원본 없이 반복 가능한 수학적 필드로 신규 제작",
+        "512² 수면 / 1024² 모래 PNG 저장 및 검수"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Environment/T_LakeNormal",
+      "limitations": [
+        "Unreal 가져오기·셰이더·게임 표시 미검증"
+      ],
+      "sha256": "783a0aeedb85d020b7a32602b9d08a85f6cd7c3eaec1bea406ca1f0a0d6bcf2b",
+      "native_size": [
+        512,
+        512
+      ],
+      "color_space": "Non-Color (sRGB disabled)",
+      "bytes": 206601
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/T_ShoreAlbedo.png",
+      "id": "T_ShoreAlbedo",
+      "purpose": "모래 표면 색/노멀",
+      "source": "Original periodic Fourier-filtered micrograin/pebble texture, create_environment_v8.py",
+      "usage_terms": "Project-created; no external imagery",
+      "history": [
+        "외부 원본 없이 반복 가능한 수학적 필드로 신규 제작",
+        "512² 수면 / 1024² 모래 PNG 저장 및 검수"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Environment/T_ShoreAlbedo",
+      "limitations": [
+        "Unreal 가져오기·셰이더·게임 표시 미검증"
+      ],
+      "sha256": "4b29b477fe96eb8f5fa1658245ff41f3500698958c73f31a0113c69524e7e2f9",
+      "native_size": [
+        1024,
+        1024
+      ],
+      "color_space": "sRGB",
+      "bytes": 1292598
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/T_ShoreNormal.png",
+      "id": "T_ShoreNormal",
+      "purpose": "모래 표면 색/노멀",
+      "source": "Original periodic Fourier-filtered micrograin/pebble texture, create_environment_v8.py",
+      "usage_terms": "Project-created; no external imagery",
+      "history": [
+        "외부 원본 없이 반복 가능한 수학적 필드로 신규 제작",
+        "512² 수면 / 1024² 모래 PNG 저장 및 검수"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Environment/T_ShoreNormal",
+      "limitations": [
+        "Unreal 가져오기·셰이더·게임 표시 미검증"
+      ],
+      "sha256": "1168b6c93ea2f25aa8289521e932cd17e0956516d55a032bacbeda5aa2bd4672",
+      "native_size": [
+        1024,
+        1024
+      ],
+      "color_space": "Non-Color",
+      "bytes": 1807200
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Audio/A_Water.wav",
+      "id": "A_Water",
+      "purpose": "환경·효과음",
+      "source": "Original deterministic noise synthesis, create_audio.py",
+      "usage_terms": "Project-created sound, no third-party recording",
+      "history": [
+        "Deterministic original synthesis"
+      ],
+      "temporary": true,
+      "runtime_reference": "/Game/PathOfDawn/Audio/A_Water",
+      "limitations": [
+        "Provisional synthesized Foley/ambience; no speech or soundtrack"
+      ],
+      "sha256": "e3eaa3665c32136a1632d1e7efef49ac7b3e4cf73d33cd8bb4bd3f385ae73110",
+      "bytes": 576044
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Audio/A_Wind.wav",
+      "id": "A_Wind",
+      "purpose": "환경·효과음",
+      "source": "Original deterministic noise synthesis, create_audio.py",
+      "usage_terms": "Project-created sound, no third-party recording",
+      "history": [
+        "Deterministic original synthesis"
+      ],
+      "temporary": true,
+      "runtime_reference": "/Game/PathOfDawn/Audio/A_Wind",
+      "limitations": [
+        "Provisional synthesized Foley/ambience; no speech or soundtrack"
+      ],
+      "sha256": "8dc423f8540edc922f1a999d96b24bdc6edd400a01e66fc5606d6508b7dd438a",
+      "bytes": 576044
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Audio/A_Footstep.wav",
+      "id": "A_Footstep",
+      "purpose": "환경·효과음",
+      "source": "Original deterministic noise synthesis, create_audio.py",
+      "usage_terms": "Project-created sound, no third-party recording",
+      "history": [
+        "Deterministic original synthesis"
+      ],
+      "temporary": true,
+      "runtime_reference": "/Game/PathOfDawn/Audio/A_Footstep",
+      "limitations": [
+        "Provisional synthesized Foley/ambience; no speech or soundtrack"
+      ],
+      "sha256": "b05c1c02e4bc5cacdd0ad40606bbf01899eed77429bab7c72e1a58406fe50398",
+      "bytes": 10604
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Audio/A_NetRustle.wav",
+      "id": "A_NetRustle",
+      "purpose": "환경·효과음",
+      "source": "Original deterministic noise synthesis, create_audio.py",
+      "usage_terms": "Project-created sound, no third-party recording",
+      "history": [
+        "Deterministic original synthesis"
+      ],
+      "temporary": true,
+      "runtime_reference": "/Game/PathOfDawn/Audio/A_NetRustle",
+      "limitations": [
+        "Provisional synthesized Foley/ambience; no speech or soundtrack"
+      ],
+      "sha256": "3a95e946d573c768ea3673dd6722ff857805a6b8a896d61604ce034af4e81fb2",
+      "bytes": 38444
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Fonts/NotoSansKR.otf",
+      "id": "F_Korean",
+      "purpose": "한국어 UI·자막",
+      "source": "Debian fonts-noto-cjk / Google Noto Sans CJK KR 정규 face",
+      "usage_terms": "SIL OFL 1.1; LICENSE-Debian-Noto.txt 동봉",
+      "history": [
+        "TTC에서 KR face 분리, 글리프 변경 없음"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/UI/F_Korean",
+      "limitations": [
+        "UMG import/render not verified"
+      ],
+      "sha256": "bf0ad1c3cfc459842725a0fb63d3e7c174ad95e0081b7618c7ba7f5af5eb9c94",
+      "bytes": 16433088
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Narrative/episode.json",
+      "id": "Episode_Galilee",
+      "purpose": "서사 제작 원본",
+      "source": "이 작업의 직접 작성 한국어 요약·창작",
+      "usage_terms": "프로젝트 원본; 참고본문 번역 장문 복제 없음",
+      "history": [
+        "누가복음 5:1–11 사건순서 검토·창작 메타데이터 분리",
+        "ContentVersion 2: 직접 수행하는 공간 상호작용 4개와 마을 도착 후 결과 기록 추가"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Narrative/DA_DawnNarrative",
+      "limitations": [
+        "Runtime DataAsset creation not executed"
+      ],
+      "sha256": "84ffbe77677830fb35afffbdb13eb677633f798a94a1a2c92b7051f1cd061b1c",
+      "bytes": 37285
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/CharactersV8.blend",
+      "id": "CharactersV8",
+      "purpose": "인물 제작 원본",
+      "source": "이 프로젝트에서 작성한 Blender 생성기와 자체 형상",
+      "usage_terms": "직접 제작; 외부 모델 없음",
+      "history": [
+        "v8 신규 제작; 기존 v7 원본 보존"
+      ],
+      "temporary": true,
+      "runtime_reference": "Editor authoring source only",
+      "limitations": [
+        "게임 배포에 Blender가 필요하지 않음",
+        "Blender 검수 조명은 Unreal 조명 검증이 아님"
+      ],
+      "sha256": "f050c158e937dfc8157c7a7d0de6e474c8a16698b1db971455ce2b3dea519777",
+      "bytes": 16438244
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/EnvironmentV8.blend",
+      "id": "EnvironmentV8",
+      "purpose": "환경 제작 원본",
+      "source": "이 프로젝트에서 작성한 Blender 생성기와 자체 형상",
+      "usage_terms": "직접 제작; 외부 모델 없음",
+      "history": [
+        "v8 신규 제작; 기존 v7 원본 보존"
+      ],
+      "temporary": false,
+      "runtime_reference": "Editor authoring source only",
+      "limitations": [
+        "게임 배포에 Blender가 필요하지 않음",
+        "Blender 검수 조명은 Unreal 조명 검증이 아님"
+      ],
+      "sha256": "ccbd1a6937348a7793c8f67657f680873a78318b6b41aaf3862caa5afcfe39d6",
+      "bytes": 14601664
+    }
+  ]
+}

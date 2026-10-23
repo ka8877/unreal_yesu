@@ -1,0 +1,4 @@
+# Same authoring-validation dependencies as requirements-art.txt.
+# Included in the standalone Windows setup helper; not game runtime dependencies.
+Pillow==12.3.0
+fonttools==4.61.1

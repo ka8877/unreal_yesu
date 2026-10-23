@@ -1,0 +1,13 @@
+{
+  "test": "Actual OTF Korean character coverage",
+  "font": "SourceArt/PathOfDawnUnreal/Fonts/NotoSansKR.otf",
+  "unique_korean_characters": 446,
+  "missing": [],
+  "passed": true,
+  "unverified": [
+    "Unreal font import",
+    "UMG shaping",
+    "small-window wrapping",
+    "packaged glyph rendering"
+  ]
+}

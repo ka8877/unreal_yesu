@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-23",
+  "revision": "v8",
+  "powershell_version": "7.4.6 on Linux",
+  "powershell_parser_files": 19,
+  "powershell_source_pipeline": {
+    "command": "pwsh -NoProfile -File Tools/PathOfDawnUnreal/TestDemo.ps1 -SourceOnly -RequireArt",
+    "exit_code": 0,
+    "core_assertions": 479,
+    "content_routes": 8,
+    "content_mutations": 20,
+    "source_guard_tests": 7,
+    "narrative_import_contracts": 6,
+    "editor_material_contracts": 13,
+    "visual_sources": 25,
+    "korean_codepoints": 446
+  },
+  "static_review": {
+    "changed_runtime_files": [
+      "DawnWidget.h",
+      "DawnWidget.cpp"
+    ],
+    "material_graph": "TextureCoordinate/Panner/TextureSample with normal/color samplers; connections checked before saving",
+    "map": "Source review only: 870cm lane internal clearance, 150cm support overlap; new foliage/slab/ground backdrop collisions off; stable interaction locations unchanged",
+    "api_sources": [
+      "https://dev.epicgames.com/documentation/en-us/unreal-engine/python-api/class/MaterialEditingLibrary",
+      "https://dev.epicgames.com/documentation/en-us/unreal-engine/python-api/genindex-S",
+      "https://dev.epicgames.com/documentation/unreal-engine/API/Runtime/SlateCore/FButtonStyle?lang=en-US"
+    ]
+  },
+  "unverified": [
+    "Unreal compilation",
+    "Editor source import and metadata persistence",
+    "UMG rendering and input",
+    "Lumen and materials",
+    "Collision and camera",
+    "Windows package",
+    "Pixel Streaming"
+  ]
+}

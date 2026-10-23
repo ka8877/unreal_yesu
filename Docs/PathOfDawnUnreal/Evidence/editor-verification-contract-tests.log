@@ -1,0 +1,18 @@
+test_full_verification_accepts_property_only_mesh_components (test_editor_verification.EditorVerificationContractTests.test_full_verification_accepts_property_only_mesh_components) ... ok
+test_missing_duplicate_or_empty_interactable_rejected (test_editor_verification.EditorVerificationContractTests.test_missing_duplicate_or_empty_interactable_rejected) ... ok
+test_missing_or_wrong_player_mesh_rejected (test_editor_verification.EditorVerificationContractTests.test_missing_or_wrong_player_mesh_rejected) ... ok
+test_missing_required_asset_or_stale_source_rejected (test_editor_verification.EditorVerificationContractTests.test_missing_required_asset_or_stale_source_rejected) ... ok
+test_narrative_and_font_rejection_propagate (test_editor_verification.EditorVerificationContractTests.test_narrative_and_font_rejection_propagate) ... ok
+test_old_visual_map_cannot_be_certified_as_v8 (test_editor_verification.EditorVerificationContractTests.test_old_visual_map_cannot_be_certified_as_v8) ... ok
+test_unloadable_map_and_missing_editor_world_rejected (test_editor_verification.EditorVerificationContractTests.test_unloadable_map_and_missing_editor_world_rejected) ... ok
+test_wrong_game_mode_or_default_pawn_rejected (test_editor_verification.EditorVerificationContractTests.test_wrong_game_mode_or_default_pawn_rejected) ... ok
+test_each_failed_connection_prevents_compile_and_save (test_editor_verification.MaterialGraphContractTests.test_each_failed_connection_prevents_compile_and_save) ... ok
+test_existing_material_is_preserved_without_rewrite (test_editor_verification.MaterialGraphContractTests.test_existing_material_is_preserved_without_rewrite) ... ok
+test_ground_uses_stationary_normal_and_separate_color_sampler (test_editor_verification.MaterialGraphContractTests.test_ground_uses_stationary_normal_and_separate_color_sampler) ... ok
+test_water_connects_unnamed_sine_input_before_save (test_editor_verification.MaterialGraphContractTests.test_water_connects_unnamed_sine_input_before_save) ... ok
+test_water_normal_uses_normal_sampler_and_checked_connections (test_editor_verification.MaterialGraphContractTests.test_water_normal_uses_normal_sampler_and_checked_connections) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.396s
+
+OK

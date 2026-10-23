@@ -1,0 +1,223 @@
+{
+  "status": "passed",
+  "scope": "Source integrity and provenance only; not Unreal import, shaders, collision or graphics",
+  "visual_version": "v8",
+  "errors": [],
+  "sources": [
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Illustrations/IL_Title_Dawn.png",
+      "id": "IL_Title_Dawn",
+      "kind": "illustration",
+      "bytes": 2485313,
+      "sha256": "c577385e02df7b70a0b2060cd2aeb6c235ba3737db1fed0ba7bf6180633ac8c1",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Illustrations/IL_Arrival.png",
+      "id": "IL_Arrival",
+      "kind": "illustration",
+      "bytes": 2791034,
+      "sha256": "2d1f4fa05c01779f9c16a256b0ee7da7fcc2fb660a6268a84472f2a3582f1882",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Illustrations/IL_Portrait_Jesus.png",
+      "id": "IL_Portrait_Jesus",
+      "kind": "illustration",
+      "bytes": 2870894,
+      "sha256": "4286c89a5b3ad328acc95b3d819e4f92015c5c77d6573d6ee661250788a5be7b",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Illustrations/IL_Portrait_Simon.png",
+      "id": "IL_Portrait_Simon",
+      "kind": "illustration",
+      "bytes": 2903787,
+      "sha256": "feaa27b4bc814738ddc03e6ede29ec0c4c6ce3e94b3180d433372f4670f39050",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Illustrations/IL_Ending_Together.png",
+      "id": "IL_Ending_Together",
+      "kind": "illustration",
+      "bytes": 2954990,
+      "sha256": "4029eab7bf45e43be0b59eb94a49998c94da6d788f55932921517e5e0bd5e449",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Illustrations/IL_Ending_Witness.png",
+      "id": "IL_Ending_Witness",
+      "kind": "illustration",
+      "bytes": 2924473,
+      "sha256": "2b210b3845af0cf3fc00fc6ae887db6dc63902eea40d2a215559b701384acb22",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Illustrations/IL_Ending_Departure.png",
+      "id": "IL_Ending_Departure",
+      "kind": "illustration",
+      "bytes": 2656870,
+      "sha256": "347cf6a087187024c738caf62b9a67019c8b98385ef90089dae18e54464ef28d",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_Traveler.fbx",
+      "id": "SM_Traveler",
+      "kind": "mesh",
+      "bytes": 1797676,
+      "sha256": "0b89415eb4ee449f35b15644df43b9f9dea7dfdd1da535d3feb701981804eded"
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_Jesus.fbx",
+      "id": "SM_Jesus",
+      "kind": "mesh",
+      "bytes": 2009372,
+      "sha256": "c54957c7ff74c9c5e793fb0f823315a09d91d1525d878b5af3f7489f318b6060"
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_Simon.fbx",
+      "id": "SM_Simon",
+      "kind": "mesh",
+      "bytes": 2036844,
+      "sha256": "4794e928a75c59880c308eb6a8cc8baa2a33bebfd4ad35edd3491e2b19fc6017"
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_Boat.fbx",
+      "id": "SM_Boat",
+      "kind": "mesh",
+      "bytes": 327276,
+      "sha256": "d1711b49333cd8c5c49c4d7391a57cdcca8c64434e35618feab63f41041ac513"
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_Net.fbx",
+      "id": "SM_Net",
+      "kind": "mesh",
+      "bytes": 339292,
+      "sha256": "33368e0a1f5f0e3663477cd4536a03dd401cacc23af0c84cdae15a1381bbc58c"
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_NetPrepared.fbx",
+      "id": "SM_NetPrepared",
+      "kind": "mesh",
+      "bytes": 320044,
+      "sha256": "9d3b3d2a9903968901ed2920f39d71fbe877c23cc05079a11e912dfae0b46174"
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_Jar.fbx",
+      "id": "SM_Jar",
+      "kind": "mesh",
+      "bytes": 121356,
+      "sha256": "99e2e5c8dafd229ffaffcacd968ef761085b96857576b3ad7cb347193fab4cbc"
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_StoneWall.fbx",
+      "id": "SM_StoneWall",
+      "kind": "mesh",
+      "bytes": 207292,
+      "sha256": "c5ca23f35afb74241e9ca870c8753c564ec168f0233cab36ad22cd4809fe9d79"
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_Canopy.fbx",
+      "id": "SM_Canopy",
+      "kind": "mesh",
+      "bytes": 124668,
+      "sha256": "31b70bef0f090287be1df99568f4b70d9ab089e383cac8f36ecfa8ac788009cf"
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_ShoreRock.fbx",
+      "id": "SM_ShoreRock",
+      "kind": "mesh",
+      "bytes": 27276,
+      "sha256": "3195e8a7a8776dcbed7e5272e665ba696795e26b33b63f3441a54d75f1b50bd1"
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_OliveTree.fbx",
+      "id": "SM_OliveTree",
+      "kind": "mesh",
+      "bytes": 3313596,
+      "sha256": "61a82b34a1239f13d38486bacd7ddcd261f8976daa021a3f925b566ba562a4d6"
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_ReedClump.fbx",
+      "id": "SM_ReedClump",
+      "kind": "mesh",
+      "bytes": 131420,
+      "sha256": "affa871d50f1b21e63e7ef7f5aced4fe07e1fa1f6ca3c391dbc7ea6f75d2e295"
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_PathSlab.fbx",
+      "id": "SM_PathSlab",
+      "kind": "mesh",
+      "bytes": 17884,
+      "sha256": "3f49bcc9ccefa16ee9656229ef77d8000d9f71a69bf707db42c014a2072834de"
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_ShoreGround.fbx",
+      "id": "SM_ShoreGround",
+      "kind": "mesh",
+      "bytes": 140092,
+      "sha256": "f28eee13883f743266b0f29532f9ecb967bba6a6bc9b8fb306642f7509309de8"
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_DistantRidge.fbx",
+      "id": "SM_DistantRidge",
+      "kind": "mesh",
+      "bytes": 63708,
+      "sha256": "668966d5b0c2b2b5857dd8bd046e12b5ed543a4b2e83e6559cc8f0eeb31df906"
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/T_LakeNormal.png",
+      "id": "T_LakeNormal",
+      "kind": "surface",
+      "bytes": 206601,
+      "sha256": "783a0aeedb85d020b7a32602b9d08a85f6cd7c3eaec1bea406ca1f0a0d6bcf2b",
+      "dimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/T_ShoreAlbedo.png",
+      "id": "T_ShoreAlbedo",
+      "kind": "surface",
+      "bytes": 1292598,
+      "sha256": "4b29b477fe96eb8f5fa1658245ff41f3500698958c73f31a0113c69524e7e2f9",
+      "dimensions": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/T_ShoreNormal.png",
+      "id": "T_ShoreNormal",
+      "kind": "surface",
+      "bytes": 1807200,
+      "sha256": "1168b6c93ea2f25aa8289521e932cd17e0956516d55a032bacbeda5aa2bd4672",
+      "dimensions": [
+        1024,
+        1024
+      ]
+    }
+  ]
+}

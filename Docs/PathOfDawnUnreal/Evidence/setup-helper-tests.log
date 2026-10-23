@@ -1,0 +1,8 @@
+
+[stderr-success] & '/bin/sh' '-c' 'echo harmless-stderr >&2; exit 0'
+harmless-stderr
+
+[exit-failure] & '/bin/sh' '-c' 'exit 37'
+
+[plan-does-not-launch] & '/tmp/intentionally-missing' '--example' 'value with spaces'
+PASS: stderr success, preference restoration, nonzero native exit, plan does not launch

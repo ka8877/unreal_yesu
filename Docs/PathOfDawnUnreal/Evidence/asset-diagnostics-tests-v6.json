@@ -1,0 +1,40 @@
+{
+  "test": "Asset generation launcher diagnostics",
+  "date": "2026-10-23",
+  "command": "XDG_CACHE_HOME=/tmp/pathofdawn-tools/cache XDG_CONFIG_HOME=/tmp/pathofdawn-tools/config XDG_DATA_HOME=/tmp/pathofdawn-tools/data /tmp/pathofdawn-tools/pwsh/pwsh -NoProfile -File Tools/PathOfDawnUnreal/tests/asset_diagnostics_tests.ps1",
+  "powershellVersion": "7.4.6",
+  "host": "Debian managed Linux workspace",
+  "exitCode": 0,
+  "assertionsPassed": 20,
+  "status": "passed",
+  "scope": "Actual AssetDiagnostics.ps1 functions and Common.ps1 native command wrapper exercised with real child PowerShell fixture processes. No Unreal Editor or Windows process was executed.",
+  "modes": [
+    "generation",
+    "reload-verification"
+  ],
+  "negativeScenarios": [
+    "Native exit 0 with failed asset report including supplied SoftObjectProperty TypeError",
+    "Failed reload-verification report",
+    "Native exit 37 with failed report still preserves error/traceback",
+    "Native exit 37 with passed report is rejected",
+    "Current report missing after a previous passed report",
+    "Corrupt JSON report retained and rejected",
+    "Missing status field",
+    "Passed report has incorrect mode",
+    "Incomplete running status"
+  ],
+  "otherChecks": [
+    "Generation/reload successful fixtures accepted",
+    "Project and Python arguments preserve spaces and Korean characters",
+    "stdout and UTF8Output flags passed",
+    "ABSLOG path absolute and unique per attempt",
+    "Python traceback reaches console",
+    "Failed and previous reports preserved in Evidence"
+  ],
+  "observedOutput": "PASS 20 asset diagnostics assertions: real child process fixtures; report and native-exit gates; failed/corrupt/previous reports preserved; Python traceback visible; generation/reload modes; unique logs and space/Unicode paths. No Unreal execution.",
+  "unverified": [
+    "Unreal Editor execution and logging",
+    "Windows native command line interpretation",
+    "Actual UE asset generation and reload"
+  ]
+}

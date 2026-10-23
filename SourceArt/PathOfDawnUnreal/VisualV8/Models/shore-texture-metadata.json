@@ -1,0 +1,32 @@
+[
+  {
+    "file": "T_ShoreAlbedo.png",
+    "width": 1024,
+    "height": 1024,
+    "runtime_path": "/Game/PathOfDawn/Environment/T_ShoreAlbedo",
+    "source": "Original periodic Fourier-filtered micrograin/pebble texture, create_environment_v8.py",
+    "license": "Project-created; no external imagery",
+    "color_space": "sRGB",
+    "sRGB": true,
+    "normal_convention": null,
+    "uv": "SM_ShoreGround UV0 uses x=46m/y=29m; multiply UV by (46,29) for 1m repeats",
+    "lighting_baked": false,
+    "temporary": false,
+    "sha256": "4b29b477fe96eb8f5fa1658245ff41f3500698958c73f31a0113c69524e7e2f9"
+  },
+  {
+    "file": "T_ShoreNormal.png",
+    "width": 1024,
+    "height": 1024,
+    "runtime_path": "/Game/PathOfDawn/Environment/T_ShoreNormal",
+    "source": "Original periodic Fourier-filtered micrograin/pebble texture, create_environment_v8.py",
+    "license": "Project-created; no external imagery",
+    "color_space": "Non-Color",
+    "sRGB": false,
+    "normal_convention": "DirectX tangent space",
+    "uv": "SM_ShoreGround UV0 uses x=46m/y=29m; multiply UV by (46,29) for 1m repeats",
+    "lighting_baked": false,
+    "temporary": false,
+    "sha256": "1168b6c93ea2f25aa8289521e932cd17e0956516d55a032bacbeda5aa2bd4672"
+  }
+]

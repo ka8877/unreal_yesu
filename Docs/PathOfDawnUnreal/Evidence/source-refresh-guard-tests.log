@@ -1,0 +1,12 @@
+test_first_generation_and_repeat (__main__.SourceAssetGuardTests.test_first_generation_and_repeat) ... ok
+test_index_roundtrip_and_reject_bad_version (__main__.SourceAssetGuardTests.test_index_roundtrip_and_reject_bad_version) ... ok
+test_missing_baseline_never_permits_refresh (__main__.SourceAssetGuardTests.test_missing_baseline_never_permits_refresh) ... ok
+test_missing_package_blocks_existing_asset (__main__.SourceAssetGuardTests.test_missing_package_blocks_existing_asset) ... ok
+test_source_and_package_change_conflicts_without_mutation (__main__.SourceAssetGuardTests.test_source_and_package_change_conflicts_without_mutation) ... ok
+test_source_update_refreshes_only_known_generated_package (__main__.SourceAssetGuardTests.test_source_update_refreshes_only_known_generated_package) ... ok
+test_user_package_edit_is_preserved_with_unchanged_source (__main__.SourceAssetGuardTests.test_user_package_edit_is_preserved_with_unchanged_source) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.002s
+
+OK

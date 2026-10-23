@@ -1,0 +1,43 @@
+{
+  "provenance": "User-uploaded Windows logs; no remote access to that PC",
+  "sessionUtc": "2026-10-23T10:25:39Z",
+  "inputFiles": [
+    {
+      "name": "start-here-20261023T102539Z-environment.log",
+      "sha256": "fad1eb8f823fc6f8e58bf70d9cf05618bc4961e3de11e1869ccfbff3844fb7cc",
+      "encoding": "UTF-16LE BOM"
+    },
+    {
+      "name": "start-here-20261023T102539Z-editor.log",
+      "sha256": "cd67e95f6785a25c86a402bfd566b70efda93f6320ee65d3ca87e353d47a4b6c",
+      "encoding": "UTF-16LE BOM"
+    }
+  ],
+  "engine": {
+    "version": "5.8.4",
+    "changelist": 58902052,
+    "path": "C:\\Program Files\\Epic Games\\UE_5.8"
+  },
+  "visualStudio": "17.14.37806.7 BuildTools",
+  "msvc": "14.44.35207",
+  "windowsSdk": "10.0.26100.0",
+  "gpu": [
+    "AMD Radeon(TM) Graphics",
+    "NVIDIA GeForce RTX 5080"
+  ],
+  "environmentCheckSucceeded": true,
+  "ubtStarted": true,
+  "editorCompilationSucceeded": false,
+  "result": "Failed (OtherCompilationError)",
+  "elapsedSeconds": 42.55,
+  "diagnosis": "BuildSettingsVersion.V5 gives warning settings that differ from the installed UnrealEditor shared build products. UBT explicitly requests BuildSettingsVersion.V7.",
+  "settingsInFailure": [
+    "UndefinedIdentifierWarningLevel",
+    "UnreachableCodeWarningLevel",
+    "ReturnTypeWarningLevel",
+    "DanglingWarningLevel"
+  ],
+  "fix": "Set DefaultBuildSettings=BuildSettingsVersion.V7 in both Game and Editor targets. Preserve default shared environment.",
+  "fixedWindowsBuildVerified": false,
+  "gameplayVerified": false
+}

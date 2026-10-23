@@ -1,0 +1,441 @@
+{
+  "schema": 1,
+  "scope": "Actual authoring files; Unreal asset import/cook/runtime references are intended, not verified.",
+  "assets": [
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Illustrations/IL_Title_Dawn.png",
+      "id": "IL_Title_Dawn",
+      "purpose": "타이틀 배경",
+      "source": "OpenAI image_gen 내장 이미지 생성 도구, 이 작업에서 신규 생성",
+      "usage_terms": "연결된 이미지 생성 서비스의 이용 조건 적용. 제3자 사진·배우 초상·영화 원화 미사용. CC0 또는 독점 저작권을 주장하지 않음.",
+      "history": [
+        "이 작업에서 신규 생성",
+        "생성 파일을 원본 보존 상태로 SourceArt에 복사",
+        "얼굴·손·구도·문자·워터마크 육안 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Illustrations/IL_Title_Dawn.IL_Title_Dawn",
+      "limitations": [
+        "원화이며 Unreal 실제 게임 캡처가 아님",
+        "에디터 가져오기·Cook·런타임 표시 미검증",
+        "도구의 실제 가로 출력은 1672×941이며 목표 1920×1080보다 작음. 확대하여 원본 해상도라고 주장하지 않음."
+      ],
+      "sha256": "8a03c1d8326f6bdc6ce57b0bfe1678be7f373d48d474e11d1d8066ab0d4863ca",
+      "bytes": 2636818
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Illustrations/IL_Arrival.png",
+      "id": "IL_Arrival",
+      "purpose": "도입",
+      "source": "OpenAI image_gen 내장 이미지 생성 도구, 이 작업에서 신규 생성",
+      "usage_terms": "연결된 이미지 생성 서비스의 이용 조건 적용. 제3자 사진·배우 초상·영화 원화 미사용. CC0 또는 독점 저작권을 주장하지 않음.",
+      "history": [
+        "이 작업에서 신규 생성",
+        "생성 파일을 원본 보존 상태로 SourceArt에 복사",
+        "얼굴·손·구도·문자·워터마크 육안 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Illustrations/IL_Arrival.IL_Arrival",
+      "limitations": [
+        "원화이며 Unreal 실제 게임 캡처가 아님",
+        "에디터 가져오기·Cook·런타임 표시 미검증",
+        "도구의 실제 가로 출력은 1672×941이며 목표 1920×1080보다 작음. 확대하여 원본 해상도라고 주장하지 않음."
+      ],
+      "sha256": "718ede3403044d5d3ede93d1bc136d43927a0b07503b767d068cb3811840ac3b",
+      "bytes": 2999783
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Illustrations/IL_Portrait_Jesus.png",
+      "id": "IL_Portrait_Jesus",
+      "purpose": "예수님 대화 초상",
+      "source": "OpenAI image_gen 내장 이미지 생성 도구, 이 작업에서 신규 생성",
+      "usage_terms": "연결된 이미지 생성 서비스의 이용 조건 적용. 제3자 사진·배우 초상·영화 원화 미사용. CC0 또는 독점 저작권을 주장하지 않음.",
+      "history": [
+        "이 작업에서 신규 생성",
+        "생성 파일을 원본 보존 상태로 SourceArt에 복사",
+        "얼굴·손·구도·문자·워터마크 육안 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Illustrations/IL_Portrait_Jesus.IL_Portrait_Jesus",
+      "limitations": [
+        "원화이며 Unreal 실제 게임 캡처가 아님",
+        "에디터 가져오기·Cook·런타임 표시 미검증"
+      ],
+      "sha256": "964ff75226924cf3eb039c85aa46de4f85383b6af0c4539c021a3788227e36a1",
+      "bytes": 2661814
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Illustrations/IL_Portrait_Simon.png",
+      "id": "IL_Portrait_Simon",
+      "purpose": "시몬 대화 초상",
+      "source": "OpenAI image_gen 내장 이미지 생성 도구, 이 작업에서 신규 생성",
+      "usage_terms": "연결된 이미지 생성 서비스의 이용 조건 적용. 제3자 사진·배우 초상·영화 원화 미사용. CC0 또는 독점 저작권을 주장하지 않음.",
+      "history": [
+        "이 작업에서 신규 생성",
+        "생성 파일을 원본 보존 상태로 SourceArt에 복사",
+        "얼굴·손·구도·문자·워터마크 육안 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Illustrations/IL_Portrait_Simon.IL_Portrait_Simon",
+      "limitations": [
+        "원화이며 Unreal 실제 게임 캡처가 아님",
+        "에디터 가져오기·Cook·런타임 표시 미검증"
+      ],
+      "sha256": "5cc096a6105d23e6c9b79f3584a33610c74d615d51ce08d3e26ec4f9c0c8c657",
+      "bytes": 2914554
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Illustrations/IL_Ending_Together.png",
+      "id": "IL_Ending_Together",
+      "purpose": "함께한 아침",
+      "source": "OpenAI image_gen 내장 이미지 생성 도구, 이 작업에서 신규 생성",
+      "usage_terms": "연결된 이미지 생성 서비스의 이용 조건 적용. 제3자 사진·배우 초상·영화 원화 미사용. CC0 또는 독점 저작권을 주장하지 않음.",
+      "history": [
+        "이 작업에서 신규 생성",
+        "생성 파일을 원본 보존 상태로 SourceArt에 복사",
+        "얼굴·손·구도·문자·워터마크 육안 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Illustrations/IL_Ending_Together.IL_Ending_Together",
+      "limitations": [
+        "원화이며 Unreal 실제 게임 캡처가 아님",
+        "에디터 가져오기·Cook·런타임 표시 미검증",
+        "도구의 실제 가로 출력은 1672×941이며 목표 1920×1080보다 작음. 확대하여 원본 해상도라고 주장하지 않음."
+      ],
+      "sha256": "98a9a03ef25ae49b28cfec22ebc85379298110edae850f6622d534a26893e679",
+      "bytes": 2998861
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Illustrations/IL_Ending_Witness.png",
+      "id": "IL_Ending_Witness",
+      "purpose": "호숫가의 증인",
+      "source": "OpenAI image_gen 내장 이미지 생성 도구, 이 작업에서 신규 생성",
+      "usage_terms": "연결된 이미지 생성 서비스의 이용 조건 적용. 제3자 사진·배우 초상·영화 원화 미사용. CC0 또는 독점 저작권을 주장하지 않음.",
+      "history": [
+        "이 작업에서 신규 생성",
+        "생성 파일을 원본 보존 상태로 SourceArt에 복사",
+        "얼굴·손·구도·문자·워터마크 육안 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Illustrations/IL_Ending_Witness.IL_Ending_Witness",
+      "limitations": [
+        "원화이며 Unreal 실제 게임 캡처가 아님",
+        "에디터 가져오기·Cook·런타임 표시 미검증",
+        "도구의 실제 가로 출력은 1672×941이며 목표 1920×1080보다 작음. 확대하여 원본 해상도라고 주장하지 않음."
+      ],
+      "sha256": "f951674b996ccfb9ea77be9896ebcbf321a7d05495fb2c1023922ddfdfdb4466",
+      "bytes": 3017583
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Illustrations/IL_Ending_Departure.png",
+      "id": "IL_Ending_Departure",
+      "purpose": "아직 걷지 않은 길",
+      "source": "OpenAI image_gen 내장 이미지 생성 도구, 이 작업에서 신규 생성",
+      "usage_terms": "연결된 이미지 생성 서비스의 이용 조건 적용. 제3자 사진·배우 초상·영화 원화 미사용. CC0 또는 독점 저작권을 주장하지 않음.",
+      "history": [
+        "이 작업에서 신규 생성",
+        "생성 파일을 원본 보존 상태로 SourceArt에 복사",
+        "얼굴·손·구도·문자·워터마크 육안 검사"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Illustrations/IL_Ending_Departure.IL_Ending_Departure",
+      "limitations": [
+        "원화이며 Unreal 실제 게임 캡처가 아님",
+        "에디터 가져오기·Cook·런타임 표시 미검증",
+        "도구의 실제 가로 출력은 1672×941이며 목표 1920×1080보다 작음. 확대하여 원본 해상도라고 주장하지 않음."
+      ],
+      "sha256": "f7eefd1bd0ceabd24a7c821340df23f6f92db7ec00db590e8a023839b83eb881",
+      "bytes": 3302916
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Models/SM_Traveler.fbx",
+      "id": "SM_Traveler",
+      "purpose": "3D 모델",
+      "source": "Original procedural geometry authored for PathOfDawnUnreal",
+      "usage_terms": "Project-created asset; no third-party source geometry",
+      "history": [
+        "Blender 4.3.2 deterministic generator; materials and natural resting poses"
+      ],
+      "temporary": true,
+      "runtime_reference": "/Game/PathOfDawn/Characters/SM_Traveler",
+      "limitations": [
+        "Static geometric silhouette; no facial rig or skeletal animation"
+      ],
+      "sha256": "f915c8ad4de3a206d7043b73da41cadbaa67f5714c79dce2ecfdc9f95d4c1120",
+      "bytes": 152028
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Models/SM_Jesus.fbx",
+      "id": "SM_Jesus",
+      "purpose": "3D 모델",
+      "source": "Original procedural geometry authored for PathOfDawnUnreal",
+      "usage_terms": "Project-created asset; no third-party source geometry",
+      "history": [
+        "Blender 4.3.2 deterministic generator; materials and natural resting poses"
+      ],
+      "temporary": true,
+      "runtime_reference": "/Game/PathOfDawn/Characters/SM_Jesus",
+      "limitations": [
+        "Static geometric silhouette; no facial rig or skeletal animation"
+      ],
+      "sha256": "083f656e5afe633a2c12ec9afd72d922a618bd96c7d4f88090de5f47d8dec6be",
+      "bytes": 151980
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Models/SM_Simon.fbx",
+      "id": "SM_Simon",
+      "purpose": "3D 모델",
+      "source": "Original procedural geometry authored for PathOfDawnUnreal",
+      "usage_terms": "Project-created asset; no third-party source geometry",
+      "history": [
+        "Blender 4.3.2 deterministic generator; materials and natural resting poses"
+      ],
+      "temporary": true,
+      "runtime_reference": "/Game/PathOfDawn/Characters/SM_Simon",
+      "limitations": [
+        "Static geometric silhouette; no facial rig or skeletal animation"
+      ],
+      "sha256": "b3bd739170607bda37701ad01e0a68d27db7a3658f924aa453079fdd8ed2d7cd",
+      "bytes": 140620
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Models/SM_Boat.fbx",
+      "id": "SM_Boat",
+      "purpose": "3D 모델",
+      "source": "Original procedural geometry authored for PathOfDawnUnreal",
+      "usage_terms": "Project-created asset; no third-party source geometry",
+      "history": [
+        "Blender 4.3.2 deterministic generator; materials and natural resting poses"
+      ],
+      "temporary": true,
+      "runtime_reference": "/Game/PathOfDawn/Environment/SM_Boat",
+      "limitations": [
+        "Provisional art; needs Unreal collision/lighting review"
+      ],
+      "sha256": "04feef7915628d1e53074133e8a926abc1ef0c0284ec82e1386e423a45a44cd9",
+      "bytes": 59788
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Models/SM_Net.fbx",
+      "id": "SM_Net",
+      "purpose": "3D 모델",
+      "source": "Original procedural geometry authored for PathOfDawnUnreal",
+      "usage_terms": "Project-created asset; no third-party source geometry",
+      "history": [
+        "Blender 4.3.2 deterministic generator; materials and natural resting poses"
+      ],
+      "temporary": true,
+      "runtime_reference": "/Game/PathOfDawn/Environment/SM_Net",
+      "limitations": [
+        "Provisional art; needs Unreal collision/lighting review"
+      ],
+      "sha256": "6b4cf04f2a0db360ff1726556ba602818b15861f06c074750be0fd86489c9dcd",
+      "bytes": 173676
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Models/SM_NetPrepared.fbx",
+      "id": "SM_NetPrepared",
+      "purpose": "3D 모델",
+      "source": "Original procedural geometry authored for PathOfDawnUnreal",
+      "usage_terms": "Project-created asset; no third-party source geometry",
+      "history": [
+        "Blender 4.3.2 deterministic generator; materials and natural resting poses"
+      ],
+      "temporary": true,
+      "runtime_reference": "/Game/PathOfDawn/Environment/SM_NetPrepared",
+      "limitations": [
+        "Provisional art; needs Unreal collision/lighting review"
+      ],
+      "sha256": "dc4c5f8a6251d5226c0cda593bacad4e9890bc821e735737f5030b1fd87e5216",
+      "bytes": 160396
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Models/SM_Jar.fbx",
+      "id": "SM_Jar",
+      "purpose": "3D 모델",
+      "source": "Original procedural geometry authored for PathOfDawnUnreal",
+      "usage_terms": "Project-created asset; no third-party source geometry",
+      "history": [
+        "Blender 4.3.2 deterministic generator; materials and natural resting poses"
+      ],
+      "temporary": true,
+      "runtime_reference": "/Game/PathOfDawn/Environment/SM_Jar",
+      "limitations": [
+        "Provisional art; needs Unreal collision/lighting review"
+      ],
+      "sha256": "2ce1d6d9228b21be41b09eb1aba3e639ac4101d8e84a03b7f6abfeb9fb32d54a",
+      "bytes": 30476
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Models/SM_StoneWall.fbx",
+      "id": "SM_StoneWall",
+      "purpose": "3D 모델",
+      "source": "Original procedural geometry authored for PathOfDawnUnreal",
+      "usage_terms": "Project-created asset; no third-party source geometry",
+      "history": [
+        "Blender 4.3.2 deterministic generator; materials and natural resting poses"
+      ],
+      "temporary": true,
+      "runtime_reference": "/Game/PathOfDawn/Environment/SM_StoneWall",
+      "limitations": [
+        "Provisional art; needs Unreal collision/lighting review"
+      ],
+      "sha256": "684728abbc29d050a8a7c4dc3f8d2cf6a9ae041417c96e5a5abe9993c6b44af9",
+      "bytes": 84636
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Models/SM_Canopy.fbx",
+      "id": "SM_Canopy",
+      "purpose": "3D 모델",
+      "source": "Original procedural geometry authored for PathOfDawnUnreal",
+      "usage_terms": "Project-created asset; no third-party source geometry",
+      "history": [
+        "Blender 4.3.2 deterministic generator; materials and natural resting poses"
+      ],
+      "temporary": true,
+      "runtime_reference": "/Game/PathOfDawn/Environment/SM_Canopy",
+      "limitations": [
+        "Provisional art; needs Unreal collision/lighting review"
+      ],
+      "sha256": "a0c932a28acfd14705e7c8118baf98385966ace5f5cf8b701c39da7ef3a1960f",
+      "bytes": 18764
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Models/SM_ShoreRock.fbx",
+      "id": "SM_ShoreRock",
+      "purpose": "3D 모델",
+      "source": "Original procedural geometry authored for PathOfDawnUnreal",
+      "usage_terms": "Project-created asset; no third-party source geometry",
+      "history": [
+        "Blender 4.3.2 deterministic generator; materials and natural resting poses"
+      ],
+      "temporary": true,
+      "runtime_reference": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+      "limitations": [
+        "Provisional art; needs Unreal collision/lighting review"
+      ],
+      "sha256": "2260b58ceb742ffd2fb312a55ffbcce8de573e66e904a457c50693845fa67076",
+      "bytes": 17276
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Audio/A_Water.wav",
+      "id": "A_Water",
+      "purpose": "환경·효과음",
+      "source": "Original deterministic noise synthesis, create_audio.py",
+      "usage_terms": "Project-created sound, no third-party recording",
+      "history": [
+        "Deterministic original synthesis"
+      ],
+      "temporary": true,
+      "runtime_reference": "/Game/PathOfDawn/Audio/A_Water",
+      "limitations": [
+        "Provisional synthesized Foley/ambience; no speech or soundtrack"
+      ],
+      "sha256": "e3eaa3665c32136a1632d1e7efef49ac7b3e4cf73d33cd8bb4bd3f385ae73110",
+      "bytes": 576044
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Audio/A_Wind.wav",
+      "id": "A_Wind",
+      "purpose": "환경·효과음",
+      "source": "Original deterministic noise synthesis, create_audio.py",
+      "usage_terms": "Project-created sound, no third-party recording",
+      "history": [
+        "Deterministic original synthesis"
+      ],
+      "temporary": true,
+      "runtime_reference": "/Game/PathOfDawn/Audio/A_Wind",
+      "limitations": [
+        "Provisional synthesized Foley/ambience; no speech or soundtrack"
+      ],
+      "sha256": "8dc423f8540edc922f1a999d96b24bdc6edd400a01e66fc5606d6508b7dd438a",
+      "bytes": 576044
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Audio/A_Footstep.wav",
+      "id": "A_Footstep",
+      "purpose": "환경·효과음",
+      "source": "Original deterministic noise synthesis, create_audio.py",
+      "usage_terms": "Project-created sound, no third-party recording",
+      "history": [
+        "Deterministic original synthesis"
+      ],
+      "temporary": true,
+      "runtime_reference": "/Game/PathOfDawn/Audio/A_Footstep",
+      "limitations": [
+        "Provisional synthesized Foley/ambience; no speech or soundtrack"
+      ],
+      "sha256": "b05c1c02e4bc5cacdd0ad40606bbf01899eed77429bab7c72e1a58406fe50398",
+      "bytes": 10604
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Audio/A_NetRustle.wav",
+      "id": "A_NetRustle",
+      "purpose": "환경·효과음",
+      "source": "Original deterministic noise synthesis, create_audio.py",
+      "usage_terms": "Project-created sound, no third-party recording",
+      "history": [
+        "Deterministic original synthesis"
+      ],
+      "temporary": true,
+      "runtime_reference": "/Game/PathOfDawn/Audio/A_NetRustle",
+      "limitations": [
+        "Provisional synthesized Foley/ambience; no speech or soundtrack"
+      ],
+      "sha256": "3a95e946d573c768ea3673dd6722ff857805a6b8a896d61604ce034af4e81fb2",
+      "bytes": 38444
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Fonts/NotoSansKR.otf",
+      "id": "F_Korean",
+      "purpose": "한국어 UI·자막",
+      "source": "Debian fonts-noto-cjk / Google Noto Sans CJK KR 정규 face",
+      "usage_terms": "SIL OFL 1.1; LICENSE-Debian-Noto.txt 동봉",
+      "history": [
+        "TTC에서 KR face 분리, 글리프 변경 없음"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/UI/F_Korean",
+      "limitations": [
+        "UMG import/render not verified"
+      ],
+      "sha256": "bf0ad1c3cfc459842725a0fb63d3e7c174ad95e0081b7618c7ba7f5af5eb9c94",
+      "bytes": 16433088
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Narrative/episode.json",
+      "id": "Episode_Galilee",
+      "purpose": "서사 제작 원본",
+      "source": "이 작업의 직접 작성 한국어 요약·창작",
+      "usage_terms": "프로젝트 원본; 참고본문 번역 장문 복제 없음",
+      "history": [
+        "누가복음 5:1–11 사건순서 검토·창작 메타데이터 분리",
+        "ContentVersion 2: 직접 수행하는 공간 상호작용 4개와 마을 도착 후 결과 기록 추가"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Narrative/DA_DawnNarrative",
+      "limitations": [
+        "Runtime DataAsset creation not executed"
+      ],
+      "sha256": "84ffbe77677830fb35afffbdb13eb677633f798a94a1a2c92b7051f1cd061b1c",
+      "bytes": 37285
+    },
+    {
+      "file": "SourceArt/PathOfDawnUnreal/Models/PathOfDawn_SourceModels.blend",
+      "id": "SourceModels",
+      "purpose": "모델 제작 원본",
+      "source": "이 프로젝트의 절차 생성 형상",
+      "usage_terms": "프로젝트 제작 원본; 외부 모델 미사용",
+      "history": [
+        "Blender 4.3.2 신규 생성"
+      ],
+      "temporary": true,
+      "runtime_reference": "Editor authoring source only",
+      "limitations": [
+        "Static provisional models; not game screenshot"
+      ],
+      "sha256": "5331d66df7415647327e18ea554df58059018779ba42e63b4938185f701cb7ac",
+      "bytes": 3054880
+    }
+  ]
+}

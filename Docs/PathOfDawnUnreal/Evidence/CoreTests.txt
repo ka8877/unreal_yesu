@@ -1,0 +1,7 @@
+PASS 181 assertions: 4 routes/3 endings, duplicate input, value checkpoints, stale callbacks, branch isolation, meta persistence, fresh-session disk roundtrip, corrupt/version rejection.
+Toolchain: g++ (Debian 14.2.0-19) 14.2.0, Linux x86_64.
+Command: g++ -std=c++17 -Wall -Wextra -Werror -pedantic -I Games/PathOfDawnUnreal/Source/PathOfDawnUnreal/Core Tools/PathOfDawnUnreal/tests/core_tests.cpp -o /tmp/dawn_core_tests && /tmp/dawn_core_tests
+Same runtime header used in Unreal. This is NOT an Unreal compilation or game execution.
+ASan/UBSan: same source compiled with -fsanitize=address,undefined -fno-omit-frame-pointer.
+Container LeakSanitizer aborted under ptrace. ASAN_OPTIONS=detect_leaks=0 execution passed 181 assertions. Leak detection NOT verified.
+Unreal Automation tests authored but not executed: PathOfDawn.Core.BranchesAndRewind; PathOfDawn.SaveGame.MemoryRoundtrip.

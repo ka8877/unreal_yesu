@@ -1,0 +1,27 @@
+{
+  "provenance": "User-uploaded Windows log; no remote access to the PC",
+  "sessionUtc": "2026-10-23T10:36:13Z",
+  "sourceBundle": "PathOfDawn-Source-20261023-v4.zip",
+  "inputFile": {
+    "name": "start-here-20261023T103613Z-editor.log",
+    "sha256": "b746cfc66e630de1c684172f0d1bd64c79c7b38ca37b645daac3b348fa7e6221",
+    "encoding": "UTF-16LE BOM"
+  },
+  "engineVersion": "5.8.4 (from preceding environment log)",
+  "sharedBuildSettingsConflictPresent": false,
+  "msvcToolchainSelected": "14.44.35229",
+  "msvcInstallDirectoryVersion": "14.44.35207",
+  "windowsSdk": "10.0.26100.0",
+  "executor": "Unreal Build Accelerator local",
+  "action": "[1/21] SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.cpp",
+  "failure": "fatal error C1083: cannot open compiler intermediate PCH file; No such file or directory",
+  "projectParentHasKoreanCharacters": true,
+  "failingPchPathShowsMojibake": true,
+  "result": "Failed (OtherCompilationError)",
+  "elapsedSeconds": 1.29,
+  "diagnosis": "Non-ASCII project path is mangled in the compiler PCH failure. Encoding conversion boundary and OneDrive causality are not established.",
+  "nextAction": "Fresh extraction of the unchanged v4 source ZIP into a short ASCII path outside OneDrive, e.g. C:\\PathOfDawn; preserve old folder and do not copy Intermediate/Binaries.",
+  "asciiPathRebuildVerified": false,
+  "editorCompilationSucceeded": false,
+  "gameplayVerified": false
+}

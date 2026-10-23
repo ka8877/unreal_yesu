@@ -1,0 +1,1 @@
+PASS: StartHere diagnostic pattern read from its actual AST extracts all 6 errors from the supplied UTF-16 compiler log (5 C4458, 1 C2440). No Unreal compilation performed.

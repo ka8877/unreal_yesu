@@ -1,0 +1,102 @@
+[
+  {
+    "file": "SourceArt/PathOfDawnUnreal/Models/SM_Traveler.fbx",
+    "asset_id": "SM_Traveler",
+    "origin": "Original procedural geometry authored for PathOfDawnUnreal",
+    "license": "Project-created asset; no third-party source geometry",
+    "temporary": true,
+    "modifications": "Blender 4.3.2 deterministic generator; materials and natural resting poses",
+    "runtime_path": "/Game/PathOfDawn/Characters/SM_Traveler",
+    "limitations": "Static geometric silhouette; no facial rig or skeletal animation"
+  },
+  {
+    "file": "SourceArt/PathOfDawnUnreal/Models/SM_Jesus.fbx",
+    "asset_id": "SM_Jesus",
+    "origin": "Original procedural geometry authored for PathOfDawnUnreal",
+    "license": "Project-created asset; no third-party source geometry",
+    "temporary": true,
+    "modifications": "Blender 4.3.2 deterministic generator; materials and natural resting poses",
+    "runtime_path": "/Game/PathOfDawn/Characters/SM_Jesus",
+    "limitations": "Static geometric silhouette; no facial rig or skeletal animation"
+  },
+  {
+    "file": "SourceArt/PathOfDawnUnreal/Models/SM_Simon.fbx",
+    "asset_id": "SM_Simon",
+    "origin": "Original procedural geometry authored for PathOfDawnUnreal",
+    "license": "Project-created asset; no third-party source geometry",
+    "temporary": true,
+    "modifications": "Blender 4.3.2 deterministic generator; materials and natural resting poses",
+    "runtime_path": "/Game/PathOfDawn/Characters/SM_Simon",
+    "limitations": "Static geometric silhouette; no facial rig or skeletal animation"
+  },
+  {
+    "file": "SourceArt/PathOfDawnUnreal/Models/SM_Boat.fbx",
+    "asset_id": "SM_Boat",
+    "origin": "Original procedural geometry authored for PathOfDawnUnreal",
+    "license": "Project-created asset; no third-party source geometry",
+    "temporary": true,
+    "modifications": "Blender 4.3.2 deterministic generator; materials and natural resting poses",
+    "runtime_path": "/Game/PathOfDawn/Environment/SM_Boat",
+    "limitations": "Provisional art; needs Unreal collision/lighting review"
+  },
+  {
+    "file": "SourceArt/PathOfDawnUnreal/Models/SM_Net.fbx",
+    "asset_id": "SM_Net",
+    "origin": "Original procedural geometry authored for PathOfDawnUnreal",
+    "license": "Project-created asset; no third-party source geometry",
+    "temporary": true,
+    "modifications": "Blender 4.3.2 deterministic generator; materials and natural resting poses",
+    "runtime_path": "/Game/PathOfDawn/Environment/SM_Net",
+    "limitations": "Provisional art; needs Unreal collision/lighting review"
+  },
+  {
+    "file": "SourceArt/PathOfDawnUnreal/Models/SM_NetPrepared.fbx",
+    "asset_id": "SM_NetPrepared",
+    "origin": "Original procedural geometry authored for PathOfDawnUnreal",
+    "license": "Project-created asset; no third-party source geometry",
+    "temporary": true,
+    "modifications": "Blender 4.3.2 deterministic generator; materials and natural resting poses",
+    "runtime_path": "/Game/PathOfDawn/Environment/SM_NetPrepared",
+    "limitations": "Provisional art; needs Unreal collision/lighting review"
+  },
+  {
+    "file": "SourceArt/PathOfDawnUnreal/Models/SM_Jar.fbx",
+    "asset_id": "SM_Jar",
+    "origin": "Original procedural geometry authored for PathOfDawnUnreal",
+    "license": "Project-created asset; no third-party source geometry",
+    "temporary": true,
+    "modifications": "Blender 4.3.2 deterministic generator; materials and natural resting poses",
+    "runtime_path": "/Game/PathOfDawn/Environment/SM_Jar",
+    "limitations": "Provisional art; needs Unreal collision/lighting review"
+  },
+  {
+    "file": "SourceArt/PathOfDawnUnreal/Models/SM_StoneWall.fbx",
+    "asset_id": "SM_StoneWall",
+    "origin": "Original procedural geometry authored for PathOfDawnUnreal",
+    "license": "Project-created asset; no third-party source geometry",
+    "temporary": true,
+    "modifications": "Blender 4.3.2 deterministic generator; materials and natural resting poses",
+    "runtime_path": "/Game/PathOfDawn/Environment/SM_StoneWall",
+    "limitations": "Provisional art; needs Unreal collision/lighting review"
+  },
+  {
+    "file": "SourceArt/PathOfDawnUnreal/Models/SM_Canopy.fbx",
+    "asset_id": "SM_Canopy",
+    "origin": "Original procedural geometry authored for PathOfDawnUnreal",
+    "license": "Project-created asset; no third-party source geometry",
+    "temporary": true,
+    "modifications": "Blender 4.3.2 deterministic generator; materials and natural resting poses",
+    "runtime_path": "/Game/PathOfDawn/Environment/SM_Canopy",
+    "limitations": "Provisional art; needs Unreal collision/lighting review"
+  },
+  {
+    "file": "SourceArt/PathOfDawnUnreal/Models/SM_ShoreRock.fbx",
+    "asset_id": "SM_ShoreRock",
+    "origin": "Original procedural geometry authored for PathOfDawnUnreal",
+    "license": "Project-created asset; no third-party source geometry",
+    "temporary": true,
+    "modifications": "Blender 4.3.2 deterministic generator; materials and natural resting poses",
+    "runtime_path": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+    "limitations": "Provisional art; needs Unreal collision/lighting review"
+  }
+]

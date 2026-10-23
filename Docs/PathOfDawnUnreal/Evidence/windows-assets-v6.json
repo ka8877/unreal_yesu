@@ -1,0 +1,46 @@
+{
+  "provenance": "User-uploaded UTF-16 assets log; sanitized summary, not a local Unreal run",
+  "sessionUtc": "2026-10-23T12:28:48Z",
+  "sourceBundle": "PathOfDawn-Source-20261023-v6.zip",
+  "projectRoot": "C:\\game\\PathOfDawn-Source-20261023-v6",
+  "uploadedLog": {
+    "name": "start-here-20261023T122848Z-assets.log",
+    "bytes": 122690,
+    "sha256": "ee5bdf0de2f30e8a33a984902d353a80d669e820f5adad62ba4a3c60fa61d154"
+  },
+  "blockingError": "AttributeError: 'StaticMeshComponent' object has no attribute 'get_static_mesh'",
+  "location": {
+    "file": "Tools/PathOfDawnUnreal/generate_demo_assets.py",
+    "function": "verify",
+    "line": 306,
+    "expression": "body.get_static_mesh()"
+  },
+  "additionalConfirmedError": {
+    "asset": "/Game/PathOfDawn/Environment/M_LakeWater",
+    "platform": "PCD3D_SM6",
+    "message": "(Node Sine) Missing Sine input",
+    "consequence": "Default Material will be used in game"
+  },
+  "observedProgress": [
+    "Previous SoftObjectPath failure did not recur",
+    "Generator reached verification after narrative, Blueprint, map and sequence creation calls",
+    "Required assets loaded and narrative validation passed before verification line 306",
+    "L_Galilee world loaded in same Editor process",
+    "Failure report and Python traceback surfaced by v6 launcher"
+  ],
+  "startupDiagnostics": {
+    "automation_condition_failed": 15,
+    "pixelstreaming_engine_not_valid": 1
+  },
+  "startupDiagnosis": "Occurred before generator execution. Not proof that PathOfDawn RunTest methods ran or failed. Remains to check on actual automation/streaming runs.",
+  "gpuObservation": "UE log created CUDA context on NVIDIA GeForce RTX 5080; no NVENC/media/graphics performance validation",
+  "fixes": [
+    "Read StaticMeshComponent.static_mesh via get_editor_property in both checks",
+    "Connect Time to first Sine input using empty input name; check all material link return values",
+    "New Blueprint defaults use editor property setter and forced checked save"
+  ],
+  "freshEditorReloadPassed": false,
+  "graphicalGameVerified": false,
+  "streamingVerified": false,
+  "v7UnrealExecutionVerified": false
+}

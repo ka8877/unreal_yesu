@@ -1,0 +1,48 @@
+Running python3; log: /workspace/unreal_yesu/Docs/PathOfDawnUnreal/Evidence/content-validation.log
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "Title source (1672, 941) is below the 1920×1080 target; do not claim native full-HD art."
+  ],
+  "scope": "Authored JSON and optional source assets only; not Unreal execution.",
+  "node_count": 30,
+  "outcome_count": 3,
+  "choice_combinations": 4,
+  "text_key_count": 35,
+  "authored_route_walks": {
+    "Simon_Greeting/HelpSimon/Stay": "Ending_Together",
+    "Simon_Greeting/HelpSimon/Depart": "Ending_Departure",
+    "Simon_Greeting/ObserveShore/Stay": "Ending_Witness",
+    "Simon_Greeting/ObserveShore/Depart": "Ending_Departure",
+    "Jesus_Arrival/HelpSimon/Stay": "Ending_Together",
+    "Jesus_Arrival/HelpSimon/Depart": "Ending_Departure",
+    "Jesus_Arrival/ObserveShore/Stay": "Ending_Witness",
+    "Jesus_Arrival/ObserveShore/Depart": "Ending_Departure"
+  },
+  "text_characters": 3672,
+  "mutation_tests": {
+    "total": 12,
+    "passed": 12,
+    "failures": []
+  }
+}
+Running python3; log: /workspace/unreal_yesu/Docs/PathOfDawnUnreal/Evidence/source-asset-guard-tests.log
+test_first_generation_and_repeat (test_source_asset_guard.SourceAssetGuardTests.test_first_generation_and_repeat) ... ok
+test_index_roundtrip_and_reject_bad_version (test_source_asset_guard.SourceAssetGuardTests.test_index_roundtrip_and_reject_bad_version) ... ok
+test_missing_baseline_never_permits_refresh (test_source_asset_guard.SourceAssetGuardTests.test_missing_baseline_never_permits_refresh) ... ok
+test_missing_package_blocks_existing_asset (test_source_asset_guard.SourceAssetGuardTests.test_missing_package_blocks_existing_asset) ... ok
+test_source_and_package_change_conflicts_without_mutation (test_source_asset_guard.SourceAssetGuardTests.test_source_and_package_change_conflicts_without_mutation) ... ok
+test_source_update_refreshes_only_known_generated_package (test_source_asset_guard.SourceAssetGuardTests.test_source_update_refreshes_only_known_generated_package) ... ok
+test_user_package_edit_is_preserved_with_unchanged_source (test_source_asset_guard.SourceAssetGuardTests.test_user_package_edit_is_preserved_with_unchanged_source) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.002s
+
+OK
+Running python3; log: /workspace/unreal_yesu/Docs/PathOfDawnUnreal/Evidence/font-validation.log
+{"test": "Actual OTF Korean character coverage", "font": "SourceArt/PathOfDawnUnreal/Fonts/NotoSansKR.otf", "unique_korean_characters": 446, "missing": [], "passed": true, "unverified": ["Unreal font import", "UMG shaping", "small-window wrapping", "packaged glyph rendering"]}
+Running g++; log: /workspace/unreal_yesu/Docs/PathOfDawnUnreal/Evidence/core-compile.log
+Running core_tests; log: /workspace/unreal_yesu/Docs/PathOfDawnUnreal/Evidence/core-tests.log
+PASS 181 assertions: 4 routes/3 endings, duplicate input, value checkpoints, stale callbacks, branch isolation, meta persistence, fresh-session disk roundtrip, corrupt/version rejection.
+Portable C++ core/content checks passed. Unreal compile, cook, graphics, USaveGame integration and streaming have NOT been tested by these checks.

@@ -1,0 +1,67 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "Title source (1672, 941) is below the 1920×1080 target; do not claim native full-HD art."
+  ],
+  "scope": "Authored JSON and optional source assets only; not Unreal execution.",
+  "node_count": 34,
+  "outcome_count": 3,
+  "choice_combinations": 4,
+  "text_key_count": 39,
+  "authored_route_walks": {
+    "Simon/HelpSimon/Stay": "Ending_Together",
+    "Simon/HelpSimon/Depart": "Ending_Departure",
+    "Simon/ObserveShore/Stay": "Ending_Witness",
+    "Simon/ObserveShore/Depart": "Ending_Departure",
+    "Jesus/HelpSimon/Stay": "Ending_Together",
+    "Jesus/HelpSimon/Depart": "Ending_Departure",
+    "Jesus/ObserveShore/Stay": "Ending_Witness",
+    "Jesus/ObserveShore/Depart": "Ending_Departure"
+  },
+  "spatial_gate_walks": {
+    "Simon/HelpSimon/Stay": [
+      "Task_HelpNet",
+      "Task_ReturnToSimon"
+    ],
+    "Simon/HelpSimon/Depart": [
+      "Task_HelpNet",
+      "Task_ReturnToSimon",
+      "Task_Departure"
+    ],
+    "Simon/ObserveShore/Stay": [
+      "Task_ObserveShore",
+      "Task_ReturnToSimon"
+    ],
+    "Simon/ObserveShore/Depart": [
+      "Task_ObserveShore",
+      "Task_ReturnToSimon",
+      "Task_Departure"
+    ],
+    "Jesus/HelpSimon/Stay": [
+      "Task_HelpNet",
+      "Task_ReturnToSimon"
+    ],
+    "Jesus/HelpSimon/Depart": [
+      "Task_HelpNet",
+      "Task_ReturnToSimon",
+      "Task_Departure"
+    ],
+    "Jesus/ObserveShore/Stay": [
+      "Task_ObserveShore",
+      "Task_ReturnToSimon"
+    ],
+    "Jesus/ObserveShore/Depart": [
+      "Task_ObserveShore",
+      "Task_ReturnToSimon",
+      "Task_Departure"
+    ]
+  },
+  "content_version": 2,
+  "text_characters": 3794,
+  "mutation_tests": {
+    "total": 20,
+    "passed": 20,
+    "failures": []
+  }
+}

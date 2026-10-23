@@ -1,0 +1,11 @@
+test_authored_nodes_use_typed_images_and_retain_text_choices_metadata (test_narrative_import.NarrativeImportContractTests.test_authored_nodes_use_typed_images_and_retain_text_choices_metadata) ... ok
+test_engine_validator_rejection_is_propagated_without_save (test_narrative_import.NarrativeImportContractTests.test_engine_validator_rejection_is_propagated_without_save) ... ok
+test_missing_image_never_saves_partial_narrative (test_narrative_import.NarrativeImportContractTests.test_missing_image_never_saves_partial_narrative) ... ok
+test_preserved_assets_are_returned_without_rewrite_or_image_lookup (test_narrative_import.NarrativeImportContractTests.test_preserved_assets_are_returned_without_rewrite_or_image_lookup) ... ok
+test_refresh_reuses_asset_and_saves_only_after_conversion (test_narrative_import.NarrativeImportContractTests.test_refresh_reuses_asset_and_saves_only_after_conversion) ... ok
+test_wrong_image_type_never_saves_partial_narrative (test_narrative_import.NarrativeImportContractTests.test_wrong_image_type_never_saves_partial_narrative) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.148s
+
+OK

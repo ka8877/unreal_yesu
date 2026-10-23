@@ -1,0 +1,55 @@
+{
+  "provenance": "Summary of user-uploaded assets log and user-pasted asset-generation-report.json; not a local Unreal run",
+  "sessionUtc": "2026-10-23T12:13:22Z",
+  "sourceBundle": "PathOfDawn-Source-20261023-v5.zip",
+  "uploadedLog": {
+    "name": "start-here-20261023T121322Z-assets.log",
+    "sha256": "b625801bce0b87b38147f24b19092e4dc41c13b0bd2f96920382ec036f603f0d",
+    "bytes": 8194
+  },
+  "projectRoot": "C:\\game\\PathOfDawn-Source-20261023-v5",
+  "engineVersion": "5.8.4-58902052+++UE5+Release-5.8",
+  "mode": "generation",
+  "status": "failed",
+  "created": [
+    "/Game/PathOfDawn/Illustrations/IL_Title_Dawn",
+    "/Game/PathOfDawn/Illustrations/IL_Arrival",
+    "/Game/PathOfDawn/Illustrations/IL_Portrait_Jesus",
+    "/Game/PathOfDawn/Illustrations/IL_Portrait_Simon",
+    "/Game/PathOfDawn/Illustrations/IL_Ending_Together",
+    "/Game/PathOfDawn/Illustrations/IL_Ending_Witness",
+    "/Game/PathOfDawn/Illustrations/IL_Ending_Departure",
+    "/Game/PathOfDawn/Characters/SM_Traveler",
+    "/Game/PathOfDawn/Characters/SM_Jesus",
+    "/Game/PathOfDawn/Characters/SM_Simon",
+    "/Game/PathOfDawn/Environment/SM_Boat",
+    "/Game/PathOfDawn/Environment/SM_Net",
+    "/Game/PathOfDawn/Environment/SM_NetPrepared",
+    "/Game/PathOfDawn/Environment/SM_Jar",
+    "/Game/PathOfDawn/Environment/SM_StoneWall",
+    "/Game/PathOfDawn/Environment/SM_Canopy",
+    "/Game/PathOfDawn/Environment/SM_ShoreRock",
+    "/Game/PathOfDawn/Audio/A_Water",
+    "/Game/PathOfDawn/Audio/A_Wind",
+    "/Game/PathOfDawn/Audio/A_Footstep",
+    "/Game/PathOfDawn/Audio/A_NetRustle",
+    "/Game/PathOfDawn/UI/FF_Korean"
+  ],
+  "preserved": [],
+  "warnings": [],
+  "error": "DawnDialogueNode: Failed to convert type 'SoftObjectPath' to property 'Illustration' (SoftObjectProperty) for attribute 'illustration' on 'DawnDialogueNode'\n  TypeError: NativizeProperty: Cannot nativize 'SoftObjectPath' as 'Illustration' (SoftObjectProperty)\n    TypeError: NativizeObject: Cannot nativize 'SoftObjectPath' as 'Object' (allowed Class type: 'Texture2D')",
+  "tracebackLocation": {
+    "file": "Tools/PathOfDawnUnreal/generate_demo_assets.py",
+    "function": "create_narrative",
+    "line": 148
+  },
+  "inferences": [
+    "StartHere reached assets after its editor build gate; standalone editor build log was not provided",
+    "Compiled project DawnAssetTools.create_composite_font returned before create_narrative raised"
+  ],
+  "fix": "Assign a loaded and type-checked Texture2D object to the soft object property, not SoftObjectPath",
+  "mapCreated": false,
+  "reloadVerificationPassed": false,
+  "v6UnrealExecutionVerified": false,
+  "windowsGameExecuted": false
+}

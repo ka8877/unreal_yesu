@@ -1,0 +1,7 @@
+[success] 실행 중입니다. 자세한 기록: /tmp/Dawn 시작 검사 ed2e4b0ef29d4f96b22c4ede98c9b860/start-here-regression-success.log
+[failure] 실행 중입니다. 자세한 기록: /tmp/Dawn 시작 검사 ed2e4b0ef29d4f96b22c4ede98c9b860/start-here-regression-failure.log
+
+실패 직전 로그(전체 내용은 위 로그 파일에 보관):
+fixture build error: shared build settings differ
+fixture wrapper exception
+PASS: native stderr success; Unicode/space arguments; preferences preserved; exit 37 recorded; complete failure log; missing script rejected.

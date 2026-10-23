@@ -1,0 +1,78 @@
+{
+  "status": "passed",
+  "type": "Blender FBX roundtrip; NOT Unreal execution",
+  "blender": "4.3.2",
+  "checks": [
+    {
+      "id": "SM_Jesus",
+      "roundtrip_mesh_count": 1,
+      "height_m": 1.8009999990463257,
+      "width_m": 0.659891664981842,
+      "polygons": 50425,
+      "triangles": 100688,
+      "materials": 14,
+      "all_faces_smooth": true,
+      "source_fbx_bytes": 2009372
+    },
+    {
+      "id": "SM_Simon",
+      "roundtrip_mesh_count": 1,
+      "height_m": 1.7739850282669067,
+      "width_m": 0.723518431186676,
+      "polygons": 51021,
+      "triangles": 101904,
+      "materials": 15,
+      "all_faces_smooth": true,
+      "source_fbx_bytes": 2036844
+    },
+    {
+      "id": "SM_Traveler",
+      "roundtrip_mesh_count": 1,
+      "height_m": 1.7829900979995728,
+      "width_m": 0.6272350549697876,
+      "polygons": 45220,
+      "triangles": 90116,
+      "materials": 14,
+      "all_faces_smooth": true,
+      "source_fbx_bytes": 1797676
+    }
+  ],
+  "unverified": [
+    "UE import and reference reload",
+    "In-game materials and lighting",
+    "NPC dialogue camera framing",
+    "Animation and facial rig: not implemented; static source meshes"
+  ],
+  "existing_output_preservation": {
+    "status": "passed",
+    "result": "second generation refused; all eight owned source/art files byte-identical",
+    "process_exit_code": 1
+  },
+  "files_sha256": {
+    "SM_Jesus.fbx": "c54957c7ff74c9c5e793fb0f823315a09d91d1525d878b5af3f7489f318b6060",
+    "SM_Simon.fbx": "4794e928a75c59880c308eb6a8cc8baa2a33bebfd4ad35edd3491e2b19fc6017",
+    "SM_Traveler.fbx": "0b89415eb4ee449f35b15644df43b9f9dea7dfdd1da535d3feb701981804eded",
+    "CharactersV8.blend": "f050c158e937dfc8157c7a7d0de6e474c8a16698b1db971455ce2b3dea519777",
+    "characters-manifest.json": "c95819cf72eb2270f3c31d2e16bb83af013f387e90d07abee8b80dc06e870fed",
+    "CharacterPreview_Trio.png": "c8e0f1a5b90fe9d13776489078a528c35dbcd1e095b5086c56d17d533e9506f6",
+    "CharacterPreview_Jesus.png": "df1127a5307baa1f9385265accb9e4bd29b834b3492d1633f608d6de68014c3a",
+    "CharacterPreview_JesusThreeQuarter.png": "ca6df9c8b8e3edd256c010155047851636a895474d7f0c51d883cd5402945321"
+  },
+  "source_generator_sha256": "0ac550693dbb7812a99acc6cb8c6dcd90c3a86fbb7693cdac26a8b57c25a3c4a",
+  "visual_inspection": {
+    "status": "reviewed",
+    "renderer": "Blender 4.3.2 Cycles CPU, 32 samples, denoising disabled because packaged Blender lacks OpenImageDenoise",
+    "images": [
+      "CharacterPreview_Trio.png",
+      "CharacterPreview_Jesus.png",
+      "CharacterPreview_JesusThreeQuarter.png"
+    ],
+    "revisions": "Inspected multiple actual renders; corrected covered mouth, exposed shoulder openings, floating mantle seams, oversized eye outlines and oversized white sclera. Final three views inspected.",
+    "remaining_limitations": [
+      "Static stylized sculptures; still visibly simpler than the painted portraits at close range. Intended for medium-distance 3D scenes with illustration close-ups.",
+      "No skeleton, skinning, face animation or cloth simulation.",
+      "Cloth and skin use original diffuse colors with geometry, without authored PBR texture maps.",
+      "No Unreal import/render/collision/camera validation was possible in this Linux environment."
+    ]
+  }
+}

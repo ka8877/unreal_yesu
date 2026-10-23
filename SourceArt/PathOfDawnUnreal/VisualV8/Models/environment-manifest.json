@@ -1,0 +1,530 @@
+[
+  {
+    "asset_id": "SM_Boat",
+    "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_Boat.fbx",
+    "sha256": "d1711b49333cd8c5c49c4d7391a57cdcca8c64434e35618feab63f41041ac513",
+    "source": "Original geometry authored in create_environment_v8.py; Blender 4.3.2",
+    "license": "Project-created; no external geometry, images, or textures",
+    "temporary": false,
+    "dimensions_m": [
+      4.1604,
+      1.4924,
+      0.9661
+    ],
+    "bounds_m": [
+      [
+        -2.0802,
+        2.0802
+      ],
+      [
+        -0.7462,
+        0.7462
+      ],
+      [
+        0.047,
+        1.0131
+      ]
+    ],
+    "vertices": 7362,
+    "triangles": 14328,
+    "materials": [
+      "V8_WoodHoney",
+      "V8_WoodWarm",
+      "V8_WoodFaded",
+      "V8_WoodPale",
+      "V8_WoodDark",
+      "V8_WoodEnd",
+      "V8_IronOxide",
+      "V8_RopeLight"
+    ],
+    "origin_m": [
+      0,
+      0,
+      0
+    ],
+    "orientation": "Z up; boat long axis X; ground lake edge +Y",
+    "runtime_path": "/Game/PathOfDawn/Environment/SM_Boat",
+    "modifications": "V8 rebuilt curved and worn surfaces, explicit triangles, FBX face smoothing, material colors",
+    "limitations": "Static mesh source; Unreal import, collision, Lumen and runtime appearance require Windows verification."
+  },
+  {
+    "asset_id": "SM_Net",
+    "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_Net.fbx",
+    "sha256": "33368e0a1f5f0e3663477cd4536a03dd401cacc23af0c84cdae15a1381bbc58c",
+    "source": "Original geometry authored in create_environment_v8.py; Blender 4.3.2",
+    "license": "Project-created; no external geometry, images, or textures",
+    "temporary": false,
+    "dimensions_m": [
+      2.5499,
+      1.4172,
+      0.3547
+    ],
+    "bounds_m": [
+      [
+        -1.2786,
+        1.2713
+      ],
+      [
+        -0.7095,
+        0.7077
+      ],
+      [
+        0.0155,
+        0.3702
+      ]
+    ],
+    "vertices": 6762,
+    "triangles": 13248,
+    "materials": [
+      "V8_WoodFaded",
+      "V8_Rope",
+      "V8_RopeLight",
+      "V8_LimestoneGrey"
+    ],
+    "origin_m": [
+      0,
+      0,
+      0
+    ],
+    "orientation": "Z up; boat long axis X; ground lake edge +Y",
+    "runtime_path": "/Game/PathOfDawn/Environment/SM_Net",
+    "modifications": "V8 rebuilt curved and worn surfaces, explicit triangles, FBX face smoothing, material colors",
+    "limitations": "Static mesh source; Unreal import, collision, Lumen and runtime appearance require Windows verification."
+  },
+  {
+    "asset_id": "SM_NetPrepared",
+    "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_NetPrepared.fbx",
+    "sha256": "9d3b3d2a9903968901ed2920f39d71fbe877c23cc05079a11e912dfae0b46174",
+    "source": "Original geometry authored in create_environment_v8.py; Blender 4.3.2",
+    "license": "Project-created; no external geometry, images, or textures",
+    "temporary": false,
+    "dimensions_m": [
+      2.4317,
+      1.6276,
+      0.1135
+    ],
+    "bounds_m": [
+      [
+        -1.2155,
+        1.2162
+      ],
+      [
+        -0.8316,
+        0.796
+      ],
+      [
+        0.0034,
+        0.1169
+      ]
+    ],
+    "vertices": 6490,
+    "triangles": 12716,
+    "materials": [
+      "V8_WoodFaded",
+      "V8_Rope",
+      "V8_RopeLight",
+      "V8_LinenLight",
+      "V8_LimestoneGrey"
+    ],
+    "origin_m": [
+      0,
+      0,
+      0
+    ],
+    "orientation": "Z up; boat long axis X; ground lake edge +Y",
+    "runtime_path": "/Game/PathOfDawn/Environment/SM_NetPrepared",
+    "modifications": "V8 rebuilt curved and worn surfaces, explicit triangles, FBX face smoothing, material colors",
+    "limitations": "Static mesh source; Unreal import, collision, Lumen and runtime appearance require Windows verification."
+  },
+  {
+    "asset_id": "SM_Jar",
+    "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_Jar.fbx",
+    "sha256": "99e2e5c8dafd229ffaffcacd968ef761085b96857576b3ad7cb347193fab4cbc",
+    "source": "Original geometry authored in create_environment_v8.py; Blender 4.3.2",
+    "license": "Project-created; no external geometry, images, or textures",
+    "temporary": false,
+    "dimensions_m": [
+      0.5865,
+      0.4914,
+      0.709
+    ],
+    "bounds_m": [
+      [
+        -0.2925,
+        0.294
+      ],
+      [
+        -0.2472,
+        0.2442
+      ],
+      [
+        0.013,
+        0.722
+      ]
+    ],
+    "vertices": 2397,
+    "triangles": 4770,
+    "materials": [
+      "V8_Clay",
+      "V8_ClayLight",
+      "V8_ClayInner"
+    ],
+    "origin_m": [
+      0,
+      0,
+      0
+    ],
+    "orientation": "Z up; boat long axis X; ground lake edge +Y",
+    "runtime_path": "/Game/PathOfDawn/Environment/SM_Jar",
+    "modifications": "V8 rebuilt curved and worn surfaces, explicit triangles, FBX face smoothing, material colors",
+    "limitations": "Static mesh source; Unreal import, collision, Lumen and runtime appearance require Windows verification."
+  },
+  {
+    "asset_id": "SM_StoneWall",
+    "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_StoneWall.fbx",
+    "sha256": "c5ca23f35afb74241e9ca870c8753c564ec168f0233cab36ad22cd4809fe9d79",
+    "source": "Original geometry authored in create_environment_v8.py; Blender 4.3.2",
+    "license": "Project-created; no external geometry, images, or textures",
+    "temporary": false,
+    "dimensions_m": [
+      3.9637,
+      0.5674,
+      1.7616
+    ],
+    "bounds_m": [
+      [
+        -1.9816,
+        1.9821
+      ],
+      [
+        -0.2927,
+        0.2747
+      ],
+      [
+        0.0224,
+        1.784
+      ]
+    ],
+    "vertices": 3782,
+    "triangles": 7392,
+    "materials": [
+      "V8_Limestone",
+      "V8_LimestoneCream",
+      "V8_LimestoneGrey",
+      "V8_LimestoneOchre",
+      "V8_LimestoneLight"
+    ],
+    "origin_m": [
+      0,
+      0,
+      0
+    ],
+    "orientation": "Z up; boat long axis X; ground lake edge +Y",
+    "runtime_path": "/Game/PathOfDawn/Environment/SM_StoneWall",
+    "modifications": "V8 rebuilt curved and worn surfaces, explicit triangles, FBX face smoothing, material colors",
+    "limitations": "Static mesh source; Unreal import, collision, Lumen and runtime appearance require Windows verification."
+  },
+  {
+    "asset_id": "SM_Canopy",
+    "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_Canopy.fbx",
+    "sha256": "31b70bef0f090287be1df99568f4b70d9ab089e383cac8f36ecfa8ac788009cf",
+    "source": "Original geometry authored in create_environment_v8.py; Blender 4.3.2",
+    "license": "Project-created; no external geometry, images, or textures",
+    "temporary": false,
+    "dimensions_m": [
+      2.9563,
+      2.2163,
+      2.177
+    ],
+    "bounds_m": [
+      [
+        -1.4773,
+        1.479
+      ],
+      [
+        -1.109,
+        1.1073
+      ],
+      [
+        0.0139,
+        2.1908
+      ]
+    ],
+    "vertices": 2464,
+    "triangles": 4660,
+    "materials": [
+      "V8_WoodHoney",
+      "V8_WoodFaded",
+      "V8_WoodDark",
+      "V8_Rope",
+      "V8_Linen",
+      "V8_LinenShade",
+      "V8_LinenLight",
+      "V8_WovenBlue"
+    ],
+    "origin_m": [
+      0,
+      0,
+      0
+    ],
+    "orientation": "Z up; boat long axis X; ground lake edge +Y",
+    "runtime_path": "/Game/PathOfDawn/Environment/SM_Canopy",
+    "modifications": "V8 rebuilt curved and worn surfaces, explicit triangles, FBX face smoothing, material colors",
+    "limitations": "Static mesh source; Unreal import, collision, Lumen and runtime appearance require Windows verification."
+  },
+  {
+    "asset_id": "SM_ShoreRock",
+    "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_ShoreRock.fbx",
+    "sha256": "3195e8a7a8776dcbed7e5272e665ba696795e26b33b63f3441a54d75f1b50bd1",
+    "source": "Original geometry authored in create_environment_v8.py; Blender 4.3.2",
+    "license": "Project-created; no external geometry, images, or textures",
+    "temporary": false,
+    "dimensions_m": [
+      0.9436,
+      0.7288,
+      0.5336
+    ],
+    "bounds_m": [
+      [
+        -0.5206,
+        0.423
+      ],
+      [
+        -0.3671,
+        0.3617
+      ],
+      [
+        -0.0127,
+        0.5209
+      ]
+    ],
+    "vertices": 255,
+    "triangles": 506,
+    "materials": [
+      "V8_LimestoneGrey"
+    ],
+    "origin_m": [
+      0,
+      0,
+      0
+    ],
+    "orientation": "Z up; boat long axis X; ground lake edge +Y",
+    "runtime_path": "/Game/PathOfDawn/Environment/SM_ShoreRock",
+    "modifications": "V8 rebuilt curved and worn surfaces, explicit triangles, FBX face smoothing, material colors",
+    "limitations": "Static mesh source; Unreal import, collision, Lumen and runtime appearance require Windows verification."
+  },
+  {
+    "asset_id": "SM_OliveTree",
+    "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_OliveTree.fbx",
+    "sha256": "61a82b34a1239f13d38486bacd7ddcd261f8976daa021a3f925b566ba562a4d6",
+    "source": "Original geometry authored in create_environment_v8.py; Blender 4.3.2",
+    "license": "Project-created; no external geometry, images, or textures",
+    "temporary": false,
+    "dimensions_m": [
+      3.6673,
+      3.6364,
+      3.8256
+    ],
+    "bounds_m": [
+      [
+        -1.8919,
+        1.7754
+      ],
+      [
+        -1.8654,
+        1.771
+      ],
+      [
+        -0.0307,
+        3.7949
+      ]
+    ],
+    "vertices": 73142,
+    "triangles": 128024,
+    "materials": [
+      "V8_OliveBark",
+      "V8_OliveBarkPale",
+      "V8_OliveLeaf",
+      "V8_OliveLeafLight",
+      "V8_OliveLeafSilver"
+    ],
+    "origin_m": [
+      0,
+      0,
+      0
+    ],
+    "orientation": "Z up; boat long axis X; ground lake edge +Y",
+    "runtime_path": "/Game/PathOfDawn/Environment/SM_OliveTree",
+    "modifications": "V8 rebuilt curved and worn surfaces, explicit triangles, FBX face smoothing, material colors",
+    "limitations": "Static mesh source; Unreal import, collision, Lumen and runtime appearance require Windows verification."
+  },
+  {
+    "asset_id": "SM_ReedClump",
+    "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_ReedClump.fbx",
+    "sha256": "affa871d50f1b21e63e7ef7f5aced4fe07e1fa1f6ca3c391dbc7ea6f75d2e295",
+    "source": "Original geometry authored in create_environment_v8.py; Blender 4.3.2",
+    "license": "Project-created; no external geometry, images, or textures",
+    "temporary": false,
+    "dimensions_m": [
+      1.2128,
+      1.2045,
+      1.7067
+    ],
+    "bounds_m": [
+      [
+        -0.6258,
+        0.587
+      ],
+      [
+        -0.5684,
+        0.6361
+      ],
+      [
+        -0.0005,
+        1.7062
+      ]
+    ],
+    "vertices": 2494,
+    "triangles": 4448,
+    "materials": [
+      "V8_ReedGreen",
+      "V8_ReedPale",
+      "V8_ReedHead"
+    ],
+    "origin_m": [
+      0,
+      0,
+      0
+    ],
+    "orientation": "Z up; boat long axis X; ground lake edge +Y",
+    "runtime_path": "/Game/PathOfDawn/Environment/SM_ReedClump",
+    "modifications": "V8 rebuilt curved and worn surfaces, explicit triangles, FBX face smoothing, material colors",
+    "limitations": "Static mesh source; Unreal import, collision, Lumen and runtime appearance require Windows verification."
+  },
+  {
+    "asset_id": "SM_PathSlab",
+    "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_PathSlab.fbx",
+    "sha256": "3f49bcc9ccefa16ee9656229ef77d8000d9f71a69bf707db42c014a2072834de",
+    "source": "Original geometry authored in create_environment_v8.py; Blender 4.3.2",
+    "license": "Project-created; no external geometry, images, or textures",
+    "temporary": false,
+    "dimensions_m": [
+      0.8843,
+      0.712,
+      0.1005
+    ],
+    "bounds_m": [
+      [
+        -0.485,
+        0.3993
+      ],
+      [
+        -0.3453,
+        0.3667
+      ],
+      [
+        -0.0147,
+        0.0858
+      ]
+    ],
+    "vertices": 32,
+    "triangles": 60,
+    "materials": [
+      "V8_LimestoneCream"
+    ],
+    "origin_m": [
+      0,
+      0,
+      0
+    ],
+    "orientation": "Z up; boat long axis X; ground lake edge +Y",
+    "runtime_path": "/Game/PathOfDawn/Environment/SM_PathSlab",
+    "modifications": "V8 rebuilt curved and worn surfaces, explicit triangles, FBX face smoothing, material colors",
+    "limitations": "Static mesh source; Unreal import, collision, Lumen and runtime appearance require Windows verification."
+  },
+  {
+    "asset_id": "SM_ShoreGround",
+    "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_ShoreGround.fbx",
+    "sha256": "f28eee13883f743266b0f29532f9ecb967bba6a6bc9b8fb306642f7509309de8",
+    "source": "Original geometry authored in create_environment_v8.py; Blender 4.3.2",
+    "license": "Project-created; no external geometry, images, or textures",
+    "temporary": false,
+    "dimensions_m": [
+      46.0,
+      28.9879,
+      0.84
+    ],
+    "bounds_m": [
+      [
+        -23.0,
+        23.0
+      ],
+      [
+        -14.5799,
+        14.4081
+      ],
+      [
+        -0.84,
+        0.0
+      ]
+    ],
+    "vertices": 3141,
+    "triangles": 6064,
+    "materials": [
+      "V8_Sand",
+      "V8_SandDark",
+      "V8_DampShore"
+    ],
+    "origin_m": [
+      0,
+      0,
+      0
+    ],
+    "orientation": "Z up; boat long axis X; ground lake edge +Y",
+    "runtime_path": "/Game/PathOfDawn/Environment/SM_ShoreGround",
+    "modifications": "V8 rebuilt curved and worn surfaces, explicit triangles, FBX face smoothing, material colors",
+    "limitations": "Static mesh source; Unreal import, collision, Lumen and runtime appearance require Windows verification."
+  },
+  {
+    "asset_id": "SM_DistantRidge",
+    "file": "SourceArt/PathOfDawnUnreal/VisualV8/Models/SM_DistantRidge.fbx",
+    "sha256": "668966d5b0c2b2b5857dd8bd046e12b5ed543a4b2e83e6559cc8f0eeb31df906",
+    "source": "Original geometry authored in create_environment_v8.py; Blender 4.3.2",
+    "license": "Project-created; no external geometry, images, or textures",
+    "temporary": false,
+    "dimensions_m": [
+      90.0,
+      20.0,
+      11.5
+    ],
+    "bounds_m": [
+      [
+        -45.0,
+        45.0
+      ],
+      [
+        -10.0,
+        10.0
+      ],
+      [
+        0.0,
+        11.5
+      ]
+    ],
+    "vertices": 1095,
+    "triangles": 2016,
+    "materials": [
+      "V8_DistantRidge",
+      "V8_DistantRidgePale"
+    ],
+    "origin_m": [
+      0,
+      0,
+      0
+    ],
+    "orientation": "Z up; boat long axis X; ground lake edge +Y",
+    "runtime_path": "/Game/PathOfDawn/Environment/SM_DistantRidge",
+    "modifications": "V8 rebuilt curved and worn surfaces, explicit triangles, FBX face smoothing, material colors",
+    "limitations": "Static mesh source; Unreal import, collision, Lumen and runtime appearance require Windows verification."
+  }
+]

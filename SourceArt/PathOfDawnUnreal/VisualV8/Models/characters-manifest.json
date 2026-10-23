@@ -1,0 +1,105 @@
+{
+  "revision": "visual-v8",
+  "generator": "Tools/PathOfDawnUnreal/create_characters_v8.py",
+  "blender": "4.3.2",
+  "units": "meters",
+  "forward": "Blender -Y; FBX axis_forward=-Y, axis_up=Z",
+  "origin": "feet at 0,0,0 before preview staging",
+  "license": "Original project-authored geometry and material colors. No third-party asset restrictions. Creative depiction, not historically verified likeness.",
+  "models": [
+    {
+      "id": "SM_Jesus",
+      "vertices": 51231,
+      "polygons": 50425,
+      "triangles": 100688,
+      "dimensions_m": [
+        0.659891664981842,
+        0.4073678255081177,
+        1.8009999990463257
+      ],
+      "materials": [
+        "V8_IvoryLinen",
+        "V8_LinenHem",
+        "V8_OliveSkin",
+        "V8_BraidedFlax",
+        "V8_WornLeather",
+        "V8_LeatherStrap",
+        "V8_DustyBlueMantle",
+        "V8_WarmSclera",
+        "V8_BrownIris",
+        "V8_Pupil",
+        "V8_ChestnutHair",
+        "V8_FaceCrease",
+        "V8_NaturalLip",
+        "V8_ChestnutRidges"
+      ],
+      "source": "Original procedural sculpt authored for this project; no third-party mesh or actor likeness",
+      "provisional": true,
+      "limitations": "Static unrigged medium-distance sculpture; no facial animation or deformable walk cycle. Requires in-engine lighting and integration verification."
+    },
+    {
+      "id": "SM_Simon",
+      "vertices": 51847,
+      "polygons": 51021,
+      "triangles": 101904,
+      "dimensions_m": [
+        0.723518431186676,
+        0.42162567377090454,
+        1.7739850282669067
+      ],
+      "materials": [
+        "V8_SimonOliveLinen",
+        "V8_LinenHem",
+        "V8_WeatheredSkin",
+        "V8_BraidedFlax",
+        "V8_WornLeather",
+        "V8_LeatherStrap",
+        "V8_SimonBrownMantle",
+        "V8_WarmSclera",
+        "V8_BrownIris",
+        "V8_Pupil",
+        "V8_WeatheredHair",
+        "V8_FaceCrease",
+        "V8_NaturalLip",
+        "V8_GreyBeard",
+        "V8_ChestnutRidges"
+      ],
+      "source": "Original procedural sculpt authored for this project; no third-party mesh or actor likeness",
+      "provisional": true,
+      "limitations": "Static unrigged medium-distance sculpture; no facial animation or deformable walk cycle. Requires in-engine lighting and integration verification."
+    },
+    {
+      "id": "SM_Traveler",
+      "vertices": 45730,
+      "polygons": 45220,
+      "triangles": 90116,
+      "dimensions_m": [
+        0.6272350549697876,
+        0.3910731077194214,
+        1.7829900979995728
+      ],
+      "materials": [
+        "V8_TravelerUndertunic",
+        "V8_LinenHem",
+        "V8_TravelerSkin",
+        "V8_BraidedFlax",
+        "V8_WornLeather",
+        "V8_LeatherStrap",
+        "V8_TravelerBlue",
+        "V8_WarmSclera",
+        "V8_BrownIris",
+        "V8_Pupil",
+        "V8_ChestnutHair",
+        "V8_FaceCrease",
+        "V8_NaturalLip",
+        "V8_ChestnutRidges"
+      ],
+      "source": "Original procedural sculpt authored for this project; no third-party mesh or actor likeness",
+      "provisional": true,
+      "limitations": "Static unrigged medium-distance sculpture; no facial animation or deformable walk cycle. Requires in-engine lighting and integration verification."
+    }
+  ],
+  "renders": "Blender CPU Cycles source-art previews, not Unreal game screenshots",
+  "runtime": "Single static mesh per character; original diffuse colors and explicit FACE smoothing; no image texture dependency",
+  "review": "Render and FBX roundtrip validation recorded separately."
+}

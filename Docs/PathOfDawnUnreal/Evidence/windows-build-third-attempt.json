@@ -1,0 +1,101 @@
+{
+  "provenance": "User-uploaded StartHere JSON and complete editor log; sanitized diagnostic fields only",
+  "sessionUtc": "2026-10-23T10:52:18Z",
+  "sourceBundle": "PathOfDawn-Source-20261023-v4.zip",
+  "inputFile": {
+    "name": "start-here-20261023T105218Z.json",
+    "sha256": "af111cbb19c08b994dac67b4071c2402a9c1cd801d8d1191758f406dfc30291c"
+  },
+  "projectRoot": "C:\\game\\PathOfDawn-Source-20261023-v4",
+  "missingPrerequisites": [],
+  "environmentExitCode": 0,
+  "editorWrapperExitCode": 1,
+  "buildBatExitCodeInTerminal": 6,
+  "fullCompilerLogReceived": true,
+  "reviewFixesInWorkingSource": [
+    "Rename 3 Controller local Player variables to TravelerPawn",
+    "Rename 2 Widget local Slot variables to TextSlot/HudSlot",
+    "Build FTypefaceEntry via Name/Font fields; add Package/InputComponent declaration headers",
+    "Capture early compiler errors/context into StartHere console and JSON",
+    "Use UFont composite-font accessors instead of deprecated public property access"
+  ],
+  "reviewedSourceCompiledWithUnreal": false,
+  "editorCompilationSucceeded": false,
+  "windowsExecutable": null,
+  "compilerLog": {
+    "name": "start-here-20261023T105218Z-editor.log",
+    "sha256": "31ac1815b5e8954771d80ea587d1612e2773a1f80f70cd25ef71bb557eb37cfb",
+    "bytes": 16502,
+    "encoding": "UTF-16 LE with BOM"
+  },
+  "diagnostics": [
+    {
+      "file": "DawnAssetTools.cpp",
+      "line": 22,
+      "column": 9,
+      "kind": "warning",
+      "code": "C4996",
+      "message": "'UFont::CompositeFont': Public access to CompositeFont is deprecated. Use GetCompositeFont(), GetInternalCompositeFont(), or GetMutableInternalCompositeFont() instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
+    },
+    {
+      "file": "DawnAssetTools.cpp",
+      "line": 22,
+      "column": 65,
+      "kind": "error",
+      "code": "C2440",
+      "message": "'<function-style-cast>': 'initializer list'에서 'FTypefaceEntry'(으)로 변환할 수 없습니다."
+    },
+    {
+      "file": "DawnAssetTools.cpp",
+      "line": 46,
+      "column": 74,
+      "kind": "warning",
+      "code": "C4996",
+      "message": "'UFont::CompositeFont': Public access to CompositeFont is deprecated. Use GetCompositeFont(), GetInternalCompositeFont(), or GetMutableInternalCompositeFont() instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
+    },
+    {
+      "file": "DawnWidget.cpp",
+      "line": 87,
+      "column": 23,
+      "kind": "error",
+      "code": "C4458",
+      "message": "'Slot' 선언은 클래스 멤버를 숨깁니다."
+    },
+    {
+      "file": "DawnWidget.cpp",
+      "line": 166,
+      "column": 23,
+      "kind": "error",
+      "code": "C4458",
+      "message": "'Slot' 선언은 클래스 멤버를 숨깁니다."
+    },
+    {
+      "file": "DawnPlayerController.cpp",
+      "line": 227,
+      "column": 31,
+      "kind": "error",
+      "code": "C4458",
+      "message": "'Player' 선언은 클래스 멤버를 숨깁니다."
+    },
+    {
+      "file": "DawnPlayerController.cpp",
+      "line": 231,
+      "column": 31,
+      "kind": "error",
+      "code": "C4458",
+      "message": "'Player' 선언은 클래스 멤버를 숨깁니다."
+    },
+    {
+      "file": "DawnPlayerController.cpp",
+      "line": 329,
+      "column": 31,
+      "kind": "error",
+      "code": "C4458",
+      "message": "'Player' 선언은 클래스 멤버를 숨깁니다."
+    }
+  ],
+  "sharedPchSucceeded": true,
+  "totalExecutionSeconds": 37.37,
+  "result": "Failed (OtherCompilationError)",
+  "fixSourceBundle": "PathOfDawn-Source-20261023-v5.zip"
+}

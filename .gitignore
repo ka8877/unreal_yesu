@@ -1,0 +1,21 @@
+# Generated Unreal output only
+Games/PathOfDawnUnreal/Binaries/
+Games/PathOfDawnUnreal/Intermediate/
+Games/PathOfDawnUnreal/DerivedDataCache/
+Games/PathOfDawnUnreal/Saved/
+Builds/PathOfDawnUnreal/Windows/
+Builds/PathOfDawnUnreal/*.zip
+Builds/PathOfDawnUnreal/*.zip.sha256
+Builds/PathOfDawnUnreal/*verification*.json
+Builds/PathOfDawnUnreal/Extracted/
+Streaming/PathOfDawnUnreal/vendor/
+Streaming/PathOfDawnUnreal/runtime/
+Tools/PathOfDawnUnreal/local.settings.json
+**/__pycache__/
+**/node_modules/
+.vs/
+SourceArt/PathOfDawnUnreal/Models/*.blend1
+SourceArt/PathOfDawnUnreal/VisualV8/Models/*.blend1
+Docs/PathOfDawnUnreal/Evidence/start-here-*
+Docs/PathOfDawnUnreal/Evidence/setup-pc-*
+Docs/PathOfDawnUnreal/Evidence/github-delivery-local.json

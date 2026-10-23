@@ -1,0 +1,23 @@
+{
+  "scope": "UMG source inspection and separate static HTML layout reference; not Unreal runtime validation",
+  "source_literal_and_delimiter_scan": "passed",
+  "korean_UI_glyphs": 248,
+  "missing_korean_glyphs": [],
+  "cross_review": "UMG APIs and action routes reviewed by automation_review_v7; no concrete compile issue found",
+  "static_preview": {
+    "file": "title-layout-preview.png",
+    "resolution": [
+      1600,
+      900
+    ],
+    "label": "UI 레이아웃 미리보기 · Unreal 실행 캡처 아님",
+    "browser": "Local Chromium through Playwright",
+    "five_title_menu_buttons_visible": true
+  },
+  "unverified": [
+    "UE5.8.4 C++ compilation",
+    "UMG rendered layout and keyboard focus",
+    "small-window and maximum text-size rendering in Unreal",
+    "actual title/dialogue/ending/HUD screenshots"
+  ]
+}

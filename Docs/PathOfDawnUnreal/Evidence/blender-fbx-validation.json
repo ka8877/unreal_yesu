@@ -1,0 +1,117 @@
+{
+  "tool": "4.3.2",
+  "kind": "Blender FBX round-trip; NOT Unreal",
+  "status": "passed",
+  "models": [
+    {
+      "file": "SM_Boat.fbx",
+      "dimensions_metres": [
+        4.189833641052246,
+        1.5504908561706543,
+        0.9384012222290039
+      ],
+      "vertices": 1302,
+      "faces": 968,
+      "material_slots": 2
+    },
+    {
+      "file": "SM_Canopy.fbx",
+      "dimensions_metres": [
+        3.008448600769043,
+        2.181673049926758,
+        2.0799999237060547
+      ],
+      "vertices": 104,
+      "faces": 62,
+      "material_slots": 2
+    },
+    {
+      "file": "SM_Jar.fbx",
+      "dimensions_metres": [
+        0.496135950088501,
+        0.7092549800872803,
+        0.5794640183448792
+      ],
+      "vertices": 428,
+      "faces": 294,
+      "material_slots": 1
+    },
+    {
+      "file": "SM_Jesus.fbx",
+      "dimensions_metres": [
+        0.762112021446228,
+        0.40591782331466675,
+        1.8109999895095825
+      ],
+      "vertices": 3566,
+      "faces": 3724,
+      "material_slots": 8
+    },
+    {
+      "file": "SM_Net.fbx",
+      "dimensions_metres": [
+        2.3466572761535645,
+        1.4231981039047241,
+        0.3294033706188202
+      ],
+      "vertices": 4398,
+      "faces": 3246,
+      "material_slots": 2
+    },
+    {
+      "file": "SM_NetPrepared.fbx",
+      "dimensions_metres": [
+        2.3466572761535645,
+        1.5286574363708496,
+        0.11985084414482117
+      ],
+      "vertices": 4422,
+      "faces": 3260,
+      "material_slots": 3
+    },
+    {
+      "file": "SM_ShoreRock.fbx",
+      "dimensions_metres": [
+        1.04728102684021,
+        0.750329852104187,
+        0.6583146452903748
+      ],
+      "vertices": 42,
+      "faces": 80,
+      "material_slots": 1
+    },
+    {
+      "file": "SM_Simon.fbx",
+      "dimensions_metres": [
+        0.8321120738983154,
+        0.40591782331466675,
+        1.8109999895095825
+      ],
+      "vertices": 3254,
+      "faces": 3364,
+      "material_slots": 7
+    },
+    {
+      "file": "SM_StoneWall.fbx",
+      "dimensions_metres": [
+        4.099847793579102,
+        0.42814433574676514,
+        1.8300000429153442
+      ],
+      "vertices": 2240,
+      "faces": 2160,
+      "material_slots": 1
+    },
+    {
+      "file": "SM_Traveler.fbx",
+      "dimensions_metres": [
+        0.762112021446228,
+        0.40591782331466675,
+        1.8109999895095825
+      ],
+      "vertices": 3566,
+      "faces": 3724,
+      "material_slots": 8
+    }
+  ]
+}

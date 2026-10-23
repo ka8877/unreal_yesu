@@ -1,0 +1,1 @@
+PASS 14 tooling assertions (space paths, unsafe IDs, hashes, smoke rejection, atomic JSON, session exclusion, owned-process cleanup). No Windows/Unreal execution.

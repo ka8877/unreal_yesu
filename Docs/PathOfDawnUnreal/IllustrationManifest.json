@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "revision": "VisualV8",
+  "art_direction": "회화적 반실사, 깊은 남색·청록색 새벽 그늘과 절제된 금빛, 거친 모래빛 석재·직조된 크림색 린넨·바랜 청색 망토·올리브와 갈색 작업복. 성인의 자연스러운 인체 비율과 얼굴, 생활감 있는 손·밧줄·목재.",
+  "historical_notice": "예수님과 시몬의 외모는 창작적 재현이며 역사적으로 확인된 초상이 아닙니다. 여행자와 결과 장면은 허구입니다. 마을·복식·풍경은 정확한 고고학적 복원이라고 주장하지 않습니다.",
+  "reference_continuity": "신규 예수님 초상을 기준 이미지로 만든 뒤 타이틀·시몬·도입·세 결과가 해당 신규 이미지들을 로컬 참조하여 얼굴·의상·조명·소재를 이어받음.",
+  "preservation": "이전 SourceArt/PathOfDawnUnreal/Illustrations 원본은 변경하지 않음. 신규 VisualV8 디렉터리만 생성.",
+  "native_resolution_limit": "가로 1672×941, 세로 1024×1536. 도구에 가능한 최대 해상도를 요청했으나 가로 1920×1080 목표에 미달. 리사이즈·업스케일 없이 실제 출력 원본을 저장.",
+  "engine_verification": "일러스트 파일과 육안 검사까지 완료. Unreal 에디터 가져오기·Cook·Windows 패키지·게임 내 표시 검증은 이 환경에서 수행하지 못함. 실제 게임 스크린샷이 아님.",
+  "assets": [
+    {
+      "id": "IL_Title_Dawn",
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Illustrations/IL_Title_Dawn.png",
+      "purpose": "타이틀 배경",
+      "source": "OpenAI image_gen 내장 이미지 생성 도구, 이 작업에서 생성",
+      "usage_terms": "연결된 이미지 생성 서비스의 이용 조건 적용. 제3자 사진·배우 초상·영화 원화 미사용. CC0 또는 독점 저작권을 주장하지 않음.",
+      "generated_on": "2026-10-23",
+      "native_output_filename": "exec-7fd5ae6b-5e81-46b8-86f4-f76f7b4021ca.png",
+      "size": [
+        1672,
+        941
+      ],
+      "color_mode": "RGB",
+      "byte_size": 2485313,
+      "sha256": "c577385e02df7b70a0b2060cd2aeb6c235ba3737db1fed0ba7bf6180633ac8c1",
+      "history": [
+        "VisualV8용 신규 image_gen 생성",
+        "원본 출력 파일을 변경하지 않고 신규 SourceArt 디렉터리에 복사",
+        "얼굴·손·발·구도·문자·워터마크 육안 검사"
+      ],
+      "reference_ids": [
+        "IL_Portrait_Jesus"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Illustrations/IL_Title_Dawn.IL_Title_Dawn",
+      "ui_location": "타이틀 메뉴",
+      "description": "왼쪽 40%의 어두운 남색 호수 여백, 오른쪽의 예수님·배·그물·돌길. 크림 린넨과 바랜 청색 망토의 전신 인물.",
+      "visual_review": {
+        "passed": true,
+        "checks": [
+          "의도한 인물·의상·색감의 연속성",
+          "얼굴·손·발의 명백한 생성 오류 없음",
+          "문자·로고·워터마크 없음",
+          "제목·대사·버튼을 이미지 안에 넣지 않음",
+          "세 결과의 인물 간 거리와 구도 차이"
+        ],
+        "limitations": [
+          "Unreal 실제 게임 캡처가 아닌 생성 일러스트",
+          "에디터 가져오기·Cook·런타임 표시 미검증",
+          "가로 원본 해상도 1672×941: 목표 1920×1080보다 작음"
+        ]
+      }
+    },
+    {
+      "id": "IL_Arrival",
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Illustrations/IL_Arrival.png",
+      "purpose": "도입 장면",
+      "source": "OpenAI image_gen 내장 이미지 생성 도구, 이 작업에서 생성",
+      "usage_terms": "연결된 이미지 생성 서비스의 이용 조건 적용. 제3자 사진·배우 초상·영화 원화 미사용. CC0 또는 독점 저작권을 주장하지 않음.",
+      "generated_on": "2026-10-23",
+      "native_output_filename": "exec-f66df3c1-a726-44a3-a3ad-ec4230e165c1.png",
+      "size": [
+        1672,
+        941
+      ],
+      "color_mode": "RGB",
+      "byte_size": 2791034,
+      "sha256": "2d1f4fa05c01779f9c16a256b0ee7da7fcc2fb660a6268a84472f2a3582f1882",
+      "history": [
+        "VisualV8용 신규 image_gen 생성",
+        "원본 출력 파일을 변경하지 않고 신규 SourceArt 디렉터리에 복사",
+        "얼굴·손·발·구도·문자·워터마크 육안 검사"
+      ],
+      "reference_ids": [
+        "IL_Title_Dawn",
+        "IL_Portrait_Jesus"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Illustrations/IL_Arrival.IL_Arrival",
+      "ui_location": "건너뛰기 가능한 도입",
+      "description": "후면의 여행자가 낮은 카메라 시점에서 돌길에 발을 디디며 호숫가에 도착한다.",
+      "visual_review": {
+        "passed": true,
+        "checks": [
+          "의도한 인물·의상·색감의 연속성",
+          "얼굴·손·발의 명백한 생성 오류 없음",
+          "문자·로고·워터마크 없음",
+          "제목·대사·버튼을 이미지 안에 넣지 않음",
+          "세 결과의 인물 간 거리와 구도 차이"
+        ],
+        "limitations": [
+          "Unreal 실제 게임 캡처가 아닌 생성 일러스트",
+          "에디터 가져오기·Cook·런타임 표시 미검증",
+          "가로 원본 해상도 1672×941: 목표 1920×1080보다 작음"
+        ]
+      }
+    },
+    {
+      "id": "IL_Portrait_Jesus",
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Illustrations/IL_Portrait_Jesus.png",
+      "purpose": "예수님 대화 초상",
+      "source": "OpenAI image_gen 내장 이미지 생성 도구, 이 작업에서 생성",
+      "usage_terms": "연결된 이미지 생성 서비스의 이용 조건 적용. 제3자 사진·배우 초상·영화 원화 미사용. CC0 또는 독점 저작권을 주장하지 않음.",
+      "generated_on": "2026-10-23",
+      "native_output_filename": "exec-e4afee1a-a5b0-4992-9bdd-a416a65a7c84.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "color_mode": "RGB",
+      "byte_size": 2870894,
+      "sha256": "4286c89a5b3ad328acc95b3d819e4f92015c5c77d6573d6ee661250788a5be7b",
+      "history": [
+        "VisualV8용 신규 image_gen 생성",
+        "원본 출력 파일을 변경하지 않고 신규 SourceArt 디렉터리에 복사",
+        "얼굴·손·발·구도·문자·워터마크 육안 검사"
+      ],
+      "reference_ids": [],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Illustrations/IL_Portrait_Jesus.IL_Portrait_Jesus",
+      "ui_location": "예수님 대화",
+      "description": "중동계의 올리브 피부, 어깨 길이 갈색 웨이브 머리와 자연스러운 수염, 크림 린넨·청색 망토. 차분하고 사려 깊은 표정. 배역 배우나 특정 작품의 인물을 참조하지 않음.",
+      "visual_review": {
+        "passed": true,
+        "checks": [
+          "의도한 인물·의상·색감의 연속성",
+          "얼굴·손·발의 명백한 생성 오류 없음",
+          "문자·로고·워터마크 없음",
+          "제목·대사·버튼을 이미지 안에 넣지 않음",
+          "세 결과의 인물 간 거리와 구도 차이"
+        ],
+        "limitations": [
+          "Unreal 실제 게임 캡처가 아닌 생성 일러스트",
+          "에디터 가져오기·Cook·런타임 표시 미검증"
+        ]
+      }
+    },
+    {
+      "id": "IL_Portrait_Simon",
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Illustrations/IL_Portrait_Simon.png",
+      "purpose": "시몬 대화 초상",
+      "source": "OpenAI image_gen 내장 이미지 생성 도구, 이 작업에서 생성",
+      "usage_terms": "연결된 이미지 생성 서비스의 이용 조건 적용. 제3자 사진·배우 초상·영화 원화 미사용. CC0 또는 독점 저작권을 주장하지 않음.",
+      "generated_on": "2026-10-23",
+      "native_output_filename": "exec-e3440912-0b47-4209-9eb2-fe8f9df88fc0.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "color_mode": "RGB",
+      "byte_size": 2903787,
+      "sha256": "feaa27b4bc814738ddc03e6ede29ec0c4c6ce3e94b3180d433372f4670f39050",
+      "history": [
+        "VisualV8용 신규 image_gen 생성",
+        "원본 출력 파일을 변경하지 않고 신규 SourceArt 디렉터리에 복사",
+        "얼굴·손·발·구도·문자·워터마크 육안 검사"
+      ],
+      "reference_ids": [
+        "IL_Portrait_Jesus",
+        "IL_Title_Dawn"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Illustrations/IL_Portrait_Simon.IL_Portrait_Simon",
+      "ui_location": "시몬 대화",
+      "description": "짧은 곱슬머리, 세월이 느껴지는 얼굴과 손, 올리브 작업복·갈색 망토·밧줄. 예수님과 얼굴·머리·체형·복식 구분.",
+      "visual_review": {
+        "passed": true,
+        "checks": [
+          "의도한 인물·의상·색감의 연속성",
+          "얼굴·손·발의 명백한 생성 오류 없음",
+          "문자·로고·워터마크 없음",
+          "제목·대사·버튼을 이미지 안에 넣지 않음",
+          "세 결과의 인물 간 거리와 구도 차이"
+        ],
+        "limitations": [
+          "Unreal 실제 게임 캡처가 아닌 생성 일러스트",
+          "에디터 가져오기·Cook·런타임 표시 미검증"
+        ]
+      }
+    },
+    {
+      "id": "IL_Ending_Together",
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Illustrations/IL_Ending_Together.png",
+      "purpose": "함께한 아침 결과",
+      "source": "OpenAI image_gen 내장 이미지 생성 도구, 이 작업에서 생성",
+      "usage_terms": "연결된 이미지 생성 서비스의 이용 조건 적용. 제3자 사진·배우 초상·영화 원화 미사용. CC0 또는 독점 저작권을 주장하지 않음.",
+      "generated_on": "2026-10-23",
+      "native_output_filename": "exec-49feed46-a091-4e25-8c35-6094fa7608fa.png",
+      "size": [
+        1672,
+        941
+      ],
+      "color_mode": "RGB",
+      "byte_size": 2954990,
+      "sha256": "4029eab7bf45e43be0b59eb94a49998c94da6d788f55932921517e5e0bd5e449",
+      "history": [
+        "VisualV8용 신규 image_gen 생성",
+        "원본 출력 파일을 변경하지 않고 신규 SourceArt 디렉터리에 복사",
+        "얼굴·손·발·구도·문자·워터마크 육안 검사"
+      ],
+      "reference_ids": [
+        "IL_Portrait_Jesus",
+        "IL_Portrait_Simon",
+        "IL_Arrival"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Illustrations/IL_Ending_Together.IL_Ending_Together",
+      "ui_location": "Ending_Together 결과 화면",
+      "description": "수선한 그물 곁에서 여행자·시몬·예수님이 가까이 서 있는 구도.",
+      "visual_review": {
+        "passed": true,
+        "checks": [
+          "의도한 인물·의상·색감의 연속성",
+          "얼굴·손·발의 명백한 생성 오류 없음",
+          "문자·로고·워터마크 없음",
+          "제목·대사·버튼을 이미지 안에 넣지 않음",
+          "세 결과의 인물 간 거리와 구도 차이"
+        ],
+        "limitations": [
+          "Unreal 실제 게임 캡처가 아닌 생성 일러스트",
+          "에디터 가져오기·Cook·런타임 표시 미검증",
+          "가로 원본 해상도 1672×941: 목표 1920×1080보다 작음"
+        ]
+      }
+    },
+    {
+      "id": "IL_Ending_Witness",
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Illustrations/IL_Ending_Witness.png",
+      "purpose": "호숫가의 증인 결과",
+      "source": "OpenAI image_gen 내장 이미지 생성 도구, 이 작업에서 생성",
+      "usage_terms": "연결된 이미지 생성 서비스의 이용 조건 적용. 제3자 사진·배우 초상·영화 원화 미사용. CC0 또는 독점 저작권을 주장하지 않음.",
+      "generated_on": "2026-10-23",
+      "native_output_filename": "exec-aef5b11e-0fb4-4f20-946c-b6b8afb986d5.png",
+      "size": [
+        1672,
+        941
+      ],
+      "color_mode": "RGB",
+      "byte_size": 2924473,
+      "sha256": "2b210b3845af0cf3fc00fc6ae887db6dc63902eea40d2a215559b701384acb22",
+      "history": [
+        "VisualV8용 신규 image_gen 생성",
+        "원본 출력 파일을 변경하지 않고 신규 SourceArt 디렉터리에 복사",
+        "얼굴·손·발·구도·문자·워터마크 육안 검사"
+      ],
+      "reference_ids": [
+        "IL_Portrait_Jesus",
+        "IL_Portrait_Simon",
+        "IL_Arrival"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Illustrations/IL_Ending_Witness.IL_Ending_Witness",
+      "ui_location": "Ending_Witness 결과 화면",
+      "description": "여행자가 전경의 바위에 앉아 밧줄을 곁에 두고 물 너머의 배와 두 인물을 바라보는 넓은 관찰 구도.",
+      "visual_review": {
+        "passed": true,
+        "checks": [
+          "의도한 인물·의상·색감의 연속성",
+          "얼굴·손·발의 명백한 생성 오류 없음",
+          "문자·로고·워터마크 없음",
+          "제목·대사·버튼을 이미지 안에 넣지 않음",
+          "세 결과의 인물 간 거리와 구도 차이"
+        ],
+        "limitations": [
+          "Unreal 실제 게임 캡처가 아닌 생성 일러스트",
+          "에디터 가져오기·Cook·런타임 표시 미검증",
+          "가로 원본 해상도 1672×941: 목표 1920×1080보다 작음"
+        ]
+      }
+    },
+    {
+      "id": "IL_Ending_Departure",
+      "file": "SourceArt/PathOfDawnUnreal/VisualV8/Illustrations/IL_Ending_Departure.png",
+      "purpose": "아직 걷지 않은 길 결과",
+      "source": "OpenAI image_gen 내장 이미지 생성 도구, 이 작업에서 생성",
+      "usage_terms": "연결된 이미지 생성 서비스의 이용 조건 적용. 제3자 사진·배우 초상·영화 원화 미사용. CC0 또는 독점 저작권을 주장하지 않음.",
+      "generated_on": "2026-10-23",
+      "native_output_filename": "exec-8cf5825b-c3e9-4a2c-a9b3-b3a4dbfc4dcb.png",
+      "size": [
+        1672,
+        941
+      ],
+      "color_mode": "RGB",
+      "byte_size": 2656870,
+      "sha256": "347cf6a087187024c738caf62b9a67019c8b98385ef90089dae18e54464ef28d",
+      "history": [
+        "VisualV8용 신규 image_gen 생성",
+        "첫 생성의 태양 두 개 오류를 발견하여 image_gen 편집으로 왼쪽 여분 태양 제거. 아치 너머 태양 하나만 남긴 수정본 사용.",
+        "원본 출력 파일을 변경하지 않고 신규 SourceArt 디렉터리에 복사",
+        "얼굴·손·발·구도·문자·워터마크 육안 검사"
+      ],
+      "reference_ids": [
+        "IL_Arrival",
+        "IL_Title_Dawn"
+      ],
+      "temporary": false,
+      "runtime_reference": "/Game/PathOfDawn/Illustrations/IL_Ending_Departure.IL_Ending_Departure",
+      "ui_location": "Ending_Departure 결과 화면",
+      "description": "여행자가 호수를 뒤로 하고 올리브나무와 석조 아치 너머 마을을 향해 걷는 구도. 왼쪽 호수 여백 유지.",
+      "visual_review": {
+        "passed": true,
+        "checks": [
+          "의도한 인물·의상·색감의 연속성",
+          "얼굴·손·발의 명백한 생성 오류 없음",
+          "문자·로고·워터마크 없음",
+          "제목·대사·버튼을 이미지 안에 넣지 않음",
+          "세 결과의 인물 간 거리와 구도 차이"
+        ],
+        "limitations": [
+          "Unreal 실제 게임 캡처가 아닌 생성 일러스트",
+          "에디터 가져오기·Cook·런타임 표시 미검증",
+          "가로 원본 해상도 1672×941: 목표 1920×1080보다 작음"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "scope": "Static source bounding-box grounding check, not Unreal collision or render verification",
+  "map_generator_sha256": "d0cd713bbad90849dbee1ef44dcc5d778c1dc7dcdbaa2a99c13d2f41f27eb35c",
+  "observations": [
+    {
+      "actor": "Boat",
+      "source_mesh": "SM_Boat",
+      "actor_z_cm": -9,
+      "min_mesh_world_z_cm": -4.3,
+      "visual_ground_z_cm": -4,
+      "bottom_offset_cm": -0.3
+    },
+    {
+      "actor": "SecondBoat",
+      "source_mesh": "SM_Boat",
+      "actor_z_cm": -8,
+      "min_mesh_world_z_cm": -4.005,
+      "visual_ground_z_cm": -4,
+      "bottom_offset_cm": -0.005
+    },
+    {
+      "actor": "Net",
+      "source_mesh": "SM_Net",
+      "actor_z_cm": -5,
+      "min_mesh_world_z_cm": -3.45,
+      "visual_ground_z_cm": -4,
+      "bottom_offset_cm": 0.55
+    },
+    {
+      "actor": "PreparedNet",
+      "source_mesh": "SM_NetPrepared",
+      "actor_z_cm": -5,
+      "min_mesh_world_z_cm": -4.66,
+      "visual_ground_z_cm": -4,
+      "bottom_offset_cm": -0.66
+    },
+    {
+      "actor": "Stone",
+      "source_mesh": "SM_ShoreRock",
+      "actor_z_cm": -3,
+      "min_mesh_world_z_cm": -4.27,
+      "visual_ground_z_cm": -4,
+      "bottom_offset_cm": -0.27
+    }
+  ],
+  "other_changes": "NPC feet at -4cm, canopy/jars lowered to -5cm; gameplay XY locations and boundaries unchanged."
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "source-asset-validation; not game execution",
+  "status": "passed",
+  "audio": [
+    {
+      "file": "A_Footstep.wav",
+      "duration_seconds": 0.22,
+      "peak_pcm16": 6455,
+      "clipped": false
+    },
+    {
+      "file": "A_NetRustle.wav",
+      "duration_seconds": 0.8,
+      "peak_pcm16": 4166,
+      "clipped": false
+    },
+    {
+      "file": "A_Water.wav",
+      "duration_seconds": 12.0,
+      "peak_pcm16": 10403,
+      "clipped": false
+    },
+    {
+      "file": "A_Wind.wav",
+      "duration_seconds": 12.0,
+      "peak_pcm16": 6179,
+      "clipped": false
+    }
+  ]
+}

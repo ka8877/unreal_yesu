@@ -1,0 +1,10 @@
+{
+  "buildId": "COPY_FROM_CANDIDATE_MANIFEST",
+  "payloadSha256": "COPY_FROM_CANDIDATE_MANIFEST",
+  "tester": "",
+  "testedUtc": "",
+  "machine": {"os": "", "gpu": "", "driver": "", "resolution": "", "quality": "", "frameTimeMs": null, "memoryMiB": null},
+  "checks": {"graphicalLaunch": false, "title": false, "movement": false, "dialogue": false, "choice": false, "ending": false, "rewind": false, "saveRestartContinue": false, "koreanGlyphs": false},
+  "captures": [],
+  "notes": "Fill only after testing this exact package with rendering and audio. Six captures: title, shore, dialogue, choice, ending, rewind. Use absolute capture paths when moving report into candidate. A process exit code, HTTP 200, mock image or NullRHI run is not graphical evidence."
+}

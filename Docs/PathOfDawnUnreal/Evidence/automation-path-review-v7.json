@@ -1,0 +1,28 @@
+{
+  "test": "Portable replay of Unreal automation source core paths",
+  "date": "2026-10-23",
+  "workingDirectory": "/workspace/unreal_yesu",
+  "sourceTest": "Games/PathOfDawnUnreal/Source/PathOfDawnUnreal/Private/Tests/DawnAutomationTests.cpp",
+  "harness": "Docs/PathOfDawnUnreal/Evidence/automation-path-review-v7.cpp",
+  "executedCommands": [
+    "g++ -std=c++17 -Wall -Wextra -Werror -pedantic -I Games/PathOfDawnUnreal/Source/PathOfDawnUnreal/Core /tmp/dawn_automation_paths_v7.cpp -o /tmp/dawn_automation_paths_v7",
+    "/tmp/dawn_automation_paths_v7"
+  ],
+  "reproductionCommands": [
+    "g++ -std=c++17 -Wall -Wextra -Werror -pedantic -I Games/PathOfDawnUnreal/Source/PathOfDawnUnreal/Core Docs/PathOfDawnUnreal/Evidence/automation-path-review-v7.cpp -o /tmp/dawn_automation_paths_v7",
+    "/tmp/dawn_automation_paths_v7"
+  ],
+  "exitCode": 0,
+  "checksPassed": 72,
+  "errors": 0,
+  "observedOutput": "Automation source core-path replay: 72 checks, 0 errors. No Unreal or USaveGame API exercised.",
+  "scope": "The actual FDawnBranchTest::RunTest body was extracted and run against the same DawnState.h using small assertion adapters. The save test core setup before NewObject/USaveGame was extracted, followed by portable Serialize/Deserialize and task-resume checks. This is a portable fixture and does not implement Unreal.",
+  "unverified": [
+    "UE Automation framework and report export",
+    "UGameplayStatics::SaveGameToMemory/LoadGameFromMemory",
+    "Unreal compilation and runtime",
+    "Startup LogAutomationTest Condition failed source",
+    "Pixel Streaming media/encoder/window behavior"
+  ],
+  "executionNote": "Recorded the already completed run; no additional test execution was performed while persisting this evidence."
+}

@@ -1,0 +1,43 @@
+[success] 실행 중입니다. 자세한 기록: /tmp/Dawn 시작 검사 6beb81c52ca741758b4a160940242d49/start-here-regression-success.log
+[failure] 실행 중입니다. 자세한 기록: /tmp/Dawn 시작 검사 6beb81c52ca741758b4a160940242d49/start-here-regression-failure.log
+
+컴파일/빌드 오류 요약(진단 JSON에도 기록):
+fixture build error: shared build settings differ
+fixture wrapper exception
+
+실패 직전 로그(전체 내용은 위 로그 파일에 보관):
+fixture build error: shared build settings differ
+fixture wrapper exception
+[compiler] 실행 중입니다. 자세한 기록: /tmp/Dawn 시작 검사 6beb81c52ca741758b4a160940242d49/start-here-regression-compiler.log
+
+컴파일/빌드 오류 요약(진단 JSON에도 기록):
+DawnPlayerController.cpp(227,31): error C4458: Player hides a class member
+PlayerController.h(272,22): note: see declaration of Player
+wrapper tail: no compiler diagnostic here
+
+실패 직전 로그(전체 내용은 위 로그 파일에 보관):
+wrapper tail: no compiler diagnostic here
+wrapper tail: no compiler diagnostic here
+wrapper tail: no compiler diagnostic here
+wrapper tail: no compiler diagnostic here
+wrapper tail: no compiler diagnostic here
+wrapper tail: no compiler diagnostic here
+wrapper tail: no compiler diagnostic here
+wrapper tail: no compiler diagnostic here
+wrapper tail: no compiler diagnostic here
+wrapper tail: no compiler diagnostic here
+wrapper tail: no compiler diagnostic here
+wrapper tail: no compiler diagnostic here
+wrapper tail: no compiler diagnostic here
+wrapper tail: no compiler diagnostic here
+wrapper tail: no compiler diagnostic here
+wrapper tail: no compiler diagnostic here
+wrapper tail: no compiler diagnostic here
+wrapper tail: no compiler diagnostic here
+wrapper tail: no compiler diagnostic here
+wrapper tail: no compiler diagnostic here
+wrapper tail: no compiler diagnostic here
+wrapper tail: no compiler diagnostic here
+wrapper tail: no compiler diagnostic here
+wrapper tail: no compiler diagnostic here
+PASS: native stderr success; Unicode/space arguments; preferences preserved; exit 37 recorded; complete failure log; missing script rejected; compiler exit 6; early compiler error/context; JSON error summary.

@@ -1,0 +1,200 @@
+{
+  "tool": "Blender 4.3.2",
+  "test": "FBX roundtrip import; not Unreal validation",
+  "passed": 12,
+  "assets": [
+    {
+      "asset_id": "SM_Boat",
+      "single_mesh": true,
+      "roundtrip_dimensions_m": [
+        4.1604,
+        1.4924,
+        0.9661
+      ],
+      "triangles": 14328,
+      "material_slots": 8,
+      "finite_coordinates": true,
+      "UV0": false,
+      "passed": true
+    },
+    {
+      "asset_id": "SM_Net",
+      "single_mesh": true,
+      "roundtrip_dimensions_m": [
+        2.5499,
+        1.4172,
+        0.3547
+      ],
+      "triangles": 13248,
+      "material_slots": 4,
+      "finite_coordinates": true,
+      "UV0": false,
+      "passed": true
+    },
+    {
+      "asset_id": "SM_NetPrepared",
+      "single_mesh": true,
+      "roundtrip_dimensions_m": [
+        2.4317,
+        1.6276,
+        0.1135
+      ],
+      "triangles": 12716,
+      "material_slots": 5,
+      "finite_coordinates": true,
+      "UV0": false,
+      "passed": true
+    },
+    {
+      "asset_id": "SM_Jar",
+      "single_mesh": true,
+      "roundtrip_dimensions_m": [
+        0.5865,
+        0.4914,
+        0.709
+      ],
+      "triangles": 4770,
+      "material_slots": 3,
+      "finite_coordinates": true,
+      "UV0": false,
+      "passed": true
+    },
+    {
+      "asset_id": "SM_StoneWall",
+      "single_mesh": true,
+      "roundtrip_dimensions_m": [
+        3.9637,
+        0.5674,
+        1.7616
+      ],
+      "triangles": 7392,
+      "material_slots": 5,
+      "finite_coordinates": true,
+      "UV0": false,
+      "passed": true
+    },
+    {
+      "asset_id": "SM_Canopy",
+      "single_mesh": true,
+      "roundtrip_dimensions_m": [
+        2.9563,
+        2.2163,
+        2.177
+      ],
+      "triangles": 4660,
+      "material_slots": 8,
+      "finite_coordinates": true,
+      "UV0": false,
+      "passed": true
+    },
+    {
+      "asset_id": "SM_ShoreRock",
+      "single_mesh": true,
+      "roundtrip_dimensions_m": [
+        0.9436,
+        0.7288,
+        0.5336
+      ],
+      "triangles": 506,
+      "material_slots": 1,
+      "finite_coordinates": true,
+      "UV0": false,
+      "passed": true
+    },
+    {
+      "asset_id": "SM_OliveTree",
+      "single_mesh": true,
+      "roundtrip_dimensions_m": [
+        3.6673,
+        3.6364,
+        3.8256
+      ],
+      "triangles": 128024,
+      "material_slots": 5,
+      "finite_coordinates": true,
+      "UV0": false,
+      "passed": true
+    },
+    {
+      "asset_id": "SM_ReedClump",
+      "single_mesh": true,
+      "roundtrip_dimensions_m": [
+        1.2128,
+        1.2045,
+        1.7067
+      ],
+      "triangles": 4448,
+      "material_slots": 3,
+      "finite_coordinates": true,
+      "UV0": false,
+      "passed": true
+    },
+    {
+      "asset_id": "SM_PathSlab",
+      "single_mesh": true,
+      "roundtrip_dimensions_m": [
+        0.8843,
+        0.712,
+        0.1005
+      ],
+      "triangles": 60,
+      "material_slots": 1,
+      "finite_coordinates": true,
+      "UV0": false,
+      "passed": true
+    },
+    {
+      "asset_id": "SM_ShoreGround",
+      "single_mesh": true,
+      "roundtrip_dimensions_m": [
+        46.0,
+        28.9879,
+        0.84
+      ],
+      "triangles": 6064,
+      "material_slots": 3,
+      "finite_coordinates": true,
+      "UV0": true,
+      "passed": true
+    },
+    {
+      "asset_id": "SM_DistantRidge",
+      "single_mesh": true,
+      "roundtrip_dimensions_m": [
+        90.0,
+        20.0,
+        11.5
+      ],
+      "triangles": 2016,
+      "material_slots": 2,
+      "finite_coordinates": true,
+      "UV0": false,
+      "passed": true
+    }
+  ],
+  "visual_review": {
+    "preview": "EnvironmentPreview.png",
+    "kind": "Blender CPU source-art preview; not Unreal runtime screenshot",
+    "resolution": [
+      1600,
+      1100
+    ],
+    "samples": 40,
+    "visually_inspected": true,
+    "observations": [
+      "Curved open boat hull, ribs, benches and mooring rope visibly present",
+      "Net drape and repaired patch are distinct",
+      "Amphora mouths open; fabric canopy sags naturally",
+      "Rubble wall replaces regular brick rows; stones softened after first review",
+      "Olive canopy uses individual two-sided leaves and fine branches",
+      "Sand uses 1024px original micrograin albedo/normal; checkerboard face colors removed"
+    ],
+    "not_tested": [
+      "Unreal import",
+      "Unreal collision",
+      "Lumen shading",
+      "Windows packaged runtime",
+      "GPU performance"
+    ]
+  }
+}

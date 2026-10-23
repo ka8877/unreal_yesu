@@ -1,0 +1,38 @@
+[
+  {
+    "file": "SourceArt/PathOfDawnUnreal/Audio/A_Water.wav",
+    "asset_id": "A_Water",
+    "origin": "Original deterministic noise synthesis, create_audio.py",
+    "license": "Project-created sound, no third-party recording",
+    "temporary": true,
+    "runtime_path": "/Game/PathOfDawn/Audio/A_Water",
+    "limitations": "Provisional synthesized Foley/ambience; no speech or soundtrack"
+  },
+  {
+    "file": "SourceArt/PathOfDawnUnreal/Audio/A_Wind.wav",
+    "asset_id": "A_Wind",
+    "origin": "Original deterministic noise synthesis, create_audio.py",
+    "license": "Project-created sound, no third-party recording",
+    "temporary": true,
+    "runtime_path": "/Game/PathOfDawn/Audio/A_Wind",
+    "limitations": "Provisional synthesized Foley/ambience; no speech or soundtrack"
+  },
+  {
+    "file": "SourceArt/PathOfDawnUnreal/Audio/A_Footstep.wav",
+    "asset_id": "A_Footstep",
+    "origin": "Original deterministic noise synthesis, create_audio.py",
+    "license": "Project-created sound, no third-party recording",
+    "temporary": true,
+    "runtime_path": "/Game/PathOfDawn/Audio/A_Footstep",
+    "limitations": "Provisional synthesized Foley/ambience; no speech or soundtrack"
+  },
+  {
+    "file": "SourceArt/PathOfDawnUnreal/Audio/A_NetRustle.wav",
+    "asset_id": "A_NetRustle",
+    "origin": "Original deterministic noise synthesis, create_audio.py",
+    "license": "Project-created sound, no third-party recording",
+    "temporary": true,
+    "runtime_path": "/Game/PathOfDawn/Audio/A_NetRustle",
+    "limitations": "Provisional synthesized Foley/ambience; no speech or soundtrack"
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "preserved_files": 17,
+  "audio_refused_exit": 1,
+  "blender_refused_exit": 1,
+  "reason": "Existing source files must not be replaced; use fresh --output-dir for reviewed regeneration."
+}

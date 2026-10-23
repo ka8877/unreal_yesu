@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "checkedUtc": "2026-10-23",
+  "engineTarget": "5.8",
+  "installedEnginePatch": null,
+  "installedEngineVerified": false,
+  "plugin": "PixelStreaming2",
+  "repository": "https://github.com/EpicGames/PixelStreamingInfrastructure.git",
+  "branch": "UE5.8",
+  "commit": "a5b526b2383110dcd84e6b56580bca8f459e1836",
+  "node": "v22.14.0",
+  "npm": "10.9.2",
+  "signallingPackage": "@epicgames-ps/lib-pixelstreamingsignalling-ue5.8",
+  "signallingVersion": "0.2.0",
+  "upstreamWilburVersion": "3.1.0",
+  "frontendSource": "Frontend/implementations/typescript",
+  "dependencyLock": "upstream package-lock.json at pinned commit",
+  "officialApiVerified": ["IServerConfig.httpServer", "IServerConfig.streamerWsOptions", "IServerConfig.playerWsOptions", "IServerConfig.maxSubscribers", "IServerConfig.playerKeepaliveTimeout"],
+  "runtimeVideoVerified": false
+}

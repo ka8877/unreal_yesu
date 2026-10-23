@@ -1,0 +1,14 @@
+{
+  "file": "T_LakeNormal.png",
+  "width": 512,
+  "height": 512,
+  "source": "Original periodic ripple normal texture authored mathematically in create_environment_v8.py",
+  "license": "Project-created; no external image",
+  "color_space": "Non-Color (sRGB disabled)",
+  "compression": "TC_Normalmap",
+  "normal_convention": "DirectX tangent-space (green -Y relative to OpenGL)",
+  "tiling": "Seamless periodic U and V; wrap sampler",
+  "runtime_path": "/Game/PathOfDawn/Environment/T_LakeNormal",
+  "temporary": false,
+  "sha256": "783a0aeedb85d020b7a32602b9d08a85f6cd7c3eaec1bea406ca1f0a0d6bcf2b"
+}

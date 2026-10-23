@@ -1,0 +1,54 @@
+{
+  "checkedUtc": "2026-10-23T14:15:42.252636+00:00",
+  "scope": "Official Windows portable archives downloaded and inspected on Linux; Windows execution not tested",
+  "nodeChecksums": "https://nodejs.org/dist/v22.14.0/SHASUMS256.txt",
+  "gitReleaseMetadata": "https://api.github.com/repos/git-for-windows/git/releases/tags/v2.56.0.windows.3",
+  "archives": [
+    {
+      "name": "node-v22.14.0-win-x64.zip",
+      "url": "https://nodejs.org/dist/v22.14.0/node-v22.14.0-win-x64.zip",
+      "sha256": "55b639295920b219bb2acbcfa00f90393a2789095b7323f79475c9f34795f217",
+      "bytes": 34906389,
+      "entries": 3017,
+      "paths": [
+        "node-v22.14.0-win-x64/node.exe",
+        "node-v22.14.0-win-x64/node_modules/corepack/package.json",
+        "node-v22.14.0-win-x64/node_modules/corepack/shims/nodewin/npm.cmd",
+        "node-v22.14.0-win-x64/node_modules/corepack/shims/nodewin/pnpm.cmd",
+        "node-v22.14.0-win-x64/node_modules/corepack/shims/npm.cmd",
+        "node-v22.14.0-win-x64/node_modules/corepack/shims/pnpm.cmd",
+        "node-v22.14.0-win-x64/node_modules/npm/bin/npm.cmd",
+        "node-v22.14.0-win-x64/node_modules/npm/node_modules/@isaacs/cliui/node_modules/ansi-regex/package.json",
+        "node-v22.14.0-win-x64/node_modules/npm/node_modules/@isaacs/cliui/node_modules/emoji-regex/package.json",
+        "node-v22.14.0-win-x64/node_modules/npm/node_modules/@isaacs/cliui/node_modules/string-width/package.json"
+      ],
+      "zipCrcVerified": true
+    },
+    {
+      "name": "MinGit-2.56.0.3-64-bit.zip",
+      "url": "https://github.com/git-for-windows/git/releases/download/v2.56.0.windows.3/MinGit-2.56.0.3-64-bit.zip",
+      "sha256": "2e5619966e588fde5f8122c5557cad50c0fbafcaed736689f40ec1dfb1d78ea7",
+      "bytes": 39854943,
+      "entries": 378,
+      "paths": [
+        "cmd/git.exe"
+      ],
+      "zipCrcVerified": true
+    }
+  ],
+  "portableTests": {
+    "command": "pwsh -NoProfile -File Tools/PathOfDawnUnreal/tests/browser_tools_tests.ps1 -OfficialArchiveDirectory /tmp/pathofdawn-browser-tools",
+    "passed": 31,
+    "checks": [
+      "Traversal/absolute/drive/ADS/backslash paths rejected before extraction",
+      "Duplicate case-insensitive paths and symlinks rejected",
+      "Checksum mismatch never extracted",
+      "Unchanged portable cache reused without downloading",
+      "Edited/unowned folders preserved and rejected",
+      "Official ZIP extraction through actual PowerShell helper",
+      "Bundled npm 10.9.2 package metadata confirmed",
+      "Downloaded node.exe and cmd/git.exe PE headers identify Windows AMD64 machine 0x8664"
+    ],
+    "windowsExecutableLaunch": "not performed (Linux workspace)"
+  }
+}
