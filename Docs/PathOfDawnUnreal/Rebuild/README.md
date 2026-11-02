@@ -31,8 +31,8 @@
 ## 재현한 소스 검사
 
 ```powershell
-pwsh -File .\Tools\PathOfDawnUnreal\Rebuild\TestRebuild.ps1
-pwsh -File .\Tools\PathOfDawnUnreal\Rebuild\PrepareRebuild.ps1
+pwsh -NoProfile -ExecutionPolicy Bypass -File .\Tools\PathOfDawnUnreal\Rebuild\TestRebuild.ps1
+pwsh -NoProfile -ExecutionPolicy Bypass -File .\Tools\PathOfDawnUnreal\Rebuild\PrepareRebuild.ps1
 ```
 
 첫 명령은 Linux GCC 또는 Windows Developer PowerShell의 MSVC와 Python/Pillow를 사용한다. C++ 132 assertions, 서사 오류 주입 24개, 환경 변조 검사 7개, 인체/의상 원본 변조 검사 5개, 임포트·에셋 정책 17개를 통과했다. 두 번째는 준비 상태를 검사하며 현재 **정상적으로 BLOCKED/종료 코드 2**가 된다. 성공으로 무시하지 않는다. 로그와 JSON은 `Docs/PathOfDawnUnreal/Evidence/Rebuild/`에 있다. 이 검사는 Unreal 컴파일·저장 파일 I/O·셰이더·UMG·그래픽 품질을 검증하지 않는다.
@@ -43,10 +43,21 @@ GitHub의 [소스 검사](https://github.com/ka8877/unreal_yesu/actions/runs/413
 
 현재 클라우드에서 사용자 PC를 직접 조작할 수 없다. PC에 준비된 Unreal/GPU를 실제로 사용할 수 있는 로컬 작업 환경이 필요하다. [기존 로컬 작업 안내](../LocalCodex.md)의 재구축 우선 지시를 따른다. 이미 실행된 엔진을 다시 설치할 필요는 없다.
 
+Windows PowerShell 5.1에서 `& 'C:\PathOfDawn\Bootstrap.ps1'`를 직접 실행하면 기본 실행 정책에 막힐 수 있다. 이미 설치된 `.cmd` 실행기는 `powershell.exe -ExecutionPolicy Bypass -File`을 통해 해당 프로세스에서만 실행하므로 다음 명령을 사용한다. PC 전체 정책이나 관리자 권한은 변경하지 않는다. 두 번째 단계는 다운로드 성공 시에만 실행한다.
+
+```powershell
+& 'C:\PathOfDawn\Update-PathOfDawn.cmd' -CommitSha 'bb928a4ca5436f5ccbac8217a09ee366d6216d28' -DownloadOnly
+if ($LASTEXITCODE -eq 0) {
+    & 'C:\PathOfDawn\versions\source-bb928a4ca543\Prepare-WordJourney-Art.cmd'
+}
+```
+
+이 명령은 준비용 원본과 진단·공식 페이지를 여는 경로다. 기존 게임을 빌드하거나 실행 중인 세션을 교체하지 않는다. 다운로드 실패 후 준비 파일을 찾을 수 없다는 메시지는 별도의 설치 실패가 아니므로 첫 오류부터 확인한다.
+
 이 브랜치의 소스를 받은 뒤 `Prepare-WordJourney-Art.cmd`를 실행하면 공식 Game Animation Sample과 MetaHuman 문서를 열고 기본 프로젝트 폴더를 읽기 전용으로 조사한다. 다른 에셋 위치가 있으면 다음처럼 지정한다.
 
 ```powershell
-pwsh -File .\Tools\PathOfDawnUnreal\Rebuild\PrepareArtOnPC.ps1 -AssetRoots 'D:\Unreal Projects' -OpenOfficialPages
+pwsh -NoProfile -ExecutionPolicy Bypass -File .\Tools\PathOfDawnUnreal\Rebuild\PrepareArtOnPC.ps1 -AssetRoots 'D:\Unreal Projects' -OpenOfficialPages
 ```
 
 본인 Epic 계정으로 무료 샘플을 라이브러리에 추가하고 UE 5.8용 별도 샘플 프로젝트를 만드는 과정은 계정/약관 확인이 필요하다. 성인 MetaHuman만으로 아기·아동·복식이 확보되는 것은 아니다. 라이선스 제한 원본과 개인 근거 파일은 공개 저장소에 커밋하지 않는다. 로컬 파일은 `.local/`에 보관한다.
@@ -54,8 +65,8 @@ pwsh -File .\Tools\PathOfDawnUnreal\Rebuild\PrepareArtOnPC.ps1 -AssetRoots 'D:\U
 확보한 CC0 환경만 실제 Editor로 가져오는 명령은 다음과 같다. 먼저 Editor 타깃을 컴파일하며, 기존 맵·게임모드·배포를 바꾸지 않는다. **현재 클라우드에서는 실행하지 못한 명령**이다.
 
 ```powershell
-pwsh -File .\Tools\PathOfDawnUnreal\Rebuild\PrepareRebuild.ps1 -EngineRoot 'C:\Program Files\Epic Games\UE_5.8' -ImportSourcesOnly
-pwsh -File .\Tools\PathOfDawnUnreal\Rebuild\PrepareRebuild.ps1 -EngineRoot 'C:\Program Files\Epic Games\UE_5.8' -ImportJournalData
+pwsh -NoProfile -ExecutionPolicy Bypass -File .\Tools\PathOfDawnUnreal\Rebuild\PrepareRebuild.ps1 -EngineRoot 'C:\Program Files\Epic Games\UE_5.8' -ImportSourcesOnly
+pwsh -NoProfile -ExecutionPolicy Bypass -File .\Tools\PathOfDawnUnreal\Rebuild\PrepareRebuild.ps1 -EngineRoot 'C:\Program Files\Epic Games\UE_5.8' -ImportJournalData
 ```
 
 두 번째는 직접 작성한 한국어 요약을 `/Game/WordJourney/Narrative/DA_JourneyJournal`로 변환하는 준비 경로다. 모든 `scene_ready`는 false이며 장면을 해금하지 않는다. 실제 임포트·에셋 재로드·Cook은 미검증이다.
@@ -63,7 +74,7 @@ pwsh -File .\Tools\PathOfDawnUnreal\Rebuild\PrepareRebuild.ps1 -EngineRoot 'C:\P
 실제 라이선스·인물·애니메이션·팩이 확보되면 템플릿을 `.local/asset-bindings.json`으로 복사해 **실제 조회한** 오브젝트 경로·스켈레톤·애니메이션·실측 배치와 사용 조건 근거를 등록한다. 그 뒤:
 
 ```powershell
-pwsh -File .\Tools\PathOfDawnUnreal\Rebuild\PrepareRebuild.ps1 -EngineRoot 'C:\Program Files\Epic Games\UE_5.8' -Bindings '.\Tools\PathOfDawnUnreal\Rebuild\.local\asset-bindings.json' -GenerateBenchmark
+pwsh -NoProfile -ExecutionPolicy Bypass -File .\Tools\PathOfDawnUnreal\Rebuild\PrepareRebuild.ps1 -EngineRoot 'C:\Program Files\Epic Games\UE_5.8' -Bindings '.\Tools\PathOfDawnUnreal\Rebuild\.local\asset-bindings.json' -GenerateBenchmark
 ```
 
 이 경로도 생성 결과만으로 통과시키지 않는다. 새 Editor 프로세스에서 실제 환경 전경·인물 근접·플레이 구도와 이동/애니메이션을 검수한다. 생성된 카메라는 구도 확인용이며 아직 플레이 Pawn/AnimBP를 구현한 것이 아니다. 실제 렌더 캡처와 기명 검수 전 상태는 계속 BLOCKED다. 현재 작업에는 도입 컷신, 새 타이틀, 요셉 이동과 실제 장면 연결이 완료되어 있지 않다.

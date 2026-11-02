@@ -35,5 +35,5 @@ if ($OpenOfficialPages) {
 Write-Host ''
 Write-Host '계정 없이 확보한 CC0 환경 원본은 이 소스에 이미 포함되어 있습니다.'
 Write-Host 'Windows Editor에서 환경 원본만 가져오는 명령:'
-Write-Host "pwsh -File `"$(Join-Path $PSScriptRoot 'PrepareRebuild.ps1')`" -EngineRoot `"C:\Program Files\Epic Games\UE_5.8`" -ImportSourcesOnly"
+Write-Host "pwsh -NoProfile -ExecutionPolicy Bypass -File `"$(Join-Path $PSScriptRoot 'PrepareRebuild.ps1')`" -EngineRoot `"C:\Program Files\Epic Games\UE_5.8`" -ImportSourcesOnly"
 Write-Host '라이선스 제한이 있는 Fab/MetaHuman 원본은 공개 GitHub에 올리지 마세요. 로컬 바인딩은 .local 아래에 보관하세요.'
