@@ -35,9 +35,9 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File .\Tools\PathOfDawnUnreal\Rebuild\T
 pwsh -NoProfile -ExecutionPolicy Bypass -File .\Tools\PathOfDawnUnreal\Rebuild\PrepareRebuild.ps1
 ```
 
-첫 명령은 Linux GCC 또는 Windows Developer PowerShell의 MSVC와 Python/Pillow를 사용한다. C++ 132 assertions, 서사 오류 주입 24개, 환경 변조 검사 7개, 인체/의상 원본 변조 검사 5개, 임포트·에셋 정책·Python 격리·샘플 조사 계약 27개를 통과했다. 두 번째는 준비 상태를 검사하며 현재 **정상적으로 BLOCKED/종료 코드 2**가 된다. 성공으로 무시하지 않는다. 로그와 JSON은 `Docs/PathOfDawnUnreal/Evidence/Rebuild/`에 있다. 이 검사는 Unreal 컴파일·저장 파일 I/O·셰이더·UMG·그래픽 품질을 검증하지 않는다.
+첫 명령은 Linux GCC 또는 Windows Developer PowerShell의 MSVC와 Python/Pillow를 사용한다. C++ 132 assertions, 서사 오류 주입 24개, 환경 변조 검사 7개, 인체/의상 원본 변조 검사 5개, 임포트·에셋 정책·Python 격리·샘플 조사·이동 검토 계약 34개를 통과했다. 두 번째는 준비 상태를 검사하며 현재 **정상적으로 BLOCKED/종료 코드 2**가 된다. 성공으로 무시하지 않는다. 로그와 JSON은 `Docs/PathOfDawnUnreal/Evidence/Rebuild/`에 있다. 이 검사는 Unreal 컴파일·저장 파일 I/O·셰이더·UMG·그래픽 품질을 검증하지 않는다.
 
-GitHub의 [소스 검사](https://github.com/ka8877/unreal_yesu/actions/runs/41472781994)와 [실제 Windows 실행기 검사](https://github.com/ka8877/unreal_yesu/actions/runs/41472782103)도 통과했다. 후자는 PowerShell 7/Windows PowerShell 5.1 부모 실행기의 파일 핸들·프로세스 유지·로그 수집 검증이며 Unreal 게임 실행이 아니다. 소스 검사 workflow의 Windows job에서는 별도 샘플 실행기 17개 검사도 통과했다. 결과는 `Evidence/Rebuild/ci.json`에 있다.
+GitHub의 [소스 검사](https://github.com/ka8877/unreal_yesu/actions/runs/41478015954)와 [실제 Windows 실행기 검사](https://github.com/ka8877/unreal_yesu/actions/runs/41478016300)도 통과했다. 후자는 PowerShell 7/Windows PowerShell 5.1 부모 실행기의 파일 핸들·프로세스 유지·로그 수집 검증이며 Unreal 게임 실행이 아니다. 소스 검사 workflow의 Windows job에서는 별도 샘플 실행기 17개와 이동 검토 실행기 20개 검사도 통과했다. 결과는 `Evidence/Rebuild/ci.json`에 있다.
 
 ## Windows PC에서 다음 작업
 
@@ -80,6 +80,21 @@ powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File .\Tools\PathOfDa
 Windows PowerShell 5.1에서도 실행하며 PC 전체 실행 정책을 바꾸지 않는다. 단독으로 내려받은 실행기는 같은 고정 커밋의 작은 Python 파일만 HTTPS로 받아 SHA-256을 확인한다. 원본 `.uproject`는 변경하지 않고 같은 폴더에 임시 설명자를 만들어 Editor Python만 활성화한 뒤 자기 파일을 정리한다. `/Game` 레지스트리를 읽고 최대 6개 메시·12개 애니메이션을 로드해 실제 스켈레톤 참조를 확인한다. 에셋·맵 저장/마이그레이션·리타기팅·빌드·서비스 교체는 수행하지 않는다. Editor가 내부 캐시를 작성할 수는 있다.
 
 각 실행 결과는 기본적으로 `C:\PathOfDawn\Reports\GameAnimationSample\<실행 ID>\sample-inventory.json`과 같은 폴더의 로그에만 남는다. 자동 업로드하지 않는다. 동일 스켈레톤이나 이름에 `Walk`가 있다는 사실은 시각적 품질·복식·리타기팅 승인 근거가 아니다. 이 조사는 `NullRHI`를 사용한 메타데이터 검사이며 **그래픽·애니메이션 재생·게임 실행 성공으로 기록하지 않는다**. Python 계약 검사와 Windows PowerShell 5.1 실행기 검사는 별도의 테스트이며 실제 Unreal 검증은 PC 보고서를 받은 후 구분해 기록한다.
+
+
+사용자가 제공한 실제 `SAMPLE_ASSETS_INSPECTED` 보고서에서 레지스트리와 제한된 에셋 로드를 확인했다. 성인 MetaHuman 원본이 등록돼 있지만 첫 6개 메시 로드에는 이 인물의 얼굴·몸 조립이 포함되지 않았다. 원본 인벤토리·개별 에셋 목록·호스트 로그는 공개 Git에 넣지 않는다. 첫 도구의 알파벳순 이름 검색이 AimOffset/웅크림/상호작용을 후보에 포함한 문제를 수정해 기본 대기·정면 걷기·멈춤·서서 회전하는 후보를 우선하고 부적합한 분류를 제외했다. 이름 선별만으로 실제 호환성을 승인하지 않는다.
+
+`PrepareMovementReview.ps1`은 이 다음 단계의 **개발용 샘플 이동 검토** 도구다. 원본 샘플의 실제 MetaHuman Character Blueprint를 조회하고 임시 액터의 얼굴·몸·애니메이션 클래스 조립을 검사한다. 기존 GameMode를 상속한 새 GameMode의 기본 Pawn에 이 Character를 연결한다. 기본 동작 4개의 실제 스켈레톤·비가산 여부·길이도 검사하며, 부족하면 후보 근거를 보고하고 중단한다. 기본 마네킹이나 추측한 경로로 대체하지 않는다.
+
+새 에셋은 `/Game/WordJourneyDev/MovementReview/r_<입력 해시>/BP_MovementReview` 하나뿐이며 Editor API로 저장한다. 소유 태그와 실제 패키지 체크섬으로 반복 생성·사용자 수정 덮어쓰기를 막고, 두 번째 Editor 프로세스에서 재로드·기본 Pawn 참조를 검증한다. 원본 `.uproject`, Config, 맵과 기존 게임 소스·빌드·서비스는 보존한다. 같은 샘플을 변경하는 작성 도구는 프로젝트별 Windows mutex로 직렬화한다.
+
+```powershell
+powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File .\Tools\PathOfDawnUnreal\Rebuild\PrepareMovementReview.ps1 -Revision '<도구가 포함된 40자리 커밋 SHA>' -SampleRoot 'C:\PathOfDawn\Samples\GameAnimationSample'
+```
+
+단독 실행기는 고정 커밋·SHA-256을 확인한 작은 Python 2개와 기존 Windows native process launcher만 추가로 받는다. 기존 `f7da4aa` 프로젝트 전체 다운로드나 C++ 재컴파일을 요구하지 않는다. 준비·재로드에는 NullRHI를 사용하며 성공 후 별도 `UnrealEditor.exe -game` 창을 정상 RHI로 요청한다. **이는 현대 복장과 샘플 공간에서의 이동 검토이며, 시대 복식·성경 장면·새 게임 데모 완성을 의미하지 않는다.** 실제 얼굴·발·보행·회전·입력을 직접 확인해야 한다.
+
+로그와 `movement-review.json`은 `C:\PathOfDawn\Reports\MovementReview\<실행 ID>` 아래에만 저장된다. 다음에는 같은 루트의 `Run-MovementReview.cmd`로 다운로드 없이 다시 검토 창을 요청한다. 원래 샘플 설명자로 실행하며 UserDir은 검토용 호스트 폴더에 분리한다. 준비/재로드 실패나 사용자 수정은 창을 띄우기 전에 알린다. 실행 요청만으로 그래픽 PASS를 기록하지 않으며, 창을 닫으면 해당 검토 게임이 종료된다. 기존 게임/스트리밍 프로세스를 일괄 종료하지 않는다.
 
 확보한 CC0 환경만 실제 Editor로 가져오는 명령은 다음과 같다. 먼저 Editor 타깃을 컴파일하며, 기존 맵·게임모드·배포를 바꾸지 않는다. **ImportSourcesOnly는 사용자 PC 로그로 성공을 확인했고, ImportJournalData는 아직 미실행**이다.
 

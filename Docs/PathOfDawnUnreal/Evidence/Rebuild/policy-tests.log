@@ -8,6 +8,13 @@ test_invalid_authored_data_prevents_factory_use (test_journal_import.ImportContr
 test_missing_or_changed_source_tag_never_overwrites (test_journal_import.ImportContracts.test_missing_or_changed_source_tag_never_overwrites) ... ok
 test_user_edits_to_any_display_field_are_preserved_and_rejected (test_journal_import.ImportContracts.test_user_edits_to_any_display_field_are_preserved_and_rejected) ... ok
 test_wrong_existing_class_never_overwrites (test_journal_import.ImportContracts.test_wrong_existing_class_never_overwrites) ... ok
+test_curated_selection_rejects_name_false_positives_and_prefers_basic_motions (test_movement_review.MovementReviewTests.test_curated_selection_rejects_name_false_positives_and_prefers_basic_motions) ... ok
+test_incomplete_character_is_rejected_and_temporary_actor_is_removed (test_movement_review.MovementReviewTests.test_incomplete_character_is_rejected_and_temporary_actor_is_removed) ... ok
+test_loader_rejects_invalid_class_reference_without_executing_commands (test_movement_review.MovementReviewTests.test_loader_rejects_invalid_class_reference_without_executing_commands) ... ok
+test_native_motion_checks_reject_additive_zero_length_and_mixed_skeletons (test_movement_review.MovementReviewTests.test_native_motion_checks_reject_additive_zero_length_and_mixed_skeletons) ... ok
+test_owned_asset_is_reused_but_user_edits_and_unindexed_assets_are_preserved (test_movement_review.MovementReviewTests.test_owned_asset_is_reused_but_user_edits_and_unindexed_assets_are_preserved) ... ok
+test_settings_reads_actual_sample_map_without_modifying_config (test_movement_review.MovementReviewTests.test_settings_reads_actual_sample_map_without_modifying_config) ... ok
+test_standalone_tool_pins_all_companions_and_rendered_launch_is_explicit (test_movement_review.MovementReviewTests.test_standalone_tool_pins_all_companions_and_rendered_launch_is_explicit) ... ok
 test_absent_graphics_capture_or_nullrhi_never_passes (test_readiness.ReadinessTests.test_absent_graphics_capture_or_nullrhi_never_passes) ... ok
 test_bad_paths_license_corruption_and_lfs_pointer_rejected (test_readiness.ReadinessTests.test_bad_paths_license_corruption_and_lfs_pointer_rejected) ... ok
 test_blocked_bindings_never_touch_editor_map_or_asset_loader (test_readiness.ReadinessTests.test_blocked_bindings_never_touch_editor_map_or_asset_loader) ... ok
@@ -27,6 +34,6 @@ test_standalone_launcher_pins_the_exact_companion_source (test_sample_inspection
 test_wrong_loaded_class_and_missing_properties_are_not_assumed (test_sample_inspection.SampleInspectionTests.test_wrong_loaded_class_and_missing_properties_are_not_assumed) ... ok
 
 ----------------------------------------------------------------------
-Ran 27 tests in 1.272s
+Ran 34 tests in 1.371s
 
 OK

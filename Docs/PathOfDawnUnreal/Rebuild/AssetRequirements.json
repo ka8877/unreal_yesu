@@ -103,9 +103,9 @@
   "actions": [
     {
       "asset": "Adult Joseph, Mary and shepherd cast",
-      "candidate": "MetaHuman Creator in Unreal Engine",
+      "candidate": "Inspect the adult MetaHuman already registered in the installed official Game Animation Sample before acquiring another base",
       "source": "https://dev.epicgames.com/documentation/en-us/metahuman/metahuman-creator",
-      "obstacle": "Requires an installed UE Editor, account/EULA-approved download and original appropriate period clothing/groom; no such character assets exist in this repository.",
+      "obstacle": "The native inventory contains an adult MetaHuman source, but its complete playable Character assembly, rendered locomotion and original period wardrobe are not yet verified. Do not treat a registered face/body as final Joseph, Mary or shepherd cast.",
       "importLocation": "Use a local licensed project source namespace outside /Game/WordJourney/Benchmark; bind actual object and skeleton paths after loading.",
       "reason": "Natural faces, proportions, skin, hair and compatible skeletal animation; existing static v8 people were rejected."
     },
@@ -141,5 +141,13 @@
       "NullRHI",
       "compilation success"
     ]
+  },
+  "movementCandidateSource": {
+    "source": "Official Game Animation Sample",
+    "nativeInventory": "USER_REPORT_CONFIRMED",
+    "adultMetaHumanSourceRegistered": true,
+    "completeCharacterAssemblyAndMotionVerified": false,
+    "periodCastApproved": false,
+    "rawInventoryPublication": "PRIVATE_ONLY"
   }
 }
