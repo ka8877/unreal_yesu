@@ -1,0 +1,26 @@
+{
+  "scope": "Project milestones only. Raw console logs, machine details, installed tool versions, timings and local execution paths are kept private.",
+  "sourceCommit": "f7da4aa9aa8506f54d2f3112fe7411386dde6b6a",
+  "editorCompilation": "Reported successful for Journey classes and project Runtime/Editor modules",
+  "sourceImport": {
+    "completion": "Accepted by the checked source-import workflow",
+    "textures": 12,
+    "materials": 4,
+    "staticMeshes": 1,
+    "total": 17,
+    "freshProcessReloadVerified": false
+  },
+  "remainingReview": [
+    "Pot smoothing-group warning needs visual inspection",
+    "Startup Automation/RTC messages are not project test results",
+    "World/character visual benchmark has not passed"
+  ],
+  "notVerified": [
+    "actual game visuals",
+    "UMG interaction",
+    "SaveGame operation",
+    "new game package",
+    "browser media",
+    "public gameplay URL"
+  ]
+}

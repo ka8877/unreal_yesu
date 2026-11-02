@@ -9,3 +9,5 @@ Keep one authoritative narrative state, value snapshots, stable IDs, independent
 Temporary 3D character models must be documented. Font, illustrations, narrative data and map references must be explicitly cooked. Do not claim a successful executable build until UAT and extracted-package graphical execution succeed.
 
 Current narrative ContentVersion=2 adds spatial Task interactions and pending departure. Source-only core tests cover these; roughly five-minute first play and any public game URL remain unverified until a real GPU Unreal host is connected.
+
+User Windows log now confirms f7da4aa Editor compilation of Journey classes and 17 source assets imported/saved for the project target. Preserve that working PC project; do not re-download just for documentation. Actual UI/SaveGame behavior, fresh-process references, actor/scene graphics and game packaging remain unverified. See Docs/PathOfDawnUnreal/Evidence/Rebuild/windows-source-import-f7da4aa.json.

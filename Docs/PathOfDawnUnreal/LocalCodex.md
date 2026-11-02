@@ -2,7 +2,7 @@
 
 **2026-11-02 재구축 작업 우선 안내:** 아래 v8 안내는 이전 갈릴리 데모의 기록이다. 새 요청은 `rebuild/word-journey-luke2` 브랜치의 **말씀의 여정 / 누가복음 2장**이며, 먼저 `Rebuild/README.md`, `Rebuild/AssetAcquisition.md`, `Rebuild/AssetRequirements.json`을 읽는다. 기존 목각형 인물을 다시 생성하지 않는다. 실제 Unreal Editor/GPU에 접근 가능한 Windows 로컬 작업에서 핵심 인물·의상·애니메이션·작은 완성 공간을 확보하고 실제 그래픽 기준 장면부터 검증한다. 이 대화의 현재 Linux 환경에 Windows 접근 권한이 자동 연결된 것은 아니다.
 
-새 로컬 작업 지시: “현재 브랜치와 사용자 변경을 확인하고 `Docs/PathOfDawnUnreal/Rebuild/README.md`의 준비 명령부터 실행하라. 새로운 에셋은 사용 조건·실제 경로·스켈레톤을 확인하고 `.local` 바인딩에 등록하라. 환경 전경·인물 근접·실제 플레이 카메라 검수 전 기존 맵/배포를 교체하지 마라. `Prepare-WordJourney-Art.cmd`는 공식 무료 샘플 페이지와 읽기 전용 진단을 제공하며 Epic 계정 로그인과 약관 동의를 대신하지 않는다. 현재 구현된 Journal* 클래스는 아직 UHT/Editor 컴파일을 거치지 않았으므로 실제 엔진 오류를 읽고 수정하라. 모든 새 기록은 별도 WordJourney_v1 슬롯을 사용하라.”
+새 로컬 작업 지시: “현재 브랜치와 사용자 변경을 확인하고 `Docs/PathOfDawnUnreal/Rebuild/README.md`의 준비 명령부터 실행하라. 새로운 에셋은 사용 조건·실제 경로·스켈레톤을 확인하고 `.local` 바인딩에 등록하라. 환경 전경·인물 근접·실제 플레이 카메라 검수 전 기존 맵/배포를 교체하지 마라. `Prepare-WordJourney-Art.cmd`는 공식 무료 샘플 페이지와 읽기 전용 진단을 제공하며 Epic 계정 로그인과 약관 동의를 대신하지 않는다. 사용자 PC의 source-f7da4aa9aa85에서 Journal* 클래스의 Editor 컴파일과 환경 에셋 17개 임포트·저장이 성공했다. 해당 PC의 Binaries/Content와 수동 작업을 보존하고 실제 로그를 확인하라. UI/저장/게임 장면의 실행 검증까지 완료한 것으로 취급하지 마라. 모든 새 기록은 별도 WordJourney_v1 슬롯을 사용하라.”
 
 Windows 로컬 Codex 작업에서는 이 PC의 프로젝트 파일과 설치된 Unreal/MSVC를 사용해 오류 확인 → 수정 → 재빌드를 진행할 수 있다. 현재 대화의 실행 환경은 별도 Debian 클라우드이며, 사용자 PC의 파일·터미널·화면에 연결되어 있지 않다. 접근을 허용한다고 채팅에 적는 것만으로 기존 작업이 Windows 실행 환경으로 전환되지는 않는다.
 

@@ -27,10 +27,12 @@
     "importAndReadinessContracts": 21,
     "existingCoreAssertions": 479,
     "newJournalKoreanGlyphsInActualFont": 235,
-    "characterSourceMutationChecks": 5
+    "characterSourceMutationChecks": 5,
+    "userWindowsEditorBuild": true,
+    "userWindowsImportedSourceAssets": 17
   },
-  "unrealCompile": "NOT_RUN",
-  "editorAssetImport": "NOT_RUN",
+  "unrealCompile": "USER_LOG_CONFIRMED_EDITOR_BUILD",
+  "editorAssetImport": "USER_LOG_CONFIRMED_SOURCE_IMPORT_AND_SAVE",
   "actualGraphicsViews": [],
   "newPlayableBuild": null,
   "newWindowsZip": null,
@@ -70,5 +72,6 @@
     "preparationCompleted": true,
     "defaultProjectsFolderCandidateFiles": 0,
     "scope": "Only the default Documents/Unreal Projects inventory; not a full-PC asset search. This log does not establish installed samples or Unreal import."
-  }
+  },
+  "userWindowsImportEvidence": "Docs/PathOfDawnUnreal/Evidence/Rebuild/windows-source-import-f7da4aa.json"
 }
