@@ -114,6 +114,10 @@ try {
     Write-Host 'Inspecting sample assets with Unreal. Metadata only; no graphics or gameplay test.'
     Write-Host "Full log: $engineLog"
     $process=Start-Process -FilePath $editor -ArgumentList (Join-NativeArguments $arguments) -WorkingDirectory $EngineRoot -RedirectStandardOutput $stdout -RedirectStandardError $stderr -WindowStyle Hidden -PassThru
+    # Windows PowerShell 5.1 otherwise loses ExitCode after a manual wait.
+    # Hold the native handle before waiting; do not use -Wait, which can wait
+    # indefinitely for persistent Editor descendants such as ZenServer.
+    $nativeHandle=$process.Handle
     $deadline=[DateTime]::UtcNow.AddSeconds($TimeoutSeconds); $nextUpdate=[DateTime]::UtcNow.AddSeconds(15)
     while (-not $process.WaitForExit(1000)) {
         if ([DateTime]::UtcNow -ge $deadline) { $process.Kill(); throw 'Sample inspection timed out. Only this inspector Editor process was stopped.' }
