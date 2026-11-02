@@ -13,6 +13,12 @@ param(
 )
 Set-StrictMode -Version Latest
 $ErrorActionPreference='Stop'
+$previousModulePath=[Environment]::GetEnvironmentVariable('PSModulePath','Process')
+if ($PSVersionTable.PSVersion.Major -lt 6) {
+    # A .cmd launched from pwsh can inherit only PowerShell 7 module paths.
+    # Prefer this Windows PowerShell's own modules for Get-FileHash et al.
+    [Environment]::SetEnvironmentVariable('PSModulePath',([IO.Path]::Combine($PSHOME,'Modules')+';'+$previousModulePath),'Process')
+}
 $pins=@{
     'movement_review.py'='1d7189654c83f2ed34d956d249979e7c97e43d62f5124ee0e34b8be8a7a95e01'
     'inspect_sample.py'='11c04dbc94ab5803bf912961ed1a2856aae8b225f77ec9ef670bd053c0a00fd7'
@@ -178,7 +184,7 @@ try {
     }
     $cmdArgs=@($cachedLauncher,'-Revision',$Revision,'-SampleRoot',$project,'-EngineRoot',$EngineRoot,'-OutputRoot',$OutputRoot,'-LocalToolsRoot',$LocalToolsRoot,'-RunOnly')
     $cmdValues=@(foreach ($value in $cmdArgs) {'"'+$value.Replace('%','%%')+'"'}) -join ' '
-    $cmd="@echo off`r`nchcp 65001 >nul`r`nsetlocal DisableDelayedExpansion`r`npowershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File $cmdValues`r`nif errorlevel 1 pause`r`n"
+    $cmd="@echo off`r`nchcp 65001 >nul`r`nsetlocal DisableDelayedExpansion`r`npowershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File $cmdValues`r`nset `"WJ_REVIEW_EXIT=%ERRORLEVEL%`"`r`nif not `"%WJ_REVIEW_EXIT%`"==`"0`" pause`r`nexit /b %WJ_REVIEW_EXIT%`r`n"
     [IO.File]::WriteAllText($wrapper,$cmd,(New-Object Text.UTF8Encoding($false)))
     Save-Json $wrapperIndex ([ordered]@{sha256=(Sha256 $wrapper);generator='word-journey-review-shortcut-v1'})
     Write-Host "Assets saved and reloaded in a fresh Editor. Report: $(Join-Path $run 'movement-review.json')"
@@ -197,6 +203,7 @@ try {
 finally {
     if ($worker -and -not $worker.HasExited) { $worker.Kill(); [void]$worker.WaitForExit(5000) }
     foreach ($name in $variables) { [Environment]::SetEnvironmentVariable($name,$previous[$name],'Process') }
+    [Environment]::SetEnvironmentVariable('PSModulePath',$previousModulePath,'Process')
     if ($probe -and (Test-Path -LiteralPath $probe)) {
         if ($probeHash -and (Sha256 $probe) -eq $probeHash) { Remove-Item -LiteralPath $probe }
         else { Write-Host "Edited temporary descriptor preserved: $probe" }
