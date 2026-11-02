@@ -73,8 +73,15 @@ function Pinned-File([string]$Name,[string]$RepositoryPath) {
 function Save-Json([string]$Path,$Value) {
     $temporary=$Path+'.'+[guid]::NewGuid().ToString('N')+'.tmp'
     [IO.File]::WriteAllText($temporary,($Value | ConvertTo-Json -Depth 32),(New-Object Text.UTF8Encoding($false)))
-    if (Test-Path -LiteralPath $Path) { [IO.File]::Replace($temporary,$Path,$null) }
-    else { [IO.File]::Move($temporary,$Path) }
+    try {
+        if (Test-Path -LiteralPath $Path) {
+            # Windows PowerShell 5.1 binds a null backup path as an invalid
+            # empty string. An explicit unique backup works in both shells.
+            $backup=$Path+'.'+[guid]::NewGuid().ToString('N')+'.backup'
+            [IO.File]::Replace($temporary,$Path,$backup)
+            [IO.File]::Delete($backup)
+        } else { [IO.File]::Move($temporary,$Path) }
+    } finally { if (Test-Path -LiteralPath $temporary) { Remove-Item -LiteralPath $temporary } }
 }
 function Invoke-EditorPhase([string]$Phase) {
     $report=Join-Path $run $(if ($Phase -eq 'verify') {'movement-review.json'} else {'prepare.json'})
@@ -179,7 +186,10 @@ try {
     if (-not $PrepareOnly) {
         $values=@($gameEditor,$project,($verified.launch.map+'?game='+$verified.launch.gameModeClass),'-game','-windowed','-ResX=1280','-ResY=720','-UTF8Output',("-UserDir="+(Join-Path $OutputRoot 'GameHost')),("-ABSLOG="+(Join-Path $run 'game-engine.log')))
         $game=[PathOfDawn.Tools.WindowsProcessLauncher]::Start($gameEditor,(Native-Arguments $values),$EngineRoot,(Join-Path $run 'game-stdout.log'),(Join-Path $run 'game-stderr.log'),$false)
-        Save-Json $sessionFile ([ordered]@{pid=$game.Id;startedUtc=$game.StartTime.ToUniversalTime().ToString('O');executable=$gameEditor;renderingRequested=$true;graphicsVerified=$false;report=(Join-Path $run 'movement-review.json')})
+        try {
+            if ($game.WaitForExit(2000)) { throw "Rendered review exited during startup (exit $($game.ExitCode)). See $(Join-Path $run 'game-engine.log')" }
+            Save-Json $sessionFile ([ordered]@{pid=$game.Id;startedUtc=$game.StartTime.ToUniversalTime().ToString('O');executable=$gameEditor;renderingRequested=$true;graphicsVerified=$false;report=(Join-Path $run 'movement-review.json')})
+        } catch { if (-not $game.HasExited) { $game.Kill(); [void]$game.WaitForExit(5000) }; throw }
         Write-Host 'Rendered sample movement review requested. Check the actual game window and WASD/mouse input. This is not the rebuilt narrative demo.'
     }
     $exitCode=0
