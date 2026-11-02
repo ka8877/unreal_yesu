@@ -37,7 +37,7 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File .\Tools\PathOfDawnUnreal\Rebuild\P
 
 첫 명령은 Linux GCC 또는 Windows Developer PowerShell의 MSVC와 Python/Pillow를 사용한다. C++ 132 assertions, 서사 오류 주입 24개, 환경 변조 검사 7개, 인체/의상 원본 변조 검사 5개, 임포트·에셋 정책·Python 격리·샘플 조사 계약 27개를 통과했다. 두 번째는 준비 상태를 검사하며 현재 **정상적으로 BLOCKED/종료 코드 2**가 된다. 성공으로 무시하지 않는다. 로그와 JSON은 `Docs/PathOfDawnUnreal/Evidence/Rebuild/`에 있다. 이 검사는 Unreal 컴파일·저장 파일 I/O·셰이더·UMG·그래픽 품질을 검증하지 않는다.
 
-GitHub의 [소스 검사](https://github.com/ka8877/unreal_yesu/actions/runs/41394929229)와 [실제 Windows 실행기 검사](https://github.com/ka8877/unreal_yesu/actions/runs/41394929081)도 통과했다. 후자는 PowerShell 7/Windows PowerShell 5.1 부모 실행기의 파일 핸들·프로세스 유지·로그 수집 검증이며 Unreal 게임 실행이 아니다. 결과는 `Evidence/Rebuild/ci.json`에 있다.
+GitHub의 [소스 검사](https://github.com/ka8877/unreal_yesu/actions/runs/41472781994)와 [실제 Windows 실행기 검사](https://github.com/ka8877/unreal_yesu/actions/runs/41472782103)도 통과했다. 후자는 PowerShell 7/Windows PowerShell 5.1 부모 실행기의 파일 핸들·프로세스 유지·로그 수집 검증이며 Unreal 게임 실행이 아니다. 소스 검사 workflow의 Windows job에서는 별도 샘플 실행기 17개 검사도 통과했다. 결과는 `Evidence/Rebuild/ci.json`에 있다.
 
 ## Windows PC에서 다음 작업
 

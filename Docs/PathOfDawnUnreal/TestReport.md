@@ -1,8 +1,10 @@
 # 말씀의 여정 재구축 — 2026-11-02
 
-새 요청의 [상태와 재현 명령](Rebuild/README.md), [소스 검사 로그](Evidence/Rebuild/journal-core.log), [에셋 준비 상태](Evidence/Rebuild/readiness.json)를 별도로 기록한다. C++ 기록책 132 assertions, 서사 오류 주입 24개, 환경 원본 변조 7개, 에셋 정책/임포트/Python 격리 21개 검사를 통과했다. 기존 갈릴리 source-only 코어 479 assertions도 통과했다. 새 기록책 JSON/UMG 소스의 한글 235종은 실제 OTF에 모두 존재한다. **새 Editor 컴파일과 환경 원본 임포트·저장은 사용자 Windows 로그로 확인했다. USaveGame 동작·실제 UMG·3종 그래픽 캡처·새 패키지·8–12분 플레이·브라우저 미디어·공개 접속은 미실행**이다. 전체 장면 준비 검사는 누락된 실제 인물·애니메이션·건축 에셋 때문에 BLOCKED/종료 코드 2로 끝나며, 원본 임포트의 성공으로 전체 게이트를 통과시키지 않는다. 아래 이전 데모 기록과 혼동하지 않는다.
+새 요청의 [상태와 재현 명령](Rebuild/README.md), [소스 검사 로그](Evidence/Rebuild/journal-core.log), [에셋 준비 상태](Evidence/Rebuild/readiness.json)를 별도로 기록한다. C++ 기록책 132 assertions, 서사 오류 주입 24개, 환경 원본 변조 7개, 에셋 정책/임포트/Python 격리/샘플 조사 계약 27개 검사를 통과했다. 기존 갈릴리 source-only 코어 479 assertions도 통과했다. 새 기록책 JSON/UMG 소스의 한글 235종은 실제 OTF에 모두 존재한다. **새 Editor 컴파일과 환경 원본 임포트·저장은 사용자 Windows 로그로 확인했다. USaveGame 동작·실제 UMG·3종 그래픽 캡처·새 패키지·8–12분 플레이·브라우저 미디어·공개 접속은 미실행**이다. 전체 장면 준비 검사는 누락된 실제 인물·애니메이션·건축 에셋 때문에 BLOCKED/종료 코드 2로 끝나며, 원본 임포트의 성공으로 전체 게이트를 통과시키지 않는다. 아래 이전 데모 기록과 혼동하지 않는다.
 
 실제 사용자 명령 `Import-WordJourney-Sources.cmd -EngineRoot ...UE_5.8`의 `f7da4aa9aa85` 로그에서 Editor 빌드 작업이 성공했고 Journey C++/테스트 클래스와 DLL이 컴파일·링크됐다. 12개 2K 텍스처·4개 재질·도기 메시를 처리한 후 17개 에셋 검증 단계와 래퍼의 정상 반환을 확인했다. 별도 보고서 JSON은 아직 제공받지 않았으며, 성공 상태는 허용 상태를 검사한 마지막 `Editor report:` 출력과 코드로 교차 확인했다. [근거와 미해결 경고](Evidence/Rebuild/windows-source-import-f7da4aa.json). Automation 테스트는 컴파일됐지만 이 실행에서는 명시적으로 실행하지 않았다.
+
+샘플 조사 도구는 Windows PowerShell 5.1에서 공백·한글 경로, 원본 설명자 보존, 임시 파일 정리, 정상/부분/실패/시간 초과 종료 코드, 버전 불일치와 변경된 Python 파일 거절 등 17개 검사를 통과했다. 모의 Editor 실행 파일로 실행기를 검증했으며 실제 샘플이나 그래픽 검증이 아니다. 첫 실행에서 발견한 PowerShell 5.1 종료 코드 유실은 native handle 유지로 수정했고, 실패를 의도한 검사의 마지막 종료 코드가 CI에 남던 검증 스크립트도 수정했다. [최종 CI](https://github.com/ka8877/unreal_yesu/actions/runs/41472781994), [구조화 결과](Evidence/Rebuild/sample-inspector-tests.json). 사용자는 샘플 다운로드를 보고했으나 native 조사 보고서는 아직 받지 않았다.
 
 ---
 

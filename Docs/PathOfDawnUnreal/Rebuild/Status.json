@@ -1,5 +1,5 @@
 {
-  "checkedUtc": "2026-11-02T05:32:48.358371+00:00",
+  "checkedUtc": "2026-11-02T15:35:48.704399+00:00",
   "work": "Word Journey / Luke 2 rebuild",
   "state": "BLOCKED_AT_GRAPHICS_BENCHMARK",
   "restorableBase": "9ae7fc27c71da0d80941c0acfe4868c28970d81e",
@@ -18,18 +18,20 @@
     "real CC0 environment source imports",
     "asset policy/quality gate",
     "PC asset inventory and official setup pages",
-    "CC0 human/rig definition and medieval robe authoring inputs; not assembled final actors"
+    "CC0 human/rig definition and medieval robe authoring inputs; not assembled final actors",
+    "Standalone metadata-only sample registry/skeleton inspector; no source project re-download or asset migration"
   ],
   "verified": {
     "portableJournalAssertions": 132,
     "narrativeMutationsRejected": 24,
     "environmentIntegrityChecks": 7,
-    "importAndReadinessContracts": 21,
+    "importAndReadinessContracts": 27,
     "existingCoreAssertions": 479,
     "newJournalKoreanGlyphsInActualFont": 235,
     "characterSourceMutationChecks": 5,
     "userWindowsEditorBuild": true,
-    "userWindowsImportedSourceAssets": 17
+    "userWindowsImportedSourceAssets": 17,
+    "sampleInspectorWindowsLauncherFixtureChecks": 17
   },
   "unrealCompile": "USER_LOG_CONFIRMED_EDITOR_BUILD",
   "editorAssetImport": "USER_LOG_CONFIRMED_SOURCE_IMPORT_AND_SAVE",
@@ -54,16 +56,16 @@
   ],
   "stagedSavePolicy": "WordJourney_v1 on the single test host only; account/per-user save separation is not implemented.",
   "ci": {
-    "testedCommit": "8ca36880c6c65d4f08898d8265725cff0a3dbae3",
+    "testedCommit": "8a15dcd7fe9787eb785ff21c26d44d2ecc6133eb",
     "sourceChecks": {
-      "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41394929229",
+      "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41472781994",
       "conclusion": "success"
     },
     "windowsLauncher": {
-      "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41394929081",
+      "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41472782103",
       "conclusion": "success"
     },
-    "scope": "Source journal/assets/import policy and actual Windows launcher fixtures only. No Unreal/UHT/GPU/game or media execution."
+    "scope": "Source journal/assets/import policy, sample inspection contracts and actual Windows launcher fixtures only. No Unreal/UHT/GPU/game or media execution."
   },
   "userReportedArtPreparation": {
     "sourceCommit": "bb928a4ca5436f5ccbac8217a09ee366d6216d28",
@@ -73,5 +75,11 @@
     "defaultProjectsFolderCandidateFiles": 0,
     "scope": "Only the default Documents/Unreal Projects inventory; not a full-PC asset search. This log does not establish installed samples or Unreal import."
   },
-  "userWindowsImportEvidence": "Docs/PathOfDawnUnreal/Evidence/Rebuild/windows-source-import-f7da4aa.json"
+  "userWindowsImportEvidence": "Docs/PathOfDawnUnreal/Evidence/Rebuild/windows-source-import-f7da4aa.json",
+  "userReportedSampleDownload": {
+    "reportedDownloaded": true,
+    "nativeAssetInspection": "PENDING",
+    "visualAndRetargetReview": "NOT_RUN",
+    "reportUploaded": false
+  }
 }

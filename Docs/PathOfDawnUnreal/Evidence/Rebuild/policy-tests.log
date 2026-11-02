@@ -19,8 +19,14 @@ test_pbr_bytes_and_color_space_must_match (test_readiness.ReadinessTests.test_pb
 test_policy_ready_is_explicitly_not_unreal_or_graphics_pass (test_readiness.ReadinessTests.test_policy_ready_is_explicitly_not_unreal_or_graphics_pass) ... ok
 test_temple_cannot_be_implicitly_completed (test_readiness.ReadinessTests.test_temple_cannot_be_implicitly_completed) ... ok
 test_unacquired_template_blocks_all_roles_without_invented_paths (test_readiness.ReadinessTests.test_unacquired_template_blocks_all_roles_without_invented_paths) ... ok
+test_empty_registry_and_engine_mismatch_block (test_sample_inspection.SampleInspectionTests.test_empty_registry_and_engine_mismatch_block) ... ok
+test_inventory_cap_is_explicit_and_engine_assets_are_excluded (test_sample_inspection.SampleInspectionTests.test_inventory_cap_is_explicit_and_engine_assets_are_excluded) ... ok
+test_loading_budget_and_each_motion_category (test_sample_inspection.SampleInspectionTests.test_loading_budget_and_each_motion_category) ... ok
+test_real_paths_and_exact_skeleton_identity_without_visual_approval (test_sample_inspection.SampleInspectionTests.test_real_paths_and_exact_skeleton_identity_without_visual_approval) ... ok
+test_standalone_launcher_pins_the_exact_companion_source (test_sample_inspection.SampleInspectionTests.test_standalone_launcher_pins_the_exact_companion_source) ... ok
+test_wrong_loaded_class_and_missing_properties_are_not_assumed (test_sample_inspection.SampleInspectionTests.test_wrong_loaded_class_and_missing_properties_are_not_assumed) ... ok
 
 ----------------------------------------------------------------------
-Ran 21 tests in 1.346s
+Ran 27 tests in 1.272s
 
 OK
