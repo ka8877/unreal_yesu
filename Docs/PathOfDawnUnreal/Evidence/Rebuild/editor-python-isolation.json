@@ -13,5 +13,20 @@
   "portableContractsPassed": 21,
   "unrealCompile": "NOT_RUN",
   "actualEditorImport": "NOT_RUN",
-  "nativeGraphicalEvidence": []
+  "nativeGraphicalEvidence": [],
+  "ci": {
+    "testedCommit": "9ebf11dedfbbd4aefd47d2fc365a1ef429d40de8",
+    "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41458308379",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "name": "windows-editor-dependencies",
+        "conclusion": "success"
+      },
+      {
+        "name": "source-only",
+        "conclusion": "success"
+      }
+    ]
+  }
 }
