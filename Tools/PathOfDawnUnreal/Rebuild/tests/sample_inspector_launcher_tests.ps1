@@ -111,3 +111,5 @@ public class FixtureEditor {
     $env:WORD_JOURNEY_SAMPLE_REPORT=$previousReport
     if (Test-Path -LiteralPath $temporary) { Remove-Item -LiteralPath $temporary -Recurse -Force }
 }
+# Expected failing children must not become the Actions shell's exit status.
+exit 0
