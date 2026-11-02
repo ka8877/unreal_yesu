@@ -10,12 +10,17 @@ if (-not $Bindings) { $Bindings=Join-Path $PSScriptRoot 'asset-bindings.example.
 if (-not (Test-Path -LiteralPath $Bindings -PathType Leaf)) { throw "Bindings file missing: $Bindings" }
 $Bindings=[IO.Path]::GetFullPath($Bindings)
 # Verify genuine downloaded sources without requesting a new download or altering them.
-Invoke-DawnCommand $python @((Join-Path $PSScriptRoot 'fetch_environment.py'),'--verify-only') (Join-Path $evidence 'environment-validation.log')
-Invoke-DawnCommand $python @((Join-Path $PSScriptRoot 'validate_journey.py')) (Join-Path $evidence 'narrative-validation.log')
+Invoke-DawnCommand $python @('-X','utf8',(Join-Path $PSScriptRoot 'fetch_environment.py'),'--verify-only') (Join-Path $evidence 'environment-validation.log')
+Invoke-DawnCommand $python @('-X','utf8',(Join-Path $PSScriptRoot 'validate_journey.py')) (Join-Path $evidence 'narrative-validation.log')
 $readiness=Join-Path $evidence 'readiness.json'
-& $python (Join-Path $PSScriptRoot 'validate_readiness.py') --root $script:RepoRoot --bindings $Bindings --report $readiness
-$readinessCode=$LASTEXITCODE
-if ($readinessCode -notin @(0,2)) { throw "Readiness validation failed: $readinessCode" }
+$readinessCode=2
+if (-not ($ImportSourcesOnly -or $ImportJournalData)) {
+    & $python -X utf8 (Join-Path $PSScriptRoot 'validate_readiness.py') --root $script:RepoRoot --bindings $Bindings --report $readiness
+    $readinessCode=$LASTEXITCODE
+    if ($readinessCode -notin @(0,2)) { throw "Readiness validation failed: $readinessCode" }
+} else {
+    Write-Host 'Importing independent source/data assets only. People and final scene quality remain blocked; no scene promotion is requested.'
+}
 if (-not ($ImportSourcesOnly -or $ImportJournalData -or $GenerateBenchmark)) {
     Write-Host "Readiness report: $readiness"
     Write-Host 'No map/config/build/session was replaced. BLOCKED means required assets or visual evidence are missing.'
@@ -35,15 +40,20 @@ if ($ImportJournalData) {
     $generator=Join-Path $PSScriptRoot 'import_journey.py'
     $arguments=@($script:ProjectFile,"-ExecutePythonScript=$generator","-JourneyDataReport=$report",'-Unattended','-NoSplash','-UTF8Output')
 }
+$engineLog=Join-Path $evidence ('editor-engine-'+(New-DawnBuildId)+'.log')
+$arguments+=@('-stdout',"-ABSLOG=$engineLog")
+Write-Host "Full Unreal Editor log: $engineLog"
 $mutex=[Threading.Mutex]::new($false,'Local\PathOfDawnUnrealEditorAssets')
 if (-not $mutex.WaitOne(0)) { $mutex.Dispose(); throw 'Another project asset import is running.' }
 $previousBindings=[Environment]::GetEnvironmentVariable('WORD_JOURNEY_BINDINGS','Process')
 $previousReport=[Environment]::GetEnvironmentVariable('WORD_JOURNEY_REPORT','Process')
+$previousPython=[Environment]::GetEnvironmentVariable('WORD_JOURNEY_HOST_PYTHON','Process')
 try {
     # A process-local transport avoids Windows command-line quoting ambiguity
     # for user project/license paths with spaces. CLI arguments remain usable.
     [Environment]::SetEnvironmentVariable('WORD_JOURNEY_BINDINGS',$Bindings,'Process')
     [Environment]::SetEnvironmentVariable('WORD_JOURNEY_REPORT',$report,'Process')
+    [Environment]::SetEnvironmentVariable('WORD_JOURNEY_HOST_PYTHON',$python,'Process')
     Invoke-DawnCommand $editor $arguments (Join-Path $evidence 'editor-import.log')
     Assert-DawnFile $report
     $result=Get-Content -LiteralPath $report -Raw | ConvertFrom-Json
@@ -53,5 +63,6 @@ try {
 } finally {
     [Environment]::SetEnvironmentVariable('WORD_JOURNEY_BINDINGS',$previousBindings,'Process')
     [Environment]::SetEnvironmentVariable('WORD_JOURNEY_REPORT',$previousReport,'Process')
+    [Environment]::SetEnvironmentVariable('WORD_JOURNEY_HOST_PYTHON',$previousPython,'Process')
     $mutex.ReleaseMutex(); $mutex.Dispose()
 }

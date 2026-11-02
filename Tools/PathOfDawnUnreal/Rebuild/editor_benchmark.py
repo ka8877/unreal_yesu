@@ -16,14 +16,15 @@ import hashlib
 import json
 import os
 import re
+import subprocess
 import sys
+import tempfile
 import traceback
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-from validate_readiness import (BENCHMARK_MAP, BIRTH_ROLES, VIEWS, digest,
-                                validate_bindings, validate_environment)
+from validate_readiness import BENCHMARK_MAP, BIRTH_ROLES, VIEWS, digest
 
 ROOT = HERE.parents[2]
 PROJECT = ROOT / "Games/PathOfDawnUnreal"
@@ -49,6 +50,37 @@ def _write(path, data):
     temporary = path.with_name(path.name + ".tmp")
     temporary.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     temporary.replace(path)
+
+
+def host_validation(bindings=None):
+    """Use the authoring Python for Pillow; UE's embedded Python stays stdlib-only.
+
+    This does not install packages in the engine or infer an Unreal/visual pass.
+    Full pixel/file and capture checks still execute in validate_readiness.py.
+    """
+    python = os.environ.get("WORD_JOURNEY_HOST_PYTHON", "")
+    if not python or not Path(python).is_file():
+        raise RuntimeError("Authoring Python is not configured. Run PrepareRebuild.ps1, which sets WORD_JOURNEY_HOST_PYTHON for this Editor process.")
+    environment = dict(os.environ)
+    # Embedded Python settings must not redirect the separate author's Python
+    # into the engine's stdlib/site-packages. Only this child is affected.
+    environment.pop("PYTHONHOME", None)
+    environment.pop("PYTHONPATH", None)
+    environment["PYTHONIOENCODING"] = "utf-8"
+    with tempfile.TemporaryDirectory(prefix="word-journey-validation-") as directory:
+        report_path = Path(directory) / "validation.json"
+        arguments = [python, "-X", "utf8", str(HERE / "validate_readiness.py"),
+                     "--root", str(ROOT), "--report", str(report_path)]
+        arguments += ["--environment-only"] if bindings is None else ["--bindings", str(bindings)]
+        completed = subprocess.run(arguments, stdin=subprocess.DEVNULL, capture_output=True,
+                                   text=True, encoding="utf-8", env=environment, timeout=60,
+                                   creationflags=subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0)
+        if completed.returncode not in (0, 2) or not report_path.is_file():
+            raise RuntimeError("Authoring validation failed: " + (completed.stderr or completed.stdout)[-3000:])
+        result = json.loads(report_path.read_text(encoding="utf-8"))
+        if not isinstance(result.get("errors"), list) or (not result["errors"]) != (completed.returncode == 0):
+            raise RuntimeError("Authoring validator result/exit code disagree.")
+        return result
 
 
 class EditorWork:
@@ -100,10 +132,13 @@ class EditorWork:
 
     def import_environment(self):
         manifest = json.loads(SOURCE_MANIFEST.read_text(encoding="utf-8"))
-        verified = validate_environment(manifest, SOURCE_MANIFEST.parent)
+        manifest_sha = digest(SOURCE_MANIFEST)
+        verified = host_validation()
         self.report["sourceValidation"] = {k: v for k, v in verified.items() if k != "files"}
         if verified["errors"]:
             raise RuntimeError("environment source verification failed: " + "; ".join(verified["errors"]))
+        if verified.get("manifestSha256") != manifest_sha or digest(SOURCE_MANIFEST) != manifest_sha:
+            raise RuntimeError("Environment manifest changed during validation; no source import was started.")
         for source in manifest["assets"]:
             imported = {}
             for row in source["files"]:
@@ -280,7 +315,7 @@ def run_editor(unreal, bindings, report_file, import_sources=False, sources_only
             report["warnings"].append("No people or complete room acquired. Benchmark and graphics gate remain blocked.")
         else:
             data = json.loads(bindings.read_text(encoding="utf-8-sig"))
-            policy = validate_bindings(data, ROOT)
+            policy = host_validation(bindings)
             report["sourcePolicy"] = policy
             if policy["readyForEditor"]:
                 loaded = work.verify_bindings(data)

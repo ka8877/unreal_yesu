@@ -183,6 +183,8 @@ def validate_environment(manifest: dict, directory: Path) -> dict:
                         if image.format not in ("PNG", "JPEG"):
                             raise ValueError("unsupported source image format")
                         image.verify()
+                    with Image.open(file) as image:
+                        image.load()
                 elif not file.read_bytes()[:23].startswith(b"Kaydara FBX Binary"):
                     raise ValueError("expected actual binary FBX source")
                 if role == "normal" and (row.get("color_space") != "linear" or row.get("normal_convention") != "DirectX"):
@@ -223,6 +225,8 @@ def validate_graphics_evidence(data: dict, root: Path, bindings_sha256: str) -> 
             from PIL import Image
             with Image.open(path) as image:
                 image.verify()
+            with Image.open(path) as image:
+                image.load()
         except (TypeError, ValueError, OSError, ImportError) as exc:
             errors.append(view + ": " + str(exc))
     for check in ("naturalCharacters", "periodClothing", "ageAppropriateBaby", "consistentMaterials", "animationAndFeet", "cameraMovement", "readableFaces", "noPlaceholders", "noDarknessOrBlurConcealment"):
@@ -235,18 +239,27 @@ def validate_graphics_evidence(data: dict, root: Path, bindings_sha256: str) -> 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[3])
-    parser.add_argument("--bindings", required=True, type=Path)
+    parser.add_argument("--bindings", type=Path)
+    parser.add_argument("--environment-only", action="store_true")
     parser.add_argument("--report", required=True, type=Path)
     args = parser.parse_args(argv)
+    if not args.environment_only and args.bindings is None:
+        parser.error("--bindings is required unless --environment-only is supplied")
     try:
-        data = json.loads(args.bindings.read_text(encoding="utf-8-sig"))
-        result = validate_bindings(data, args.root)
+        if args.environment_only:
+            manifest_path = args.root / "SourceArt/PathOfDawnUnreal/Rebuild/Environment/manifest.json"
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            result = validate_environment(manifest, manifest_path.parent)
+            result["manifestSha256"] = digest(manifest_path)
+        else:
+            data = json.loads(args.bindings.read_text(encoding="utf-8-sig"))
+            result = validate_bindings(data, args.root)
     except (ValueError, OSError) as exc:
         result = {"status": "BLOCKED", "readyForEditor": False, "errors": [str(exc)], "graphicsGate": "NOT_RUN"}
     args.report.parent.mkdir(parents=True, exist_ok=True)
     args.report.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(result, ensure_ascii=False, indent=2))
-    return 0 if result["readyForEditor"] else 2
+    return 0 if not result["errors"] else 2
 
 
 if __name__ == "__main__":

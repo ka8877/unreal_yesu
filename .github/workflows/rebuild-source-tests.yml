@@ -20,3 +20,12 @@ jobs:
       - name: Source hashes, scripture metadata, asset policy and journal state
         shell: pwsh
         run: ./Tools/PathOfDawnUnreal/Rebuild/TestRebuild.ps1
+  windows-editor-dependencies:
+    runs-on: windows-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Install authoring dependency outside the simulated editor interpreter
+        run: python -m pip install Pillow==12.3.0
+      - name: Verify stdlib-only editor and authoring Python boundary (no Unreal)
+        run: python -m unittest discover -s Tools/PathOfDawnUnreal/Rebuild/tests -p test_editor_python_isolation.py -v

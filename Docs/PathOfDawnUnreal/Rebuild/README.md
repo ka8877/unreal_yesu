@@ -65,11 +65,16 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File .\Tools\PathOfDawnUnreal\Rebuild\P
 확보한 CC0 환경만 실제 Editor로 가져오는 명령은 다음과 같다. 먼저 Editor 타깃을 컴파일하며, 기존 맵·게임모드·배포를 바꾸지 않는다. **현재 클라우드에서는 실행하지 못한 명령**이다.
 
 ```powershell
+& '.\Import-WordJourney-Sources.cmd' -EngineRoot 'C:\Program Files\Epic Games\UE_5.8'
 pwsh -NoProfile -ExecutionPolicy Bypass -File .\Tools\PathOfDawnUnreal\Rebuild\PrepareRebuild.ps1 -EngineRoot 'C:\Program Files\Epic Games\UE_5.8' -ImportSourcesOnly
 pwsh -NoProfile -ExecutionPolicy Bypass -File .\Tools\PathOfDawnUnreal\Rebuild\PrepareRebuild.ps1 -EngineRoot 'C:\Program Files\Epic Games\UE_5.8' -ImportJournalData
 ```
 
-두 번째는 직접 작성한 한국어 요약을 `/Game/WordJourney/Narrative/DA_JourneyJournal`로 변환하는 준비 경로다. 모든 `scene_ready`는 false이며 장면을 해금하지 않는다. 실제 임포트·에셋 재로드·Cook은 미검증이다.
+`-ImportJournalData`는 직접 작성한 한국어 요약을 `/Game/WordJourney/Narrative/DA_JourneyJournal`로 변환하는 준비 경로다. 모든 `scene_ready`는 false이며 장면을 해금하지 않는다. 실제 임포트·에셋 재로드·Cook은 미검증이다.
+
+`Import-WordJourney-Sources.cmd`는 바로 아래의 `-ImportSourcesOnly` 명령과 같은 동작이므로 둘 중 하나만 실행한다. `SOURCE_IMPORT_COMPLETE`는 원본 임포트의 성공 상태이며 전체 장면의 `graphicsGate`는 인물/움직임/실제 화면 검수 전까지 BLOCKED다. 독립 원본 임포트에는 미확보 인물 바인딩을 검사해 오류 목록으로 출력하지 않는다.
+
+Unreal 내장 Python과 시스템 Python의 패키지 환경은 분리되어 있다. 현재 임포터는 `WORD_JOURNEY_HOST_PYTHON`으로 지정된 작성 도구용 Python 자식 프로세스에서 Pillow 이미지·캡처 검사를 실행한다. PrepareRebuild가 실제 preflight에 사용한 인터프리터를 에디터 프로세스에만 전달하고 종료 후 복구한다. 엔진 Python에 Pillow를 설치하거나 배포 런타임에 Python 의존성을 추가하지 않는다. 에디터에서 직접 실행할 때 호스트 Python 경로가 없으면 검사를 생략하지 않고 명시적으로 실패한다.
 
 실제 라이선스·인물·애니메이션·팩이 확보되면 템플릿을 `.local/asset-bindings.json`으로 복사해 **실제 조회한** 오브젝트 경로·스켈레톤·애니메이션·실측 배치와 사용 조건 근거를 등록한다. 그 뒤:
 

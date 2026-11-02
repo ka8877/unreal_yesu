@@ -4,6 +4,7 @@ import contextlib
 import io
 import hashlib
 import json
+import os
 import sys
 import tempfile
 import unittest
@@ -109,7 +110,7 @@ class ReadinessTests(unittest.TestCase):
                     return "5.8.4-test-fixture"
         path = self.root / "bindings.json"
         path.write_text((TOOLS / "asset-bindings.example.json").read_text())
-        with contextlib.redirect_stdout(io.StringIO()), patch.object(editor, "ROOT", self.root), patch.object(editor, "INDEX_PATH", self.root / "index.json"):
+        with contextlib.redirect_stdout(io.StringIO()), patch.object(editor, "ROOT", self.root), patch.object(editor, "INDEX_PATH", self.root / "index.json"), patch.dict(os.environ, {"WORD_JOURNEY_HOST_PYTHON": sys.executable}):
             result = editor.run_editor(Editor, path, self.root / "report.json")
         self.assertEqual(result["status"], "BLOCKED")
         self.assertEqual(result["benchmarkCreation"], "NOT_RUN")

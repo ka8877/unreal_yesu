@@ -1,3 +1,7 @@
+test_forged_image_bytes_with_matching_hash_are_rejected_by_host (test_editor_python_isolation.EditorPythonIsolationTests.test_forged_image_bytes_with_matching_hash_are_rejected_by_host) ... ok
+test_host_timeout_is_reported_without_leaving_validation_files (test_editor_python_isolation.EditorPythonIsolationTests.test_host_timeout_is_reported_without_leaving_validation_files) ... ok
+test_stdlib_only_editor_python_runs_full_decode_in_authoring_python (test_editor_python_isolation.EditorPythonIsolationTests.test_stdlib_only_editor_python_runs_full_decode_in_authoring_python) ... ok
+test_unconfigured_host_fails_before_spawning_a_process (test_editor_python_isolation.EditorPythonIsolationTests.test_unconfigured_host_fails_before_spawning_a_process) ... ok
 test_canonical_references_and_korean_people_match_runtime_contract (test_journal_import.ImportContracts.test_canonical_references_and_korean_people_match_runtime_contract) ... ok
 test_identical_asset_is_preserved_without_saving_or_creating (test_journal_import.ImportContracts.test_identical_asset_is_preserved_without_saving_or_creating) ... ok
 test_invalid_authored_data_prevents_factory_use (test_journal_import.ImportContracts.test_invalid_authored_data_prevents_factory_use) ... ok
@@ -17,6 +21,6 @@ test_temple_cannot_be_implicitly_completed (test_readiness.ReadinessTests.test_t
 test_unacquired_template_blocks_all_roles_without_invented_paths (test_readiness.ReadinessTests.test_unacquired_template_blocks_all_roles_without_invented_paths) ... ok
 
 ----------------------------------------------------------------------
-Ran 17 tests in 0.044s
+Ran 21 tests in 1.346s
 
 OK

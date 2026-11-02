@@ -24,7 +24,7 @@
     "portableJournalAssertions": 132,
     "narrativeMutationsRejected": 24,
     "environmentIntegrityChecks": 7,
-    "importAndReadinessContracts": 17,
+    "importAndReadinessContracts": 21,
     "existingCoreAssertions": 479,
     "newJournalKoreanGlyphsInActualFont": 235,
     "characterSourceMutationChecks": 5
@@ -62,5 +62,13 @@
       "conclusion": "success"
     },
     "scope": "Source journal/assets/import policy and actual Windows launcher fixtures only. No Unreal/UHT/GPU/game or media execution."
+  },
+  "userReportedArtPreparation": {
+    "sourceCommit": "bb928a4ca5436f5ccbac8217a09ee366d6216d28",
+    "stampUtc": "2026-11-02T13:39:42Z",
+    "downloadCompleted": true,
+    "preparationCompleted": true,
+    "defaultProjectsFolderCandidateFiles": 0,
+    "scope": "Only the default Documents/Unreal Projects inventory; not a full-PC asset search. This log does not establish installed samples or Unreal import."
   }
 }
