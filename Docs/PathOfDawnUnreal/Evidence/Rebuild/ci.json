@@ -1,0 +1,12 @@
+{
+  "testedCommit": "8ca36880c6c65d4f08898d8265725cff0a3dbae3",
+  "sourceChecks": {
+    "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41394929229",
+    "conclusion": "success"
+  },
+  "windowsLauncher": {
+    "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41394929081",
+    "conclusion": "success"
+  },
+  "scope": "Source journal/assets/import policy and actual Windows launcher fixtures only. No Unreal/UHT/GPU/game or media execution."
+}

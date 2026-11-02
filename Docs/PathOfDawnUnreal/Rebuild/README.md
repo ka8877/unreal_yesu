@@ -37,6 +37,8 @@ pwsh -File .\Tools\PathOfDawnUnreal\Rebuild\PrepareRebuild.ps1
 
 첫 명령은 Linux GCC 또는 Windows Developer PowerShell의 MSVC와 Python/Pillow를 사용한다. C++ 132 assertions, 서사 오류 주입 24개, 환경 변조 검사 7개, 인체/의상 원본 변조 검사 5개, 임포트·에셋 정책 17개를 통과했다. 두 번째는 준비 상태를 검사하며 현재 **정상적으로 BLOCKED/종료 코드 2**가 된다. 성공으로 무시하지 않는다. 로그와 JSON은 `Docs/PathOfDawnUnreal/Evidence/Rebuild/`에 있다. 이 검사는 Unreal 컴파일·저장 파일 I/O·셰이더·UMG·그래픽 품질을 검증하지 않는다.
 
+GitHub의 [소스 검사](https://github.com/ka8877/unreal_yesu/actions/runs/41394929229)와 [실제 Windows 실행기 검사](https://github.com/ka8877/unreal_yesu/actions/runs/41394929081)도 통과했다. 후자는 PowerShell 7/Windows PowerShell 5.1 부모 실행기의 파일 핸들·프로세스 유지·로그 수집 검증이며 Unreal 게임 실행이 아니다. 결과는 `Evidence/Rebuild/ci.json`에 있다.
+
 ## Windows PC에서 다음 작업
 
 현재 클라우드에서 사용자 PC를 직접 조작할 수 없다. PC에 준비된 Unreal/GPU를 실제로 사용할 수 있는 로컬 작업 환경이 필요하다. [기존 로컬 작업 안내](../LocalCodex.md)의 재구축 우선 지시를 따른다. 이미 실행된 엔진을 다시 설치할 필요는 없다.

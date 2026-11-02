@@ -1,0 +1,12 @@
+Source journal/assets/import policy and actual Windows launcher fixtures only. No Unreal/UHT/GPU/game or media execution.
+
+launcher	Native handle isolation and late logs with PowerShell 7 parent	2026-11-02T05:35:59.0031014Z PASS: native launcher C# compiles; 64-bit Win32 structure layouts match.
+launcher	Native handle isolation and late logs with PowerShell 7 parent	2026-11-02T05:35:59.9777022Z PASS: native arguments retain empty values, spaces, Unicode, embedded quotes, trailing backslashes and shell punctuation.
+launcher	Native handle isolation and late logs with PowerShell 7 parent	2026-11-02T05:36:00.0700462Z PASS: persistent child did not inherit an unrelated pipe; parent sees EOF while the child is still alive.
+launcher	Native handle isolation and late logs with PowerShell 7 parent	2026-11-02T05:36:01.9803688Z PASS: Windows Run-Step returned while its child remained alive; subsequent browser step reached; late stdout/stderr preserved in dedicated logs.
+launcher	Native handle isolation and late logs with Windows PowerShell 5.1 parent	2026-11-02T05:36:02.9122004Z PASS: native launcher C# compiles; 64-bit Win32 structure layouts match.
+launcher	Native handle isolation and late logs with Windows PowerShell 5.1 parent	2026-11-02T05:36:02.9745608Z PASS: native arguments retain empty values, spaces, Unicode, embedded quotes, trailing backslashes and shell punctuation.
+launcher	Native handle isolation and late logs with Windows PowerShell 5.1 parent	2026-11-02T05:36:03.0508065Z PASS: persistent child did not inherit an unrelated pipe; parent sees EOF while the child is still alive.
+launcher	Native handle isolation and late logs with Windows PowerShell 5.1 parent	2026-11-02T05:36:08.7705491Z PASS: Windows Run-Step returned while its child remained alive; subsequent browser step reached; late stdout/stderr preserved in dedicated logs.
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-11-02T05:36:10.0064311Z PASS 14 tooling assertions (space paths, unsafe IDs, hashes, smoke rejection, atomic JSON, session exclusion, owned-process cleanup). Host: Win32NT; no Unreal/media test.
+launcher	Process ownership, save session exclusion and diagnostic collection	2026-11-02T05:36:11.5193068Z PASS: native stderr success; Unicode/space arguments; preferences preserved; exit 37 recorded; complete failure log; missing script rejected; compiler exit 6; early compiler error/context; JSON error summary.
