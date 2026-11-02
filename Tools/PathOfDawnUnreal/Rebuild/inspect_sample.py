@@ -25,6 +25,46 @@ def classify_motion(name):
     return [kind for kind, words in MOTION_WORDS.items() if any(word in lower for word in words)]
 
 
+def locomotion_rank(row, kind):
+    """Selection hints only. Exclude poses/interactions and prefer basic loops.
+
+    The first native inventory exposed alphabetical AimOffset, takedown and
+    crouch false positives. A name containing 'walk' never suffices by itself.
+    Runtime skeleton/additive checks and visual review remain separate.
+    """
+    path, name = row["objectPath"].lower(), row["name"].lower()
+    tokens = set(re.split(r"[^a-z0-9]+", path))
+    rejected = {"aimoffset", "ao", "crouch", "interactions", "interaction", "takedowns",
+                "takedown", "traversal", "ragdoll", "slide", "poses", "pose", "mocap",
+                "additive", "avoidance", "lookatpoi", "jump", "run", "sprint"}
+    if tokens & rejected:
+        return None
+    if kind not in classify_motion(name):
+        return None
+    if kind == "idle" and any(word in name for word in ("turn", "pivot", "walk", "stop", "break")):
+        return None
+    if kind == "walk" and any(word in name for word in ("stop", "turn", "start", "pivot", "slope", "reface", "spin")):
+        return None
+    score = 0
+    if "relaxed" in tokens: score -= 10
+    if kind == "idle" and name.endswith("idle_loop"): score -= 100
+    if kind == "walk" and name.endswith("walk_loop_f"): score -= 100
+    if kind == "walk" and "loop" in tokens: score -= 30
+    if kind == "stop" and "_stop_f_" in name: score -= 100
+    if kind == "turn" and "_stand_turn_090_" in name: score -= 100
+    return score
+
+
+def select_locomotion(rows, per_kind=3):
+    result = {}
+    sequences = [row for row in rows if row["class"] == "AnimSequence"]
+    for kind in MOTION_WORDS:
+        scored = [(rank, row["objectPath"], row) for row in sequences
+                  if (rank := locomotion_rank(row, kind)) is not None]
+        result[kind] = [row for _, _, row in sorted(scored)[:per_kind]]
+    return result
+
+
 def asset_row(asset_data):
     package = str(asset_data.package_name)
     name = str(asset_data.asset_name)
@@ -68,7 +108,11 @@ def inspect_assets(unreal, max_meshes=6, max_animations=12, max_rows=5000):
         return obj.get_path_name() if obj is not None else None
 
     # Loading is bounded. Registry inventory does not load every animation or BP.
-    meshes = [row for row in rows if row["class"] == "SkeletalMesh"][:max_meshes]
+    def mesh_priority(row):
+        path = row["objectPath"].lower()
+        return (0 if "uefn_mannequin/meshes" in path else 1 if "/metahumans/" in path and "/common/" not in path else 2,
+                row["objectPath"])
+    meshes = sorted([row for row in rows if row["class"] == "SkeletalMesh"], key=mesh_priority)[:max_meshes]
     for row in meshes:
         try:
             mesh = unreal.EditorAssetLibrary.load_asset(row["objectPath"])
@@ -85,13 +129,11 @@ def inspect_assets(unreal, max_meshes=6, max_animations=12, max_rows=5000):
 
     # Give each requested motion category a chance instead of loading only the
     # first alphabetical batch (often hundreds of unrelated additive clips).
-    sequences = [row for row in rows if row["class"] == "AnimSequence"]
     candidates = []
     selected = set()
     per_kind = max(1, max_animations // len(MOTION_WORDS))
-    for kind in MOTION_WORDS:
-        matching = [row for row in sequences if kind in classify_motion(row["name"])]
-        for row in matching[:per_kind]:
+    for matching in select_locomotion(rows, per_kind).values():
+        for row in matching:
             if row["objectPath"] not in selected:
                 candidates.append(row)
                 selected.add(row["objectPath"])
@@ -102,12 +144,13 @@ def inspect_assets(unreal, max_meshes=6, max_animations=12, max_rows=5000):
                 raise TypeError("Registry entry did not load as AnimSequence")
             report["loadedAnimations"].append({**row, "skeleton": object_path(optional(animation, "skeleton")),
                                                "motionNameHints": classify_motion(row["name"]),
+                                               "locomotionCandidateKinds": [kind for kind in MOTION_WORDS if locomotion_rank(row, kind) is not None],
                                                "playLengthSeconds": optional(animation, "sequence_length"),
                                                "motionVisuallyReviewed": False})
         except Exception as error:
             report["warnings"].append(row["objectPath"] + ": " + str(error))
     report["motionCandidates"] = {
-        kind: [row["objectPath"] for row in report["loadedAnimations"] if kind in row["motionNameHints"]]
+        kind: [row["objectPath"] for row in report["loadedAnimations"] if kind in row["locomotionCandidateKinds"]]
         for kind in MOTION_WORDS}
     report["sameSkeletonPairs"] = [
         {"mesh": mesh["objectPath"], "animation": animation["objectPath"], "skeleton": mesh["skeleton"]}

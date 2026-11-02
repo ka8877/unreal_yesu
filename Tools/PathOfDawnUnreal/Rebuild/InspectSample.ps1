@@ -10,7 +10,7 @@ param(
 )
 Set-StrictMode -Version Latest
 $ErrorActionPreference='Stop'
-$ExpectedPythonSha256='dd3b98b03416d90e248620e22babfbf5bb625f4c70f3e41b7b8107fc84cd80aa'
+$ExpectedPythonSha256='11c04dbc94ab5803bf912961ed1a2856aae8b225f77ec9ef670bd053c0a00fd7'
 $process=$null; $probe=$null; $probeHash=$null; $exitCode=1
 $previousReport=[Environment]::GetEnvironmentVariable('WORD_JOURNEY_SAMPLE_REPORT','Process')
 function Sha256([string]$Path) { (Get-FileHash -LiteralPath $Path -Algorithm SHA256).Hash.ToLowerInvariant() }

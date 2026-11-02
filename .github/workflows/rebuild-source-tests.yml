@@ -32,3 +32,6 @@ jobs:
       - name: Verify sample inspector with Windows PowerShell 5.1 (fixture executable, no Unreal)
         shell: pwsh
         run: ./Tools/PathOfDawnUnreal/Rebuild/tests/sample_inspector_launcher_tests.ps1
+      - name: Verify preparation, fresh reload and rendered movement launch boundary (fixtures, no Unreal)
+        shell: pwsh
+        run: ./Tools/PathOfDawnUnreal/Rebuild/tests/movement_review_launcher_tests.ps1

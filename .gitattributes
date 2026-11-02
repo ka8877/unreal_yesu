@@ -10,6 +10,7 @@
 *.cmd text eol=crlf
 *.ps1 text eol=crlf
 *.py text eol=lf
+Tools/PathOfDawnUnreal/WindowsProcessLauncher.cs text eol=lf
 *.cpp text eol=lf
 *.h text eol=lf
 # Preserve provider bytes/hashes even in Windows Git checkouts.
