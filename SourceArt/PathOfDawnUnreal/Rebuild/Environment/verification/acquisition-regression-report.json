@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "checks": [
+    "real source clone accepted",
+    "modified source bytes rejected",
+    "missing source rejected",
+    "missing material channel rejected",
+    "source path traversal rejected",
+    "unreviewed source license rejected",
+    "missing asset set rejected"
+  ],
+  "scope": "Real source integrity and manifest mutation tests; no Unreal execution"
+}

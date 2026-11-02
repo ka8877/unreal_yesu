@@ -1,0 +1,1 @@
+{"status": "passed", "checks": ["real character-source clone accepted", "source mutation rejected", "unsupported final-character claim rejected", "source path escape rejected", "incomplete source set rejected"], "game_ready": false}

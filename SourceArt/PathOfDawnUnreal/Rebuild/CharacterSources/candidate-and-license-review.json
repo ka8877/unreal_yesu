@@ -1,0 +1,33 @@
+{
+  "checked_utc": "2026-11-02T05:34:05.703180+00:00",
+  "references": [
+    {
+      "url": "https://github.com/makehumancommunity/mpfb2/blob/master/LICENSE.md",
+      "response_sha256": "5cefb60680cb9efd4550a2e65d719021cfbec9dad3658481d11d48ae863ce04d"
+    },
+    {
+      "url": "https://github.com/animate1978/MB-Lab/blob/master/license.txt",
+      "response_sha256": "021a9f55e1d9938486e39c566445c4363c40366ac2aa47d81738f22126e16cf9"
+    },
+    {
+      "url": "https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html",
+      "response_sha256": "859caa265fb72eed51f4f997861213870cd71f31ebb898df7cd6ca42a7df7ba5"
+    },
+    {
+      "url": "https://dev.epicgames.com/documentation/en-us/metahuman/getting-started-with-metahuman-creator-in-unreal-engine",
+      "response_sha256": "02f10a83a59194d11ad795a772ebc699248360bdbc969aeca1af26bc6486cb3a"
+    },
+    {
+      "url": "https://static.makehumancommunity.org/assets/assetpacks/suits02.html",
+      "response_sha256": "1ed2671cab91d3b845e3de79e77e24f8a4958e14da246339b9657e67e3358c0d"
+    }
+  ],
+  "conclusions": {
+    "MakeHuman_Mpfb": "CC0 graphical assets and output; code separately GPL/AGPL. Only individual data sources acquired, no addon code included.",
+    "DonitzRobe": "MHCLO and material headers explicitly identify Donitz and CC0. Author says medieval monk robe, not a certified first-century costume.",
+    "MBLab": "Inspected repository license.txt assigns database/generated models AGPL3; not treated as CC0; not acquired.",
+    "Mixamo": "Official FAQ says free with Adobe ID, animations/characters royalty free in projects; no authenticated session or chosen period-ready character here; not acquired.",
+    "MetaHumanCoreData": "Inspected official setup documents Launcher release tile Launch>Options and Core Data selection plus project plugin. No documented Core Data component installer CLI verified in these sources; no guessed command generated."
+  },
+  "game_ready": false
+}

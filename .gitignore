@@ -19,3 +19,5 @@ SourceArt/PathOfDawnUnreal/VisualV8/Models/*.blend1
 Docs/PathOfDawnUnreal/Evidence/start-here-*
 Docs/PathOfDawnUnreal/Evidence/setup-pc-*
 Docs/PathOfDawnUnreal/Evidence/github-delivery-local.json
+# Private imported-asset bindings, inventory paths and local license evidence.
+Tools/PathOfDawnUnreal/Rebuild/.local/

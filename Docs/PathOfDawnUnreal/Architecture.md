@@ -1,3 +1,9 @@
+# 말씀의 여정 재구축 추가 구조 — 2026-11-02
+
+`JourneyJournal.h`는 누가복음 2장 기록의 단일 값 상태와 순서를 관리한다. 편집 원본 `Rebuild/Narrative/journey.json` → Editor 전용 `import_journey.py` → cooked `UJourneyJournalData` → `UJourneyJournalSubsystem` → `UJourneyJournalWidget` 흐름이다. 배포 런타임은 원본 JSON/Python을 읽지 않는다. `UJourneySaveGame`은 기존 갈릴리 저장과 별도인 `WordJourney_v1` 슬롯을 사용한다. 후보 저장·값 재검증·백업 이후 상태를 반영하고 미해금 본문은 UI에 전달하지 않는다. 실제 장면 트리거·요셉 Pawn·시네마틱과 설정 적용 어댑터는 아직 연결하지 않았다. 현재 staging 클래스는 엔진 컴파일을 거치지 않았으며 기존 맵과 서비스에 활성화되지 않는다. [새 작업의 검증 범위](Rebuild/README.md).
+
+---
+
 # 구현 구조와 상태 소유권
 
 이 문서는 **작성된 소스**를 설명한다. 현재 환경에 Unreal Engine이 없어 UHT/UBT 컴파일, 실제 에디터 자산 생성, Cook, 패키지와 그래픽 실행은 아직 검증하지 못했다. 엔진 독립 코어는 같은 소스를 GCC로 컴파일하여 테스트했다.

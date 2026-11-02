@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "status": "PASSED_SOURCE_ONLY",
+  "scope": "Authored metadata and mutation checks only; not Unreal compilation, playback or visual verification.",
+  "source": "SourceArt/PathOfDawnUnreal/Rebuild/Narrative/journey.json",
+  "source_sha256": "64197fd5d6be7f4980b28c0e74828f9c4bf854d47605b1a636e4ced3c6920976",
+  "event_count": 3,
+  "errors": [],
+  "scene_statuses": {
+    "S_Birth": "BLOCKED",
+    "S_Shepherds": "BLOCKED",
+    "S_Temple": "BLOCKED"
+  },
+  "mutations": {
+    "total": 24,
+    "rejected": 24,
+    "failures": []
+  }
+}

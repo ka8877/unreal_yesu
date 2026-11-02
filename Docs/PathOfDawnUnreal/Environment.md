@@ -1,3 +1,9 @@
+# 재구축 환경 재확인 — 2026-11-02
+
+새 작업의 실제 관측값은 [Evidence/Rebuild/environment.json](Evidence/Rebuild/environment.json)에 있다. 현재 연결은 Linux 클라우드이며 Unreal Editor/생성 패키지/GPU 장치/Windows PC 연결이 없다. Blender 4.3.2, GCC, Python과 PowerShell 7.6.7 기반 소스 검사는 가능하다. 사용자 PC의 과거 UE 5.8.4·RTX 5080과 현재 클라우드를 같은 환경으로 취급하지 않는다. 기존 사용자 로그에서는 main `9ae7fc2` Windows 빌드·스트리밍 시작·브라우저 열기가 완료됐지만 브라우저 미디어는 확인하지 못했다. 현재 신규 렌더·인코더·프레임 성능 검증은 미실행이다. [재구축 게이트](Rebuild/README.md)를 통과하기 전 기존 배포 설정을 교체하지 않는다.
+
+---
+
 # 실행 환경 — 2026-10-23 (한국 시간)
 
 ## 확인 결과

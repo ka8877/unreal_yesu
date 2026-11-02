@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "stage": "birth",
+  "description": "Bind actual licensed assets already imported in this Unreal project. Null paths are deliberately unacquired; never replace them with invented future object paths. Do not put accounts, tokens or credentials here. License evidence belongs in ignored local files when redistribution is restricted.",
+  "assets": {
+    "BirthEnvironment": {
+      "objectPath": null,
+      "assetClass": "World",
+      "sourceUrl": null,
+      "license": null,
+      "origin": "licensed_import",
+      "temporary": false,
+      "qualityApproved": false,
+      "licenseReview": {
+        "evidencePath": null,
+        "sha256": null,
+        "reviewer": null,
+        "permittedGameDistribution": false,
+        "permittedPublicSourceDistribution": false
+      }
+    },
+    "Joseph": {
+      "objectPath": null,
+      "assetClass": "SkeletalMesh",
+      "sourceUrl": null,
+      "license": null,
+      "origin": "licensed_import",
+      "temporary": false,
+      "qualityApproved": false,
+      "licenseReview": {
+        "evidencePath": null,
+        "sha256": null,
+        "reviewer": null,
+        "permittedGameDistribution": false,
+        "permittedPublicSourceDistribution": false
+      },
+      "ageCategory": "adult",
+      "skeletonPath": null,
+      "animations": {
+        "idle": null,
+        "walk": null,
+        "turn": null
+      },
+      "transform": {
+        "locationCm": null,
+        "rotationDegrees": null,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "Mary": {
+      "objectPath": null,
+      "assetClass": "SkeletalMesh",
+      "sourceUrl": null,
+      "license": null,
+      "origin": "licensed_import",
+      "temporary": false,
+      "qualityApproved": false,
+      "licenseReview": {
+        "evidencePath": null,
+        "sha256": null,
+        "reviewer": null,
+        "permittedGameDistribution": false,
+        "permittedPublicSourceDistribution": false
+      },
+      "ageCategory": "adult",
+      "skeletonPath": null,
+      "animations": {
+        "idle": null
+      },
+      "transform": {
+        "locationCm": null,
+        "rotationDegrees": null,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "Baby": {
+      "objectPath": null,
+      "assetClass": "StaticMesh",
+      "sourceUrl": null,
+      "license": null,
+      "origin": "licensed_import",
+      "temporary": false,
+      "qualityApproved": false,
+      "licenseReview": {
+        "evidencePath": null,
+        "sha256": null,
+        "reviewer": null,
+        "permittedGameDistribution": false,
+        "permittedPublicSourceDistribution": false
+      },
+      "ageCategory": "infant",
+      "transform": {
+        "locationCm": null,
+        "rotationDegrees": null,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "Shepherd": {
+      "objectPath": null,
+      "assetClass": "SkeletalMesh",
+      "sourceUrl": null,
+      "license": null,
+      "origin": "licensed_import",
+      "temporary": false,
+      "qualityApproved": false,
+      "licenseReview": {
+        "evidencePath": null,
+        "sha256": null,
+        "reviewer": null,
+        "permittedGameDistribution": false,
+        "permittedPublicSourceDistribution": false
+      },
+      "ageCategory": "adult",
+      "skeletonPath": null,
+      "animations": {
+        "idle": null,
+        "walk": null,
+        "turn": null
+      },
+      "transform": {
+        "locationCm": null,
+        "rotationDegrees": null,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "Manger": {
+      "objectPath": null,
+      "assetClass": "StaticMesh",
+      "sourceUrl": null,
+      "license": null,
+      "origin": "licensed_import",
+      "temporary": false,
+      "qualityApproved": false,
+      "licenseReview": {
+        "evidencePath": null,
+        "sha256": null,
+        "reviewer": null,
+        "permittedGameDistribution": false,
+        "permittedPublicSourceDistribution": false
+      },
+      "transform": {
+        "locationCm": null,
+        "rotationDegrees": null,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    }
+  },
+  "cameras": {
+    "environment": {
+      "locationCm": null,
+      "rotationDegrees": null,
+      "focalLengthMm": 35.0
+    },
+    "closeup": {
+      "locationCm": null,
+      "rotationDegrees": null,
+      "focalLengthMm": 70.0
+    },
+    "gameplay": {
+      "locationCm": null,
+      "rotationDegrees": null,
+      "focalLengthMm": 35.0
+    }
+  }
+}

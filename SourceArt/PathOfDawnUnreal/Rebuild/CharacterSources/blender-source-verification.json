@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "blender_version": "4.3.2",
+  "source_objects": [
+    {
+      "source": "DonitzRobe/Monks_Robe.obj",
+      "object": "Monks_Robe",
+      "vertices": 10233,
+      "triangles": 19820,
+      "uv_layers": 1
+    },
+    {
+      "source": "MakeHumanFoundation/3dobjs/base.obj",
+      "object": "base",
+      "vertices": 19158,
+      "triangles": 36972,
+      "uv_layers": 1
+    }
+  ],
+  "rig_definition_bones": 163,
+  "rig_weights_source_parsed": true,
+  "game_ready": false,
+  "skeleton_bound_in_blender_or_unreal": false,
+  "scope": "Original OBJ/UV and JSON parsing only. No assembled/animated/clothed final character, Unreal import or game image."
+}

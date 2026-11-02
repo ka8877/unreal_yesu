@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "content_version": 1,
+  "project_module": "PathOfDawnUnreal",
+  "title_ko": "말씀의 여정",
+  "language": "ko",
+  "source_policy": {
+    "reference_url": "https://bible.usccb.org/bible/luke/2",
+    "reference_checked_utc": "2026-11-02",
+    "direct_quotation_used": false,
+    "translation_license": null,
+    "summary_author": "이 프로젝트를 위해 새로 작성한 한국어 요약",
+    "notes": "USCCB의 누가복음 2장에서 사건 순서와 인물·장절을 확인했다. 해당 사이트의 번역문과 해설은 복사하지 않았다. 다른 복음서의 탄생 장면을 혼합하지 않는다."
+  },
+  "disclaimer": {
+    "text_kind": "GameGuide",
+    "text_ko": "성경의 사건을 바탕으로 구성한 게임입니다. 본문은 직접 작성한 요약이며, 이동·관찰·기록책과 공간 연출은 게임을 위한 각색입니다. 기록책은 실제 성경 집필 과정을 재현하지 않습니다."
+  },
+  "events": [
+    {
+      "id": "Birth",
+      "chapter_id": "Birth",
+      "title_ko": "베들레헴에서의 탄생",
+      "scripture_references": [
+        {"book": "Luke", "chapter": 2, "verse_start": 1, "verse_end": 7, "label_ko": "누가복음 2:1–7"}
+      ],
+      "text_kind": "ScriptureSummary",
+      "body_ko": "호적 등록을 위해 요셉은 마리아와 함께 나사렛에서 베들레헴으로 갔다. 그곳에 머무는 동안 마리아가 첫아들을 낳아 천으로 감싸 구유에 눕혔다. 그들이 머물 자리가 없었기 때문이다.",
+      "people": ["Joseph", "Mary", "InfantJesus"],
+      "place_ko": "베들레헴",
+      "prerequisite_written": [],
+      "unlock_event": "BirthWitnessed",
+      "write_action": "WriteEntry",
+      "checkpoint_after_written": "BirthRecorded",
+      "scene_id": "S_Birth",
+      "source_note": "누가복음 2:1–7의 직접 작성 요약. 구유가 놓인 건물 형태·인물 외모·요셉의 플레이 이동과 관찰은 시각적·게임적 각색이다. 구유 외에 마구간·동굴·여관 주인 등이 본문에 명시되었다고 주장하지 않는다.",
+      "implementation": {"state_logic": "SOURCE_IMPLEMENTED", "scene": "BLOCKED", "visual_review": "NOT_RUN", "playtest": "NOT_RUN"}
+    },
+    {
+      "id": "Shepherds",
+      "chapter_id": "Birth",
+      "title_ko": "목자들이 전한 소식",
+      "scripture_references": [
+        {"book": "Luke", "chapter": 2, "verse_start": 8, "verse_end": 20, "label_ko": "누가복음 2:8–20"}
+      ],
+      "text_kind": "ScriptureSummary",
+      "body_ko": "들에서 양 떼를 지키던 목자들은 천사를 통해 아기의 탄생 소식을 들었다. 베들레헴으로 간 목자들은 마리아와 요셉, 구유에 누운 아기를 찾아 자신들이 들은 소식을 전했다. 마리아는 이 일들을 마음에 간직했고, 목자들은 하나님을 찬양하며 돌아갔다.",
+      "people": ["Shepherds", "Joseph", "Mary", "InfantJesus"],
+      "place_ko": "베들레헴과 그 주변 들",
+      "prerequisite_written": ["Birth"],
+      "unlock_event": "ShepherdsWitnessed",
+      "write_action": "WriteEntry",
+      "checkpoint_after_written": "BirthChapterComplete",
+      "scene_id": "S_Shepherds",
+      "source_note": "누가복음 2:8–20의 직접 작성 요약. 목자의 정확한 수·외모와 방문 동선은 본문에 기록된 사실로 제시하지 않는다. 들의 장면을 생략한 채 설명으로만 전할 경우 실제 체험 범위를 장면 메타데이터에서 구분해야 한다.",
+      "implementation": {"state_logic": "SOURCE_IMPLEMENTED", "scene": "BLOCKED", "visual_review": "NOT_RUN", "playtest": "NOT_RUN"}
+    },
+    {
+      "id": "Temple",
+      "chapter_id": "Temple",
+      "title_ko": "열두 살 예수와 성전",
+      "scripture_references": [
+        {"book": "Luke", "chapter": 2, "verse_start": 41, "verse_end": 52, "label_ko": "누가복음 2:41–52"}
+      ],
+      "text_kind": "ScriptureSummary",
+      "body_ko": "예수가 열두 살이 되었을 때 가족은 유월절을 지키러 예루살렘으로 갔다. 돌아오는 길에 예수가 함께하지 않는 것을 알게 된 부모는 예루살렘으로 돌아가 찾았다. 사흘 뒤 예수는 성전에서 선생들 가운데 앉아 듣고 질문하고 있었다. 이후 예수는 부모와 함께 나사렛으로 돌아갔고, 지혜와 키가 자라며 하나님과 사람에게 더욱 사랑을 받았다.",
+      "people": ["Joseph", "Mary", "TwelveYearOldJesus", "Teachers"],
+      "place_ko": "예루살렘 성전, 이후 나사렛",
+      "prerequisite_written": ["Birth", "Shepherds"],
+      "unlock_event": "TempleWitnessed",
+      "write_action": "WriteEntry",
+      "checkpoint_after_written": "TempleRecorded",
+      "scene_id": "S_Temple",
+      "source_note": "누가복음 2:41–52의 직접 작성 요약. 예수께 새로운 설교나 가상 교리 발언을 부여하지 않는다. 아동은 아동 비율의 별도 에셋을 사용해야 하며 성인 메시 축소로 대체하지 않는다. 성전 공간과 관찰 동선은 시각적·게임적 각색이다.",
+      "implementation": {"state_logic": "SOURCE_IMPLEMENTED", "scene": "BLOCKED", "visual_review": "NOT_RUN", "playtest": "NOT_RUN"}
+    }
+  ],
+  "scenes": [
+    {"id": "S_Birth", "event_id": "Birth", "planned_opening_seconds": 60, "skip_completes_only_event": "Birth", "status": "BLOCKED", "blockers": ["Unreal rendering host unavailable", "Approved adult, infant, rig, animation and built environment assets unavailable"]},
+    {"id": "S_Shepherds", "event_id": "Shepherds", "skip_completes_only_event": "Shepherds", "status": "BLOCKED", "blockers": ["Birth visual benchmark not passed", "Approved shepherd and animation assets unavailable"]},
+    {"id": "S_Temple", "event_id": "Temple", "skip_completes_only_event": "Temple", "status": "BLOCKED", "blockers": ["Birth visual benchmark not passed", "Age-appropriate child, teachers, animations and temple environment unavailable"]}
+  ],
+  "time_transition": {
+    "text_kind": "GameGuide",
+    "text_ko": "이야기는 예수가 열두 살이 된 때로 옮겨갑니다.",
+    "after_written": ["Birth", "Shepherds"],
+    "next_checkpoint": "TempleArrival",
+    "unplayed_reference": {"book": "Luke", "chapter": 2, "verse_start": 21, "verse_end": 40, "label_ko": "누가복음 2:21–40"},
+    "omission_note_ko": "이름을 지은 일, 성전에 데리고 간 일과 시므온·안나의 만남, 나사렛으로 돌아가 자란 과정은 이번 데모에서 체험하는 장면으로 구현하지 않습니다.",
+    "counts_as_experienced": false,
+    "creates_journal_entry": false
+  },
+  "book_presentation": {
+    "locked_entries_expose_title": false,
+    "locked_entries_expose_body": false,
+    "initial_body_ko": "아직 기록된 이야기가 없습니다. 사건을 경험하면 이 페이지를 채울 수 있습니다.",
+    "available_action_ko": "기록하기",
+    "written_label_ko": "기록 완료",
+    "future_chapters_shown_as_playable": false
+  }
+}

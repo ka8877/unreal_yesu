@@ -1,0 +1,15 @@
+{
+  "url": "https://bible.usccb.org/bible/luke/2",
+  "title": "Luke, CHAPTER 2 | USCCB",
+  "checked_date_utc": "2026-11-02",
+  "download_sha256": "26db5f6e2618c0152c8a3fb8d2a06212cc606a696023ef8fcbec7615cae20a15",
+  "method": "HTTPS fetch and HTML text review in this task",
+  "reviewed_passages": [
+    "Luke 2:1-7",
+    "Luke 2:8-20",
+    "Luke 2:21-40",
+    "Luke 2:41-52"
+  ],
+  "copied_translation_text": false,
+  "reproduction_note": "External translation and footnotes were inspected for event order. They are not copied into the project. All player-facing summaries are original Korean prose."
+}

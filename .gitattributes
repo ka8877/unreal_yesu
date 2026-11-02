@@ -1,7 +1,7 @@
 *.uasset filter=lfs diff=lfs merge=lfs -text
 *.umap filter=lfs diff=lfs merge=lfs -text
 # Source art stays in ordinary Git so the public commit ZIP contains real files.
-# Current largest authoring file is <17 MB; no LFS account/download step needed.
+# Current largest authoring file is <30 MB; no LFS account/download step needed.
 *.png binary
 *.fbx binary
 *.blend binary
@@ -12,3 +12,6 @@
 *.py text eol=lf
 *.cpp text eol=lf
 *.h text eol=lf
+# Preserve provider bytes/hashes even in Windows Git checkouts.
+SourceArt/PathOfDawnUnreal/Rebuild/Environment/** -text
+SourceArt/PathOfDawnUnreal/Rebuild/CharacterSources/** -text

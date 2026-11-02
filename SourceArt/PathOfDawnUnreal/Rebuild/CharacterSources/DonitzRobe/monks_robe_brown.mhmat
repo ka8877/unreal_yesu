@@ -1,0 +1,45 @@
+# This is a material file for MakeHuman, produced by MakeSkin
+
+// Metadata
+
+tag monk
+tag robe
+name Monks Robe Brown
+license CC0
+author Donitz
+
+// Color
+
+diffuseColor 0.5000 0.5000 0.5000
+specularColor 0.0274509803922 0.0274509803922 0.0274509803922
+viewPortColor 0.8000 0.8000 0.8000
+
+diffuseIntensity 1.0000
+normalmapIntensity 1.0000
+
+diffuseTexture robe_brown__diffuse.png
+
+normalmapTexture robe__normal_gl.png
+
+// Properties
+
+metallic 0.0000
+ior 1.4500
+roughness 1.0000
+shininess 0.0000
+opacity 1.0000
+shadeless False
+wireframe False
+transparent False
+alphaToCoverage True
+backfaceCull True
+depthless False
+castShadows True
+receiveShadows True
+autoBlendSkin False
+
+// Shader properties (only affects how things look in MakeHuman)
+
+shader data/shaders/glsl/litsphere
+shaderParam litsphereTexture data/litspheres/lit_leather.png
+shaderConfig normal True

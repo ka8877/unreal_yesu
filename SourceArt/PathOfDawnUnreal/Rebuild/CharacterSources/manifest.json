@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "game_ready": false,
+  "status": "CC0_PRODUCTION_SOURCES_ONLY_NOT_FINAL_CHARACTERS",
+  "makehuman_commit": "a8bc2d54ff0ac92e78ff71431b1023eda42bf482",
+  "network_bytes": 32272173,
+  "garment_license_reference": "https://static.makehumancommunity.org/assets/assetpacks/suits02.html",
+  "garment_note": "Author describes this as a classic MEDIEVAL monk's robe. CC0 production source for adaptation only; not first-century clothing, not approved final costume. Design changes, fit and historical/art review required.",
+  "foundation_note": "Base topology plus rig definition/weights only. No skin textures, final hair, animation, assembled skeletal mesh, baby or child supplied. Never use the unclothed foundation as a final scene actor.",
+  "unreal_import_verified": false,
+  "files": [
+    {
+      "path": "DonitzRobe/Monks_Robe.obj",
+      "bytes": 877212,
+      "sha256": "12ab7c180f724c1a50d3b2217d0d37ef03758ed387e22abb3933fe93269b90cc",
+      "source_url": "https://files.makehumancommunity.org/asset_packs/suits02/suits02_cc0.zip",
+      "archive_member": "clothes/donitz_monk_robe/Monks_Robe.obj",
+      "zip_crc32": "a9b34251",
+      "license": "CC0-1.0",
+      "author": "Donitz"
+    },
+    {
+      "path": "DonitzRobe/monks_robe_brown.mhmat",
+      "bytes": 900,
+      "sha256": "605e05e538f3d2160d62724dd07bd736efda01c055bfcb4c4de13bd90214f4ce",
+      "source_url": "https://files.makehumancommunity.org/asset_packs/suits02/suits02_cc0.zip",
+      "archive_member": "clothes/donitz_monk_robe/monks_robe_brown.mhmat",
+      "zip_crc32": "b71b5d66",
+      "license": "CC0-1.0",
+      "author": "Donitz"
+    },
+    {
+      "path": "DonitzRobe/donitz_monk_robe.mhclo",
+      "bytes": 623419,
+      "sha256": "7f0cf2903c602bd817e8a3a38d4b6201313ab0c156702f9dcc3e440897b0a4c8",
+      "source_url": "https://files.makehumancommunity.org/asset_packs/suits02/suits02_cc0.zip",
+      "archive_member": "clothes/donitz_monk_robe/donitz_monk_robe.mhclo",
+      "zip_crc32": "cf82e9d2",
+      "license": "CC0-1.0",
+      "author": "Donitz"
+    },
+    {
+      "path": "DonitzRobe/robe_brown__diffuse.png",
+      "bytes": 16959094,
+      "sha256": "244f344a4ba574aa4e36b63919d36e5c6bb1ac6b7d0b92ef6815a709c5bc9bb9",
+      "source_url": "https://files.makehumancommunity.org/asset_packs/suits02/suits02_cc0.zip",
+      "archive_member": "clothes/donitz_monk_robe/robe_brown__diffuse.png",
+      "zip_crc32": "1611542b",
+      "license": "CC0-1.0",
+      "author": "Donitz",
+      "role": "base_color",
+      "color_space": "sRGB"
+    },
+    {
+      "path": "DonitzRobe/donitz_monk_robe.thumb",
+      "bytes": 38175,
+      "sha256": "8f338fcec830c14436f1f360b4798de7908c217d7f5ad768a9b1cd3847cc3d92",
+      "source_url": "https://files.makehumancommunity.org/asset_packs/suits02/suits02_cc0.zip",
+      "archive_member": "clothes/donitz_monk_robe/donitz_monk_robe.thumb",
+      "zip_crc32": "41390d16",
+      "license": "CC0-1.0",
+      "author": "Donitz"
+    },
+    {
+      "path": "DonitzRobe/robe__normal_gl.png",
+      "bytes": 12239751,
+      "sha256": "0ec059f6732c37c234af409c4467eabe1c8865292fdac0755a653ea6f9110859",
+      "source_url": "https://files.makehumancommunity.org/asset_packs/suits02/suits02_cc0.zip",
+      "archive_member": "clothes/donitz_monk_robe/robe__normal_gl.png",
+      "zip_crc32": "a68e071f",
+      "license": "CC0-1.0",
+      "author": "Donitz",
+      "role": "normal",
+      "color_space": "linear",
+      "normal_convention": "OpenGL"
+    },
+    {
+      "path": "MakeHumanFoundation/LICENSE.ASSETS.md",
+      "bytes": 6962,
+      "sha256": "f6089cba01cb570a24712b41ab8a586ccd3cc5ef53dc266ca50b95c288956d2c",
+      "source_url": "https://raw.githubusercontent.com/makehumancommunity/makehuman/a8bc2d54ff0ac92e78ff71431b1023eda42bf482/LICENSE.ASSETS.md",
+      "license": "CC0-1.0",
+      "author": "MakeHuman Team"
+    },
+    {
+      "path": "MakeHumanFoundation/LICENSE.md",
+      "bytes": 3598,
+      "sha256": "edd99571ca62698f78c943fd4fffb159a413c315fa0d4819d3cec5cadaf8b4f1",
+      "source_url": "https://raw.githubusercontent.com/makehumancommunity/makehuman/a8bc2d54ff0ac92e78ff71431b1023eda42bf482/LICENSE.md",
+      "license": "License notice",
+      "author": "MakeHuman Team"
+    },
+    {
+      "path": "MakeHumanFoundation/3dobjs/base.obj",
+      "bytes": 1749303,
+      "sha256": "8e761e6624b8f54536409135d1636da63b32486a90d4897f84e121d144f6fb4c",
+      "source_url": "https://raw.githubusercontent.com/makehumancommunity/makehuman/a8bc2d54ff0ac92e78ff71431b1023eda42bf482/makehuman/data/3dobjs/base.obj",
+      "license": "CC0-1.0",
+      "author": "MakeHuman Team"
+    },
+    {
+      "path": "MakeHumanFoundation/rigs/default.mhskel",
+      "bytes": 117790,
+      "sha256": "99f179bce0aa850b45d4191a1d0d234c5851f881c057439470ded3bddf729a24",
+      "source_url": "https://raw.githubusercontent.com/makehumancommunity/makehuman/a8bc2d54ff0ac92e78ff71431b1023eda42bf482/makehuman/data/rigs/default.mhskel",
+      "license": "CC0-1.0",
+      "author": "MakeHuman Team"
+    },
+    {
+      "path": "MakeHumanFoundation/rigs/default_weights.mhw",
+      "bytes": 897521,
+      "sha256": "0f3641d651ae3d00ad6b4ccee43142edb109d3bd909d27d9e4139ef1beed8625",
+      "source_url": "https://raw.githubusercontent.com/makehumancommunity/makehuman/a8bc2d54ff0ac92e78ff71431b1023eda42bf482/makehuman/data/rigs/default_weights.mhw",
+      "license": "CC0-1.0",
+      "author": "MakeHuman Team"
+    }
+  ]
+}
