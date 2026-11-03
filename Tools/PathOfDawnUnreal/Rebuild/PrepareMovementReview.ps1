@@ -20,7 +20,7 @@ if ($PSVersionTable.PSVersion.Major -lt 6) {
     [Environment]::SetEnvironmentVariable('PSModulePath',([IO.Path]::Combine($PSHOME,'Modules')+';'+$previousModulePath),'Process')
 }
 $pins=@{
-    'movement_review.py'='1d7189654c83f2ed34d956d249979e7c97e43d62f5124ee0e34b8be8a7a95e01'
+    'movement_review.py'='54bc25975e9de208b270c2867d6bb99148847b6209cd2f37b33fff2656a689cd'
     'inspect_sample.py'='11c04dbc94ab5803bf912961ed1a2856aae8b225f77ec9ef670bd053c0a00fd7'
     'WindowsProcessLauncher.cs'='068e9628308f39cd50f74c35c6b8f253794852fe3644266142aae18bd8482b35'
 }
@@ -106,8 +106,8 @@ function Invoke-EditorPhase([string]$Phase) {
         $value=Get-Content -LiteralPath $report -Raw -Encoding UTF8 | ConvertFrom-Json
         if ($value.status -eq 'FAILED') { throw "Unreal: $($value.error). Report: $report" }
     } else { throw "Unreal did not write $report (exit $($script:worker.ExitCode)). Full log: $engineLog" }
-    $expected=if ($Phase -eq 'verify') {'MOTION_REVIEW_ASSETS_RELOADED'} else {'MOTION_REVIEW_ASSETS_SAVED'}
-    if ($script:worker.ExitCode -ne 0 -or $value.schemaVersion -ne 1 -or $value.status -ne $expected) { throw "Unreal phase $Phase failed (exit $($script:worker.ExitCode), status $($value.status)). Report: $report" }
+    $expected=if ($Phase -eq 'verify') {@('MOTION_REVIEW_ASSETS_RELOADED','SAMPLE_EDITOR_REVIEW_RELOADED')} else {@('MOTION_REVIEW_ASSETS_SAVED','SAMPLE_EDITOR_REVIEW_READY')}
+    if ($script:worker.ExitCode -ne 0 -or $value.schemaVersion -ne 1 -or $value.status -notin $expected) { throw "Unreal phase $Phase failed (exit $($script:worker.ExitCode), status $($value.status)). Report: $report" }
     if ($value.graphicsVerified -ne $false -or $value.sourceSampleAssetsModified -ne $false -or $value.narrativeDemoComplete -ne $false) { throw 'Unexpected report scope; preparation cannot approve graphics or replace the demo.' }
     if ($Phase -eq 'verify' -and @($value.created).Count) { throw 'Reload unexpectedly created assets; graphical launch was blocked.' }
     return $value
@@ -174,8 +174,12 @@ try {
     if (-not $RunOnly) { $prepared=Invoke-EditorPhase 'prepare' }
     $verified=Invoke-EditorPhase 'verify'
     if ((Sha256 $project) -ne $projectHash -or (Sha256 $config) -ne $configHash) { throw 'Original project/config changed concurrently. Preserved; review before launching.' }
-    if (-not $RunOnly -and ($prepared.launch.gameModeClass -ne $verified.launch.gameModeClass -or $prepared.launch.sourcePawn -ne $verified.launch.sourcePawn)) { throw 'Fresh-process references differ from preparation. Launch blocked.' }
-    if ($verified.launch.map -notmatch '^/Game/[A-Za-z0-9_/]+$' -or $verified.launch.gameModeClass -notmatch '^/Game/WordJourneyDev/MovementReview/r_[0-9a-f]{16}/BP_MovementReview\.BP_MovementReview_C$') { throw 'Invalid review launch paths.' }
+    if (-not $RunOnly -and ($prepared.launch.mode -ne $verified.launch.mode -or $prepared.launch.gameModeClass -ne $verified.launch.gameModeClass -or $prepared.launch.sourcePawn -ne $verified.launch.sourcePawn)) { throw 'Fresh-process references differ from preparation. Launch blocked.' }
+    if ($verified.launch.map -notmatch '^/Game/[A-Za-z0-9_/]+$') { throw 'Invalid review map.' }
+    $sampleEditor=$verified.launch.mode -eq 'sampleEditor'
+    if ($sampleEditor) {
+        if ($verified.launch.gameModeClass -ne '' -or $verified.launch.sourcePawn -ne '' -or $verified.launch.manualCharacterSelectionRequired -ne $true -or @($verified.created).Count -ne 0 -or (-not $RunOnly -and @($prepared.created).Count -ne 0)) { throw 'Original sample review must not claim an automatic Pawn/GameMode binding or generated assets.' }
+    } elseif ($verified.launch.mode -ne 'boundKellan' -or $verified.launch.gameModeClass -notmatch '^/Game/WordJourneyDev/MovementReview/r_[0-9a-f]{16}/BP_MovementReview\.BP_MovementReview_C$') { throw 'Invalid bound-character review paths.' }
     $wrapper=Join-Path $OutputRoot 'Run-MovementReview.cmd'; $wrapperIndex=Join-Path $OutputRoot 'wrapper-owner.json'
     if (Test-Path -LiteralPath $wrapper) {
         if (-not (Test-Path -LiteralPath $wrapperIndex)) { throw 'Existing unowned review shortcut preserved.' }
@@ -187,16 +191,23 @@ try {
     $cmd="@echo off`r`nchcp 65001 >nul`r`nsetlocal DisableDelayedExpansion`r`npowershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File $cmdValues`r`nset `"WJ_REVIEW_EXIT=%ERRORLEVEL%`"`r`nif not `"%WJ_REVIEW_EXIT%`"==`"0`" pause`r`nexit /b %WJ_REVIEW_EXIT%`r`n"
     [IO.File]::WriteAllText($wrapper,$cmd,(New-Object Text.UTF8Encoding($false)))
     Save-Json $wrapperIndex ([ordered]@{sha256=(Sha256 $wrapper);generator='word-journey-review-shortcut-v1'})
-    Write-Host "Assets saved and reloaded in a fresh Editor. Report: $(Join-Path $run 'movement-review.json')"
+    if ($sampleEditor) {
+        Write-Host 'Automatic Kellan binding is not configured. Opening the original sample Editor for PIE and its own character picker; no generated Pawn or GameMode is substituted.'
+        Write-Host "Review report: $(Join-Path $run 'movement-review.json')"
+    } else { Write-Host "Assets saved and reloaded in a fresh Editor. Report: $(Join-Path $run 'movement-review.json')" }
     Write-Host "Next launch, no downloads: $wrapper"
     if (-not $PrepareOnly) {
-        $values=@($gameEditor,$project,($verified.launch.map+'?game='+$verified.launch.gameModeClass),'-game','-windowed','-ResX=1280','-ResY=720','-UTF8Output',("-UserDir="+(Join-Path $OutputRoot 'GameHost')),("-ABSLOG="+(Join-Path $run 'game-engine.log')))
+        $values=@($gameEditor,$project)
+        if ($sampleEditor) { $values+=$verified.launch.map }
+        else { $values+=@(($verified.launch.map+'?game='+$verified.launch.gameModeClass),'-game','-windowed','-ResX=1280','-ResY=720') }
+        $values+=@('-UTF8Output',("-UserDir="+(Join-Path $OutputRoot 'GameHost')),("-ABSLOG="+(Join-Path $run 'game-engine.log')))
         $game=[PathOfDawn.Tools.WindowsProcessLauncher]::Start($gameEditor,(Native-Arguments $values),$EngineRoot,(Join-Path $run 'game-stdout.log'),(Join-Path $run 'game-stderr.log'),$false)
         try {
             if ($game.WaitForExit(2000)) { throw "Rendered review exited during startup (exit $($game.ExitCode)). See $(Join-Path $run 'game-engine.log')" }
-            Save-Json $sessionFile ([ordered]@{pid=$game.Id;startedUtc=$game.StartTime.ToUniversalTime().ToString('O');executable=$gameEditor;renderingRequested=$true;graphicsVerified=$false;report=(Join-Path $run 'movement-review.json')})
+            Save-Json $sessionFile ([ordered]@{pid=$game.Id;startedUtc=$game.StartTime.ToUniversalTime().ToString('O');executable=$gameEditor;launchMode=$verified.launch.mode;renderingRequested=$true;graphicsVerified=$false;report=(Join-Path $run 'movement-review.json')})
         } catch { if (-not $game.HasExited) { $game.Kill(); [void]$game.WaitForExit(5000) }; throw }
-        Write-Host 'Rendered sample movement review requested. Check the actual game window and WASD/mouse input. This is not the rebuilt narrative demo.'
+        if ($sampleEditor) { Write-Host 'Original sample Editor requested. Press Play, open Game Animation Widget in the sample, and select the MetaHuman using Character Override. Actual Kellan playback is still unverified.' }
+        else { Write-Host 'Rendered sample movement review requested. Check the actual game window and WASD/mouse input. This is not the rebuilt narrative demo.' }
     }
     $exitCode=0
 } catch { Write-Host "Movement review stopped: $($_.Exception.Message)" }

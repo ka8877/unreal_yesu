@@ -1,6 +1,9 @@
 """Editor-only setup/reload for the installed sample's MetaHuman movement review.
 
-Uses an existing complete Character blueprint and its original motion system.
+Finds the appearance Actor separately from playable Character blueprints. It
+uses an existing complete Character when one is actually configured. Otherwise
+it opens the original sample Editor for PIE/its own character picker; it never
+pretends that a plain MetaHuman Actor is already a playable Character.
 Only a new, owned GameMode blueprint is saved in WordJourneyDev. No source
 sample assets, map/config files, active game project or service are changed.
 The separate rendered launch is a development review, not the narrative demo.
@@ -20,6 +23,10 @@ from inspect_sample import asset_row, select_locomotion
 
 BASE = "/Game/WordJourneyDev/MovementReview"
 GENERATOR = "word-journey-movement-review-v1"
+
+
+class CharacterAssemblyNotFound(LookupError):
+    pass
 
 
 def write_json(path, value):
@@ -97,37 +104,106 @@ def inspect_character(unreal, actor):
     return result
 
 
+def blueprint_class(unreal, row):
+    """Use the native loader first; a redirect's destination may be renamed."""
+    cls = unreal.EditorAssetLibrary.load_blueprint_class(row["objectPath"])
+    if cls is not None:
+        return cls
+    if row["class"] == "ObjectRedirector":
+        asset = unreal.EditorAssetLibrary.load_asset(row["objectPath"])
+        seen = set()
+        redirector = getattr(unreal, "ObjectRedirector", None)
+        while redirector is not None and isinstance(asset, redirector):
+            if asset.get_path_name() in seen:
+                raise RuntimeError("Cyclic Blueprint redirector")
+            seen.add(asset.get_path_name())
+            asset = asset.get_editor_property("destination_object")
+        if isinstance(asset, unreal.Blueprint):
+            return asset.generated_class()
+    return None
+
+
+def probe_components(unreal, cls, actor_subsystem):
+    actor = actor_subsystem.spawn_actor_from_class(cls, unreal.Vector(0, 0, -50000))
+    if actor is None:
+        raise RuntimeError("Cannot instantiate the sample actor for component checks")
+    try:
+        return inspect_character(unreal, actor)
+    finally:
+        if not actor_subsystem.destroy_actor(actor):
+            raise RuntimeError("Cannot remove the temporary probe actor")
+
+
+def character_priority(row):
+    name = row["name"].lower()
+    # Names affect order only. Generic/renamed Characters and redirectors must
+    # still be visited; requiring Kellan/MetaHuman in the name caused the bug.
+    return (0 if "kellan" in name else 1 if "metahuman" in name else
+            2 if "character" in name else 3 if "pawn" in name else 4,
+            "mover" in name, row["objectPath"])
+
+
 def find_character(unreal, rows, actor_subsystem, report):
-    candidates = sorted([r for r in rows if r["class"] == "Blueprint" and
-                         any(word in r["name"].lower() for word in ("kellan", "metahuman"))],
-                        key=lambda r: ("kellan" not in r["name"].lower(), r["objectPath"]))
-    for row in candidates[:16]:
-        record = {"objectPath": row["objectPath"]}
+    candidates = sorted([r for r in rows if r["class"] in ("Blueprint", "ObjectRedirector")],
+                        key=character_priority)
+    report["characterDiscovery"] = {"registeredCandidates": len(candidates), "limit": 256,
+                                    "truncated": len(candidates) > 256,
+                                    "nameIsTypeRequirement": False}
+    loaded = []
+    reference_bodies, reference_faces, body_skeletons = set(), set(), set()
+    # Read the actual appearance Actor as an Actor. It is expected that its
+    # default object need not derive from Character. No source asset is edited.
+    for row in candidates[:256]:
+        record = {"objectPath": row["objectPath"], "registryClass": row["class"]}
         report["characterCandidates"].append(record)
-        cls = unreal.EditorAssetLibrary.load_blueprint_class(row["objectPath"])
-        if cls is None:
-            record["reason"] = "Blueprint class could not be loaded"
-            continue
-        cdo = unreal.get_default_object(cls)
-        record["isCharacter"] = isinstance(cdo, unreal.Character)
-        if not record["isCharacter"]: continue
-        actor = actor_subsystem.spawn_actor_from_class(cls, unreal.Vector(0, 0, -50000))
-        if actor is None: raise RuntimeError("Cannot instantiate the sample character for component checks.")
         try:
-            record["components"] = inspect_character(unreal, actor)
-        finally:
-            if not actor_subsystem.destroy_actor(actor): raise RuntimeError("Cannot remove the temporary probe actor.")
-        # A similarly named generic retarget actor is insufficient. Require the
-        # fully assembled sample Kellan face/body somewhere in its hierarchy.
-        paths = [part["mesh"].lower() for part in record["components"]]
-        has_face = any("/kellan/" in p and "face" in p for p in paths)
-        has_body = any("/kellan/" in p and "/body/" in p for p in paths)
-        animated = any(part["animationClass"] for part in record["components"])
-        if has_face and has_body and animated:
+            cls = blueprint_class(unreal, row)
+            if cls is None:
+                record["reason"] = "Not a loadable Blueprint class"
+                continue
+            cdo = unreal.get_default_object(cls)
+            record["resolvedClass"] = cls.get_path_name()
+            record["isCharacter"] = isinstance(cdo, unreal.Character)
+            if record["isCharacter"]:
+                loaded.append((cls, row, record))
+            elif "kellan" in row["name"].lower() and isinstance(cdo, unreal.Actor):
+                record["kind"] = "appearanceActor"
+                record["components"] = probe_components(unreal, cls, actor_subsystem)
+                for part in record["components"]:
+                    role = part["component"].casefold()
+                    if role == "body" or role.startswith("body_"):
+                        reference_bodies.add(part["mesh"])
+                        if part["skeleton"]: body_skeletons.add(part["skeleton"])
+                    if role == "face" or role.startswith("face_") or "/kellan/" in part["mesh"].lower() and "face" in part["mesh"].lower():
+                        reference_faces.add(part["mesh"])
+        except Exception as error:
+            record["inspectionError"] = str(error)
+    report["referenceAppearance"] = {"bodyMeshes": sorted(reference_bodies),
+                                     "faceMeshes": sorted(reference_faces),
+                                     "bodySkeletons": sorted(body_skeletons)}
+    seen_classes = set()
+    for cls, row, record in loaded:
+        if record["resolvedClass"] in seen_classes:
+            record["reason"] = "Duplicate/redirected reference to an already inspected Character"
+            continue
+        seen_classes.add(record["resolvedClass"])
+        try:
+            record["components"] = probe_components(unreal, cls, actor_subsystem)
+        except Exception as error:
+            record["inspectionError"] = str(error)
+            continue
+        has_face = any(p["mesh"] in reference_faces for p in record["components"])
+        # A shared MetaHuman body is legitimate. Compare the actual reference
+        # body/skeleton and component role, not a required /Kellan/.../Body path.
+        has_bound_body = any(p["animationClass"] and (
+            p["mesh"] in reference_bodies or
+            (p["component"].casefold() == "body" or p["component"].casefold().startswith("body_")) and
+            p["skeleton"] in body_skeletons) for p in record["components"])
+        if has_face and has_bound_body:
             report["selectedCharacter"] = record
             return cls, row["objectPath"]
-        record["reason"] = "Complete Kellan face/body and an animation class were not assembled on this Character"
-    raise RuntimeError("No existing complete Kellan Character blueprint passed component checks. Candidate details were saved; no mannequin or guessed binding was substituted.")
+        record["reason"] = "Kellan reference face and an animated compatible body were not assembled on this Character"
+    raise CharacterAssemblyNotFound("No existing complete Kellan Character is configured in the inspected defaults. Use the original sample Editor/PIE character picker; automatic binding remains unverified.")
 
 
 def check_motions(unreal, rows, report):
@@ -203,7 +279,19 @@ def run(unreal, project, state, report, verify=False):
     if parent is None or not isinstance(unreal.get_default_object(parent), unreal.GameModeBase):
         raise RuntimeError("The sample's original GameMode could not be loaded")
     actors = unreal.get_editor_subsystem(unreal.EditorActorSubsystem)
-    pawn, pawn_path = find_character(unreal, rows, actors, report)
+    try:
+        pawn, pawn_path = find_character(unreal, rows, actors, report)
+    except CharacterAssemblyNotFound as error:
+        # Opening the existing sample for native PIE review needs no generated
+        # Pawn or GameMode. Preserve the source map's own mode override and UI.
+        report["automaticBinding"] = {"status": "NOT_CONFIGURED", "reason": str(error)}
+        report["scope"] = "Original sample Editor/PIE review with manual character selection; no automatic Kellan binding and no generated assets."
+        report["launch"] = {"mode": "sampleEditor", "map": game["map"],
+                            "gameModeClass": "", "sourcePawn": "",
+                            "manualCharacterSelectionRequired": True}
+        report["sourceConfigSha256"] = game["configSha256"]
+        report["status"] = "SAMPLE_EDITOR_REVIEW_RELOADED" if verify else "SAMPLE_EDITOR_REVIEW_READY"
+        return
     inputs = {"config": game["configSha256"], "pawn": pawn_path, "parentMode": parent.get_path_name(),
               "generatorSha256": file_hash(Path(__file__)), "selectorSha256": file_hash(Path(__file__).with_name("inspect_sample.py"))}
     # Both processes compute the same native inputs and package checksum. Verify
@@ -213,7 +301,8 @@ def run(unreal, project, state, report, verify=False):
     if verify and not unreal.EditorAssetLibrary.does_asset_exist(package):
         raise RuntimeError("Fresh-process reload cannot find the prepared GameMode")
     mode = owned_mode(unreal, project, state, parent, pawn, inputs, report)
-    report["launch"] = {"map": game["map"], "gameModeClass": mode, "sourcePawn": pawn_path}
+    report["launch"] = {"mode": "boundKellan", "map": game["map"], "gameModeClass": mode, "sourcePawn": pawn_path,
+                        "manualCharacterSelectionRequired": False}
     report["sourceConfigSha256"] = game["configSha256"]
     report["status"] = "MOTION_REVIEW_ASSETS_RELOADED" if verify else "MOTION_REVIEW_ASSETS_SAVED"
     report["newAssetsSaved"] = bool(report["created"])

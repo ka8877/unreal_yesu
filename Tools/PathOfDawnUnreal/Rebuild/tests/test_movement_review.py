@@ -74,15 +74,15 @@ class MovementReviewTests(unittest.TestCase):
     def test_incomplete_character_is_rejected_and_temporary_actor_is_removed(self):
         class Character: pass
         character = Character()
-        cls = object(); destroyed = []
+        cls = SimpleNamespace(get_path_name=lambda: "/Game/Fixture/Person.Person_C"); destroyed = []
         unreal = SimpleNamespace(Character=Character, Vector=lambda *v: v, get_default_object=lambda _: character,
                                  EditorAssetLibrary=SimpleNamespace(load_blueprint_class=lambda _: cls))
         actors = SimpleNamespace(spawn_actor_from_class=lambda *args: character,
                                   destroy_actor=lambda actor: destroyed.append(actor) or True)
         candidates = [{"name": "Fixture_Metahuman", "class": "Blueprint", "objectPath": "/Game/Fixture/Person.Person"}]
         report = {"characterCandidates": []}
-        with patch.object(review, "inspect_character", return_value=[{"mesh": "/Game/Fixture/Mannequin.Mannequin", "animationClass": "FixtureAnim"}]):
-            with self.assertRaisesRegex(RuntimeError, "No existing complete Kellan Character"):
+        with patch.object(review, "inspect_character", return_value=[{"component": "Mesh", "mesh": "/Game/Fixture/Mannequin.Mannequin", "skeleton": "OtherSkeleton", "animationClass": "FixtureAnim"}]):
+            with self.assertRaisesRegex(review.CharacterAssemblyNotFound, "No existing complete Kellan Character"):
                 review.find_character(unreal, candidates, actors, report)
         self.assertEqual(destroyed, [character])
 
@@ -124,10 +124,81 @@ class MovementReviewTests(unittest.TestCase):
         self.assertIn("MOTION_REVIEW_ASSETS_RELOADED", launcher)
         # Native preparation uses NullRHI. The separate persistent game launch
         # must render; it is never used as an automatic graphics-pass claim.
-        game_line = next(line for line in launcher.splitlines() if "$values=@($gameEditor" in line)
-        self.assertIn("'-game'", game_line)
-        self.assertNotIn("NullRHI", game_line)
-        self.assertNotIn("RenderOffscreen", game_line)
+        launch_block = launcher.split('if (-not $PrepareOnly) {', 1)[1]
+        self.assertIn("'-game'", launch_block)
+        self.assertIn("if ($sampleEditor)", launch_block)
+        self.assertNotIn("NullRHI", launch_block)
+        self.assertNotIn("RenderOffscreen", launch_block)
+
+    def appearance_fixture(self, redirect=False, include_named_character=False):
+        class Actor: pass
+        class Character(Actor): pass
+        appearance, player = Actor(), Character()
+        appearance_class = SimpleNamespace(get_path_name=lambda: "/Game/Fixture/BP_Kellan.BP_Kellan_C")
+        player_class = SimpleNamespace(get_path_name=lambda: "/Game/Fixture/Avatar.Avatar_C")
+        body = {"component": "Body", "mesh": "/Game/Fixture/Common/Body.Body", "skeleton": "HumanBodySkeleton", "animationClass": "GenericRetarget"}
+        face = {"component": "Face", "mesh": "/Game/Fixture/Kellan/Face.Face", "skeleton": "FaceSkeleton", "animationClass": "FaceAnim"}
+        rows = [{"name": "BP_Kellan", "class": "Blueprint", "objectPath": "/Game/Fixture/BP_Kellan.BP_Kellan"},
+                {"name": "GenericAvatar", "class": "ObjectRedirector" if redirect else "Blueprint", "objectPath": "/Game/Fixture/OldAvatar.OldAvatar" if redirect else "/Game/Fixture/Avatar.Avatar"}]
+        if include_named_character:
+            rows.append({"name": "CBP_Kellan_Alias", "class": "Blueprint", "objectPath": "/Game/Fixture/Alias.Alias"})
+        classes = {r["objectPath"]: appearance_class if r["name"] == "BP_Kellan" else player_class for r in rows}
+        if redirect:
+            classes[rows[1]["objectPath"]] = None
+        class Blueprint:
+            def generated_class(self): return player_class
+        class Redirector(PropertyObject):
+            def get_path_name(self): return "/Game/Fixture/OldAvatar.OldAvatar"
+        redirected = Redirector(destination_object=Blueprint())
+        self.destroyed = []
+        unreal = SimpleNamespace(Actor=Actor, Character=Character, Blueprint=Blueprint, ObjectRedirector=Redirector,
+            Vector=lambda *v: v, EditorAssetLibrary=SimpleNamespace(load_blueprint_class=lambda path: classes[path], load_asset=lambda _: redirected),
+            get_default_object=lambda cls: appearance if cls is appearance_class else player)
+        actors = SimpleNamespace(spawn_actor_from_class=lambda cls, _: appearance if cls is appearance_class else player,
+                                 destroy_actor=lambda actor: self.destroyed.append(actor) or True)
+        return unreal, actors, rows, player_class, lambda *_: [dict(body), dict(face)]
+
+    def test_plain_appearance_actor_and_generic_named_character_are_kept_separate(self):
+        unreal, actors, rows, player_class, parts = self.appearance_fixture()
+        report = {"characterCandidates": []}
+        with patch.object(review, "inspect_character", side_effect=parts):
+            cls, path = review.find_character(unreal, rows, actors, report)
+        self.assertIs(cls, player_class)
+        self.assertEqual(path, "/Game/Fixture/Avatar.Avatar")
+        self.assertEqual(report["characterCandidates"][0]["kind"], "appearanceActor")
+        self.assertFalse(report["characterCandidates"][0]["isCharacter"])
+        self.assertEqual(len(self.destroyed), 2)
+
+    def test_redirected_character_is_resolved_and_shared_body_location_is_accepted(self):
+        unreal, actors, rows, player_class, parts = self.appearance_fixture(redirect=True)
+        report = {"characterCandidates": []}
+        with patch.object(review, "inspect_character", side_effect=parts):
+            cls, _ = review.find_character(unreal, rows, actors, report)
+        self.assertIs(cls, player_class)
+        self.assertEqual(report["referenceAppearance"]["bodyMeshes"], ["/Game/Fixture/Common/Body.Body"])
+
+    def test_source_editor_review_does_not_save_assets_or_claim_binding(self):
+        class Mode: pass
+        parent = SimpleNamespace()
+        registry = SimpleNamespace(search_all_assets=lambda _: None,
+                                   get_assets_by_path=lambda *args, **kw: [{"class": "World", "objectPath": "/Game/Fixture/Map.Map"}])
+        unreal = SimpleNamespace(SystemLibrary=SimpleNamespace(get_engine_version=lambda: "5.8.0-fixture"), GameModeBase=Mode,
+            AssetRegistryHelpers=SimpleNamespace(get_asset_registry=lambda: registry), LevelEditorSubsystem=object(), EditorActorSubsystem=object(),
+            get_editor_subsystem=lambda _: SimpleNamespace(load_level=lambda _: True), get_default_object=lambda _: Mode())
+        for verify in (False, True):
+            report = {"created": [], "graphicsVerified": False}
+            with patch.object(review, "settings", return_value={"map": "/Game/Fixture/Map", "mode": "fixture", "configSha256": "stable"}), \
+                    patch.object(review, "asset_row", side_effect=lambda r: r), patch.object(review, "check_motions"), \
+                    patch.object(review, "load_class", return_value=parent), \
+                    patch.object(review, "find_character", side_effect=review.CharacterAssemblyNotFound("No configured Character")), \
+                    patch.object(review, "owned_mode") as save:
+                review.run(unreal, Path("."), Path("."), report, verify=verify)
+            save.assert_not_called()
+            self.assertEqual(report["launch"]["mode"], "sampleEditor")
+            self.assertEqual(report["launch"]["gameModeClass"], "")
+            self.assertEqual(report["launch"]["sourcePawn"], "")
+            self.assertTrue(report["launch"]["manualCharacterSelectionRequired"])
+            self.assertFalse(report["graphicsVerified"])
 
 
 if __name__ == "__main__": unittest.main()
