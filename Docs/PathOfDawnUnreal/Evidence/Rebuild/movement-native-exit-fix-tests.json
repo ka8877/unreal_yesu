@@ -1,0 +1,48 @@
+{
+  "status": "PASSED_TOOLING_ONLY",
+  "testedCommit": "26bdb1f7c93e46934e1f2c17808f4856f196d740",
+  "ci": {
+    "testedCommit": "26bdb1f7c93e46934e1f2c17808f4856f196d740",
+    "sourceChecks": {
+      "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41663406182",
+      "conclusion": "success"
+    },
+    "windowsLauncher": {
+      "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41663406136",
+      "conclusion": "success"
+    },
+    "scope": "Portable contracts and actual Windows launcher fixtures, including non-exception native error logging and READY JSON with native exit 1. No Unreal/GPU execution on CI."
+  },
+  "rebuildPythonContracts": 39,
+  "movementReviewSpecificContracts": 12,
+  "sampleInventoryWindowsFixtureChecks": 17,
+  "movementReviewWindowsFixtureChecks": 30,
+  "confirmedNativeFailure": {
+    "reportedStatus": "SAMPLE_EDITOR_REVIEW_READY",
+    "nativeExitCode": 1,
+    "errorMessage": "LoadBlueprintClass failed: The asset is not a Blueprint.",
+    "newAssetsSaved": false,
+    "rawReportAndHostPathsPublished": false
+  },
+  "historicalFunctionContractReplay": {
+    "scope": "Actual old and current Python functions against the user-observed logging contract; not Unreal execution",
+    "oldLoaderReturnedNoneAndLoggedErrors": 1,
+    "correctedLoaderLoggedErrors": 0,
+    "passed": true
+  },
+  "regressions": [
+    "non-Blueprint redirect never invokes Blueprint-only native loader",
+    "missing generated class does not force source compilation",
+    "READY preparation plus native exit 1 blocks launch",
+    "READY reload plus native exit 1 blocks launch",
+    "engine error and exit code retained in one JSON",
+    "actual native error printed in console"
+  ],
+  "correctedNativeExecution": "NOT_RUN",
+  "graphicsVerified": false,
+  "automaticKellanBinding": "UNVERIFIED",
+  "publishedLauncher": {
+    "bytes": 19844,
+    "sha256": "8080f47d8bb96592ea3f84f5c650fb2d9cbf653f8696480c59dfc2ce4dcdb42f"
+  }
+}

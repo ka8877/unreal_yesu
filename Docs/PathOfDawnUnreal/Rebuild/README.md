@@ -35,9 +35,9 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File .\Tools\PathOfDawnUnreal\Rebuild\T
 pwsh -NoProfile -ExecutionPolicy Bypass -File .\Tools\PathOfDawnUnreal\Rebuild\PrepareRebuild.ps1
 ```
 
-첫 명령은 Linux GCC 또는 Windows Developer PowerShell의 MSVC와 Python/Pillow를 사용한다. C++ 132 assertions, 서사 오류 주입 24개, 환경 변조 검사 7개, 인체/의상 원본 변조 검사 5개, 임포트·에셋 정책·Python 격리·샘플 조사·이동 검토 계약 37개를 통과했다. 두 번째는 준비 상태를 검사하며 현재 **정상적으로 BLOCKED/종료 코드 2**가 된다. 성공으로 무시하지 않는다. 로그와 JSON은 `Docs/PathOfDawnUnreal/Evidence/Rebuild/`에 있다. 이 검사는 Unreal 컴파일·저장 파일 I/O·셰이더·UMG·그래픽 품질을 검증하지 않는다.
+첫 명령은 Linux GCC 또는 Windows Developer PowerShell의 MSVC와 Python/Pillow를 사용한다. C++ 132 assertions, 서사 오류 주입 24개, 환경 변조 검사 7개, 인체/의상 원본 변조 검사 5개, 임포트·에셋 정책·Python 격리·샘플 조사·이동 검토 계약 39개를 통과했다. 두 번째는 준비 상태를 검사하며 현재 **정상적으로 BLOCKED/종료 코드 2**가 된다. 성공으로 무시하지 않는다. 로그와 JSON은 `Docs/PathOfDawnUnreal/Evidence/Rebuild/`에 있다. 이 검사는 Unreal 컴파일·저장 파일 I/O·셰이더·UMG·그래픽 품질을 검증하지 않는다.
 
-GitHub의 [소스 검사](https://github.com/ka8877/unreal_yesu/actions/runs/41659480383)와 [실제 Windows 실행기 검사](https://github.com/ka8877/unreal_yesu/actions/runs/41659480556)도 통과했다. 후자는 PowerShell 7/Windows PowerShell 5.1 부모 실행기의 파일 핸들·프로세스 유지·로그 수집 검증이며 Unreal 게임 실행이 아니다. 소스 검사 workflow의 Windows job에서는 별도 샘플 실행기 17개와 이동 검토 실행기 24개 검사도 통과했다. 결과는 `Evidence/Rebuild/ci.json`에 있다.
+GitHub의 [소스 검사](https://github.com/ka8877/unreal_yesu/actions/runs/41663406182)와 [실제 Windows 실행기 검사](https://github.com/ka8877/unreal_yesu/actions/runs/41663406136)도 통과했다. 후자는 PowerShell 7/Windows PowerShell 5.1 부모 실행기의 파일 핸들·프로세스 유지·로그 수집 검증이며 Unreal 게임 실행이 아니다. 소스 검사 workflow의 Windows job에서는 별도 샘플 실행기 17개와 이동 검토 실행기 30개 검사도 통과했다. 결과는 `Evidence/Rebuild/ci.json`에 있다.
 
 ## Windows PC에서 다음 작업
 
@@ -133,3 +133,7 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File .\Tools\PathOfDawnUnreal\Rebuild\P
 실제 후속 준비 보고서에서는 기본 동작 4개의 길이·비가산 설정·동일 소스 스켈레톤을 확인한 뒤, 최초의 이름/클래스 필터 때문에 외형 Actor 하나만 조사하고 중단했다. 생성·저장한 새 에셋은 없었다. 이 보고서의 원본·개별 에셋 경로·호스트 정보는 공개하지 않는다. 이번 수정의 재실행·실제 Kellan 재생은 아직 확인 전이다.
 
 `sampleEditor`로 열렸다면 상단 Play로 PIE를 시작하고, 시작 지점 근처의 Game Animation Widget 바닥 버튼으로 선택기를 열어 Character Override에서 인물을 선택한다. [공식 샘플 조작·위젯 안내](https://dev.epicgames.com/documentation/unreal-engine/game-animation-sample-project-in-unreal-engine), [MetaHuman의 외형·플레이어 Blueprint 구분](https://dev.epicgames.com/documentation/unreal-engine/adding-a-metahuman-to-the-game-animation-sample-project-in-unreal-engine). 설치 파일 구조는 실제 디스커버리를 우선하며, 문서에 나온 옛 경로를 존재하는 것으로 가정하지 않는다. 이 수동 선택 경로를 자동 연결 성공으로 기록하지 않는다.
+
+후속 실제 실행은 Kellan 외형의 몸·얼굴·복식 컴포넌트 조회까지 진행했지만, Blueprint가 아닌 리다이렉터 대상에도 `LoadBlueprintClass`를 호출해 native Error를 쌓았다. Python은 검토 준비 보고서를 썼으나 commandlet은 종료 코드 1을 반환했다. 원인은 일반 UObject 로드 → 리다이렉터 해석 → 실제 Blueprint 타입 검사 → generated_class 조회 순서로 수정했다. 에셋 타입 확인을 위해 실패하는 native 함수를 먼저 호출하지 않는다. 생성 클래스가 없는 원본을 강제 컴파일하거나 저장하지 않는다.
+
+READY JSON과 종료 코드 1의 조합은 계속 실패다. 실행기는 native 종료 코드·phaseSucceeded·원본 보고 상태·Unreal 오류 줄을 `launcherDiagnostics`에 붙여 같은 JSON에 저장하고 콘솔에도 실제 오류를 표시한다. 실패 종료 코드를 무시하거나 에디터 오류 로그를 숨겨 통과시키지 않는다. 수정본의 실제 Unreal 재실행·PIE·그래픽 검증은 아직 확인 전이다.
