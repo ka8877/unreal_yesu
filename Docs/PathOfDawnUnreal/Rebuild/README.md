@@ -35,9 +35,9 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File .\Tools\PathOfDawnUnreal\Rebuild\T
 pwsh -NoProfile -ExecutionPolicy Bypass -File .\Tools\PathOfDawnUnreal\Rebuild\PrepareRebuild.ps1
 ```
 
-첫 명령은 Linux GCC 또는 Windows Developer PowerShell의 MSVC와 Python/Pillow를 사용한다. C++ 132 assertions, 서사 오류 주입 24개, 환경 변조 검사 7개, 인체/의상 원본 변조 검사 5개, 임포트·에셋 정책·Python 격리·샘플 조사·이동 검토 계약 34개를 통과했다. 두 번째는 준비 상태를 검사하며 현재 **정상적으로 BLOCKED/종료 코드 2**가 된다. 성공으로 무시하지 않는다. 로그와 JSON은 `Docs/PathOfDawnUnreal/Evidence/Rebuild/`에 있다. 이 검사는 Unreal 컴파일·저장 파일 I/O·셰이더·UMG·그래픽 품질을 검증하지 않는다.
+첫 명령은 Linux GCC 또는 Windows Developer PowerShell의 MSVC와 Python/Pillow를 사용한다. C++ 132 assertions, 서사 오류 주입 24개, 환경 변조 검사 7개, 인체/의상 원본 변조 검사 5개, 임포트·에셋 정책·Python 격리·샘플 조사·이동 검토 계약 37개를 통과했다. 두 번째는 준비 상태를 검사하며 현재 **정상적으로 BLOCKED/종료 코드 2**가 된다. 성공으로 무시하지 않는다. 로그와 JSON은 `Docs/PathOfDawnUnreal/Evidence/Rebuild/`에 있다. 이 검사는 Unreal 컴파일·저장 파일 I/O·셰이더·UMG·그래픽 품질을 검증하지 않는다.
 
-GitHub의 [소스 검사](https://github.com/ka8877/unreal_yesu/actions/runs/41478015954)와 [실제 Windows 실행기 검사](https://github.com/ka8877/unreal_yesu/actions/runs/41478016300)도 통과했다. 후자는 PowerShell 7/Windows PowerShell 5.1 부모 실행기의 파일 핸들·프로세스 유지·로그 수집 검증이며 Unreal 게임 실행이 아니다. 소스 검사 workflow의 Windows job에서는 별도 샘플 실행기 17개와 이동 검토 실행기 20개 검사도 통과했다. 결과는 `Evidence/Rebuild/ci.json`에 있다.
+GitHub의 [소스 검사](https://github.com/ka8877/unreal_yesu/actions/runs/41659480383)와 [실제 Windows 실행기 검사](https://github.com/ka8877/unreal_yesu/actions/runs/41659480556)도 통과했다. 후자는 PowerShell 7/Windows PowerShell 5.1 부모 실행기의 파일 핸들·프로세스 유지·로그 수집 검증이며 Unreal 게임 실행이 아니다. 소스 검사 workflow의 Windows job에서는 별도 샘플 실행기 17개와 이동 검토 실행기 24개 검사도 통과했다. 결과는 `Evidence/Rebuild/ci.json`에 있다.
 
 ## Windows PC에서 다음 작업
 
@@ -84,7 +84,7 @@ Windows PowerShell 5.1에서도 실행하며 PC 전체 실행 정책을 바꾸�
 
 사용자가 제공한 실제 `SAMPLE_ASSETS_INSPECTED` 보고서에서 레지스트리와 제한된 에셋 로드를 확인했다. 성인 MetaHuman 원본이 등록돼 있지만 첫 6개 메시 로드에는 이 인물의 얼굴·몸 조립이 포함되지 않았다. 원본 인벤토리·개별 에셋 목록·호스트 로그는 공개 Git에 넣지 않는다. 첫 도구의 알파벳순 이름 검색이 AimOffset/웅크림/상호작용을 후보에 포함한 문제를 수정해 기본 대기·정면 걷기·멈춤·서서 회전하는 후보를 우선하고 부적합한 분류를 제외했다. 이름 선별만으로 실제 호환성을 승인하지 않는다.
 
-`PrepareMovementReview.ps1`은 이 다음 단계의 **개발용 샘플 이동 검토** 도구다. 원본 샘플의 실제 MetaHuman Character Blueprint를 조회하고 임시 액터의 얼굴·몸·애니메이션 클래스 조립을 검사한다. 기존 GameMode를 상속한 새 GameMode의 기본 Pawn에 이 Character를 연결한다. 기본 동작 4개의 실제 스켈레톤·비가산 여부·길이도 검사하며, 부족하면 후보 근거를 보고하고 중단한다. 기본 마네킹이나 추측한 경로로 대체하지 않는다.
+`PrepareMovementReview.ps1`은 이 다음 단계의 **개발용 샘플 이동 검토** 도구다. MetaHuman 외형 Actor와 조작용 Character를 별도로 조회한다. 이름에 MetaHuman/Kellan이 없어도 실제 Character 및 ObjectRedirector를 검사하고, 임시 액터의 실제 얼굴·몸·애니메이션 클래스 조립을 확인한다. 공용 바디는 원본 외형 Actor의 실제 메시·스켈레톤과 비교한다. 기존 GameMode를 상속한 새 GameMode의 기본 Pawn에 이 Character를 연결한다. 기본 동작 4개의 실제 스켈레톤·비가산 여부·길이도 검사하며, 자동 연결 가능한 조합이 없으면 `automaticBinding=NOT_CONFIGURED`와 후보 근거를 남기고 원본 샘플 에디터를 여는 검토 경로를 사용한다. 외형 Actor를 Pawn으로 강제 지정하거나 기본 마네킹을 Kellan으로 표시하지 않는다.
 
 새 에셋은 `/Game/WordJourneyDev/MovementReview/r_<입력 해시>/BP_MovementReview` 하나뿐이며 Editor API로 저장한다. 소유 태그와 실제 패키지 체크섬으로 반복 생성·사용자 수정 덮어쓰기를 막고, 두 번째 Editor 프로세스에서 재로드·기본 Pawn 참조를 검증한다. 원본 `.uproject`, Config, 맵과 기존 게임 소스·빌드·서비스는 보존한다. 같은 샘플을 변경하는 작성 도구는 프로젝트별 Windows mutex로 직렬화한다.
 
@@ -92,7 +92,7 @@ Windows PowerShell 5.1에서도 실행하며 PC 전체 실행 정책을 바꾸�
 powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File .\Tools\PathOfDawnUnreal\Rebuild\PrepareMovementReview.ps1 -Revision '<도구가 포함된 40자리 커밋 SHA>' -SampleRoot 'C:\PathOfDawn\Samples\GameAnimationSample'
 ```
 
-단독 실행기는 고정 커밋·SHA-256을 확인한 작은 Python 2개와 기존 Windows native process launcher만 추가로 받는다. 기존 `f7da4aa` 프로젝트 전체 다운로드나 C++ 재컴파일을 요구하지 않는다. 준비·재로드에는 NullRHI를 사용하며 성공 후 별도 `UnrealEditor.exe -game` 창을 정상 RHI로 요청한다. **이는 현대 복장과 샘플 공간에서의 이동 검토이며, 시대 복식·성경 장면·새 게임 데모 완성을 의미하지 않는다.** 실제 얼굴·발·보행·회전·입력을 직접 확인해야 한다.
+단독 실행기는 고정 커밋·SHA-256을 확인한 작은 Python 2개와 기존 Windows native process launcher만 추가로 받는다. 기존 `f7da4aa` 프로젝트 전체 다운로드나 C++ 재컴파일을 요구하지 않는다. 준비·재로드에는 NullRHI를 사용한다. 자동 연결이 확인되면 별도 `UnrealEditor.exe -game` 창을 정상 RHI로 요청한다. 연결이 미확인인 경우에는 `sampleEditor` 모드로 원본 에디터를 요청하며 `-game`, GameMode 오버라이드와 새 에셋 생성을 사용하지 않는다. 에디터 전용 Game Animation Widget을 사용할 수 있도록 PIE에서 검토한다. **이는 현대 복장과 샘플 공간에서의 이동 검토이며, 시대 복식·성경 장면·새 게임 데모 완성을 의미하지 않는다.** 실제 얼굴·발·보행·회전·입력을 직접 확인해야 한다.
 
 로그와 `movement-review.json`은 `C:\PathOfDawn\Reports\MovementReview\<실행 ID>` 아래에만 저장된다. 다음에는 같은 루트의 `Run-MovementReview.cmd`로 다운로드 없이 다시 검토 창을 요청한다. 원래 샘플 설명자로 실행하며 UserDir은 검토용 호스트 폴더에 분리한다. 준비/재로드 실패나 사용자 수정은 창을 띄우기 전에 알린다. 실행 요청만으로 그래픽 PASS를 기록하지 않으며, 창을 닫으면 해당 검토 게임이 종료된다. 기존 게임/스트리밍 프로세스를 일괄 종료하지 않는다.
 
@@ -129,3 +129,7 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File .\Tools\PathOfDawnUnreal\Rebuild\P
 `f7da4aa9aa85`의 Windows 로그에서 Editor 타깃이 성공했다. JourneyJournalData/Subsystem/Widget 및 Automation 테스트 소스가 실제로 컴파일됐고 Runtime/Editor DLL이 링크됐다. 이어서 12개 텍스처의 Interchange 임포트, 도기 메시 빌드, 총 17개 에셋 저장 후 정상 반환을 확인했다. Source-only 성공 상태는 허용 상태를 검사한 래퍼의 마지막 `Editor report:` 출력으로 확인하며 별도 JSON 자체는 아직 제공받지 않았다. [선별 근거](../Evidence/Rebuild/windows-source-import-f7da4aa.json).
 
 도기 FBX의 스무딩 그룹 경고는 실제 외관 검수 대상이다. 시작 시의 Automation `Condition failed` 15줄과 Pixel Streaming 초기화 오류는 이 실행에서 프로젝트 테스트나 스트리밍을 검증했다는 근거가 아니며 미해결 메시지로 남긴다. 다른 플랫폼의 SDK 안내만으로 Windows 도구를 다시 설치하지 않는다. 전체 장면·UI·패키지·공개 접속은 여전히 미검증이다.
+
+실제 후속 준비 보고서에서는 기본 동작 4개의 길이·비가산 설정·동일 소스 스켈레톤을 확인한 뒤, 최초의 이름/클래스 필터 때문에 외형 Actor 하나만 조사하고 중단했다. 생성·저장한 새 에셋은 없었다. 이 보고서의 원본·개별 에셋 경로·호스트 정보는 공개하지 않는다. 이번 수정의 재실행·실제 Kellan 재생은 아직 확인 전이다.
+
+`sampleEditor`로 열렸다면 상단 Play로 PIE를 시작하고, 시작 지점 근처의 Game Animation Widget 바닥 버튼으로 선택기를 열어 Character Override에서 인물을 선택한다. [공식 샘플 조작·위젯 안내](https://dev.epicgames.com/documentation/unreal-engine/game-animation-sample-project-in-unreal-engine), [MetaHuman의 외형·플레이어 Blueprint 구분](https://dev.epicgames.com/documentation/unreal-engine/adding-a-metahuman-to-the-game-animation-sample-project-in-unreal-engine). 설치 파일 구조는 실제 디스커버리를 우선하며, 문서에 나온 옛 경로를 존재하는 것으로 가정하지 않는다. 이 수동 선택 경로를 자동 연결 성공으로 기록하지 않는다.

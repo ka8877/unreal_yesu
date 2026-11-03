@@ -4,6 +4,8 @@
 
 이번 원본 임포트의 미해결 검수 항목: 도기 FBX 스무딩 그룹 경고, Editor 시작 중 `LogAutomationTest: Condition failed` 15줄, Engine 초기화 전 PixelStreaming2RTC 대상 창 오류. 이 로그에서 임포트는 완료됐지만 해당 메시지의 근본 원인이나 메시·재질의 외관을 검증한 것은 아니다. 명시적인 `WordJourney` Automation 실행 결과도 없으므로 프로젝트 자동 테스트의 PASS/FAIL로 계산하지 않는다. 다른 플랫폼 SDK 안내는 성공한 Win64 Editor 빌드와 구분한다.
 
+후속 이동 검토는 실제 소스 동작 4종 로드 후 외형/조작용 Character를 혼동한 검색에서 중단됐으며 새 에셋을 저장하지 않았다. 수정본은 전체 Blueprint/리다이렉터를 검사하고 미구성 상태에서는 원본 Editor/PIE 검토를 제공한다. 이 경로에서 Kellan을 자동 연결했다고 표시하지 않는다. 실제 수정본 실행과 인물 선택·보행은 아직 미검증이다.
+
 ---
 
 # 현재 남은 작업

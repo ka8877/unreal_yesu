@@ -1,5 +1,5 @@
 {
-  "checkedUtc": "2026-11-02T16:12:21.497629+00:00",
+  "checkedUtc": "2026-11-03T15:08:17.095466+00:00",
   "work": "Word Journey / Luke 2 rebuild",
   "state": "BLOCKED_AT_GRAPHICS_BENCHMARK",
   "restorableBase": "9ae7fc27c71da0d80941c0acfe4868c28970d81e",
@@ -26,14 +26,15 @@
     "portableJournalAssertions": 132,
     "narrativeMutationsRejected": 24,
     "environmentIntegrityChecks": 7,
-    "importAndReadinessContracts": 34,
+    "importAndReadinessContracts": 37,
     "existingCoreAssertions": 479,
     "newJournalKoreanGlyphsInActualFont": 235,
     "characterSourceMutationChecks": 5,
     "userWindowsEditorBuild": true,
     "userWindowsImportedSourceAssets": 17,
     "sampleInspectorWindowsLauncherFixtureChecks": 17,
-    "movementReviewWindowsLauncherFixtureChecks": 20
+    "movementReviewWindowsLauncherFixtureChecks": 24,
+    "nativeCuratedSourceMotionsLoaded": 4
   },
   "unrealCompile": "USER_LOG_CONFIRMED_EDITOR_BUILD",
   "editorAssetImport": "USER_LOG_CONFIRMED_SOURCE_IMPORT_AND_SAVE",
@@ -58,16 +59,16 @@
   ],
   "stagedSavePolicy": "WordJourney_v1 on the single test host only; account/per-user save separation is not implemented.",
   "ci": {
-    "testedCommit": "ab6e9d63a08f4f1e1c3efca32f06d10398d4a485",
+    "testedCommit": "8eb9ef586131d05bef3a513ca83c301fcb66df7c",
     "sourceChecks": {
-      "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41478015954",
+      "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41659480383",
       "conclusion": "success"
     },
     "windowsLauncher": {
-      "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41478016300",
+      "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41659480556",
       "conclusion": "success"
     },
-    "scope": "Portable source tests and actual Windows PowerShell 5.1/native process launcher fixtures, including sample review preparation/reload/render-request boundaries. No Unreal or GPU execution on CI."
+    "scope": "Portable source contracts and real Windows launcher fixtures for bound-character and original Editor/PIE review paths. No Unreal/GPU execution on CI."
   },
   "userReportedArtPreparation": {
     "sourceCommit": "bb928a4ca5436f5ccbac8217a09ee366d6216d28",
@@ -83,6 +84,14 @@
     "nativeAssetInspection": "USER_REPORT_CONFIRMED_REGISTRY_AND_LIMITED_LOAD",
     "visualAndRetargetReview": "NOT_RUN",
     "reportUploaded": true,
-    "nativeKellanActorAssembly": "NOT_RUN"
+    "nativeKellanActorAssembly": "PREVIOUS_ATTEMPT_FAILED_DISCOVERY_BEFORE_ASSET_CREATION"
+  },
+  "movementReview": {
+    "previousNativeAttempt": "FAILED_BEFORE_ASSET_CREATION",
+    "nativeSourceMotionsValidated": 4,
+    "previousCandidateFilter": "Appearance default object was not Character; only name-filtered Blueprint candidates were inspected",
+    "correctedNativeExecution": "NOT_RUN",
+    "automaticKellanBinding": "UNVERIFIED",
+    "sourceEditorReview": "IMPLEMENTED_PIE_PATH_NATIVE_EXECUTION_PENDING"
   }
 }

@@ -1,12 +1,12 @@
 {
-  "testedCommit": "ab6e9d63a08f4f1e1c3efca32f06d10398d4a485",
+  "testedCommit": "8eb9ef586131d05bef3a513ca83c301fcb66df7c",
   "sourceChecks": {
-    "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41478015954",
+    "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41659480383",
     "conclusion": "success"
   },
   "windowsLauncher": {
-    "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41478016300",
+    "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41659480556",
     "conclusion": "success"
   },
-  "scope": "Portable source tests and actual Windows PowerShell 5.1/native process launcher fixtures, including sample review preparation/reload/render-request boundaries. No Unreal or GPU execution on CI."
+  "scope": "Portable source contracts and real Windows launcher fixtures for bound-character and original Editor/PIE review paths. No Unreal/GPU execution on CI."
 }
