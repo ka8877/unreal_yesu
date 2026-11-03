@@ -27,6 +27,11 @@ class PropertyObject:
 class Animation(PropertyObject): pass
 
 
+class BlueprintAsset:
+    def __init__(self, cls): self.cls = cls
+    def generated_class(self): return self.cls
+
+
 class MovementReviewTests(unittest.TestCase):
     def test_curated_selection_rejects_name_false_positives_and_prefers_basic_motions(self):
         rows = [row("M_relaxed_takedown_walk_B", "Interactions/Takedowns"),
@@ -75,8 +80,8 @@ class MovementReviewTests(unittest.TestCase):
         class Character: pass
         character = Character()
         cls = SimpleNamespace(get_path_name=lambda: "/Game/Fixture/Person.Person_C"); destroyed = []
-        unreal = SimpleNamespace(Character=Character, Vector=lambda *v: v, get_default_object=lambda _: character,
-                                 EditorAssetLibrary=SimpleNamespace(load_blueprint_class=lambda _: cls))
+        unreal = SimpleNamespace(Character=Character, Blueprint=BlueprintAsset, Vector=lambda *v: v, get_default_object=lambda _: character,
+                                 EditorAssetLibrary=SimpleNamespace(load_asset=lambda _: BlueprintAsset(cls)))
         actors = SimpleNamespace(spawn_actor_from_class=lambda *args: character,
                                   destroy_actor=lambda actor: destroyed.append(actor) or True)
         candidates = [{"name": "Fixture_Metahuman", "class": "Blueprint", "objectPath": "/Game/Fixture/Person.Person"}]
@@ -142,17 +147,14 @@ class MovementReviewTests(unittest.TestCase):
                 {"name": "GenericAvatar", "class": "ObjectRedirector" if redirect else "Blueprint", "objectPath": "/Game/Fixture/OldAvatar.OldAvatar" if redirect else "/Game/Fixture/Avatar.Avatar"}]
         if include_named_character:
             rows.append({"name": "CBP_Kellan_Alias", "class": "Blueprint", "objectPath": "/Game/Fixture/Alias.Alias"})
-        classes = {r["objectPath"]: appearance_class if r["name"] == "BP_Kellan" else player_class for r in rows}
-        if redirect:
-            classes[rows[1]["objectPath"]] = None
-        class Blueprint:
-            def generated_class(self): return player_class
+        assets = {r["objectPath"]: BlueprintAsset(appearance_class if r["name"] == "BP_Kellan" else player_class) for r in rows}
         class Redirector(PropertyObject):
             def get_path_name(self): return "/Game/Fixture/OldAvatar.OldAvatar"
-        redirected = Redirector(destination_object=Blueprint())
+        if redirect:
+            assets[rows[1]["objectPath"]] = Redirector(destination_object=BlueprintAsset(player_class))
         self.destroyed = []
-        unreal = SimpleNamespace(Actor=Actor, Character=Character, Blueprint=Blueprint, ObjectRedirector=Redirector,
-            Vector=lambda *v: v, EditorAssetLibrary=SimpleNamespace(load_blueprint_class=lambda path: classes[path], load_asset=lambda _: redirected),
+        unreal = SimpleNamespace(Actor=Actor, Character=Character, Blueprint=BlueprintAsset, ObjectRedirector=Redirector,
+            Vector=lambda *v: v, EditorAssetLibrary=SimpleNamespace(load_blueprint_class=lambda _: self.fail("Specialized class loading must not precede type validation"), load_asset=lambda path: assets[path]),
             get_default_object=lambda cls: appearance if cls is appearance_class else player)
         actors = SimpleNamespace(spawn_actor_from_class=lambda cls, _: appearance if cls is appearance_class else player,
                                  destroy_actor=lambda actor: self.destroyed.append(actor) or True)
@@ -199,6 +201,32 @@ class MovementReviewTests(unittest.TestCase):
             self.assertEqual(report["launch"]["sourcePawn"], "")
             self.assertTrue(report["launch"]["manualCharacterSelectionRequired"])
             self.assertFalse(report["graphicsVerified"])
+
+    def test_non_blueprint_redirect_is_not_sent_to_native_error_logging_loader(self):
+        class Redirector(PropertyObject):
+            def get_path_name(self): return "/Game/Fixture/OldRig.OldRig"
+        non_blueprint = object()
+        redirect = Redirector(destination_object=non_blueprint)
+        native_errors = []
+        special_calls = []
+        # Native UE logs an Error and returns None here; it does NOT raise a
+        # Python exception. Commandlets later return 1 because errors exist.
+        def specialized_loader(path):
+            special_calls.append(path)
+            native_errors.append("LogEditorAssetSubsystem: Error: LoadBlueprintClass failed: The asset is not a Blueprint.")
+            return None
+        unreal = SimpleNamespace(Blueprint=BlueprintAsset, ObjectRedirector=Redirector,
+            EditorAssetLibrary=SimpleNamespace(load_asset=lambda _: redirect, load_blueprint_class=specialized_loader))
+        result = review.blueprint_class(unreal, {"class": "ObjectRedirector", "objectPath": redirect.get_path_name()})
+        self.assertIsNone(result)
+        self.assertEqual(special_calls, [])
+        self.assertEqual(native_errors, [])
+        self.assertEqual(1 if native_errors else 0, 0)
+
+    def test_missing_generated_class_is_reported_without_forcing_source_compilation(self):
+        unreal = SimpleNamespace(Blueprint=BlueprintAsset, EditorAssetLibrary=SimpleNamespace(load_asset=lambda _: BlueprintAsset(None)))
+        with self.assertRaisesRegex(RuntimeError, "no generated class; source asset preserved"):
+            review.blueprint_class(unreal, {"class": "Blueprint", "objectPath": "/Game/Fixture/Unbuilt.Unbuilt"})
 
 
 if __name__ == "__main__": unittest.main()

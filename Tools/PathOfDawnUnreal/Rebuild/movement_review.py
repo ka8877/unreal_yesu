@@ -105,22 +105,26 @@ def inspect_character(unreal, actor):
 
 
 def blueprint_class(unreal, row):
-    """Use the native loader first; a redirect's destination may be renamed."""
-    cls = unreal.EditorAssetLibrary.load_blueprint_class(row["objectPath"])
-    if cls is not None:
-        return cls
-    if row["class"] == "ObjectRedirector":
-        asset = unreal.EditorAssetLibrary.load_asset(row["objectPath"])
-        seen = set()
-        redirector = getattr(unreal, "ObjectRedirector", None)
-        while redirector is not None and isinstance(asset, redirector):
-            if asset.get_path_name() in seen:
-                raise RuntimeError("Cyclic Blueprint redirector")
-            seen.add(asset.get_path_name())
-            asset = asset.get_editor_property("destination_object")
-        if isinstance(asset, unreal.Blueprint):
-            return asset.generated_class()
-    return None
+    """Resolve as UObject, then type-check before touching Blueprint APIs.
+
+    LoadBlueprintClass logs a native Error (without a Python exception) for a
+    redirect to a non-Blueprint asset. Those errors make the commandlet exit 1
+    even when Python writes READY. Generic loading/type checks are intentional.
+    """
+    asset = unreal.EditorAssetLibrary.load_asset(row["objectPath"])
+    seen = set()
+    redirector = getattr(unreal, "ObjectRedirector", None)
+    while redirector is not None and isinstance(asset, redirector):
+        if asset.get_path_name() in seen:
+            raise RuntimeError("Cyclic Blueprint redirector")
+        seen.add(asset.get_path_name())
+        asset = asset.get_editor_property("destination_object")
+    if not isinstance(asset, unreal.Blueprint):
+        return None
+    cls = asset.generated_class()
+    if cls is None:
+        raise RuntimeError("Blueprint has no generated class; source asset preserved: " + row["objectPath"])
+    return cls
 
 
 def probe_components(unreal, cls, actor_subsystem):

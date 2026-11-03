@@ -20,7 +20,7 @@ if ($PSVersionTable.PSVersion.Major -lt 6) {
     [Environment]::SetEnvironmentVariable('PSModulePath',([IO.Path]::Combine($PSHOME,'Modules')+';'+$previousModulePath),'Process')
 }
 $pins=@{
-    'movement_review.py'='54bc25975e9de208b270c2867d6bb99148847b6209cd2f37b33fff2656a689cd'
+    'movement_review.py'='af11f04c6913826ef0391a7848e3924055a2dc43a032473083f1178a73a0f3a7'
     'inspect_sample.py'='11c04dbc94ab5803bf912961ed1a2856aae8b225f77ec9ef670bd053c0a00fd7'
     'WindowsProcessLauncher.cs'='068e9628308f39cd50f74c35c6b8f253794852fe3644266142aae18bd8482b35'
 }
@@ -89,6 +89,20 @@ function Save-Json([string]$Path,$Value) {
         } else { [IO.File]::Move($temporary,$Path) }
     } finally { if (Test-Path -LiteralPath $temporary) { Remove-Item -LiteralPath $temporary } }
 }
+function Native-ErrorLines([string[]]$Paths) {
+    $seen=New-Object 'Collections.Generic.HashSet[string]'
+    $lines=New-Object 'Collections.Generic.List[string]'
+    foreach ($path in $Paths) {
+        if (-not (Test-Path -LiteralPath $path -PathType Leaf)) { continue }
+        foreach ($match in @(Select-String -LiteralPath $path -Encoding UTF8 -Pattern '(?i)(?:\bError\s*:|Fatal error|Traceback)' | Select-Object -First 16)) {
+            $line=$match.Line.Trim()
+            if ($seen.Add($line)) { $lines.Add($line) }
+            if ($lines.Count -ge 16) { break }
+        }
+        if ($lines.Count -ge 16) { break }
+    }
+    return $lines.ToArray()
+}
 function Invoke-EditorPhase([string]$Phase) {
     $report=Join-Path $run $(if ($Phase -eq 'verify') {'movement-review.json'} else {'prepare.json'})
     $engineLog=Join-Path $run ($Phase+'-engine.log')
@@ -104,9 +118,17 @@ function Invoke-EditorPhase([string]$Phase) {
     }
     if (Test-Path -LiteralPath $report) {
         $value=Get-Content -LiteralPath $report -Raw -Encoding UTF8 | ConvertFrom-Json
-        if ($value.status -eq 'FAILED') { throw "Unreal: $($value.error). Report: $report" }
     } else { throw "Unreal did not write $report (exit $($script:worker.ExitCode)). Full log: $engineLog" }
     $expected=if ($Phase -eq 'verify') {@('MOTION_REVIEW_ASSETS_RELOADED','SAMPLE_EDITOR_REVIEW_RELOADED')} else {@('MOTION_REVIEW_ASSETS_SAVED','SAMPLE_EDITOR_REVIEW_READY')}
+    $errors=@(Native-ErrorLines @($engineLog,(Join-Path $run ($Phase+'-stderr.log')),(Join-Path $run ($Phase+'-stdout.log'))))
+    $value | Add-Member -NotePropertyName launcherDiagnostics -NotePropertyValue ([ordered]@{phase=$Phase;nativeExitCode=$script:worker.ExitCode;reportedStatus=$value.status;phaseSucceeded=($script:worker.ExitCode -eq 0 -and $value.status -in $expected);engineErrors=$errors;engineLog=$engineLog;graphicsVerified=$false}) -Force
+    # Preserve native errors with the report, including READY + exit 1. One
+    # shared JSON should suffice to diagnose a failure; never ignore exit 1.
+    Save-Json $report $value
+    if ($script:worker.ExitCode -ne 0 -or $value.status -eq 'FAILED') {
+        foreach ($line in $errors) { Write-Host $line }
+    }
+    if ($value.status -eq 'FAILED') { throw "Unreal: $($value.error). Report: $report" }
     if ($script:worker.ExitCode -ne 0 -or $value.schemaVersion -ne 1 -or $value.status -notin $expected) { throw "Unreal phase $Phase failed (exit $($script:worker.ExitCode), status $($value.status)). Report: $report" }
     if ($value.graphicsVerified -ne $false -or $value.sourceSampleAssetsModified -ne $false -or $value.narrativeDemoComplete -ne $false) { throw 'Unexpected report scope; preparation cannot approve graphics or replace the demo.' }
     if ($Phase -eq 'verify' -and @($value.created).Count) { throw 'Reload unexpectedly created assets; graphical launch was blocked.' }
