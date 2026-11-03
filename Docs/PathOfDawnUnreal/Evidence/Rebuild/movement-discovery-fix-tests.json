@@ -1,0 +1,42 @@
+{
+  "status": "PASSED_TOOLING_ONLY",
+  "testedCommit": "8eb9ef586131d05bef3a513ca83c301fcb66df7c",
+  "ci": {
+    "testedCommit": "8eb9ef586131d05bef3a513ca83c301fcb66df7c",
+    "sourceChecks": {
+      "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41659480383",
+      "conclusion": "success"
+    },
+    "windowsLauncher": {
+      "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41659480556",
+      "conclusion": "success"
+    },
+    "scope": "Portable source contracts and real Windows launcher fixtures for bound-character and original Editor/PIE review paths. No Unreal/GPU execution on CI."
+  },
+  "rebuildPythonContracts": 37,
+  "movementReviewSpecificContracts": 10,
+  "sampleInventoryWindowsFixtureChecks": 17,
+  "movementReviewWindowsFixtureChecks": 24,
+  "previousNativeAttempt": {
+    "fourSourceMotionsLoaded": true,
+    "positiveLengthsAndNonAdditive": true,
+    "commonSourceSkeleton": true,
+    "nameFilteredAppearanceObjectWasCharacter": false,
+    "newAssetsCreated": 0,
+    "newAssetsSaved": false
+  },
+  "rawNativeReportPublished": false,
+  "correctedNativeExecution": "NOT_RUN",
+  "automaticKellanBinding": "UNVERIFIED",
+  "graphicsVerified": false,
+  "retargetMotionVisuallyVerified": false,
+  "sourceEditorFallbackClaimsAutomaticBinding": false,
+  "publishedLauncher": {
+    "bytes": 18415,
+    "sha256": "faa457ed8de4ef06a37d291d62beaf0f3f5560b68d2950dfce16a47bab0147c3"
+  },
+  "officialReferences": [
+    "https://dev.epicgames.com/documentation/unreal-engine/game-animation-sample-project-in-unreal-engine",
+    "https://dev.epicgames.com/documentation/unreal-engine/adding-a-metahuman-to-the-game-animation-sample-project-in-unreal-engine"
+  ]
+}

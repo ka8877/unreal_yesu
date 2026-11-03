@@ -1,0 +1,44 @@
+{
+  "status": "PASSED_TOOLING_ONLY",
+  "testedCommit": "ab6e9d63a08f4f1e1c3efca32f06d10398d4a485",
+  "rebuildPythonContracts": 34,
+  "movementReviewSpecificContracts": 7,
+  "sampleInventoryWindowsFixtureChecks": 17,
+  "movementReviewWindowsFixtureChecks": 20,
+  "ci": {
+    "testedCommit": "ab6e9d63a08f4f1e1c3efca32f06d10398d4a485",
+    "sourceChecks": {
+      "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41478015954",
+      "conclusion": "success"
+    },
+    "windowsLauncher": {
+      "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41478016300",
+      "conclusion": "success"
+    },
+    "scope": "Portable source tests and actual Windows PowerShell 5.1/native process launcher fixtures, including sample review preparation/reload/render-request boundaries. No Unreal or GPU execution on CI."
+  },
+  "nativeSampleInventory": "USER_REPORT_CONFIRMED_REGISTRY_AND_LIMITED_LOAD",
+  "nativeMovementReviewPreparation": "NOT_RUN",
+  "nativeKellanActorAssembly": "NOT_RUN",
+  "graphicsVerified": false,
+  "retargetMotionVisuallyVerified": false,
+  "newNarrativeDemoComplete": false,
+  "publishedTools": {
+    "PrepareMovementReview.ps1": {
+      "bytes": 17082,
+      "sha256": "be3ae91198e09872a292a0238bbafd64ec093d02bf69d0f9d5f3674020a4577b"
+    },
+    "movement_review.py": {
+      "bytes": 13614,
+      "sha256": "1d7189654c83f2ed34d956d249979e7c97e43d62f5124ee0e34b8be8a7a95e01"
+    },
+    "inspect_sample.py": {
+      "bytes": 9246,
+      "sha256": "11c04dbc94ab5803bf912961ed1a2856aae8b225f77ec9ef670bd053c0a00fd7"
+    },
+    "WindowsProcessLauncher.cs": {
+      "bytes": 8704,
+      "sha256": "068e9628308f39cd50f74c35c6b8f253794852fe3644266142aae18bd8482b35"
+    }
+  }
+}

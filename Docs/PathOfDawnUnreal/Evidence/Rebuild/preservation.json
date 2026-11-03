@@ -1,0 +1,67 @@
+{
+  "baseCommit": "9ae7fc27c71da0d80941c0acfe4868c28970d81e",
+  "files": [
+    {
+      "path": "Games/PathOfDawnUnreal/Config/DefaultEngine.ini",
+      "sha256": "1f54008c78dbe5c56f3b9b9a245ebf29ae221769986c6c48a70de886819f874b",
+      "unchanged": true
+    },
+    {
+      "path": "Games/PathOfDawnUnreal/Config/DefaultGame.ini",
+      "sha256": "9f8ca302d7deb4def0b5195d2087ee514354a73c52f68c0c824c69b741a23e82",
+      "unchanged": true
+    },
+    {
+      "path": "Games/PathOfDawnUnreal/PathOfDawnUnreal.uproject",
+      "sha256": "c3ae837ab12848638c9c42936e8c3b9bb3284918d85d85cb7d915f66076292b8",
+      "unchanged": true
+    },
+    {
+      "path": "Tools/PathOfDawnUnreal/Bootstrap.ps1",
+      "sha256": "a0ec2753ce6a1a12cd16dc87749a3663403f803d1d7de1dbed104be44c60e2f5",
+      "unchanged": true
+    },
+    {
+      "path": "Tools/PathOfDawnUnreal/SyncAndPlay.ps1",
+      "sha256": "38fc4065789b38b3db4821881c59832dc4b0fd929e9ee868517d642be4a6c38a",
+      "unchanged": true
+    },
+    {
+      "path": "Tools/PathOfDawnUnreal/StartHere.ps1",
+      "sha256": "e5eef538d7fc2bc6ffc039634e6a7f8fc0e0eda67e6cea73d35091a06c552aee",
+      "unchanged": true
+    },
+    {
+      "path": "Tools/PathOfDawnUnreal/BuildDemo.ps1",
+      "sha256": "ea031ea2933bd1125bd761724f1eeba1f6ffd2f92ce36f9c4c81fad1326d1e0e",
+      "unchanged": true
+    },
+    {
+      "path": "Tools/PathOfDawnUnreal/UpdateDemo.ps1",
+      "sha256": "e34d76b35fe8a5465764e8cb2b1b9793382a95e9afd2596cd6c40f1d5cad8fe5",
+      "unchanged": true
+    },
+    {
+      "path": "Tools/PathOfDawnUnreal/Common.ps1",
+      "sha256": "5c3605a40702a3649be391aaaa63a08e878b5eb53591bd7876aa6fa3e999f302",
+      "unchanged": true
+    },
+    {
+      "path": "Tools/PathOfDawnUnreal/WindowsProcessLauncher.cs",
+      "sha256": "068e9628308f39cd50f74c35c6b8f253794852fe3644266142aae18bd8482b35",
+      "unchanged": true
+    },
+    {
+      "path": "Streaming/PathOfDawnUnreal/server.mjs",
+      "sha256": "c2e412664e6060b2791c5549fe9ebb01803273cb6cf3f78820858e6db5215aed",
+      "unchanged": true
+    },
+    {
+      "path": "Streaming/PathOfDawnUnreal/versions.lock.json",
+      "sha256": "84ebfa94851831a7751586edac4cf028c6d423bca4bd6eb37a82b246e7974229",
+      "unchanged": true
+    }
+  ],
+  "activePcProcessesChecked": false,
+  "newServicePromoted": false
+}

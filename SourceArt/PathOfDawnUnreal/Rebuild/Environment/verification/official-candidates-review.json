@@ -1,0 +1,33 @@
+{
+  "checked_utc": "2026-11-02T05:16:06.512850+00:00",
+  "status": "CANDIDATES_ONLY_NOT_ACQUIRED",
+  "references": [
+    {
+      "url": "https://dev.epicgames.com/documentation/en-us/metahuman/metahuman-creator",
+      "title": "MetaHuman Creator in Unreal Engine",
+      "response_sha256": "2937697c65e7e159c8031153fb53aad93bf5d1b99a62483bc302c1e9f108606b"
+    },
+    {
+      "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/game-animation-sample-project-in-unreal-engine",
+      "title": "Game Animation Sample Project in Unreal Engine",
+      "response_sha256": "2a0ee75261a0ef0e6d39671bcb86bc842e2326740c7dbf9fe5c5f188a3a967af"
+    },
+    {
+      "url": "https://www.fab.com/listings/880e319a-a59e-4ed2-b268-b32dac7fa016",
+      "title": "Game Animation Sample | Fab",
+      "response_sha256": "1c00483f142d1e1b055a10a820b3a8759e060e993b674330cf38240455de49a8"
+    }
+  ],
+  "observed_facts": [
+    "Fab Game Animation Sample structured offer shows current price 0.0 KRW and an actual UE 5.8 update entry.",
+    "MetaHuman Creator page mentions MetaHuman Creator Core Data install option."
+  ],
+  "not_acquired": [
+    "Sample project files",
+    "MetaHuman characters or core data",
+    "Period clothing",
+    "Baby or twelve-year-old child character",
+    "Complete architecture"
+  ],
+  "license_note": "Epic/Fab product files are not CC0 and have not been downloaded or accepted on behalf of the user. No source redistribution rights are presumed."
+}

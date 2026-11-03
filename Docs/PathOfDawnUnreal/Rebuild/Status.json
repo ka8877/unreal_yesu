@@ -1,0 +1,99 @@
+{
+  "checkedUtc": "2026-11-03T15:28:33.606014+00:00",
+  "work": "Word Journey / Luke 2 rebuild",
+  "state": "BLOCKED_AT_GRAPHICS_BENCHMARK",
+  "restorableBase": "9ae7fc27c71da0d80941c0acfe4868c28970d81e",
+  "branch": "rebuild/word-journey-luke2",
+  "preserved": [
+    "active map and GameMode",
+    "existing Cook and packaging configuration",
+    "main branch updater",
+    "Pixel Streaming infrastructure pins and loopback endpoint",
+    "old save namespace"
+  ],
+  "sourceImplemented": [
+    "Luke 2 summaries and metadata",
+    "journal state and staged Unreal wrappers",
+    "UMG journal",
+    "real CC0 environment source imports",
+    "asset policy/quality gate",
+    "PC asset inventory and official setup pages",
+    "CC0 human/rig definition and medieval robe authoring inputs; not assembled final actors",
+    "Standalone metadata-only sample registry/skeleton inspector; no source project re-download or asset migration",
+    "Isolated sample MetaHuman movement review authoring, fresh-process asset reload and rendered launch request; native review execution pending"
+  ],
+  "verified": {
+    "portableJournalAssertions": 132,
+    "narrativeMutationsRejected": 24,
+    "environmentIntegrityChecks": 7,
+    "importAndReadinessContracts": 39,
+    "existingCoreAssertions": 479,
+    "newJournalKoreanGlyphsInActualFont": 235,
+    "characterSourceMutationChecks": 5,
+    "userWindowsEditorBuild": true,
+    "userWindowsImportedSourceAssets": 17,
+    "sampleInspectorWindowsLauncherFixtureChecks": 17,
+    "movementReviewWindowsLauncherFixtureChecks": 30,
+    "nativeCuratedSourceMotionsLoaded": 4,
+    "nativeAppearanceSkeletalComponentsLoaded": 5
+  },
+  "unrealCompile": "USER_LOG_CONFIRMED_EDITOR_BUILD",
+  "editorAssetImport": "USER_LOG_CONFIRMED_SOURCE_IMPORT_AND_SAVE",
+  "actualGraphicsViews": [],
+  "newPlayableBuild": null,
+  "newWindowsZip": null,
+  "newGameUrl": null,
+  "firstPlayMinutesMeasured": null,
+  "blockedBy": [
+    "No connected Unreal/GPU/Windows PC execution environment",
+    "No approved complete adult/infant/child characters, period wardrobe and animation",
+    "No complete period birth/temple environment",
+    "No actual benchmark/play/render evidence"
+  ],
+  "notImplemented": [
+    "new title and Joseph playable pawn",
+    "opening/scene playback wiring",
+    "new game scene flow",
+    "applied sound/camera/quality settings adapters",
+    "new package/cook activation",
+    "public media route or per-user saves"
+  ],
+  "stagedSavePolicy": "WordJourney_v1 on the single test host only; account/per-user save separation is not implemented.",
+  "ci": {
+    "testedCommit": "26bdb1f7c93e46934e1f2c17808f4856f196d740",
+    "sourceChecks": {
+      "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41663406182",
+      "conclusion": "success"
+    },
+    "windowsLauncher": {
+      "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41663406136",
+      "conclusion": "success"
+    },
+    "scope": "Portable contracts and actual Windows launcher fixtures, including non-exception native error logging and READY JSON with native exit 1. No Unreal/GPU execution on CI."
+  },
+  "userReportedArtPreparation": {
+    "sourceCommit": "bb928a4ca5436f5ccbac8217a09ee366d6216d28",
+    "stampUtc": "2026-11-02T13:39:42Z",
+    "downloadCompleted": true,
+    "preparationCompleted": true,
+    "defaultProjectsFolderCandidateFiles": 0,
+    "scope": "Only the default Documents/Unreal Projects inventory; not a full-PC asset search. This log does not establish installed samples or Unreal import."
+  },
+  "userWindowsImportEvidence": "Docs/PathOfDawnUnreal/Evidence/Rebuild/windows-source-import-f7da4aa.json",
+  "userReportedSampleDownload": {
+    "reportedDownloaded": true,
+    "nativeAssetInspection": "USER_REPORT_CONFIRMED_REGISTRY_AND_LIMITED_LOAD",
+    "visualAndRetargetReview": "NOT_RUN",
+    "reportUploaded": true,
+    "nativeKellanActorAssembly": "APPEARANCE_ACTOR_COMPONENTS_LOADED_PLAYER_BINDING_UNVERIFIED"
+  },
+  "movementReview": {
+    "previousNativeAttempt": "READY_REPORT_BUT_NATIVE_EXIT_1_WRONG_TYPE_BLUEPRINT_LOAD",
+    "nativeSourceMotionsValidated": 4,
+    "previousCandidateFilter": "Appearance default object was not Character; only name-filtered Blueprint candidates were inspected",
+    "correctedNativeExecution": "NOT_RUN",
+    "automaticKellanBinding": "UNVERIFIED",
+    "sourceEditorReview": "IMPLEMENTED_PIE_PATH_NATIVE_EXECUTION_PENDING",
+    "rootCause": "Blueprint-specific native loader was used on non-Blueprint redirect targets; native errors occurred without Python exceptions"
+  }
+}

@@ -1,0 +1,329 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-11-02T05:11:23.590504+00:00",
+  "source_scope": "Original Poly Haven CC0 files, acquired without account or payment",
+  "quality_gate": "BLOCKED: no Unreal import/render verification; required people, animation and complete architecture are not supplied by these assets.",
+  "provenance_files": [
+    {
+      "path": "provenance/license-review.json",
+      "source_url": "https://polyhaven.com/license",
+      "bytes": 435,
+      "sha256": "e4a11ddaa2afbfe1873643981531a0c65a4da724e486403156238c9199748423"
+    },
+    {
+      "path": "provenance/stone_wall_05.files.json",
+      "source_url": "https://api.polyhaven.com/files/stone_wall_05",
+      "bytes": 27759,
+      "sha256": "cbef81030a043ef8051e920d2806f72bf4186f48f7725418140f3a08ca25241f"
+    },
+    {
+      "path": "provenance/stone_wall_05.info.json",
+      "source_url": "https://api.polyhaven.com/info/stone_wall_05",
+      "bytes": 975,
+      "sha256": "0df14a48cac1240fdc422d09671a158d68c003cbd9da56a449e29757d7253abf"
+    },
+    {
+      "path": "provenance/brown_mud_dry.files.json",
+      "source_url": "https://api.polyhaven.com/files/brown_mud_dry",
+      "bytes": 30323,
+      "sha256": "13e14f4e84d4c83d8536416fa8229c2c5efdad75250ea7f7cb490e565a4bad70"
+    },
+    {
+      "path": "provenance/brown_mud_dry.info.json",
+      "source_url": "https://api.polyhaven.com/info/brown_mud_dry",
+      "bytes": 918,
+      "sha256": "f167341ef7bc0f4203c083eb485d53b8463e20729a262585c61d66ad36710622"
+    },
+    {
+      "path": "provenance/rough_wood.files.json",
+      "source_url": "https://api.polyhaven.com/files/rough_wood",
+      "bytes": 29159,
+      "sha256": "33d4cd8061a14864c35efbc73a5bc1d165130e6f1ff928b098f9bb1c877c07a2"
+    },
+    {
+      "path": "provenance/rough_wood.info.json",
+      "source_url": "https://api.polyhaven.com/info/rough_wood",
+      "bytes": 914,
+      "sha256": "afe4eaad96f846e1f9b0a0b57aa8b95112f04b45a9123f3e9d59e2ec7f96f481"
+    },
+    {
+      "path": "provenance/ceramic_pot.files.json",
+      "source_url": "https://api.polyhaven.com/files/ceramic_pot",
+      "bytes": 21745,
+      "sha256": "f55b85f6f25953728993d86a49546cfc05c48731c6b60b0c55efadea86bd54c2"
+    },
+    {
+      "path": "provenance/ceramic_pot.info.json",
+      "source_url": "https://api.polyhaven.com/info/ceramic_pot",
+      "bytes": 1025,
+      "sha256": "196b996be873895a29b1ccb25396473cb1d3dc9ac71d7b5991765ed2ebe2b81f"
+    }
+  ],
+  "assets": [
+    {
+      "id": "stone_wall_05",
+      "kind": "pbr_material",
+      "name": "Stone Wall 05",
+      "usage": "석조 벽면 후보",
+      "source_url": "https://polyhaven.com/a/stone_wall_05",
+      "license": "CC0-1.0",
+      "license_url": "https://polyhaven.com/license",
+      "license_text_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "authors": {
+        "Charlotte Baglioni": "All"
+      },
+      "source_api": "https://api.polyhaven.com/files/stone_wall_05",
+      "metadata_path": "provenance/stone_wall_05.files.json",
+      "files": [
+        {
+          "path": "stone_wall_05/stone_wall_05_diff_2k.jpg",
+          "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/stone_wall_05/stone_wall_05_diff_2k.jpg",
+          "bytes": 3504038,
+          "sha256": "d3680c5ef2657aead18f9bfab93994555b8f05de4f4fecba18194cbe3a116b87",
+          "role": "base_color",
+          "md5": "a68442d9069165f1d640944a88ed9603",
+          "color_space": "sRGB",
+          "image": {
+            "width": 2048,
+            "height": 2048,
+            "format": "JPEG"
+          }
+        },
+        {
+          "path": "stone_wall_05/stone_wall_05_nor_dx_2k.png",
+          "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/stone_wall_05/stone_wall_05_nor_dx_2k.png",
+          "bytes": 23440260,
+          "sha256": "2461853950a9d33899bc74e5b1d63e2d65a4a1a6159347e18d3b6aa37ca2dbce",
+          "role": "normal",
+          "md5": "b8146b686742bc3a61166d1d8ed20c91",
+          "color_space": "linear",
+          "image": {
+            "width": 2048,
+            "height": 2048,
+            "format": "PNG"
+          },
+          "normal_convention": "DirectX"
+        },
+        {
+          "path": "stone_wall_05/stone_wall_05_rough_2k.jpg",
+          "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/stone_wall_05/stone_wall_05_rough_2k.jpg",
+          "bytes": 1122076,
+          "sha256": "aead8f5c535fc22b1a3c46aa50679c43b37f279f7abce482115551b0f58a5b0e",
+          "role": "roughness",
+          "md5": "b3533f7a6c909a5590776c9e1d6ccb66",
+          "color_space": "linear",
+          "image": {
+            "width": 2048,
+            "height": 2048,
+            "format": "JPEG"
+          }
+        }
+      ],
+      "status": "downloaded_source_verified",
+      "unreal_import_verified": false,
+      "scene_applied": false,
+      "historical_accuracy_verified": false
+    },
+    {
+      "id": "brown_mud_dry",
+      "kind": "pbr_material",
+      "name": "Brown Mud Dry",
+      "usage": "작은 마당의 흙바닥 후보",
+      "source_url": "https://polyhaven.com/a/brown_mud_dry",
+      "license": "CC0-1.0",
+      "license_url": "https://polyhaven.com/license",
+      "license_text_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "source_api": "https://api.polyhaven.com/files/brown_mud_dry",
+      "metadata_path": "provenance/brown_mud_dry.files.json",
+      "files": [
+        {
+          "path": "brown_mud_dry/brown_mud_dry_diff_2k.jpg",
+          "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/brown_mud_dry/brown_mud_dry_diff_2k.jpg",
+          "bytes": 3519711,
+          "sha256": "5f567f61a7e139101441a1209e9c174a4f92dce489b28bb168f6bfd0ca07e411",
+          "role": "base_color",
+          "md5": "7c062619553df423ce2085c48b2ef3c8",
+          "color_space": "sRGB",
+          "image": {
+            "width": 2048,
+            "height": 2048,
+            "format": "JPEG"
+          }
+        },
+        {
+          "path": "brown_mud_dry/brown_mud_dry_nor_dx_2k.png",
+          "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/brown_mud_dry/brown_mud_dry_nor_dx_2k.png",
+          "bytes": 9577780,
+          "sha256": "49ec19b0ec283e4d4dc2f0e2499df2d297a4b7f61c39a6a6f2db765ea57569ee",
+          "role": "normal",
+          "md5": "4fd56d45453a6bda89e72eb6e20c4308",
+          "color_space": "linear",
+          "image": {
+            "width": 2048,
+            "height": 2048,
+            "format": "PNG"
+          },
+          "normal_convention": "DirectX"
+        },
+        {
+          "path": "brown_mud_dry/brown_mud_dry_rough_2k.jpg",
+          "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/brown_mud_dry/brown_mud_dry_rough_2k.jpg",
+          "bytes": 1554454,
+          "sha256": "f4038e84a4b3b9b7efa95d63d66bbdca27edddb2de9b496084cf140b18d75923",
+          "role": "roughness",
+          "md5": "29c7d9215dae069ecf9b294fe444d0e5",
+          "color_space": "linear",
+          "image": {
+            "width": 2048,
+            "height": 2048,
+            "format": "JPEG"
+          }
+        }
+      ],
+      "status": "downloaded_source_verified",
+      "unreal_import_verified": false,
+      "scene_applied": false,
+      "historical_accuracy_verified": false
+    },
+    {
+      "id": "rough_wood",
+      "kind": "pbr_material",
+      "name": "Rough Wood",
+      "usage": "오래된 목재 표면 후보",
+      "source_url": "https://polyhaven.com/a/rough_wood",
+      "license": "CC0-1.0",
+      "license_url": "https://polyhaven.com/license",
+      "license_text_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "source_api": "https://api.polyhaven.com/files/rough_wood",
+      "metadata_path": "provenance/rough_wood.files.json",
+      "files": [
+        {
+          "path": "rough_wood/rough_wood_diff_2k.jpg",
+          "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rough_wood/rough_wood_diff_2k.jpg",
+          "bytes": 2223327,
+          "sha256": "0bd2b3195db9b54d55aa0f842801220ec5e1d389f5fc1e670b378bdaca3f8e7b",
+          "role": "base_color",
+          "md5": "f5f9c55696f047ceaa49dc97c5aa5526",
+          "color_space": "sRGB",
+          "image": {
+            "width": 2048,
+            "height": 2048,
+            "format": "JPEG"
+          }
+        },
+        {
+          "path": "rough_wood/rough_wood_nor_dx_2k.png",
+          "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/rough_wood/rough_wood_nor_dx_2k.png",
+          "bytes": 6604059,
+          "sha256": "e0bcd917d992b59995ed6534bc909654d7d63ba91d6752f743fa72be1e0c80ef",
+          "role": "normal",
+          "md5": "f3c067f0bb5c86ac5f3947b481a829e6",
+          "color_space": "linear",
+          "image": {
+            "width": 2048,
+            "height": 2048,
+            "format": "PNG"
+          },
+          "normal_convention": "DirectX"
+        },
+        {
+          "path": "rough_wood/rough_wood_rough_2k.jpg",
+          "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rough_wood/rough_wood_rough_2k.jpg",
+          "bytes": 810338,
+          "sha256": "38343cb062e7fadcda513ded0b17271c9d7f1da56765d03508dc84c8ff1bd475",
+          "role": "roughness",
+          "md5": "832d6d549a8e76c16b9af2586f429d6c",
+          "color_space": "linear",
+          "image": {
+            "width": 2048,
+            "height": 2048,
+            "format": "JPEG"
+          }
+        }
+      ],
+      "status": "downloaded_source_verified",
+      "unreal_import_verified": false,
+      "scene_applied": false,
+      "historical_accuracy_verified": false
+    },
+    {
+      "id": "ceramic_pot",
+      "kind": "static_mesh",
+      "name": "Ceramic Pot",
+      "usage": "도기 소품 후보; 시대 고증 확정 아님",
+      "source_url": "https://polyhaven.com/a/ceramic_pot",
+      "license": "CC0-1.0",
+      "license_url": "https://polyhaven.com/license",
+      "license_text_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "authors": {
+        "Aron Łyczek": "All"
+      },
+      "source_api": "https://api.polyhaven.com/files/ceramic_pot",
+      "metadata_path": "provenance/ceramic_pot.files.json",
+      "files": [
+        {
+          "path": "ceramic_pot/ceramic_pot_2k.fbx",
+          "source_url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/2k/ceramic_pot/ceramic_pot_2k.fbx",
+          "bytes": 121228,
+          "sha256": "14e799f5a23ed1d15726996c544a4444e7649aff91479e0b37c2bcf540d26ff5",
+          "role": "mesh",
+          "md5": "9e069ca07b732df75006de0d20147a1e",
+          "material_assignment": "Bind downloaded PBR maps explicitly; provider FBX may reference omitted EXR siblings."
+        },
+        {
+          "path": "ceramic_pot/ceramic_pot_diff_2k.jpg",
+          "source_url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/ceramic_pot/ceramic_pot_diff_2k.jpg",
+          "bytes": 2424934,
+          "sha256": "2b1cd6e6b9dd5b7b1c3f0afaabcb89d7098b760530d24cf4632848dd06ce1188",
+          "role": "base_color",
+          "md5": "511a286f6b85d97a1e243323c4f862a4",
+          "color_space": "sRGB",
+          "image": {
+            "width": 2048,
+            "height": 2048,
+            "format": "JPEG"
+          }
+        },
+        {
+          "path": "ceramic_pot/ceramic_pot_nor_dx_2k.png",
+          "source_url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/ceramic_pot/ceramic_pot_nor_dx_2k.png",
+          "bytes": 4898861,
+          "sha256": "28dd6e76695798662364a57fa3af69d486fa09bc8e31007bdcbf91476156224c",
+          "role": "normal",
+          "md5": "3785fa0a38c64eacbaada2f3637cca04",
+          "color_space": "linear",
+          "image": {
+            "width": 2048,
+            "height": 2048,
+            "format": "PNG"
+          },
+          "normal_convention": "DirectX"
+        },
+        {
+          "path": "ceramic_pot/ceramic_pot_rough_2k.jpg",
+          "source_url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/ceramic_pot/ceramic_pot_rough_2k.jpg",
+          "bytes": 1825756,
+          "sha256": "c4870271361baaba9aa1c9a77de690564e1a25835169ea7a52bd41db97428141",
+          "role": "roughness",
+          "md5": "65f33c701567a072c6b198d69b0decc1",
+          "color_space": "linear",
+          "image": {
+            "width": 2048,
+            "height": 2048,
+            "format": "JPEG"
+          }
+        }
+      ],
+      "status": "downloaded_source_verified",
+      "unreal_import_verified": false,
+      "scene_applied": false,
+      "historical_accuracy_verified": false
+    }
+  ]
+}

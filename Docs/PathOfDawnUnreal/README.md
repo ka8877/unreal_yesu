@@ -1,3 +1,9 @@
+# 2026-11-02 재구축 작업
+
+새 요청인 **말씀의 여정 / 누가복음 2장**은 [재구축 현황과 실행 준비](Rebuild/README.md)를 따른다. 기존 운영 버전은 유지하며 새 그래픽 기준 장면은 에셋·Unreal 실행 환경 부족으로 BLOCKED다. 아래 안내는 기존 갈릴리 데모에 해당한다.
+
+---
+
 # 새벽의 길: 갈릴리의 첫 아침
 
 수동 ZIP 대신 GitHub에서 자동 갱신하려면 [GitHubUpdates.md](GitHubUpdates.md)와 저장소 [첫 실행 안내](../../README.md)를 따른다. 한 번 준비한 뒤 `C:\PathOfDawn\Play-in-Browser.cmd`로 최신 소스를 받아 로컬 Windows 빌드와 브라우저 후보 테스트를 시작할 수 있다. 공개 인터넷용 게임 주소와 현재 버전의 Windows 실행 검증은 아직 없다.

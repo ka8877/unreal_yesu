@@ -1,0 +1,6 @@
+{
+  "scope": "Actual OTF cmap vs new journal JSON and UMG source; not Unreal font import/shaping/render",
+  "uniqueKoreanCharacters": 235,
+  "missing": [],
+  "passed": true
+}

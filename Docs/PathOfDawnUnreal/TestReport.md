@@ -1,3 +1,19 @@
+# 말씀의 여정 재구축 — 2026-11-02
+
+새 요청의 [상태와 재현 명령](Rebuild/README.md), [소스 검사 로그](Evidence/Rebuild/journal-core.log), [에셋 준비 상태](Evidence/Rebuild/readiness.json)를 별도로 기록한다. C++ 기록책 132 assertions, 서사 오류 주입 24개, 환경 원본 변조 7개, 에셋 정책/임포트/Python 격리/샘플 조사·이동 검토 계약 39개 검사를 통과했다. 기존 갈릴리 source-only 코어 479 assertions도 통과했다. 새 기록책 JSON/UMG 소스의 한글 235종은 실제 OTF에 모두 존재한다. **새 Editor 컴파일과 환경 원본 임포트·저장은 사용자 Windows 로그로 확인했다. USaveGame 동작·실제 UMG·3종 그래픽 캡처·새 패키지·8–12분 플레이·브라우저 미디어·공개 접속은 미실행**이다. 전체 장면 준비 검사는 누락된 실제 인물·애니메이션·건축 에셋 때문에 BLOCKED/종료 코드 2로 끝나며, 원본 임포트의 성공으로 전체 게이트를 통과시키지 않는다. 아래 이전 데모 기록과 혼동하지 않는다.
+
+실제 사용자 명령 `Import-WordJourney-Sources.cmd -EngineRoot ...UE_5.8`의 `f7da4aa9aa85` 로그에서 Editor 빌드 작업이 성공했고 Journey C++/테스트 클래스와 DLL이 컴파일·링크됐다. 12개 2K 텍스처·4개 재질·도기 메시를 처리한 후 17개 에셋 검증 단계와 래퍼의 정상 반환을 확인했다. 별도 보고서 JSON은 아직 제공받지 않았으며, 성공 상태는 허용 상태를 검사한 마지막 `Editor report:` 출력과 코드로 교차 확인했다. [근거와 미해결 경고](Evidence/Rebuild/windows-source-import-f7da4aa.json). Automation 테스트는 컴파일됐지만 이 실행에서는 명시적으로 실행하지 않았다.
+
+샘플 조사 도구는 Windows PowerShell 5.1에서 공백·한글 경로, 원본 설명자 보존, 임시 파일 정리, 정상/부분/실패/시간 초과 종료 코드, 버전 불일치와 변경된 Python 파일 거절 등 17개 검사를 통과했다. 모의 Editor 실행 파일로 실행기를 검증했으며 실제 샘플이나 그래픽 검증이 아니다. 첫 실행에서 발견한 PowerShell 5.1 종료 코드 유실은 native handle 유지로 수정했고, 실패를 의도한 검사의 마지막 종료 코드가 CI에 남던 검증 스크립트도 수정했다. [최종 CI](https://github.com/ka8877/unreal_yesu/actions/runs/41472781994), [구조화 결과](Evidence/Rebuild/sample-inspector-tests.json). 이후 실제 native 조사 보고서를 받아 레지스트리/제한된 로드를 확인했다. Kellan 얼굴·몸의 Character 조립과 렌더링은 첫 로드 대상에 없었다. 보고서 원본은 비공개로 보관한다.
+
+이동 검토 도구의 계약 검사 7개를 추가해 총 34개 소스 검사를 통과했다. Windows PowerShell 5.1에서 별도 준비/재로드 프로세스, 정상 RHI 실행 인수, 부모 반환 후 게임 프로세스 유지, 한글·공백 경로의 바로가기 재실행, 원본/사용자 수정 보존과 오류 전파를 포함한 20개 실행기 fixture 검사도 통과했다. 이 과정에서 5.1의 null 백업 경로 바인딩과 cmd→5.1의 모듈 경로 상속, 바로가기의 실패 종료 코드 보존을 수정했다. [최종 CI](https://github.com/ka8877/unreal_yesu/actions/runs/41478015954), [구조화 결과](Evidence/Rebuild/movement-review-tests.json). 새 GameMode의 실제 Unreal 생성·재로드·Kellan 조립·화면과 입력은 사용자 PC에서 다음 실행으로 확인할 항목이며, 기존 인벤토리 성공이나 CI fixture 통과로 대신하지 않는다.
+
+후속 사용자 준비 보고서는 실제 대기·걷기·멈춤·회전 4종의 정상 로드·비가산 설정·동일 소스 스켈레톤을 확인한 뒤 외형 Actor/플레이어 Character 검색에서 중단됐다. 새 에셋 생성·저장은 없었다. 이름으로 후보를 제한하던 조건을 제거하고 리다이렉터, 공용 바디 참조와 실제 클래스를 조사하도록 수정했다. 자동 연결이 미구성일 때는 원본 Editor/PIE 선택기로 검토하며, 자동 연결·그래픽 승인으로 계산하지 않는다. 수정된 native 경로는 아직 미실행이다. 수정 회귀를 포함한 총 37개 소스 검사와 Windows 이동 검토 실행기 24개 검사가 통과했다. [최종 CI](https://github.com/ka8877/unreal_yesu/actions/runs/41659480383), [구조화 결과](Evidence/Rebuild/movement-discovery-fix-tests.json).
+
+2026-11-04 KST 후속 원인 확인: READY 보고서와 native 종료 코드 1이 함께 발생했다. 사용자 오류 로그는 `LoadBlueprintClass failed: The asset is not a Blueprint.`를 확인했고, 보고서에는 생성 에셋 없이 외형 컴포넌트 조회가 기록됐다. 타입 검사 전 특화 로더 호출을 제거했다. 오류 로그만 남기고 None을 반환하는 native API 동작, READY+종료1의 준비/재로드 차단, 같은 JSON의 실제 오류 보존을 추가로 검사한다. 수정본 native 실행과 화면 검증은 미수행이다. 회귀 포함 소스 39개와 Windows 실행기 30개 검사, 이전/현재 함수의 native 오류 로그 계약 비교가 통과했다. [CI](https://github.com/ka8877/unreal_yesu/actions/runs/41663406182), [검사 범위](Evidence/Rebuild/movement-native-exit-fix-tests.json).
+
+---
+
 # 검증 보고 — 2026-10-23
 
 **v7은 사용자 PC에서 실행됐다는 보고를 받았다. v8의 Unreal 컴파일·가져오기·게임 실행·브라우저 플레이는 아직 미검증이다.** 사용자는 v7의 인물·환경·화면 구성 품질을 문제로 지적했다. 현재 클라우드에는 엔진/Windows 빌드 환경/GPU가 없으며 아래 기존 소스 검사와 사용자 실행 보고, v8 신규 검증을 구분한다.

@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "scope": "Original provider FBX parsed by Blender; not Unreal import/render or historical certification",
+  "blender_version": "4.3.2",
+  "mesh_objects": [
+    {
+      "name": "ceramic_pot",
+      "vertices": 1794,
+      "triangles": 3592,
+      "uv_layers": 1,
+      "dimensions_m": [
+        0.65625,
+        0.50175,
+        0.37167
+      ],
+      "materials": [
+        "ceramic_pot"
+      ]
+    }
+  ],
+  "total_triangles": 3592,
+  "original_file": "ceramic_pot/ceramic_pot_2k.fbx",
+  "original_sha256": "14e799f5a23ed1d15726996c544a4444e7649aff91479e0b37c2bcf540d26ff5",
+  "material_note": "Provider EXR file links were not bundled; use manifest base_color/DirectX normal/roughness textures with explicit material assignment."
+}

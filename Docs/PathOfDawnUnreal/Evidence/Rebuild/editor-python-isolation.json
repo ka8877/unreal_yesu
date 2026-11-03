@@ -1,0 +1,32 @@
+{
+  "checkedUtc": "2026-11-02T13:58:27.610884+00:00",
+  "cause": "EditorWork called Pillow validation inside Unreal embedded Python. Pillow in the host authoring Python does not install it in Unreal.",
+  "fix": "Editor requests full validation via a short-lived authoring Python subprocess. Engine Python imports only stdlib and the local policy module. No engine pip install.",
+  "reproduction": "A real python -S interpreter cannot import PIL and the old in-process validator rejects the genuine PNG/JPG sources. From that same isolated interpreter, the authoring subprocess verifies all real sources.",
+  "tests": [
+    "No-Pillow editor environment with real separate authoring Python",
+    "Malformed image with a matching SHA is still rejected",
+    "Missing authoring Python blocks before process creation",
+    "Timed-out validator cleans temporary files",
+    "Existing blocked bindings do not load/create a map"
+  ],
+  "portableContractsPassed": 21,
+  "unrealCompile": "NOT_RUN",
+  "actualEditorImport": "NOT_RUN",
+  "nativeGraphicalEvidence": [],
+  "ci": {
+    "testedCommit": "9ebf11dedfbbd4aefd47d2fc365a1ef429d40de8",
+    "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41458308379",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "name": "windows-editor-dependencies",
+        "conclusion": "success"
+      },
+      {
+        "name": "source-only",
+        "conclusion": "success"
+      }
+    ]
+  }
+}
