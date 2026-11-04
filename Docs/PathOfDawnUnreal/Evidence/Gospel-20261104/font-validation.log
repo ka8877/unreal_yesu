@@ -1,0 +1,1 @@
+{"test": "Gospel source Korean glyph coverage", "files": 7, "uniqueKoreanCharacters": 437, "missing": [], "passed": true, "unverified": ["Editor font import", "UMG layout", "actual rendering"]}

@@ -1,0 +1,2 @@
+# The evaluated export is checked as deterministic UTF-8/LF bytes.
+*.json text eol=lf

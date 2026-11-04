@@ -1,4 +1,8 @@
-# 새벽의 길: 갈릴리의 첫 아침
+# 말씀을 따라 예수님의 길 · Unreal 3D
+
+2026-11-04: Unity의 「말씀을 따라 예수님의 길」과 스토리·게임성을 공유하는 **2D/HD-2D Unity판 + 영화 같은 실사·반실사 3D Unreal판**을 별도로 개발·배포한다. Unity 원본에서 23목표·19본문·81이야기 화면을 내보냈고, 새 진행 코어·Unreal 런타임/UI·성전 개발용 장면 생성기·별도 빌드/패키지 도구를 소스로 구현했다. **새 Unreal 실행 파일·최종 아트/BGM·테스트 URL은 아직 없다.** [구현 상태와 Windows 실행 절차](Docs/PathOfDawnUnreal/GospelImplementation.md), [제작·URL 테스트 방향](Docs/PathOfDawnUnreal/DualEditionPlan.md)을 먼저 확인한다.
+
+## 보존하는 갈릴리 v8 프로토타입
 
 Unreal Engine 5.8 기반 한국어 3인칭 서사 어드벤처의 제작 소스입니다. 최신 원화·인물·호숫가·타이틀 UI 개선분(v8)을 포함합니다. 플레이 시간 목표는 약 5분이며, 현재 버전의 실제 플레이 시간과 Windows 빌드·스트리밍은 아직 검증되지 않았습니다.
 

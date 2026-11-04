@@ -4,6 +4,8 @@ Games/PathOfDawnUnreal/Intermediate/
 Games/PathOfDawnUnreal/DerivedDataCache/
 Games/PathOfDawnUnreal/Saved/
 Builds/PathOfDawnUnreal/Windows/
+Builds/PathOfDawnUnreal/GospelWindows/
+Builds/PathOfDawnUnreal/GospelReleases/
 Builds/PathOfDawnUnreal/*.zip
 Builds/PathOfDawnUnreal/*.zip.sha256
 Builds/PathOfDawnUnreal/*verification*.json
@@ -19,3 +21,4 @@ SourceArt/PathOfDawnUnreal/VisualV8/Models/*.blend1
 Docs/PathOfDawnUnreal/Evidence/start-here-*
 Docs/PathOfDawnUnreal/Evidence/setup-pc-*
 Docs/PathOfDawnUnreal/Evidence/github-delivery-local.json
+Docs/PathOfDawnUnreal/Evidence/GospelHost/

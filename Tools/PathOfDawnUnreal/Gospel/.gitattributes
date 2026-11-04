@@ -1,0 +1,5 @@
+# Keep the immutable source snapshot byte-exact on Windows checkouts too.
+*.cs text eol=lf
+*.csproj text eol=lf
+*.json text eol=lf
+*.Config text eol=lf
