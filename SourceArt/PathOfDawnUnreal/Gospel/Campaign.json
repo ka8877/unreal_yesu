@@ -1,0 +1,1415 @@
+{
+  "SchemaVersion": 1,
+  "CampaignId": "gospel-pilgrimage",
+  "ContentVersion": 1,
+  "Title": "말씀을 따라 예수님의 길",
+  "ScopeNote": "탄생 · 열두 살 성전 방문 · 요단강의 세례. 이후의 사역과 십자가·부활·승천은 다음 이야기입니다. 복음서에 기록된 사건을 따라가는 학습 여정입니다. 지형·이동 거리·길 안내 대화는 게임을 위한 극화이며, 기록되지 않은 예수님의 발언을 성경 말씀으로 만들지 않습니다.",
+  "Source": {
+    "Repository": "ka8877/firstgame",
+    "Commit": "808d8d1e1eeed908d8925398f80c7173653ef364"
+  },
+  "Readings": [
+    {
+      "Id": "road-bethlehem",
+      "Title": "베들레헴으로 가는 길",
+      "Reference": "누가복음 2:1–5",
+      "Text": "1 이때에 가이사 아구스도가 영을 내려 천하로 다 호적하라 하였으니\n2 이 호적은 구레뇨가 수리아 총독 되었을 때에 첫번 한것이라\n3 모든 사람이 호적하러 각각 고향으로 돌아가매\n4 요셉도 다윗의 집 족속인 고로 갈릴리 나사렛 동네에서 유대를 향하여 베들레헴이라 하는 다윗의 동네로\n5 그 정혼한 마리아와 함께 호적하러 올라가니 마리아가 이미 잉태되었더라",
+      "Source": "성경전서 개역한글판 · 대한성서공회 · https://www.bskorea.or.kr/bible/korbibReadpage.php?version=HAN&book=luk&chap=2",
+      "Context": "본문을 바탕으로 한 학습용 극화"
+    },
+    {
+      "Id": "birth-manger",
+      "Title": "베들레헴의 탄생",
+      "Reference": "누가복음 2:6–7",
+      "Text": "6 거기 있을 그 때에 해산할 날이 차서\n7 맏아들을 낳아 강보로 싸서 구유에 뉘었으니 이는 사관에 있을 곳이 없음이러라",
+      "Source": "성경전서 개역한글판 · 대한성서공회 · https://www.bskorea.or.kr/bible/korbibReadpage.php?version=HAN&book=luk&chap=2",
+      "Context": "요셉과 마리아는 호적하러 나사렛에서 베들레헴으로 올라갑니다. 예수님의 탄생을 누가복음의 기록으로 따라갑니다."
+    },
+    {
+      "Id": "night-shepherds",
+      "Title": "밤 들판의 목자들",
+      "Reference": "누가복음 2:8–9",
+      "Text": "8 그 지경에 목자들이 밖에서 밤에 자기 양떼를 지키더니\n9 주의 사자가 곁에 서고 주의 영광이 저희를 두루 비취매 크게 무서워하는지라",
+      "Source": "성경전서 개역한글판 · 대한성서공회 · https://www.bskorea.or.kr/bible/korbibReadpage.php?version=HAN&book=luk&chap=2",
+      "Context": "본문을 바탕으로 한 학습용 극화"
+    },
+    {
+      "Id": "birth-good-news",
+      "Title": "큰 기쁨의 소식",
+      "Reference": "누가복음 2:10–11",
+      "Text": "10 천사가 이르되 무서워 말라 보라 내가 온 백성에게 미칠 큰 기쁨의 좋은 소식을 너희에게 전하노라\n11 오늘날 다윗의 동네에 너희를 위하여 구주가 나셨으니 곧 그리스도 주시니라",
+      "Source": "성경전서 개역한글판 · 대한성서공회 · https://www.bskorea.or.kr/bible/korbibReadpage.php?version=HAN&book=luk&chap=2",
+      "Context": "목자들에게 탄생의 소식이 전해집니다. 구유의 아기를 찾아가는 기록은 누가복음 2:8–18에서 함께 읽을 수 있습니다."
+    },
+    {
+      "Id": "manger-witnesses",
+      "Title": "듣고 보고 전한 사람들",
+      "Reference": "누가복음 2:15–18",
+      "Text": "15 천사들이 떠나 하늘로 올라가니 목자가 서로 말하되 이제 베들레헴까지 가서 주께서 우리에게 알리신바 이 이루어진 일을 보자 하고\n16 빨리 가서 마리아와 요셉과 구유에 누인 아기를 찾아서\n17 보고 천사가 자기들에게 이 아기에 대하여 말한 것을 고하니\n18 듣는 자가 다 목자의 말하는 일을 기이히 여기되",
+      "Source": "성경전서 개역한글판 · 대한성서공회 · https://www.bskorea.or.kr/bible/korbibReadpage.php?version=HAN&book=luk&chap=2",
+      "Context": "본문을 바탕으로 한 학습용 극화"
+    },
+    {
+      "Id": "birth-remembered",
+      "Title": "마음에 간직한 말씀",
+      "Reference": "누가복음 2:19–20",
+      "Text": "19 마리아는 이 모든 말을 마음에 지키어 생각하니라\n20 목자가 자기들에게 이르던 바와 같이 듣고 본 그 모든 것을 인하여 하나님께 영광을 돌리고 찬송하며 돌아가니라",
+      "Source": "성경전서 개역한글판 · 대한성서공회 · https://www.bskorea.or.kr/bible/korbibReadpage.php?version=HAN&book=luk&chap=2",
+      "Context": "탄생의 기록을 마치고 열두 살 예수님의 성전 방문으로 넘어갑니다. 이 구간에서 빠진 시간은 누가복음 2:21–40의 할례·성전 봉헌·나사렛에서의 성장 기록으로 연결됩니다."
+    },
+    {
+      "Id": "name-jesus",
+      "Title": "예수라는 이름",
+      "Reference": "누가복음 2:21",
+      "Text": "21 할례할 팔일이 되매 그 이름을 예수라 하니 곧 수태하기 전에 천사의 일컬은 바러라",
+      "Source": "성경전서 개역한글판 · 대한성서공회 · https://www.bskorea.or.kr/bible/korbibReadpage.php?version=HAN&book=luk&chap=2",
+      "Context": "본문을 바탕으로 한 학습용 극화"
+    },
+    {
+      "Id": "temple-dedication",
+      "Title": "아기를 데리고 성전으로",
+      "Reference": "누가복음 2:22–24",
+      "Text": "22 모세의 법대로 결례의 날이 차매 아기를 데리고 예루살렘에 올라가니\n23 이는 주의 율법에 쓴바 첫 태에 처음 난 남자마다 주의 거룩한 자라 하리라 한대로 아기를 주께 드리고\n24 또 주의 율법에 말씀하신대로 비둘기 한 쌍이나 혹 어린 반구 둘로 제사하려함이더라",
+      "Source": "성경전서 개역한글판 · 대한성서공회 · https://www.bskorea.or.kr/bible/korbibReadpage.php?version=HAN&book=luk&chap=2",
+      "Context": "본문을 바탕으로 한 학습용 극화"
+    },
+    {
+      "Id": "simeon-peace",
+      "Title": "시므온이 품에 안고",
+      "Reference": "누가복음 2:28–32",
+      "Text": "28 시므온이 아기를 안고 하나님을 찬송하여 가로되\n29 주재여 이제는 말씀하신대로 종을 평안히 놓아 주시는도다\n30 내 눈이 주의 구원을 보았사오니\n31 이는 만민 앞에 예비하신 것이요\n32 이방을 비추는 빛이요 주의 백성 이스라엘의 영광이니이다 하니",
+      "Source": "성경전서 개역한글판 · 대한성서공회 · https://www.bskorea.or.kr/bible/korbibReadpage.php?version=HAN&book=luk&chap=2",
+      "Context": "본문을 바탕으로 한 학습용 극화"
+    },
+    {
+      "Id": "anna-thanksgiving",
+      "Title": "안나의 감사",
+      "Reference": "누가복음 2:36–38",
+      "Text": "36 또 아셀 지파 바누엘의 딸 안나라 하는 선지자가 있어 나이 매우 늙었더라 그가 출가한 후 일곱 해 동안 남편과 함께 살다가\n37 과부 된지 팔십 사년이라 이 사람이 성전을 떠나지 아니하고 주야에 금식하며 기도함으로 섬기더니\n38 마침 이 때에 나아와서 하나님께 감사하고 예루살렘의 구속됨을 바라는 모든 사람에게 이 아기에 대하여 말하니라",
+      "Source": "성경전서 개역한글판 · 대한성서공회 · https://www.bskorea.or.kr/bible/korbibReadpage.php?version=HAN&book=luk&chap=2",
+      "Context": "본문을 바탕으로 한 학습용 극화"
+    },
+    {
+      "Id": "nazareth-growth",
+      "Title": "나사렛에서 자라시다",
+      "Reference": "누가복음 2:39–40",
+      "Text": "39 주의 율법을 좇아 모든 일을 필하고 갈릴리로 돌아가 본 동네 나사렛에 이르니라\n40 아기가 자라며 강하여지고 지혜가 충족하며 하나님의 은혜가 그 위에 있더라",
+      "Source": "성경전서 개역한글판 · 대한성서공회 · https://www.bskorea.or.kr/bible/korbibReadpage.php?version=HAN&book=luk&chap=2",
+      "Context": "본문을 바탕으로 한 학습용 극화"
+    },
+    {
+      "Id": "temple-passover",
+      "Title": "유월절의 예루살렘",
+      "Reference": "누가복음 2:41–43",
+      "Text": "41 그 부모가 해마다 유월절을 당하면 예루살렘으로 가더니\n42 예수께서 열 두살 될 때에 저희가 이 절기의 전례를 좇아 올라갔다가\n43 그 날들을 마치고 돌아갈 때에 아이 예수는 예루살렘에 머무셨더라 그 부모는 이를 알지 못하고",
+      "Source": "성경전서 개역한글판 · 대한성서공회 · https://www.bskorea.or.kr/bible/korbibReadpage.php?version=HAN&book=luk&chap=2",
+      "Context": "열두 살 예수님은 유월절을 지키러 예루살렘에 올라오십니다. 성전 문으로 걸어가 이번 기록의 시작을 읽어 보세요."
+    },
+    {
+      "Id": "temple-teachers",
+      "Title": "선생들 가운데",
+      "Reference": "누가복음 2:46–47",
+      "Text": "46 사흘 후에 성전에서 만난즉 그가 선생들 중에 앉으사 저희에게 듣기도 하시며 묻기도 하시니\n47 듣는 자가 다 그 지혜와 대답을 기이히 여기더라",
+      "Source": "성경전서 개역한글판 · 대한성서공회 · https://www.bskorea.or.kr/bible/korbibReadpage.php?version=HAN&book=luk&chap=2",
+      "Context": "부모는 예수님을 찾다가 사흘 후 성전에서 만납니다. 예수님은 선생들 가운데 앉아 듣기도 하시고 묻기도 하십니다. 앞선 찾음의 기록은 누가복음 2:44–45에 나옵니다."
+    },
+    {
+      "Id": "temple-parents",
+      "Title": "내 아버지 집",
+      "Reference": "누가복음 2:48–50",
+      "Text": "48 그 부모가 보고 놀라며 그 모친은 가로되 아이야 어찌하여 우리에게 이렇게 하였느냐 보라 네 아버지와 내가 근심하여 너를 찾았노라\n49 예수께서 가라사대 어찌하여 나를 찾으셨나이까 내가 내 아버지 집에 있어야 될 줄을 알지 못하셨나이까 하시니\n50 양친이 그 하신 말씀을 깨닫지 못하더라",
+      "Source": "성경전서 개역한글판 · 대한성서공회 · https://www.bskorea.or.kr/bible/korbibReadpage.php?version=HAN&book=luk&chap=2",
+      "Context": "마리아는 근심하며 찾았던 마음을 전합니다. 예수님께서 말씀하신 내 아버지 집을 본문에서 살펴보세요."
+    },
+    {
+      "Id": "temple-nazareth",
+      "Title": "나사렛으로",
+      "Reference": "누가복음 2:51–52",
+      "Text": "51 예수께서 한가지로 내려가사 나사렛에 이르러 순종하여 받드시더라 그 모친은 이 모든 말을 마음에 두니라\n52 예수는 그 지혜와 그 키가 자라가며 하나님과 사람에게 더 사랑스러워 가시더라",
+      "Source": "성경전서 개역한글판 · 대한성서공회 · https://www.bskorea.or.kr/bible/korbibReadpage.php?version=HAN&book=luk&chap=2",
+      "Context": "예수님은 부모와 함께 나사렛으로 내려가십니다. 돌아가는 길에서 첫 여정을 마치고, 읽은 말씀을 기록에서 다시 살펴보세요."
+    },
+    {
+      "Id": "john-jordan",
+      "Title": "요단 부근의 요한",
+      "Reference": "누가복음 3:2–3",
+      "Text": "2 안나스와 가야바가 대제사장으로 있을 때에 하나님의 말씀이 빈 들에서 사가랴의 아들 요한에게 임한지라\n3 요한이 요단강 부근 각처에 와서 죄 사함을 얻게 하는 회개의 세례를 전파하니",
+      "Source": "성경전서 개역한글판 · 대한성서공회 · https://www.bskorea.or.kr/bible/korbibReadpage.php?version=HAN&book=luk&chap=3",
+      "Context": "요한의 회개 세례 사역을 전하는 누가복음의 기록."
+    },
+    {
+      "Id": "baptism-request",
+      "Title": "요한에게 세례를 받으려 하시다",
+      "Reference": "마태복음 3:13–15",
+      "Text": "13 이 때에 예수께서 갈릴리로서 요단강에 이르러 요한에게 세례를 받으려 하신대\n14 요한이 말려 가로되 내가 당신에게 세례를 받아야 할 터인데 당신이 내게로 오시나이까\n15 예수께서 대답하여 가라사대 이제 허락하라 우리가 이와 같이 하여 모든 의를 이루는 것이 합당하니라 하신대 이에 요한이 허락하는지라",
+      "Source": "성경전서 개역한글판 · 대한성서공회 · https://www.bskorea.or.kr/bible/korbibReadpage.php?version=HAN&book=mat&chap=3",
+      "Context": "예수님과 요한의 대화를 전하는 마태복음의 기록."
+    },
+    {
+      "Id": "baptism-water",
+      "Title": "세례 후 하늘의 음성",
+      "Reference": "마태복음 3:16–17",
+      "Text": "16 예수께서 세례를 받으시고 곧 물에서 올라 오실쌔 하늘이 열리고 하나님의 성령이 비둘기 같이 내려 자기 위에 임하심을 보시더니\n17 하늘로서 소리가 있어 말씀하시되 이는 내 사랑하는 아들이요 내 기뻐하는 자라 하시니라",
+      "Source": "성경전서 개역한글판 · 대한성서공회 · https://www.bskorea.or.kr/bible/korbibReadpage.php?version=HAN&book=mat&chap=3",
+      "Context": "마태복음의 표현을 그대로 인용하며 누가복음의 하늘 음성과 합치지 않는다."
+    },
+    {
+      "Id": "ministry-thirty",
+      "Title": "삼십세쯤 시작하신 가르치심",
+      "Reference": "누가복음 3:23",
+      "Text": "23 예수께서 가르치심을 시작할 때에 삼십세쯤 되시니라 사람들의 아는대로는 요셉의 아들이니 요셉의 이상은 헬리요",
+      "Source": "성경전서 개역한글판 · 대한성서공회 · https://www.bskorea.or.kr/bible/korbibReadpage.php?version=HAN&book=luk&chap=3",
+      "Context": "가르치심을 시작할 때의 대략적인 나이. 세례 날의 정확한 생일을 뜻하지 않는다."
+    }
+  ],
+  "Quests": [
+    {
+      "Id": "birth-road-bethlehem",
+      "ChapterId": "birth",
+      "Title": "베들레헴으로 가는 길",
+      "Objective": "탄생에서 이어지는 이야기를 따라가세요.",
+      "NpcId": "narrator",
+      "NpcName": "복음서의 이야기",
+      "ReadingId": "road-bethlehem",
+      "IsPrologue": true,
+      "Beats": [
+        {
+          "Id": "birth-road-bethlehem:0",
+          "Speaker": "이야기",
+          "Text": "이야기는 갈릴리의 작은 동네, 나사렛에서 시작됩니다. 마리아는 다윗의 집안 사람 요셉과 정혼한 처녀였습니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 1:26–27 · 본문 요약",
+          "VoiceKey": "birth-road-bethlehem:0",
+          "SceneTitle": "약속을 들은 마리아",
+          "Location": "갈릴리 나사렛",
+          "TimeLabel": "탄생을 앞둔 시절",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-road-bethlehem:1",
+          "Speaker": "이야기",
+          "Text": "누가복음은 천사 가브리엘이 마리아를 찾아왔다고 전합니다. 태어날 아들의 이름은 예수이며, 지극히 높으신 이의 아들이라 불리고 그 나라가 끝이 없으리라는 소식이었습니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 1:28–35 · 본문 요약",
+          "VoiceKey": "birth-road-bethlehem:1",
+          "SceneTitle": "약속을 들은 마리아",
+          "Location": "갈릴리 나사렛",
+          "TimeLabel": "탄생을 앞둔 시절",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-road-bethlehem:2",
+          "Speaker": "이야기",
+          "Text": "마리아는 어떻게 이런 일이 있을지 물었습니다. 성령이 임하시리라는 말을 들은 뒤, 자신을 주의 여종이라 하며 그 말씀대로 이루어지기를 받아들였습니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 1:34–38 · 본문 요약",
+          "VoiceKey": "birth-road-bethlehem:2",
+          "SceneTitle": "약속을 들은 마리아",
+          "Location": "갈릴리 나사렛",
+          "TimeLabel": "탄생을 앞둔 시절",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-road-bethlehem:3",
+          "Speaker": "이야기",
+          "Text": "마리아는 유다 산중의 엘리사벳을 찾아갑니다. 엘리사벳은 주께서 하신 말씀이 이루어지리라 믿은 마리아를 축복했습니다. 마리아도 하나님을 높이며 기뻐합니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 1:39–56 · 본문 요약",
+          "VoiceKey": "birth-road-bethlehem:3",
+          "SceneTitle": "마리아와 엘리사벳의 만남",
+          "Location": "유다의 산중",
+          "TimeLabel": "마리아의 방문",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-road-bethlehem:4",
+          "Speaker": "이야기",
+          "Text": "마태복음은 같은 탄생을 요셉의 자리에서 전합니다. 마리아의 잉태를 알게 된 요셉은 그를 드러내지 않고 가만히 끊고자 생각했습니다.",
+          "Kind": "Summary",
+          "Reference": "마태복음 1:18–19 · 본문 요약",
+          "VoiceKey": "birth-road-bethlehem:4",
+          "SceneTitle": "요셉에게 전해진 소식",
+          "Location": "마태가 전하는 요셉의 이야기",
+          "TimeLabel": "마리아를 맞아들이기 전",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-road-bethlehem:5",
+          "Speaker": "이야기",
+          "Text": "그때 요셉의 꿈에 주의 사자가 나타납니다. 마리아에게 잉태된 이는 성령으로 된 것이라고 알리고, 아들의 이름을 예수라 하라고 합니다. 그가 자기 백성을 죄에서 구원할 이이기 때문입니다.",
+          "Kind": "Summary",
+          "Reference": "마태복음 1:20–21 · 본문 요약",
+          "VoiceKey": "birth-road-bethlehem:5",
+          "SceneTitle": "요셉에게 전해진 소식",
+          "Location": "마태가 전하는 요셉의 이야기",
+          "TimeLabel": "마리아를 맞아들이기 전",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-road-bethlehem:6",
+          "Speaker": "이야기",
+          "Text": "요셉은 잠에서 깨어 주의 사자가 분부한 대로 마리아를 아내로 맞아들였습니다. 누가와 마태가 전하는 두 이야기는 이 아기의 탄생을 각자의 자리에서 비춥니다.",
+          "Kind": "Summary",
+          "Reference": "마태복음 1:22–25 · 본문 요약",
+          "VoiceKey": "birth-road-bethlehem:6",
+          "SceneTitle": "요셉에게 전해진 소식",
+          "Location": "마태가 전하는 요셉의 이야기",
+          "TimeLabel": "마리아를 맞아들이기 전",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-road-bethlehem:7",
+          "Speaker": "이야기",
+          "Text": "누가는 가이사 아구스도의 호적 명령을 배경으로 전합니다. 사람들은 호적하러 자기 고향으로 향합니다. 한 가족의 길도 그 명령을 따라 움직이게 됩니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:1–3 · 본문 요약 / 연대 단정 없음",
+          "VoiceKey": "birth-road-bethlehem:7",
+          "SceneTitle": "베들레헴으로",
+          "Location": "나사렛에서 베들레헴으로",
+          "TimeLabel": "탄생을 앞두고",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-road-bethlehem:8",
+          "Speaker": "이야기",
+          "Text": "요셉도 다윗의 집 족속이므로, 잉태한 마리아와 함께 나사렛에서 유대로 올라갑니다. 그들이 향하는 곳은 다윗의 동네라 불리는 베들레헴입니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:4–5 · 본문 요약",
+          "VoiceKey": "birth-road-bethlehem:8",
+          "SceneTitle": "베들레헴으로",
+          "Location": "나사렛에서 베들레헴으로",
+          "TimeLabel": "탄생을 앞두고",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-road-bethlehem:9",
+          "Speaker": "요셉",
+          "Text": "베들레헴으로 가야 하오. 함께 길을 떠납시다.",
+          "Kind": "Dramatization",
+          "Reference": "누가복음 2:4–5의 여정 · 이동 대화는 극화",
+          "VoiceKey": "birth-road-bethlehem:9",
+          "SceneTitle": "베들레헴으로",
+          "Location": "나사렛에서 베들레헴으로",
+          "TimeLabel": "탄생을 앞두고",
+          "MusicRole": "birth"
+        }
+      ]
+    },
+    {
+      "Id": "birth-birth-manger",
+      "ChapterId": "birth",
+      "Title": "베들레헴의 탄생",
+      "Objective": "탄생에서 이어지는 이야기를 따라가세요.",
+      "NpcId": "narrator",
+      "NpcName": "복음서의 이야기",
+      "ReadingId": "birth-manger",
+      "IsPrologue": true,
+      "Beats": [
+        {
+          "Id": "birth-birth-manger:0",
+          "Speaker": "이야기",
+          "Text": "그들이 베들레헴에 있을 때, 마리아가 해산할 날이 찼습니다. 마리아는 첫아들을 낳았습니다. 기다리던 소식은 이제 품에 안을 수 있는 아기로 다가왔습니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:6–7 · 본문 요약",
+          "VoiceKey": "birth-birth-manger:0",
+          "SceneTitle": "구유에 뉘인 아기",
+          "Location": "베들레헴",
+          "TimeLabel": "예수님의 탄생",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-birth-manger:1",
+          "Speaker": "이야기",
+          "Text": "마리아는 아기를 강보로 싸서 구유에 뉘었습니다. 누가는 사관에 머물 곳이 없었다고 기록합니다. 구유는 뒤에 목자들이 아기를 알아볼 표적이 됩니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:7, 12 · 본문 요약",
+          "VoiceKey": "birth-birth-manger:1",
+          "SceneTitle": "구유에 뉘인 아기",
+          "Location": "베들레헴",
+          "TimeLabel": "예수님의 탄생",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-birth-manger:2",
+          "Speaker": "마리아",
+          "Text": "이 작은 아기를 품에 안고, 조심스럽게 강보로 감싸겠어요.",
+          "Kind": "Dramatization",
+          "Reference": "누가복음 2:7의 행동 · 대화는 극화",
+          "VoiceKey": "birth-birth-manger:2",
+          "SceneTitle": "구유에 뉘인 아기",
+          "Location": "베들레헴",
+          "TimeLabel": "예수님의 탄생",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-birth-manger:3",
+          "Speaker": "이야기",
+          "Text": "탄생의 소식이 전해지는 그 밤, 이야기는 베들레헴 부근의 들판으로 이어집니다. 그곳에는 밖에서 양 떼를 지키는 사람들이 있었습니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:7–8 · 본문 연결 해설",
+          "VoiceKey": "birth-birth-manger:3",
+          "SceneTitle": "구유에 뉘인 아기",
+          "Location": "베들레헴",
+          "TimeLabel": "예수님의 탄생",
+          "MusicRole": "birth"
+        }
+      ]
+    },
+    {
+      "Id": "birth-night-shepherds",
+      "ChapterId": "birth",
+      "Title": "밤 들판의 목자들",
+      "Objective": "탄생에서 이어지는 이야기를 따라가세요.",
+      "NpcId": "narrator",
+      "NpcName": "복음서의 이야기",
+      "ReadingId": "night-shepherds",
+      "IsPrologue": true,
+      "Beats": [
+        {
+          "Id": "birth-night-shepherds:0",
+          "Speaker": "이야기",
+          "Text": "그 지경에는 목자들이 있었습니다. 그들은 밖에서 밤을 지새우며 양 떼를 지키고 있었습니다. 일하던 그 밤, 뜻밖의 만남이 찾아옵니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:8 · 본문 요약",
+          "VoiceKey": "birth-night-shepherds:0",
+          "SceneTitle": "들판의 밤",
+          "Location": "베들레헴 부근 들판",
+          "TimeLabel": "같은 밤",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-night-shepherds:1",
+          "Speaker": "이야기",
+          "Text": "주의 사자가 목자들 곁에 서고, 주의 영광이 그들을 두루 비추었습니다. 목자들은 크게 두려워했습니다. 천사는 먼저 그 두려움에 말을 건넵니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:9–10 · 본문 요약",
+          "VoiceKey": "birth-night-shepherds:1",
+          "SceneTitle": "들판의 밤",
+          "Location": "베들레헴 부근 들판",
+          "TimeLabel": "같은 밤",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-night-shepherds:2",
+          "Speaker": "목자",
+          "Text": "저 빛을 보아! 무슨 일이 일어난 걸까?",
+          "Kind": "Dramatization",
+          "Reference": "누가복음 2:9의 반응 · 대화는 극화",
+          "VoiceKey": "birth-night-shepherds:2",
+          "SceneTitle": "들판의 밤",
+          "Location": "베들레헴 부근 들판",
+          "TimeLabel": "같은 밤",
+          "MusicRole": "birth"
+        }
+      ]
+    },
+    {
+      "Id": "birth-birth-good-news",
+      "ChapterId": "birth",
+      "Title": "큰 기쁨의 소식",
+      "Objective": "탄생에서 이어지는 이야기를 따라가세요.",
+      "NpcId": "narrator",
+      "NpcName": "복음서의 이야기",
+      "ReadingId": "birth-good-news",
+      "IsPrologue": true,
+      "Beats": [
+        {
+          "Id": "birth-birth-good-news:0",
+          "Speaker": "이야기",
+          "Text": "천사가 가져온 것은 두려움에 머물라는 말이 아니었습니다. 누가는 온 백성에게 미칠 큰 기쁨의 소식이 목자들에게 전해졌다고 기록합니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:10 · 본문 요약",
+          "VoiceKey": "birth-birth-good-news:0",
+          "SceneTitle": "두려움에서 기쁨으로",
+          "Location": "밤의 들판",
+          "TimeLabel": "목자들에게 전해진 소식",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-birth-good-news:1",
+          "Speaker": "천사",
+          "Text": "무서워 말라 보라 내가 온 백성에게 미칠 큰 기쁨의 좋은 소식을 너희에게 전하노라",
+          "Kind": "Scripture",
+          "Reference": "누가복음 2:10 · 개역한글 직접 인용",
+          "VoiceKey": "birth-birth-good-news:1",
+          "SceneTitle": "두려움에서 기쁨으로",
+          "Location": "밤의 들판",
+          "TimeLabel": "목자들에게 전해진 소식",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-birth-good-news:2",
+          "Speaker": "천사",
+          "Text": "오늘날 다윗의 동네에 너희를 위하여 구주가 나셨으니 곧 그리스도 주시니라",
+          "Kind": "Scripture",
+          "Reference": "누가복음 2:11 · 개역한글 직접 인용",
+          "VoiceKey": "birth-birth-good-news:2",
+          "SceneTitle": "두려움에서 기쁨으로",
+          "Location": "밤의 들판",
+          "TimeLabel": "목자들에게 전해진 소식",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-birth-good-news:3",
+          "Speaker": "이야기",
+          "Text": "천사는 강보에 싸여 구유에 누인 아기를 보게 될 것이라고 말합니다. 그것이 목자들에게 주어진 표적이었습니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:12 · 본문 요약",
+          "VoiceKey": "birth-birth-good-news:3",
+          "SceneTitle": "두려움에서 기쁨으로",
+          "Location": "밤의 들판",
+          "TimeLabel": "목자들에게 전해진 소식",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-birth-good-news:4",
+          "Speaker": "이야기",
+          "Text": "홀연히 많은 천군이 그 천사와 함께 하나님을 찬송합니다. 지극히 높은 곳의 하나님께 영광을, 땅에는 하나님이 기뻐하신 사람들 중의 평화를 선포했습니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:13–14 · 본문 요약",
+          "VoiceKey": "birth-birth-good-news:4",
+          "SceneTitle": "두려움에서 기쁨으로",
+          "Location": "밤의 들판",
+          "TimeLabel": "목자들에게 전해진 소식",
+          "MusicRole": "birth"
+        }
+      ]
+    },
+    {
+      "Id": "birth-manger-witnesses",
+      "ChapterId": "birth",
+      "Title": "듣고 보고 전한 사람들",
+      "Objective": "탄생에서 이어지는 이야기를 따라가세요.",
+      "NpcId": "narrator",
+      "NpcName": "복음서의 이야기",
+      "ReadingId": "manger-witnesses",
+      "IsPrologue": true,
+      "Beats": [
+        {
+          "Id": "birth-manger-witnesses:0",
+          "Speaker": "목자들",
+          "Text": "이제 베들레헴까지 가서 주께서 우리에게 알리신바 이 이루어진 일을 보자",
+          "Kind": "Scripture",
+          "Reference": "누가복음 2:15 · 개역한글 직접 인용",
+          "VoiceKey": "birth-manger-witnesses:0",
+          "SceneTitle": "서둘러 찾아온 사람들",
+          "Location": "베들레헴",
+          "TimeLabel": "목자들의 방문",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-manger-witnesses:1",
+          "Speaker": "이야기",
+          "Text": "목자들은 빨리 가서 마리아와 요셉, 구유에 누인 아기를 찾았습니다. 천사가 일러 준 표적대로, 강보에 싸인 아기가 그곳에 있었습니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:12, 16 · 본문 요약",
+          "VoiceKey": "birth-manger-witnesses:1",
+          "SceneTitle": "서둘러 찾아온 사람들",
+          "Location": "베들레헴",
+          "TimeLabel": "목자들의 방문",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-manger-witnesses:2",
+          "Speaker": "이야기",
+          "Text": "그들은 아기를 보고, 그에 대하여 들은 말을 알렸습니다. 듣는 사람들은 목자들이 전하는 말을 기이하게 여겼습니다. 들은 소식은 찾아가 보고 전하는 이야기가 되었습니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:17–18 · 본문 요약",
+          "VoiceKey": "birth-manger-witnesses:2",
+          "SceneTitle": "서둘러 찾아온 사람들",
+          "Location": "베들레헴",
+          "TimeLabel": "목자들의 방문",
+          "MusicRole": "birth"
+        }
+      ]
+    },
+    {
+      "Id": "birth-birth-remembered",
+      "ChapterId": "birth",
+      "Title": "마음에 간직한 말씀",
+      "Objective": "탄생에서 이어지는 이야기를 따라가세요.",
+      "NpcId": "narrator",
+      "NpcName": "복음서의 이야기",
+      "ReadingId": "birth-remembered",
+      "IsPrologue": true,
+      "Beats": [
+        {
+          "Id": "birth-birth-remembered:0",
+          "Speaker": "이야기",
+          "Text": "마리아는 이 모든 말을 마음에 지키어 생각했습니다. 찾아온 사람들의 말과 아기의 모습을 서둘러 지나치지 않고, 마음에 두었습니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:19 · 본문 요약",
+          "VoiceKey": "birth-birth-remembered:0",
+          "SceneTitle": "마음에 간직하다",
+          "Location": "베들레헴",
+          "TimeLabel": "방문 뒤",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-birth-remembered:1",
+          "Speaker": "이야기",
+          "Text": "목자들은 자기들에게 이르던 바와 같이 듣고 본 모든 것을 인하여 하나님께 영광을 돌리고 찬송하며 돌아갔습니다. 그들이 지키던 들판에도 다시 날이 이어집니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:20 · 본문 요약 / 장면 연결 해설",
+          "VoiceKey": "birth-birth-remembered:1",
+          "SceneTitle": "마음에 간직하다",
+          "Location": "베들레헴",
+          "TimeLabel": "방문 뒤",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-birth-remembered:2",
+          "Speaker": "마리아",
+          "Text": "오늘 들은 말들을 오래 마음에 간직하겠어요.",
+          "Kind": "Dramatization",
+          "Reference": "누가복음 2:19의 마음 · 대화는 극화",
+          "VoiceKey": "birth-birth-remembered:2",
+          "SceneTitle": "마음에 간직하다",
+          "Location": "베들레헴",
+          "TimeLabel": "방문 뒤",
+          "MusicRole": "birth"
+        }
+      ]
+    },
+    {
+      "Id": "birth-name-jesus",
+      "ChapterId": "birth",
+      "Title": "예수라는 이름",
+      "Objective": "탄생에서 이어지는 이야기를 따라가세요.",
+      "NpcId": "narrator",
+      "NpcName": "복음서의 이야기",
+      "ReadingId": "name-jesus",
+      "IsPrologue": true,
+      "Beats": [
+        {
+          "Id": "birth-name-jesus:0",
+          "Speaker": "이야기",
+          "Text": "할례할 팔 일이 되었습니다. 아기의 이름을 예수라 하였습니다. 누가는 이 이름이 수태하기 전에 천사가 일컬었던 이름이라고 기록합니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:21 · 본문 요약",
+          "VoiceKey": "birth-name-jesus:0",
+          "SceneTitle": "예수라는 이름",
+          "Location": "아기 때의 기록",
+          "TimeLabel": "팔 일이 되었을 때",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-name-jesus:1",
+          "Speaker": "이야기",
+          "Text": "마리아에게 전해진 이름이며, 마태복음에서는 요셉에게도 주어진 이름입니다. 탄생의 이야기는 처음부터 이 아기를 예수라 부릅니다. 뒤에 다른 사람이 되어 그 이름을 얻는 이야기가 아닙니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 1:31; 2:21 / 마태복음 1:21 · 본문 연결 해설",
+          "VoiceKey": "birth-name-jesus:1",
+          "SceneTitle": "예수라는 이름",
+          "Location": "아기 때의 기록",
+          "TimeLabel": "팔 일이 되었을 때",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-name-jesus:2",
+          "Speaker": "이야기",
+          "Text": "구유의 아기와 앞으로 자라실 예수님은 같은 분입니다. 팔 일의 이름과 할례를 지나, 이야기는 아기 때의 예루살렘 성전 방문으로 이어집니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:21–22 · 본문 연결 해설",
+          "VoiceKey": "birth-name-jesus:2",
+          "SceneTitle": "예수라는 이름",
+          "Location": "아기 때의 기록",
+          "TimeLabel": "팔 일이 되었을 때",
+          "MusicRole": "birth"
+        }
+      ]
+    },
+    {
+      "Id": "birth-temple-dedication",
+      "ChapterId": "birth",
+      "Title": "아기를 데리고 성전으로",
+      "Objective": "탄생에서 이어지는 이야기를 따라가세요.",
+      "NpcId": "narrator",
+      "NpcName": "복음서의 이야기",
+      "ReadingId": "temple-dedication",
+      "IsPrologue": true,
+      "Beats": [
+        {
+          "Id": "birth-temple-dedication:0",
+          "Speaker": "이야기",
+          "Text": "모세의 법대로 결례의 날이 찼을 때, 부모는 아기를 데리고 예루살렘으로 올라갔습니다. 팔 일의 이름 짓기와 이 성전 방문은 서로 구분되는 기록입니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:21–22 · 본문 요약",
+          "VoiceKey": "birth-temple-dedication:0",
+          "SceneTitle": "아기를 안고 성전으로",
+          "Location": "예루살렘 성전",
+          "TimeLabel": "아기 때의 성전 방문",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-temple-dedication:1",
+          "Speaker": "이야기",
+          "Text": "그들은 율법에 기록된 대로 첫 태에 처음 난 남자 아기를 주께 드리고자 했습니다. 아기를 안은 가족이 예루살렘 성전으로 들어갑니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:22–23 · 본문 요약",
+          "VoiceKey": "birth-temple-dedication:1",
+          "SceneTitle": "아기를 안고 성전으로",
+          "Location": "예루살렘 성전",
+          "TimeLabel": "아기 때의 성전 방문",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-temple-dedication:2",
+          "Speaker": "이야기",
+          "Text": "또 율법에 말씀하신 대로 비둘기 한 쌍이나 어린 반구 둘로 제사하려 했습니다. 누가는 가족이 율법을 따라 행하는 모습을 전합니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:24 · 본문 요약",
+          "VoiceKey": "birth-temple-dedication:2",
+          "SceneTitle": "아기를 안고 성전으로",
+          "Location": "예루살렘 성전",
+          "TimeLabel": "아기 때의 성전 방문",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-temple-dedication:3",
+          "Speaker": "요셉",
+          "Text": "아기를 데리고 성전으로 갑시다. 율법에 기록된 대로 행해야겠소.",
+          "Kind": "Dramatization",
+          "Reference": "누가복음 2:22–24의 행동 · 대화는 극화",
+          "VoiceKey": "birth-temple-dedication:3",
+          "SceneTitle": "아기를 안고 성전으로",
+          "Location": "예루살렘 성전",
+          "TimeLabel": "아기 때의 성전 방문",
+          "MusicRole": "birth"
+        }
+      ]
+    },
+    {
+      "Id": "birth-simeon-peace",
+      "ChapterId": "birth",
+      "Title": "시므온이 품에 안고",
+      "Objective": "탄생에서 이어지는 이야기를 따라가세요.",
+      "NpcId": "narrator",
+      "NpcName": "복음서의 이야기",
+      "ReadingId": "simeon-peace",
+      "IsPrologue": true,
+      "Beats": [
+        {
+          "Id": "birth-simeon-peace:0",
+          "Speaker": "이야기",
+          "Text": "예루살렘에는 시므온이라는 사람이 있었습니다. 그는 이스라엘의 위로를 기다렸습니다. 누가는 성령이 그 위에 계셨고, 그를 성전으로 이끄셨다고 전합니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:25–27 · 본문 요약",
+          "VoiceKey": "birth-simeon-peace:0",
+          "SceneTitle": "기다리던 만남",
+          "Location": "예루살렘 성전",
+          "TimeLabel": "시므온의 찬송",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-simeon-peace:1",
+          "Speaker": "이야기",
+          "Text": "부모가 율법의 전례대로 행하려고 아기 예수를 데리고 왔을 때, 시므온은 아기를 안고 하나님을 찬송했습니다. 오래 기다린 사람이 아기를 품에 안은 만남이었습니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:27–28 · 본문 요약",
+          "VoiceKey": "birth-simeon-peace:1",
+          "SceneTitle": "기다리던 만남",
+          "Location": "예루살렘 성전",
+          "TimeLabel": "시므온의 찬송",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-simeon-peace:2",
+          "Speaker": "시므온",
+          "Text": "주재여 이제는 말씀하신대로 종을 평안히 놓아 주시는도다",
+          "Kind": "Scripture",
+          "Reference": "누가복음 2:29 · 개역한글 직접 인용",
+          "VoiceKey": "birth-simeon-peace:2",
+          "SceneTitle": "기다리던 만남",
+          "Location": "예루살렘 성전",
+          "TimeLabel": "시므온의 찬송",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-simeon-peace:3",
+          "Speaker": "시므온",
+          "Text": "내 눈이 주의 구원을 보았사오니",
+          "Kind": "Scripture",
+          "Reference": "누가복음 2:30 · 개역한글 직접 인용",
+          "VoiceKey": "birth-simeon-peace:3",
+          "SceneTitle": "기다리던 만남",
+          "Location": "예루살렘 성전",
+          "TimeLabel": "시므온의 찬송",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-simeon-peace:4",
+          "Speaker": "시므온",
+          "Text": "이는 만민 앞에 예비하신 것이요",
+          "Kind": "Scripture",
+          "Reference": "누가복음 2:31 · 개역한글 직접 인용",
+          "VoiceKey": "birth-simeon-peace:4",
+          "SceneTitle": "기다리던 만남",
+          "Location": "예루살렘 성전",
+          "TimeLabel": "시므온의 찬송",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-simeon-peace:5",
+          "Speaker": "시므온",
+          "Text": "이방을 비추는 빛이요 주의 백성 이스라엘의 영광이니이다",
+          "Kind": "Scripture",
+          "Reference": "누가복음 2:32 · 개역한글 직접 인용",
+          "VoiceKey": "birth-simeon-peace:5",
+          "SceneTitle": "기다리던 만남",
+          "Location": "예루살렘 성전",
+          "TimeLabel": "시므온의 찬송",
+          "MusicRole": "birth"
+        }
+      ]
+    },
+    {
+      "Id": "birth-anna-thanksgiving",
+      "ChapterId": "birth",
+      "Title": "안나의 감사",
+      "Objective": "탄생에서 이어지는 이야기를 따라가세요.",
+      "NpcId": "narrator",
+      "NpcName": "복음서의 이야기",
+      "ReadingId": "anna-thanksgiving",
+      "IsPrologue": true,
+      "Beats": [
+        {
+          "Id": "birth-anna-thanksgiving:0",
+          "Speaker": "이야기",
+          "Text": "성전에는 선지자 안나도 있었습니다. 누가는 그가 성전을 떠나지 않고 밤낮으로 금식하며 기도함으로 섬겼다고 기록합니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:36–37 · 본문 요약",
+          "VoiceKey": "birth-anna-thanksgiving:0",
+          "SceneTitle": "안나의 감사",
+          "Location": "예루살렘 성전",
+          "TimeLabel": "그 때에 나아와",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-anna-thanksgiving:1",
+          "Speaker": "이야기",
+          "Text": "안나는 마침 그때에 나아와 하나님께 감사했습니다. 그리고 예루살렘의 구속을 바라는 모든 사람에게 이 아기에 대하여 말했습니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:38 · 본문 요약",
+          "VoiceKey": "birth-anna-thanksgiving:1",
+          "SceneTitle": "안나의 감사",
+          "Location": "예루살렘 성전",
+          "TimeLabel": "그 때에 나아와",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-anna-thanksgiving:2",
+          "Speaker": "이야기",
+          "Text": "누가는 가족이 주의 율법을 따라 모든 일을 마친 후, 갈릴리의 나사렛으로 돌아갔다고 전합니다. 아기를 만난 사람들의 말이 뒤에 남았습니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:39 · 본문 요약",
+          "VoiceKey": "birth-anna-thanksgiving:2",
+          "SceneTitle": "안나의 감사",
+          "Location": "예루살렘 성전",
+          "TimeLabel": "그 때에 나아와",
+          "MusicRole": "birth"
+        }
+      ]
+    },
+    {
+      "Id": "birth-nazareth-growth",
+      "ChapterId": "birth",
+      "Title": "나사렛에서 자라시다",
+      "Objective": "탄생에서 이어지는 이야기를 따라가세요.",
+      "NpcId": "narrator",
+      "NpcName": "복음서의 이야기",
+      "ReadingId": "nazareth-growth",
+      "IsPrologue": true,
+      "Beats": [
+        {
+          "Id": "birth-nazareth-growth:0",
+          "Speaker": "이야기",
+          "Text": "마태복음에는 탄생 뒤의 또 다른 기록이 있습니다. 동방에서 온 박사들이 아기와 마리아가 있는 집에 들어가 경배하고 예물을 드렸습니다. 누가는 목자들을, 마태는 이 방문을 전합니다.",
+          "Kind": "Summary",
+          "Reference": "마태복음 2:1–12 · 본문 요약",
+          "VoiceKey": "birth-nazareth-growth:0",
+          "SceneTitle": "마태가 전하는 탄생 뒤의 기록",
+          "Location": "베들레헴 · 애굽 · 나사렛",
+          "TimeLabel": "또 다른 복음서의 시선",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-nazareth-growth:1",
+          "Speaker": "이야기",
+          "Text": "마태는 헤롯의 위협 가운데 요셉이 꿈에서 지시를 받았다고 전합니다. 요셉은 밤에 아기와 그 어머니를 데리고 애굽으로 떠났고, 헤롯이 죽기까지 그곳에 있었습니다.",
+          "Kind": "Summary",
+          "Reference": "마태복음 2:13–15 · 본문 요약",
+          "VoiceKey": "birth-nazareth-growth:1",
+          "SceneTitle": "마태가 전하는 탄생 뒤의 기록",
+          "Location": "베들레헴 · 애굽 · 나사렛",
+          "TimeLabel": "또 다른 복음서의 시선",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-nazareth-growth:2",
+          "Speaker": "이야기",
+          "Text": "마태는 헤롯이 베들레헴과 그 지경의 어린아이들을 죽이게 한 일도 기록합니다. 이어 라헬의 울음이라는 말씀을 들어 그 슬픔을 전합니다. 탄생의 이야기에 이 아픔도 남아 있습니다.",
+          "Kind": "Summary",
+          "Reference": "마태복음 2:16–18 · 본문 요약",
+          "VoiceKey": "birth-nazareth-growth:2",
+          "SceneTitle": "마태가 전하는 탄생 뒤의 기록",
+          "Location": "베들레헴 · 애굽 · 나사렛",
+          "TimeLabel": "또 다른 복음서의 시선",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-nazareth-growth:3",
+          "Speaker": "이야기",
+          "Text": "헤롯이 죽은 뒤, 요셉은 아기와 그 어머니를 데리고 돌아옵니다. 유대로 가기를 두려워한 그는 꿈의 지시를 따라 갈릴리로 물러가 나사렛에 살았습니다. 이것이 마태가 전하는 귀향입니다.",
+          "Kind": "Summary",
+          "Reference": "마태복음 2:19–23 · 본문 요약",
+          "VoiceKey": "birth-nazareth-growth:3",
+          "SceneTitle": "마태가 전하는 탄생 뒤의 기록",
+          "Location": "베들레헴 · 애굽 · 나사렛",
+          "TimeLabel": "또 다른 복음서의 시선",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-nazareth-growth:4",
+          "Speaker": "이야기",
+          "Text": "누가는 나사렛에서 아기가 자라며 강하여지고 지혜가 충족하며, 하나님의 은혜가 그 위에 있었다고 기록합니다. 탄생을 지켜본 사람들의 이야기는 자라시는 예수님에게로 이어집니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:39–40 · 본문 요약",
+          "VoiceKey": "birth-nazareth-growth:4",
+          "SceneTitle": "나사렛의 날들",
+          "Location": "갈릴리 나사렛",
+          "TimeLabel": "성장하시는 예수님",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-nazareth-growth:5",
+          "Speaker": "이야기",
+          "Text": "복음서는 그 사이 모든 날을 적지 않았습니다. 기록되지 않은 어린 시절의 사건이나 말씀을 만들어 채우지 않고, 다음으로 기록된 만남을 따라갑니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:40–42 · 기록 범위 안내",
+          "VoiceKey": "birth-nazareth-growth:5",
+          "SceneTitle": "나사렛의 날들",
+          "Location": "갈릴리 나사렛",
+          "TimeLabel": "성장하시는 예수님",
+          "MusicRole": "birth"
+        },
+        {
+          "Id": "birth-nazareth-growth:6",
+          "Speaker": "이야기",
+          "Text": "이제 여러분이 직접 움직일 예수님은 열두 살입니다. 부모와 함께 유월절에 예루살렘으로 올라가는 길에서, 다음 이야기가 시작됩니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:41–42 · 다음 장면 안내",
+          "VoiceKey": "birth-nazareth-growth:6",
+          "SceneTitle": "나사렛의 날들",
+          "Location": "갈릴리 나사렛",
+          "TimeLabel": "성장하시는 예수님",
+          "MusicRole": "birth"
+        }
+      ]
+    },
+    {
+      "Id": "nazareth-departure",
+      "ChapterId": "temple",
+      "Title": "유월절 길을 준비하며",
+      "Objective": "나사렛 길목에서 요셉과 출발 준비를 이야기하세요.",
+      "NpcId": "joseph",
+      "NpcName": "요셉",
+      "ReadingId": "",
+      "IsPrologue": false,
+      "Beats": [
+        {
+          "Id": "nazareth-departure:0",
+          "Speaker": "요셉",
+          "Text": "예루살렘으로 갈 준비가 되었니? 함께 걷는 이들을 살피며 출발하자.",
+          "Kind": "Dramatization",
+          "Reference": "누가복음 2:41–42 · 길 안내 대화는 극화",
+          "VoiceKey": "nazareth-departure:0",
+          "SceneTitle": "유월절 길을 준비하며",
+          "Location": "나사렛 길목",
+          "TimeLabel": "열두 살",
+          "MusicRole": "temple"
+        },
+        {
+          "Id": "nazareth-departure:1",
+          "Speaker": "요셉",
+          "Text": "샘가 길목에 마리아가 있단다. 먼저 가서 만나 보렴.",
+          "Kind": "Dramatization",
+          "Reference": "누가복음 2:41–42 · 길 안내 대화는 극화",
+          "VoiceKey": "nazareth-departure:1",
+          "SceneTitle": "유월절 길을 준비하며",
+          "Location": "나사렛 길목",
+          "TimeLabel": "열두 살",
+          "MusicRole": "temple"
+        }
+      ]
+    },
+    {
+      "Id": "pilgrim-spring",
+      "ChapterId": "temple",
+      "Title": "함께 오르는 길",
+      "Objective": "샘가 길목으로 걸어가 마리아와 여정의 목적을 이야기하세요.",
+      "NpcId": "mary",
+      "NpcName": "마리아",
+      "ReadingId": "",
+      "IsPrologue": false,
+      "Beats": [
+        {
+          "Id": "pilgrim-spring:0",
+          "Speaker": "마리아",
+          "Text": "우리는 유월절을 지키러 예루살렘으로 올라간단다. 길을 잘 살피며 함께 가자.",
+          "Kind": "Dramatization",
+          "Reference": "누가복음 2:41–42 · 길 안내 대화는 극화",
+          "VoiceKey": "pilgrim-spring:0",
+          "SceneTitle": "함께 오르는 길",
+          "Location": "예루살렘으로 향하는 길",
+          "TimeLabel": "유월절의 여정",
+          "MusicRole": "temple"
+        },
+        {
+          "Id": "pilgrim-spring:1",
+          "Speaker": "이야기",
+          "Text": "누가는 부모가 해마다 유월절에 예루살렘으로 갔다고 기록합니다. 길과 샘가의 배치는 이 여정을 걸어 보기 위한 표현입니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:41–42 · 길 안내 대화는 극화",
+          "VoiceKey": "pilgrim-spring:1",
+          "SceneTitle": "함께 오르는 길",
+          "Location": "예루살렘으로 향하는 길",
+          "TimeLabel": "유월절의 여정",
+          "MusicRole": "temple"
+        }
+      ]
+    },
+    {
+      "Id": "festival-courtyard",
+      "ChapterId": "temple",
+      "Title": "예루살렘의 절기",
+      "Objective": "성전 뜰의 길잡이에게 유월절의 기록을 들으세요.",
+      "NpcId": "temple-guide",
+      "NpcName": "성전 길잡이",
+      "ReadingId": "temple-passover",
+      "IsPrologue": false,
+      "Beats": [
+        {
+          "Id": "festival-courtyard:0",
+          "Speaker": "성전 길잡이",
+          "Text": "성전 뜰에 오셨군요. 유월절을 맞아 예루살렘으로 올라오는 이들이 있습니다.",
+          "Kind": "Dramatization",
+          "Reference": "누가복음 2:41–43",
+          "VoiceKey": "festival-courtyard:0",
+          "SceneTitle": "절기의 예루살렘",
+          "Location": "예루살렘 성전 뜰",
+          "TimeLabel": "유월절",
+          "MusicRole": "temple"
+        },
+        {
+          "Id": "festival-courtyard:1",
+          "Speaker": "이야기",
+          "Text": "예수님이 열두 살이 되던 해에도 가족은 절기의 전례를 따라 올라왔습니다. 이곳에서 그 날들을 보냈습니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:41–43",
+          "VoiceKey": "festival-courtyard:1",
+          "SceneTitle": "절기의 예루살렘",
+          "Location": "예루살렘 성전 뜰",
+          "TimeLabel": "유월절",
+          "MusicRole": "temple"
+        },
+        {
+          "Id": "festival-courtyard:2",
+          "Speaker": "이야기",
+          "Text": "절기가 끝났습니다. 부모는 동행 중에 계신 줄 알고 길을 떠났지만, 예수님은 예루살렘에 머무셨습니다. 찾지 못한 부모는 예루살렘으로 돌아옵니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:41–43",
+          "VoiceKey": "festival-courtyard:2",
+          "SceneTitle": "절기의 예루살렘",
+          "Location": "예루살렘 성전 뜰",
+          "TimeLabel": "유월절",
+          "MusicRole": "temple"
+        }
+      ]
+    },
+    {
+      "Id": "listening-court",
+      "ChapterId": "temple",
+      "Title": "듣고 묻는 자리",
+      "Objective": "회랑에서 성전의 선생을 만나 대화하세요.",
+      "NpcId": "teacher-listening",
+      "NpcName": "성전의 선생",
+      "ReadingId": "",
+      "IsPrologue": false,
+      "Beats": [
+        {
+          "Id": "listening-court:0",
+          "Speaker": "성전의 선생",
+          "Text": "안쪽에 선생들이 모여 있습니다. 회랑을 따라 들어오세요.",
+          "Kind": "Dramatization",
+          "Reference": "누가복음 2:46 · 길 안내 대화는 극화",
+          "VoiceKey": "listening-court:0",
+          "SceneTitle": "듣고 묻는 자리",
+          "Location": "성전 회랑",
+          "TimeLabel": "절기가 지난 뒤",
+          "MusicRole": "temple"
+        },
+        {
+          "Id": "listening-court:1",
+          "Speaker": "이야기",
+          "Text": "성경에는 이 자리에서 오간 질문의 내용이 남아 있지 않습니다. 그 말을 새로 만들어 예수님의 발언으로 대신하지 않습니다. 기록된 만남을 따라 안쪽 뜰로 갑니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:46 · 길 안내 대화는 극화",
+          "VoiceKey": "listening-court:1",
+          "SceneTitle": "듣고 묻는 자리",
+          "Location": "성전 회랑",
+          "TimeLabel": "절기가 지난 뒤",
+          "MusicRole": "temple"
+        }
+      ]
+    },
+    {
+      "Id": "teachers-circle",
+      "ChapterId": "temple",
+      "Title": "선생들 가운데",
+      "Objective": "안쪽 뜰의 율법 선생을 만나 성전의 이야기를 이어가세요.",
+      "NpcId": "teacher-reading",
+      "NpcName": "율법 선생",
+      "ReadingId": "temple-teachers",
+      "IsPrologue": false,
+      "Beats": [
+        {
+          "Id": "teachers-circle:0",
+          "Speaker": "이야기",
+          "Text": "사흘 후, 부모는 성전에서 예수님을 찾았습니다. 예수님은 선생들 가운데 앉아, 듣기도 하시고 묻기도 하셨습니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:46–47",
+          "VoiceKey": "teachers-circle:0",
+          "SceneTitle": "선생들 가운데",
+          "Location": "성전 안쪽 뜰",
+          "TimeLabel": "사흘 후 성전에서",
+          "MusicRole": "temple"
+        },
+        {
+          "Id": "teachers-circle:1",
+          "Speaker": "이야기",
+          "Text": "듣는 사람들은 그 지혜와 대답을 기이하게 여겼습니다. 누가가 남긴 것은 이 만남과 사람들의 반응입니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:46–47",
+          "VoiceKey": "teachers-circle:1",
+          "SceneTitle": "선생들 가운데",
+          "Location": "성전 안쪽 뜰",
+          "TimeLabel": "사흘 후 성전에서",
+          "MusicRole": "temple"
+        },
+        {
+          "Id": "teachers-circle:2",
+          "Speaker": "이야기",
+          "Text": "이제 부모가 가까이 옵니다. 마리아는 근심하며 아들을 찾았던 마음을 말합니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:46–47",
+          "VoiceKey": "teachers-circle:2",
+          "SceneTitle": "선생들 가운데",
+          "Location": "성전 안쪽 뜰",
+          "TimeLabel": "사흘 후 성전에서",
+          "MusicRole": "temple"
+        }
+      ]
+    },
+    {
+      "Id": "parents-reunite",
+      "ChapterId": "temple",
+      "Title": "근심 끝의 만남",
+      "Objective": "성전으로 찾아온 부모와 함께 마리아의 말을 들으세요.",
+      "NpcId": "mary",
+      "NpcName": "마리아",
+      "ReadingId": "temple-parents",
+      "IsPrologue": false,
+      "Beats": [
+        {
+          "Id": "parents-reunite:0",
+          "Speaker": "마리아",
+          "Text": "아이야 어찌하여 우리에게 이렇게 하였느냐 보라 네 아버지와 내가 근심하여 너를 찾았노라",
+          "Kind": "Scripture",
+          "Reference": "누가복음 2:48–50",
+          "VoiceKey": "parents-reunite:0",
+          "SceneTitle": "다시 만난 부모",
+          "Location": "예루살렘 성전",
+          "TimeLabel": "사흘 만의 만남",
+          "MusicRole": "temple"
+        },
+        {
+          "Id": "parents-reunite:1",
+          "Speaker": "예수님",
+          "Text": "어찌하여 나를 찾으셨나이까 내가 내 아버지 집에 있어야 될 줄을 알지 못하셨나이까",
+          "Kind": "Scripture",
+          "Reference": "누가복음 2:48–50",
+          "VoiceKey": "parents-reunite:1",
+          "SceneTitle": "다시 만난 부모",
+          "Location": "예루살렘 성전",
+          "TimeLabel": "사흘 만의 만남",
+          "MusicRole": "temple"
+        },
+        {
+          "Id": "parents-reunite:2",
+          "Speaker": "이야기",
+          "Text": "양친은 그 하신 말씀을 깨닫지 못했습니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:48–50",
+          "VoiceKey": "parents-reunite:2",
+          "SceneTitle": "다시 만난 부모",
+          "Location": "예루살렘 성전",
+          "TimeLabel": "사흘 만의 만남",
+          "MusicRole": "temple"
+        },
+        {
+          "Id": "parents-reunite:3",
+          "Speaker": "이야기",
+          "Text": "예수님은 부모와 함께 나사렛으로 내려갑니다. 마리아는 이 모든 말을 마음에 둡니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:48–50",
+          "VoiceKey": "parents-reunite:3",
+          "SceneTitle": "다시 만난 부모",
+          "Location": "예루살렘 성전",
+          "TimeLabel": "사흘 만의 만남",
+          "MusicRole": "temple"
+        }
+      ]
+    },
+    {
+      "Id": "nazareth-return",
+      "ChapterId": "temple",
+      "Title": "나사렛으로 함께",
+      "Objective": "귀향길의 요셉을 만나 성장의 기록을 간직하세요.",
+      "NpcId": "joseph",
+      "NpcName": "요셉",
+      "ReadingId": "temple-nazareth",
+      "IsPrologue": false,
+      "Beats": [
+        {
+          "Id": "nazareth-return:0",
+          "Speaker": "요셉",
+          "Text": "함께 나사렛으로 돌아가자. 집으로 내려갈 때에도 서로 곁을 살피자꾸나.",
+          "Kind": "Dramatization",
+          "Reference": "누가복음 2:51–52",
+          "VoiceKey": "nazareth-return:0",
+          "SceneTitle": "함께 나사렛으로",
+          "Location": "나사렛으로 돌아가는 길",
+          "TimeLabel": "성전 방문 뒤",
+          "MusicRole": "temple"
+        },
+        {
+          "Id": "nazareth-return:1",
+          "Speaker": "이야기",
+          "Text": "예수님은 부모에게 순종하여 받드셨습니다. 지혜와 키가 자라가며 하나님과 사람에게 더 사랑스러워 가셨습니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:51–52",
+          "VoiceKey": "nazareth-return:1",
+          "SceneTitle": "함께 나사렛으로",
+          "Location": "나사렛으로 돌아가는 길",
+          "TimeLabel": "성전 방문 뒤",
+          "MusicRole": "temple"
+        },
+        {
+          "Id": "nazareth-return:2",
+          "Speaker": "이야기",
+          "Text": "기록은 모든 해를 자세히 잇지 않습니다. 다음 이야기는 성인이 된 예수님이 요단강으로 향하는 때로 이어집니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 2:51–52",
+          "VoiceKey": "nazareth-return:2",
+          "SceneTitle": "함께 나사렛으로",
+          "Location": "나사렛으로 돌아가는 길",
+          "TimeLabel": "성전 방문 뒤",
+          "MusicRole": "temple"
+        }
+      ]
+    },
+    {
+      "Id": "adult-jordan-road",
+      "ChapterId": "baptism",
+      "Title": "요단으로 향하는 길",
+      "Objective": "성인이 된 예수님으로 요단 길목의 안내자를 만나세요.",
+      "NpcId": "jordan-guide",
+      "NpcName": "요단 길잡이",
+      "ReadingId": "",
+      "IsPrologue": false,
+      "Beats": [
+        {
+          "Id": "adult-jordan-road:0",
+          "Speaker": "이야기",
+          "Text": "이제 성인이 된 예수님입니다. 마태는 예수님이 갈릴리에서 요단강으로 와서 요한에게 세례를 받으려 하셨다고 전합니다.",
+          "Kind": "Summary",
+          "Reference": "마태복음 3:13 · 길 안내 대화는 극화",
+          "VoiceKey": "adult-jordan-road:0",
+          "SceneTitle": "요단으로 향하다",
+          "Location": "요단강으로 향하는 길",
+          "TimeLabel": "공생애가 시작되는 무렵",
+          "MusicRole": "baptism"
+        },
+        {
+          "Id": "adult-jordan-road:1",
+          "Speaker": "요단 길잡이",
+          "Text": "나무 그늘을 지나 강가로 가 보세요. 그곳에 요한이 있습니다.",
+          "Kind": "Dramatization",
+          "Reference": "마태복음 3:13 · 길 안내 대화는 극화",
+          "VoiceKey": "adult-jordan-road:1",
+          "SceneTitle": "요단으로 향하다",
+          "Location": "요단강으로 향하는 길",
+          "TimeLabel": "공생애가 시작되는 무렵",
+          "MusicRole": "baptism"
+        }
+      ]
+    },
+    {
+      "Id": "john-calling",
+      "ChapterId": "baptism",
+      "Title": "요단에서 들리는 외침",
+      "Objective": "요단 부근에서 세례 요한의 사역에 관한 기록을 들으세요.",
+      "NpcId": "john-baptist",
+      "NpcName": "세례 요한",
+      "ReadingId": "john-jordan",
+      "IsPrologue": false,
+      "Beats": [
+        {
+          "Id": "john-calling:0",
+          "Speaker": "이야기",
+          "Text": "하나님의 말씀이 빈 들에서 사가랴의 아들 요한에게 임했습니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 3:2–3",
+          "VoiceKey": "john-calling:0",
+          "SceneTitle": "빈 들에서 들리는 소리",
+          "Location": "요단 부근",
+          "TimeLabel": "요한의 사역",
+          "MusicRole": "baptism"
+        },
+        {
+          "Id": "john-calling:1",
+          "Speaker": "이야기",
+          "Text": "요한은 요단강 부근 각처에 와서 죄 사함을 얻게 하는 회개의 세례를 전합니다. 예수님도 이 강가로 오십니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 3:2–3",
+          "VoiceKey": "john-calling:1",
+          "SceneTitle": "빈 들에서 들리는 소리",
+          "Location": "요단 부근",
+          "TimeLabel": "요한의 사역",
+          "MusicRole": "baptism"
+        }
+      ]
+    },
+    {
+      "Id": "baptism-request",
+      "ChapterId": "baptism",
+      "Title": "모든 의를 이루는 길",
+      "Objective": "세례 자리에서 요한을 만나 이야기를 이어가세요.",
+      "NpcId": "john-baptist",
+      "NpcName": "세례 요한",
+      "ReadingId": "baptism-request",
+      "IsPrologue": false,
+      "Beats": [
+        {
+          "Id": "baptism-request:0",
+          "Speaker": "세례 요한",
+          "Text": "내가 당신에게 세례를 받아야 할 터인데 당신이 내게로 오시나이까",
+          "Kind": "Scripture",
+          "Reference": "마태복음 3:13–15",
+          "VoiceKey": "baptism-request:0",
+          "SceneTitle": "모든 의를 이루는 길",
+          "Location": "요단강",
+          "TimeLabel": "요한과의 만남",
+          "MusicRole": "baptism"
+        },
+        {
+          "Id": "baptism-request:1",
+          "Speaker": "예수님",
+          "Text": "이제 허락하라 우리가 이와 같이 하여 모든 의를 이루는 것이 합당하니라",
+          "Kind": "Scripture",
+          "Reference": "마태복음 3:13–15",
+          "VoiceKey": "baptism-request:1",
+          "SceneTitle": "모든 의를 이루는 길",
+          "Location": "요단강",
+          "TimeLabel": "요한과의 만남",
+          "MusicRole": "baptism"
+        }
+      ]
+    },
+    {
+      "Id": "baptism-water",
+      "ChapterId": "baptism",
+      "Title": "물에서 올라오시다",
+      "Objective": "강가의 다음 만남에서 세례 후의 기록을 살펴보세요.",
+      "NpcId": "jordan-witness",
+      "NpcName": "강가의 기록 안내자",
+      "ReadingId": "baptism-water",
+      "IsPrologue": false,
+      "Beats": [
+        {
+          "Id": "baptism-water:0",
+          "Speaker": "이야기",
+          "Text": "예수님은 세례를 받으시고 물에서 올라오십니다. 하늘이 열리고, 하나님의 성령이 비둘기 같이 내려 임하심을 보십니다.",
+          "Kind": "Summary",
+          "Reference": "마태복음 3:16–17",
+          "VoiceKey": "baptism-water:0",
+          "SceneTitle": "물에서 올라오시다",
+          "Location": "요단강",
+          "TimeLabel": "세례를 받으신 뒤",
+          "MusicRole": "baptism"
+        },
+        {
+          "Id": "baptism-water:1",
+          "Speaker": "하늘에서 들린 소리",
+          "Text": "이는 내 사랑하는 아들이요 내 기뻐하는 자라",
+          "Kind": "Scripture",
+          "Reference": "마태복음 3:16–17",
+          "VoiceKey": "baptism-water:1",
+          "SceneTitle": "물에서 올라오시다",
+          "Location": "요단강",
+          "TimeLabel": "세례를 받으신 뒤",
+          "MusicRole": "baptism"
+        }
+      ]
+    },
+    {
+      "Id": "ministry-beginning",
+      "ChapterId": "baptism",
+      "Title": "공생애의 문턱",
+      "Objective": "강가 길 끝에서 공생애 시작의 나이를 기록한 말씀을 발견하세요.",
+      "NpcId": "journey-narrator",
+      "NpcName": "여정의 기록자",
+      "ReadingId": "ministry-thirty",
+      "IsPrologue": false,
+      "Beats": [
+        {
+          "Id": "ministry-beginning:0",
+          "Speaker": "이야기",
+          "Text": "탄생의 밤에서 나사렛의 성장, 열두 살의 성전과 요단강의 만남으로 이야기가 이어졌습니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 3:23",
+          "VoiceKey": "ministry-beginning:0",
+          "SceneTitle": "공생애의 문턱",
+          "Location": "요단의 여정을 마치며",
+          "TimeLabel": "삼십세쯤",
+          "MusicRole": "baptism"
+        },
+        {
+          "Id": "ministry-beginning:1",
+          "Speaker": "이야기",
+          "Text": "누가는 예수님이 가르치심을 시작할 때 삼십세쯤 되셨다고 기록합니다. 이야기는 이제 공생애의 문턱에 이릅니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 3:23",
+          "VoiceKey": "ministry-beginning:1",
+          "SceneTitle": "공생애의 문턱",
+          "Location": "요단의 여정을 마치며",
+          "TimeLabel": "삼십세쯤",
+          "MusicRole": "baptism"
+        },
+        {
+          "Id": "ministry-beginning:2",
+          "Speaker": "이야기",
+          "Text": "이번 장은 여기서 마칩니다. 앞으로의 사역과 십자가, 부활과 승천은 다음 이야기입니다. 여러분이 지나온 사건의 말씀은 성경책에 남습니다.",
+          "Kind": "Summary",
+          "Reference": "누가복음 3:23",
+          "VoiceKey": "ministry-beginning:2",
+          "SceneTitle": "공생애의 문턱",
+          "Location": "요단의 여정을 마치며",
+          "TimeLabel": "삼십세쯤",
+          "MusicRole": "baptism"
+        }
+      ]
+    }
+  ]
+}

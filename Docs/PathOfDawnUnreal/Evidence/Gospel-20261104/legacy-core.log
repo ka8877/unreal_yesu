@@ -1,0 +1,1 @@
+PASS 479 assertions: 4 routes/3 endings, spatial tasks and pending departure, duplicate input, value checkpoints, stale callbacks, branch isolation, meta persistence, fresh-session disk roundtrip, corrupt/version rejection.

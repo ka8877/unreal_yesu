@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Map": "/Game/PathOfDawnGospel/Maps/L_GospelTemplePreview",
+  "Status": "Development blockout for gameplay verification; final cinematic art and BGM are not included.",
+  "PlayerStart": [-550, 0, 100],
+  "Markers": [
+    {"QuestId": "nazareth-departure", "NpcId": "joseph", "Position": [0, 0, 100]},
+    {"QuestId": "pilgrim-spring", "NpcId": "mary", "Position": [850, -100, 100]},
+    {"QuestId": "festival-courtyard", "NpcId": "temple-guide", "Position": [1750, 0, 100]},
+    {"QuestId": "listening-court", "NpcId": "teacher-listening", "Position": [2400, 600, 100]},
+    {"QuestId": "teachers-circle", "NpcId": "teacher-reading", "Position": [3100, 550, 100]},
+    {"QuestId": "parents-reunite", "NpcId": "mary", "Position": [2350, -600, 100]},
+    {"QuestId": "nazareth-return", "NpcId": "joseph", "Position": [3400, -800, 100]}
+  ]
+}

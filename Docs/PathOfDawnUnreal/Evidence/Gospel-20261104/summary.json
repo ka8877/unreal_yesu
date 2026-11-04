@@ -1,0 +1,120 @@
+{
+  "date": "2026-11-04",
+  "timezone": "Asia/Seoul",
+  "scope": "Actual portable source/content/core/fixture tests; no Unreal execution",
+  "unitySource": {
+    "repository": "ka8877/firstgame",
+    "commit": "808d8d1e1eeed908d8925398f80c7173653ef364",
+    "exactCSharpFiles": 11
+  },
+  "content": {
+    "quests": 23,
+    "readings": 19,
+    "storyBeats": 81,
+    "nativityBeats": 51,
+    "templePreviewQuests": 7,
+    "templePreviewReadings": 4
+  },
+  "executed": [
+    {
+      "command": "TestGospel.ps1 -SourceOnly -Sanitize -CheckExportParity -DotNet /tmp/pathofdawn-dotnet/dotnet",
+      "host": "Debian Linux, PowerShell 7.6.9, .NET SDK 8.0.427",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 -m unittest discover -s Tools/PathOfDawnUnreal/tests -p test_gospel_*.py -v",
+      "passed": 77
+    },
+    {
+      "command": "python3 Tools/PathOfDawnUnreal/tests/test_gospel_core.py --sanitize",
+      "passedAssertions": 2190,
+      "sanitizers": "ASan/UBSan; leak inspection disabled due to sandbox process restrictions"
+    },
+    {
+      "command": "export_campaign.py --check",
+      "result": "Original C# catalogs evaluated; byte-identical Campaign.json"
+    },
+    {
+      "command": "validate_gospel_font.py",
+      "uniqueKoreanCharacters": 437,
+      "missing": 0
+    },
+    {
+      "command": "legacy core_tests.cpp compiled with g++ -std=c++17 -O1 -Wall -Wextra -Werror",
+      "passedAssertions": 479
+    },
+    {
+      "command": "validate_content.py --root /workspace/unreal_yesu --require-art",
+      "exitCode": 0
+    }
+  ],
+  "notPerformed": [
+    "Windows/MSVC execution",
+    "Unreal/UHT compilation",
+    "Actual Editor DataAsset/font/map generation and fresh-process reload",
+    "UAT Cook/package",
+    "USaveGame disk operations",
+    "Actual GPU gameplay and visual quality review",
+    "Final character/animation/BGM production",
+    "Pixel Streaming media/hosted URL deployment"
+  ],
+  "logs": [
+    {
+      "file": "content-validation.log",
+      "bytes": 100,
+      "sha256": "c4b7fe27eaf9a078665f7a81f0eb199eb15a62c07f1ddacddee6322f3c8b3dce"
+    },
+    {
+      "file": "font-validation.log",
+      "bytes": 194,
+      "sha256": "e5bb5d049bd5a2a9fb7d4b3968f529cc3eb9dce01a82e3541cc7feaf28e3fb8f"
+    },
+    {
+      "file": "gospel-contract-tests.log",
+      "bytes": 12650,
+      "sha256": "38df72af0aa904c765d3aa257ba60aaeee4e3f09c3b5386d1799b98e315a1b16"
+    },
+    {
+      "file": "gospel-core-tests.log",
+      "bytes": 90,
+      "sha256": "26dbaec147a14025aaba2c242ead55ff8b72cd8f84ee8c3d8f71a5d3cdd1741b"
+    },
+    {
+      "file": "legacy-content.log",
+      "bytes": 1662,
+      "sha256": "ff58a3d67b6e5dd0751bca150846d90f06040b4930e67b0e82d7066aec659e5b"
+    },
+    {
+      "file": "legacy-core.log",
+      "bytes": 224,
+      "sha256": "71a7eb32d14529770b1bc7a5468b6599ccca1c6d55ad25870744f0d79b23218f"
+    },
+    {
+      "file": "source-provenance.log",
+      "bytes": 84,
+      "sha256": "e715fd84b606e3933f92d4636ce94175a27c279f4c63f14565fdd87e2b7a3bf1"
+    },
+    {
+      "file": "unity-export-parity.log",
+      "bytes": 84,
+      "sha256": "73701fca3bf9ecb93d028612afd079a0cc99175b0ef7f724b926aa92224c9a64"
+    }
+  ],
+  "remoteCI": {
+    "headSha": "0f8be6fbc1b58eca937d0641289d9322abbc21b1",
+    "pullRequest": "https://github.com/ka8877/unreal_yesu/pull/2",
+    "runs": [
+      {
+        "name": "Gospel shared story and portable gameplay",
+        "conclusion": "success",
+        "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41785330334"
+      },
+      {
+        "name": "Windows launcher regression",
+        "conclusion": "success",
+        "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41785283655"
+      }
+    ],
+    "scope": "Source/export/core fixtures and native Windows launcher tests only; no Unreal/GPU."
+  }
+}

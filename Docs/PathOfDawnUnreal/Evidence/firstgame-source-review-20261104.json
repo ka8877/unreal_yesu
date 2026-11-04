@@ -1,0 +1,55 @@
+{
+  "reviewed_date": "2026-11-04",
+  "timezone": "Asia/Seoul",
+  "repository": "ka8877/firstgame",
+  "ref": "808d8d1e1eeed908d8925398f80c7173653ef364",
+  "access": "GitHub connected tools, read only; no attachment to the Unity cloud instance or its uncommitted files",
+  "sources": [
+    {
+      "path": "Games/PathOfDawn/Assets/Game/Core/GospelChronicleCatalog.cs",
+      "git_blob_sha": "f6a8606b515d5fd804d43ba85e9573fcbf77447c",
+      "url": "https://github.com/ka8877/firstgame/blob/808d8d1e1eeed908d8925398f80c7173653ef364/Games/PathOfDawn/Assets/Game/Core/GospelChronicleCatalog.cs"
+    },
+    {
+      "path": "Games/PathOfDawn/Assets/Game/Core/GospelStorybookCatalog.cs",
+      "git_blob_sha": "86693f4c17eddfdf84f53ac3724368484d347c84",
+      "url": "https://github.com/ka8877/firstgame/blob/808d8d1e1eeed908d8925398f80c7173653ef364/Games/PathOfDawn/Assets/Game/Core/GospelStorybookCatalog.cs"
+    },
+    {
+      "path": "Games/PathOfDawn/Assets/Game/Core/GospelChronicle.cs",
+      "git_blob_sha": "0985c9d7b025c08158545f79e90fe38ab7a976bb",
+      "url": "https://github.com/ka8877/firstgame/blob/808d8d1e1eeed908d8925398f80c7173653ef364/Games/PathOfDawn/Assets/Game/Core/GospelChronicle.cs"
+    },
+    {
+      "path": "Games/PathOfDawn/Assets/Game/Core/GospelConversations.cs",
+      "git_blob_sha": "21465094ba8a1e730ff6138f385f0d4e2d189947",
+      "url": "https://github.com/ka8877/firstgame/blob/808d8d1e1eeed908d8925398f80c7173653ef364/Games/PathOfDawn/Assets/Game/Core/GospelConversations.cs"
+    },
+    {
+      "path": "Games/PathOfDawn/Assets/Game/Core/GospelNpcCatalog.cs",
+      "git_blob_sha": "f23e7e19cb67792e4f80d532d111632035332747",
+      "url": "https://github.com/ka8877/firstgame/blob/808d8d1e1eeed908d8925398f80c7173653ef364/Games/PathOfDawn/Assets/Game/Core/GospelNpcCatalog.cs"
+    },
+    {
+      "path": "Games/PathOfDawn/Assets/Game/Core/GospelBelongings.cs",
+      "git_blob_sha": "61b0046806caf53245544dcbca3cbbed3d24ebcd",
+      "url": "https://github.com/ka8877/firstgame/blob/808d8d1e1eeed908d8925398f80c7173653ef364/Games/PathOfDawn/Assets/Game/Core/GospelBelongings.cs"
+    },
+    {
+      "path": "Games/PathOfDawn/Assets/Game/Core/GospelPilgrimageSave.cs",
+      "git_blob_sha": "4bab266d60c8787459c81e1f0d3e350018f0bca9",
+      "url": "https://github.com/ka8877/firstgame/blob/808d8d1e1eeed908d8925398f80c7173653ef364/Games/PathOfDawn/Assets/Game/Core/GospelPilgrimageSave.cs"
+    },
+    {
+      "path": "Games/PathOfDawn/Assets/Game/Core/GospelChronicleScripture.cs",
+      "git_blob_sha": "e20399aad2389c17d685ab943fcee8e86d72b6f5",
+      "url": "https://github.com/ka8877/firstgame/blob/808d8d1e1eeed908d8925398f80c7173653ef364/Games/PathOfDawn/Assets/Game/Core/GospelChronicleScripture.cs"
+    },
+    {
+      "path": "Games/PathOfDawn/Assets/Game/Core/GospelCatalog.cs",
+      "git_blob_sha": "2ed29c84abd82aef884bc9283677dbe6065007a2",
+      "url": "https://github.com/ka8877/firstgame/blob/808d8d1e1eeed908d8925398f80c7173653ef364/Games/PathOfDawn/Assets/Game/Core/GospelCatalog.cs"
+    }
+  ],
+  "verification": "Source review only; no Unity or Unreal execution, new build, or deployment was performed."
+}
