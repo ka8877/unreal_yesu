@@ -56,8 +56,7 @@
     "USaveGame disk operations",
     "Actual GPU gameplay and visual quality review",
     "Final character/animation/BGM production",
-    "Pixel Streaming media/hosted URL deployment",
-    "Remote GitHub workflow execution"
+    "Pixel Streaming media/hosted URL deployment"
   ],
   "logs": [
     {
@@ -100,5 +99,22 @@
       "bytes": 84,
       "sha256": "73701fca3bf9ecb93d028612afd079a0cc99175b0ef7f724b926aa92224c9a64"
     }
-  ]
+  ],
+  "remoteCI": {
+    "headSha": "0f8be6fbc1b58eca937d0641289d9322abbc21b1",
+    "pullRequest": "https://github.com/ka8877/unreal_yesu/pull/2",
+    "runs": [
+      {
+        "name": "Gospel shared story and portable gameplay",
+        "conclusion": "success",
+        "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41785330334"
+      },
+      {
+        "name": "Windows launcher regression",
+        "conclusion": "success",
+        "url": "https://github.com/ka8877/unreal_yesu/actions/runs/41785283655"
+      }
+    ],
+    "scope": "Source/export/core fixtures and native Windows launcher tests only; no Unreal/GPU."
+  }
 }

@@ -25,6 +25,8 @@ WASD/마우스 이동, E 대화, Enter/Space 다음 이야기, M 성경책, J �
 
 실제 실행 결과: 원본 C# 재평가 바이트 일치, 계약/가져오기/패키징77개 검사, C++ 진행2,190개 assertion(ASan/UBSan), 한국어437자 누락0개를 확인했다. 보존한 갈릴리 코어479개 assertion과 기존 콘텐츠/아트 검사도 통과했다. [실제 검사 요약](Evidence/Gospel-20261104/summary.json)과 같은 폴더의 원본 로그를 참고한다. 이는 Windows·Unreal·GPU 실행 결과가 아니다.
 
+원격 코드 `0f8be6f…`의 [Gospel 소스 CI](https://github.com/ka8877/unreal_yesu/actions/runs/41785330334)와 [Windows 실행기 CI](https://github.com/ka8877/unreal_yesu/actions/runs/41785283655)도 실제 완료·성공했다. Windows 실행기 검사는 UE/GPU가 없는 runner에서의 기존 프로세스 실행 회귀이며 새 게임의 Windows 빌드 성공을 뜻하지 않는다. 작업은 [초안 PR #2](https://github.com/ka8877/unreal_yesu/pull/2)에 보존했다.
+
 ```bash
 python3 Tools/PathOfDawnUnreal/Gospel/export_campaign.py --verify-sources-only
 # .NET8 SDK가 준비된 경우, 원본을 재평가해 바이트 동일성을 확인한다.
